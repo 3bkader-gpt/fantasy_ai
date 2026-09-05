@@ -1,0 +1,65 @@
+{
+  "last_updated": "2026-09-05 12:46:05 UTC",
+  "models": {
+    "gemini-3.8-flash": {
+      "display_name": "Gemini 3.8 Flash",
+      "category": "Text-out models",
+      "rpm_current": 1,
+      "rpm_limit": 5,
+      "tpm_current": 5,
+      "tpm_limit": 250000,
+      "rpd_current": 2,
+      "rpd_limit": 20
+    },
+    "gemini-3.7-flash": {
+      "display_name": "Gemini 3.7 Flash",
+      "category": "Text-out models",
+      "rpm_current": 0,
+      "rpm_limit": 5,
+      "tpm_current": 0,
+      "tpm_limit": 250000,
+      "rpd_current": 0,
+      "rpd_limit": 20
+    },
+    "gemini-3.6-flash": {
+      "display_name": "Gemini 3.6 Flash",
+      "category": "Text-out models",
+      "rpm_current": 2,
+      "rpm_limit": 5,
+      "tpm_current": 1184,
+      "tpm_limit": 250000,
+      "rpd_current": 7,
+      "rpd_limit": 20
+    },
+    "gemini-3.5-flash": {
+      "display_name": "Gemini 3.5 Flash",
+      "category": "Text-out models",
+      "rpm_current": 1,
+      "rpm_limit": 5,
+      "tpm_current": 2766,
+      "tpm_limit": 250000,
+      "rpd_current": 1,
+      "rpd_limit": 20
+    },
+    "gemini-3.5-flash-lite": {
+      "display_name": "Gemini 3.5 Flash Lite",
+      "category": "Text-out models",
+      "rpm_current": 2,
+      "rpm_limit": 15,
+      "tpm_current": 1140,
+      "tpm_limit": 250000,
+      "rpd_current": 3,
+      "rpd_limit": 500
+    },
+    "gemini-3.1-flash-lite": {
+      "display_name": "Gemini 3.1 Flash Lite",
+      "category": "Text-out models",
+      "rpm_current": 0,
+      "rpm_limit": 15,
+      "tpm_current": 0,
+      "tpm_limit": 250000,
+      "rpd_current": 0,
+      "rpd_limit": 500
+    }
+  }
+}

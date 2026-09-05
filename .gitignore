@@ -1,0 +1,24 @@
+# Environment variables and secrets
+.env
+*.env
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Logs and cache
+*.log
+data_cache/
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+cloned_repos/
+*.tmp
