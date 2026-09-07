@@ -120,21 +120,26 @@ class RuleBasedXPEngine(IXPEngine):
             # Rolling horizon calculation with exponential decay
             horizon_total = 0.0
             upcoming_strs = []
-            for offset in range(weeks_ahead):
+            fixtures_list = []
+            for offset in range(5):
                 target_gw = next_gw + offset
                 target_fixes = [f for f in all_fixes if f.event == target_gw]
                 gw_xp = self.calculate_player_xp(p, target_fixes)
-                horizon_total += gw_xp * (decay ** offset)
+                if offset < weeks_ahead:
+                    horizon_total += gw_xp * (decay ** offset)
 
                 if target_fixes:
                     f = target_fixes[0]
                     venue = "H" if f.is_home else "A"
                     upcoming_strs.append(f"{f.opponent_name} ({venue}) [{f.difficulty}]")
+                    fixtures_list.append({"gw": target_gw, "opponent": f.opponent_name, "is_home": f.is_home, "fdr": f.difficulty})
                 else:
                     upcoming_strs.append("BLANK")
+                    fixtures_list.append({"gw": target_gw, "opponent": "-", "is_home": True, "fdr": 3})
 
+            p.fixtures_5gw = fixtures_list
             p.horizon_xp = round(horizon_total, 2)
-            p.horizon_fixtures = " | ".join(upcoming_strs)
+            p.horizon_fixtures = " | ".join(upcoming_strs[:weeks_ahead])
             if gw1_fixes:
                 f0 = gw1_fixes[0]
                 p.next_fixture = f"{f0.opponent_name} ({'H' if f0.is_home else 'A'}) [FDR {f0.difficulty}]"

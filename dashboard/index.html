@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fantasy AI | Autonomous FPL Manager</title>
+  <title>Fantasy AI | Autonomous FPL Manager & Command Center</title>
   <meta name="description" content="Autonomous AI-powered Fantasy Premier League management dashboard deployed on Cloudflare Pages.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
         <div>
           <div style="display: flex; align-items: center; gap: 8px;">
             <h1 class="brand-title">FANTASY AI</h1>
-            <span class="brand-badge">AUTONOMOUS</span>
+            <span class="brand-badge">WAR ROOM</span>
           </div>
           <div style="font-size: 0.75rem; color: var(--text-muted);" id="nav-subtitle">Pep GPT • هبد اصطناعي</div>
         </div>
@@ -40,6 +40,38 @@
 
   <!-- Main Container -->
   <main class="main-container">
+    <!-- Command & Control Center Bar -->
+    <div class="control-bar">
+      <!-- Strategy Mood Selector -->
+      <div class="control-group">
+        <span class="control-label">Tactical Mood:</span>
+        <div class="mood-selector" id="mood-selector">
+          <button class="mood-btn" data-mood="conservative" title="Conservative: Zero hits, safe template">🛡️ Safe</button>
+          <button class="mood-btn active" data-mood="balanced" title="Balanced: High ROI, optimal risk-reward">⚖️ Balanced</button>
+          <button class="mood-btn" data-mood="aggressive" title="Aggressive: Upside differentials & hits allowed">⚔️ Attack</button>
+        </div>
+      </div>
+
+      <!-- View Switcher Tabs -->
+      <div class="control-group">
+        <span class="control-label">View:</span>
+        <div class="view-tabs" id="view-tabs">
+          <button class="view-tab active" data-view="pitch">⚽ Pitch View</button>
+          <button class="view-tab" data-view="matrix">📅 5-GW Matrix</button>
+        </div>
+      </div>
+
+      <!-- Cloud Trigger Button & Mode -->
+      <div class="control-group">
+        <div class="status-badge" id="mode-badge" style="cursor: pointer;" title="Click to toggle simulation mode">
+          <span id="mode-text">🛡️ SIMULATION</span>
+        </div>
+        <button class="btn-trigger" id="btn-trigger-agent">
+          <span>⚡ Run Cloud Agent</span>
+        </button>
+      </div>
+    </div>
+
     <!-- Hero Stats Grid -->
     <section class="hero-grid">
       <div class="stat-card accent-mint">
@@ -48,7 +80,7 @@
           <span class="stat-icon">📈</span>
         </div>
         <div class="stat-value" id="stat-xp">87.2</div>
-        <div class="stat-sub">MILP Optimal Horizon</div>
+        <div class="stat-sub" id="stat-xp-sub">MILP Optimal Horizon</div>
       </div>
 
       <div class="stat-card accent-cyan">
@@ -81,37 +113,72 @@
 
     <!-- Dashboard Content Layout -->
     <div class="dashboard-layout">
-      <!-- Left Column: Pitch & Squad -->
-      <section class="pitch-wrapper">
-        <div class="pitch-header">
-          <div class="pitch-title">
-            <span>Starting Squad</span>
-            <span class="formation-tag" id="formation-tag">3-5-2</span>
+      <!-- Left Column: Pitch OR Fixture Matrix -->
+      <div class="view-container-wrapper">
+        <!-- 1. Pitch View -->
+        <section class="pitch-wrapper" id="view-pitch">
+          <div class="pitch-header">
+            <div class="pitch-title">
+              <span>Active Lineup</span>
+              <span class="formation-tag" id="formation-tag">3-5-2</span>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary);">
+              Captain: <strong id="header-captain" style="color: var(--fpl-gold);">Gakpo</strong> | 
+              VC: <strong id="header-vc" style="color: var(--fpl-silver);">Fernandes</strong>
+            </div>
           </div>
-          <div style="font-size: 0.85rem; color: var(--text-secondary);">
-            Captain: <strong id="header-captain" style="color: var(--fpl-gold);">Gakpo</strong> | 
-            VC: <strong id="header-vc" style="color: var(--fpl-silver);">Fernandes</strong>
+
+          <!-- 3-5-2 Pitch Field -->
+          <div class="pitch-field" id="pitch-field">
+            <!-- Row 1: Goalkeeper -->
+            <div class="pitch-row" id="row-gk"></div>
+            <!-- Row 2: Defenders -->
+            <div class="pitch-row" id="row-def"></div>
+            <!-- Row 3: Midfielders -->
+            <div class="pitch-row" id="row-mid"></div>
+            <!-- Row 4: Forwards -->
+            <div class="pitch-row" id="row-fwd"></div>
           </div>
-        </div>
 
-        <!-- 3-5-2 Pitch Field -->
-        <div class="pitch-field" id="pitch-field">
-          <!-- Row 1: Goalkeeper -->
-          <div class="pitch-row" id="row-gk"></div>
-          <!-- Row 2: Defenders -->
-          <div class="pitch-row" id="row-def"></div>
-          <!-- Row 3: Midfielders -->
-          <div class="pitch-row" id="row-mid"></div>
-          <!-- Row 4: Forwards -->
-          <div class="pitch-row" id="row-fwd"></div>
-        </div>
+          <!-- Bench Section -->
+          <div class="bench-wrapper">
+            <div class="bench-header">Substitutes Bench</div>
+            <div class="bench-row" id="row-bench"></div>
+          </div>
+        </section>
 
-        <!-- Bench Section -->
-        <div class="bench-wrapper">
-          <div class="bench-header">Substitutes Bench</div>
-          <div class="bench-row" id="row-bench"></div>
-        </div>
-      </section>
+        <!-- 2. 5-GW Fixture Matrix View -->
+        <section class="matrix-container" id="view-matrix">
+          <div class="pitch-header">
+            <div class="pitch-title">
+              <span>📅 5-Gameweek Fixture Difficulty Matrix</span>
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);">
+              FDR: <span style="color: #34d399;">2=Easy</span> • <span style="color: #cbd5e1;">3=Medium</span> • <span style="color: #f87171;">4=Hard</span> • <span style="color: #fca5a5;">5=Very Hard</span>
+            </div>
+          </div>
+          <div style="overflow-x: auto;">
+            <table class="matrix-table">
+              <thead>
+                <tr>
+                  <th>Player</th>
+                  <th>Pos</th>
+                  <th>Cost</th>
+                  <th>GW4</th>
+                  <th>GW5</th>
+                  <th>GW6</th>
+                  <th>GW7</th>
+                  <th>GW8</th>
+                  <th style="text-align: right;">Difficulty</th>
+                </tr>
+              </thead>
+              <tbody id="matrix-tbody">
+                <!-- Dynamically generated rows -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
 
       <!-- Right Column: AI Intel & Standings -->
       <aside class="side-column">
@@ -155,19 +222,19 @@
           </div>
           <div style="font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 8px;">
             <div style="display: flex; justify-content: space-between;">
-              <span>Mode:</span>
-              <strong style="color: var(--fpl-mint);" id="pipeline-mode">Full Autonomous (GitHub Actions)</strong>
+              <span>Cloud Status:</span>
+              <strong style="color: var(--fpl-mint);">GitHub Actions 24/7 (Active)</strong>
             </div>
             <div style="display: flex; justify-content: space-between;">
               <span>Solver Engine:</span>
               <strong style="color: #fff;">Two-Tier MILP (PuLP)</strong>
             </div>
             <div style="display: flex; justify-content: space-between;">
-              <span>LLM Reasoner:</span>
-              <strong style="color: #fff;">Gemini 2.5 Flash Thinking</strong>
+              <span>Telegram Bot:</span>
+              <strong style="color: var(--fpl-cyan);">@fantasy_gpt_bot</strong>
             </div>
             <div style="display: flex; justify-content: space-between;">
-              <span>Last Synchronized:</span>
+              <span>Last Sync:</span>
               <span id="last-updated-text" style="color: var(--text-muted);">Just now</span>
             </div>
           </div>
@@ -175,6 +242,23 @@
       </aside>
     </div>
   </main>
+
+  <!-- Floating What-If Action Bar -->
+  <div class="whatif-bar" id="whatif-bar">
+    <div class="whatif-stat">
+      <span style="color: var(--fpl-gold); font-weight: 700;">🧪 WHAT-IF:</span>
+      <span id="whatif-swap-count">1 player replaced</span>
+    </div>
+    <div class="whatif-stat">
+      <span>xP Delta:</span>
+      <span class="whatif-delta positive" id="whatif-delta-xp">+0.0</span>
+    </div>
+    <div class="whatif-stat">
+      <span>Simulated Bank:</span>
+      <span id="whatif-sim-bank" style="font-weight: 700; color: #fff;">£1.2m</span>
+    </div>
+    <button class="whatif-btn-reset" id="whatif-btn-reset">↺ Reset to AI Baseline</button>
+  </div>
 
   <!-- Player Detail Modal -->
   <div class="modal-overlay" id="player-modal" role="dialog" aria-modal="true">
@@ -209,9 +293,32 @@
         </div>
       </div>
 
-      <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
+      <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); margin-bottom: 16px;">
         <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px;">UPCOMING FIXTURE & FDR</div>
         <div id="modal-fixture" style="font-weight: 700; font-size: 0.95rem;">FUL (H) [FDR 2]</div>
+      </div>
+
+      <button id="modal-swap-btn" style="width: 100%; background: linear-gradient(135deg, #04f5ff, #00bdc7); color: #000; border: none; padding: 10px; border-radius: var(--radius-md); font-weight: 700; font-size: 0.9rem; cursor: pointer;">
+        🔄 Test Swap in What-If Simulator
+      </button>
+    </div>
+  </div>
+
+  <!-- Player Swap Modal (What-If Market Candidates) -->
+  <div class="modal-overlay" id="swap-modal" role="dialog" aria-modal="true">
+    <div class="modal-content" style="max-width: 520px;">
+      <div class="modal-header">
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.2rem;">🔄 Replace Player</h3>
+          <div style="font-size: 0.8rem; color: var(--text-muted);" id="swap-target-desc">Select alternative candidate</div>
+        </div>
+        <button class="modal-close" id="swap-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+
+      <input type="text" class="candidate-search-box" id="candidate-search" placeholder="🔍 Search player or club..." autocomplete="off">
+
+      <div class="candidate-list" id="candidate-list">
+        <!-- Dynamically rendered candidates -->
       </div>
     </div>
   </div>

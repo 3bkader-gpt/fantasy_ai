@@ -24,7 +24,8 @@ class DashboardExporter:
             "fixture": getattr(p, "next_fixture", ""),
             "expected_minutes": getattr(p, "expected_minutes", 90),
             "is_captain": is_c,
-            "is_vice_captain": is_vc
+            "is_vice_captain": is_vc,
+            "fixtures_5gw": getattr(p, "fixtures_5gw", [])
         }
 
     def export(self, dto: GameweekPlanDTO, output_path: str = "dashboard/data/squad_data.json") -> str:
@@ -49,6 +50,28 @@ class DashboardExporter:
                     "player_in": {"name": t.player_in.name, "team": t.player_in.team_short, "cost": t.player_in.cost, "xp": round(float(t.player_in.xp), 1)}
                 })
 
+        # Curated market candidates for What-If simulator (Top 20 per position)
+        candidates = []
+        if getattr(dto, "all_players", None):
+            by_pos = {"GK": [], "DEF": [], "MID": [], "FWD": []}
+            for p in dto.all_players:
+                if p.is_available and p.xp > 0 and p.position in by_pos:
+                    by_pos[p.position].append(p)
+            for pos, plist in by_pos.items():
+                plist.sort(key=lambda x: (x.xp, x.horizon_xp), reverse=True)
+                for p in plist[:20]:
+                    candidates.append({
+                        "id": p.id,
+                        "name": p.name,
+                        "team": p.team_short,
+                        "position": p.position,
+                        "cost": getattr(p, "cost", 0.0),
+                        "xp": round(float(p.xp), 1),
+                        "horizon_xp": round(float(getattr(p, "horizon_xp", p.xp)), 1),
+                        "fixture": getattr(p, "next_fixture", ""),
+                        "fixtures_5gw": getattr(p, "fixtures_5gw", [])
+                    })
+
         data = {
             "meta": {
                 "manager_name": dto.manager_name or "Pep GPT",
@@ -70,6 +93,7 @@ class DashboardExporter:
             "starters": starters,
             "bench": bench,
             "transfers": transfers,
+            "market_candidates": candidates,
             "briefing": dto.briefing,
             "leagues": [
                 {"name": "beIN SPORTS League", "rank": 1420, "entry_rank": 1420},

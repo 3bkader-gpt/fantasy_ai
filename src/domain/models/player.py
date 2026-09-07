@@ -43,6 +43,7 @@ class Player:
     price_trend: str = "STABLE ⚖️"
     is_differential: bool = False
     is_flop_risk: bool = False
+    fixtures_5gw: list = field(default_factory=list)
 
     @property
     def is_available(self) -> bool:
