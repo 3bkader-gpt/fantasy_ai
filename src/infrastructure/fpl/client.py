@@ -111,12 +111,20 @@ class FPLClient(IFPLGateway):
         picks = picks_res.json().get("picks", []) if picks_res.status_code == 200 else []
         if not picks:
             baseline_file = config.data_cache_dir / f"team_{team_id}_baseline.json"
+            dash_file = config.base_dir / "dashboard" / "data" / "squad_data.json"
+            import json
             if baseline_file.exists():
-                import json
                 try:
                     with open(baseline_file, "r", encoding="utf-8") as f:
                         picks = json.load(f)
-                        logger.info(f"Loaded {len(picks)} initial picks from baseline squad file.")
+                except Exception:
+                    pass
+            elif dash_file.exists():
+                try:
+                    with open(dash_file, "r", encoding="utf-8") as f:
+                        d = json.load(f)
+                        all_p = d.get("starters", []) + d.get("bench", [])
+                        picks = [{"element": p["id"], "position": i + 1, "is_captain": p.get("is_captain", False), "is_vice_captain": p.get("is_vice_captain", False)} for i, p in enumerate(all_p)]
                 except Exception:
                     pass
 

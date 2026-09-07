@@ -14,7 +14,8 @@ venv/
 
 # Logs and cache
 *.log
-data_cache/
+data_cache/*
+!data_cache/team_*_baseline.json
 .DS_Store
 Thumbs.db
 Desktop.ini
