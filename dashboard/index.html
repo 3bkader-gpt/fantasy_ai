@@ -58,6 +58,7 @@
         <div class="view-tabs" id="view-tabs">
           <button class="view-tab active" data-view="pitch">⚽ Pitch View</button>
           <button class="view-tab" data-view="matrix">📅 5-GW Matrix</button>
+          <button class="view-tab" data-view="radar">🕵️ League Spy & Radar</button>
         </div>
       </div>
 
@@ -122,9 +123,17 @@
               <span>Active Lineup</span>
               <span class="formation-tag" id="formation-tag">3-5-2</span>
             </div>
-            <div style="font-size: 0.85rem; color: var(--text-secondary);">
-              Captain: <strong id="header-captain" style="color: var(--fpl-gold);">Gakpo</strong> | 
-              VC: <strong id="header-vc" style="color: var(--fpl-silver);">Fernandes</strong>
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div class="pitch-theme-picker" id="pitch-theme-picker">
+                <button class="theme-btn active" data-theme="cyber" title="Cyber Dark Mode">🌌 Cyber</button>
+                <button class="theme-btn" data-theme="emerald" title="Emerald Turf">🌿 Emerald</button>
+                <button class="theme-btn" data-theme="chalkboard" title="Tactical Chalkboard">📋 Board</button>
+                <button class="theme-btn" data-theme="stadium" title="3D Stadium Perspective">🏟️ 3D</button>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary);">
+                Captain: <strong id="header-captain" style="color: var(--fpl-gold);">Gakpo</strong> | 
+                VC: <strong id="header-vc" style="color: var(--fpl-silver);">Fernandes</strong>
+              </div>
             </div>
           </div>
 
@@ -176,6 +185,64 @@
                 <!-- Dynamically generated rows -->
               </tbody>
             </table>
+          </div>
+        </section>
+
+        <!-- 3. Mini-League Spy & EO Radar View -->
+        <section class="radar-container" id="view-radar">
+          <div class="pitch-header">
+            <div class="pitch-title">
+              <span>🕵️ Mini-League Spy & Competitor EO Radar</span>
+            </div>
+            <div class="radar-score-pill" title="Overall Competitor Threat Rating">
+              Threat Score: <strong id="threat-score-val" style="color: var(--fpl-gold);">68/100</strong>
+            </div>
+          </div>
+
+          <div class="radar-content-grid">
+            <!-- Left: Competitor Threats -->
+            <div class="radar-card">
+              <div class="radar-card-header">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="font-size: 1.2rem;">🚨</span>
+                  <div>
+                    <div style="font-weight: 700; color: #fff;">Competitor Threats</div>
+                    <div style="font-size: 0.72rem; color: var(--text-muted);">High EO players owned by rivals (Not in squad)</div>
+                  </div>
+                </div>
+                <span class="threat-badge-counter" id="threats-count">3 Targets</span>
+              </div>
+              <div class="radar-list" id="threats-list">
+                <!-- Dynamically populated threats -->
+              </div>
+            </div>
+
+            <!-- Right: Differential Superpowers -->
+            <div class="radar-card">
+              <div class="radar-card-header">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="font-size: 1.2rem;">💎</span>
+                  <div>
+                    <div style="font-weight: 700; color: #fff;">Differential Superpowers</div>
+                    <div style="font-size: 0.72rem; color: var(--text-muted);">Low EO weapons in your squad (Rank multipliers)</div>
+                  </div>
+                </div>
+                <span class="diff-badge-counter" id="differentials-count">6 Weapons</span>
+              </div>
+              <div class="radar-list" id="differentials-list">
+                <!-- Dynamically populated differentials -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Mini-League Standings Tracker Cards -->
+          <div class="radar-leagues-section">
+            <h4 style="font-family: var(--font-heading); margin-bottom: 12px; font-size: 1rem; color: var(--text-secondary); display: flex; align-items: center; gap: 6px;">
+              <span>🏆</span> Mini-League Competitive Trackers
+            </h4>
+            <div class="radar-leagues-grid" id="radar-leagues-grid">
+              <!-- Dynamically populated league cards -->
+            </div>
           </div>
         </section>
       </div>
@@ -320,6 +387,50 @@
       <div class="candidate-list" id="candidate-list">
         <!-- Dynamically rendered candidates -->
       </div>
+    </div>
+  </div>
+
+  <!-- AI Tactical Copilot Floating Action Button -->
+  <button class="copilot-floating-btn" id="btn-open-copilot" title="Chat with Pep GPT AI Copilot" aria-label="Open AI Copilot">
+    <span class="copilot-pulse"></span>
+    <span class="copilot-icon">🤖</span>
+    <span class="copilot-label">AI Copilot</span>
+  </button>
+
+  <!-- AI Tactical Copilot Slide-in Drawer -->
+  <div class="copilot-drawer" id="copilot-drawer">
+    <div class="copilot-header">
+      <div class="copilot-title">
+        <span class="copilot-avatar">🤖</span>
+        <div>
+          <h4>Pep GPT Copilot</h4>
+          <span class="copilot-status"><span class="status-dot"></span> Tactical Director Online</span>
+        </div>
+      </div>
+      <button class="copilot-close" id="btn-close-copilot" aria-label="Close Copilot">&times;</button>
+    </div>
+
+    <!-- Quick Suggestions Chips -->
+    <div class="copilot-quick-prompts">
+      <button class="prompt-chip" data-prompt="Should I keep the captaincy on Gakpo or switch to Bruno?">🎯 Captain Gakpo vs Bruno?</button>
+      <button class="prompt-chip" data-prompt="Why is rolling the transfer recommended for GW4?">🔄 Why roll the transfer?</button>
+      <button class="prompt-chip" data-prompt="Who is the biggest threat in my mini-league?">⚠️ Biggest rival threat?</button>
+      <button class="prompt-chip" data-prompt="Suggest an attacking midfielder under £7.5m">💎 Sub-£7.5m midfielder?</button>
+    </div>
+
+    <!-- Conversation Feed -->
+    <div class="copilot-messages" id="copilot-messages">
+      <div class="copilot-msg ai">
+        <div class="msg-bubble">
+          أهلاً بك يا بطل! أنا <strong>Pep GPT</strong>، مديرك التكتيكي الذكي لفريق <em>هبد اصطناعي</em>. تشكيلتنا 3-5-2 ومجموع نقاطنا المتوقعة 87.2 xP. اسألني عن أي خيار تكتيكي، كابتنة، أو رادار المنافسين!
+        </div>
+      </div>
+    </div>
+
+    <!-- Message Input Bar -->
+    <div class="copilot-input-bar">
+      <input type="text" id="copilot-input" placeholder="Ask Pep GPT about tactics, transfers, or captains..." autocomplete="off" />
+      <button id="copilot-send" title="Send message" aria-label="Send message">➤</button>
     </div>
   </div>
 

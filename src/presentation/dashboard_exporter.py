@@ -4,6 +4,7 @@ import logging
 from datetime import datetime
 from typing import Dict, Any, Optional
 from ..application.dtos.gameweek_dto import GameweekPlanDTO
+from .league_radar import LeagueRadarService
 
 logger = logging.getLogger("DashboardExporter")
 
@@ -72,6 +73,12 @@ class DashboardExporter:
                         "fixtures_5gw": getattr(p, "fixtures_5gw", [])
                     })
 
+        raw_leagues = [
+            {"name": "beIN SPORTS League", "rank": 1420, "entry_rank": 1420},
+            {"name": "ال هيخلص الاخير بياخد فيها", "rank": 1, "entry_rank": 1}
+        ]
+        radar_data = LeagueRadarService.generate_radar_data(lineup.starting_xi + lineup.bench, raw_leagues)
+
         data = {
             "meta": {
                 "manager_name": dto.manager_name or "Pep GPT",
@@ -95,10 +102,8 @@ class DashboardExporter:
             "transfers": transfers,
             "market_candidates": candidates,
             "briefing": dto.briefing,
-            "leagues": [
-                {"name": "beIN SPORTS League", "rank": 1420, "entry_rank": 1420},
-                {"name": "ال هيخلص الاخير بياخد فيها", "rank": 1, "entry_rank": 1}
-            ]
+            "leagues": radar_data["leagues"],
+            "eo_radar": radar_data
         }
 
         os.makedirs(os.path.dirname(output_path), exist_ok=True)

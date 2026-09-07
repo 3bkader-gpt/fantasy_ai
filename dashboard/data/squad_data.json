@@ -4151,12 +4151,115 @@
     {
       "name": "beIN SPORTS League",
       "rank": 1420,
-      "entry_rank": 1420
+      "leader_points_delta": -18,
+      "status": "⚔️ Hunting Leader",
+      "rival_to_watch": "League Leader #1",
+      "risk_index": "Medium"
     },
     {
       "name": "ال هيخلص الاخير بياخد فيها",
       "rank": 1,
-      "entry_rank": 1
+      "leader_points_delta": 0,
+      "status": "👑 Leader (Defend Rank)",
+      "rival_to_watch": "Team Mo Salah",
+      "risk_index": "Low"
     }
-  ]
+  ],
+  "eo_radar": {
+    "threats": [
+      {
+        "player": "Haaland",
+        "team": "MCI",
+        "cost": 15.2,
+        "eo": 138,
+        "threat_level": "CRITICAL",
+        "impact": "Goal/Assist drops your rank by ~13.8%"
+      },
+      {
+        "player": "Salah",
+        "team": "LIV",
+        "cost": 12.6,
+        "eo": 84,
+        "threat_level": "HIGH",
+        "impact": "Goal/Assist drops your rank by ~8.4%"
+      },
+      {
+        "player": "Alexander-Arnold",
+        "team": "LIV",
+        "cost": 7.1,
+        "eo": 46,
+        "threat_level": "MODERATE",
+        "impact": "Goal/Assist drops your rank by ~4.6%"
+      }
+    ],
+    "differentials": [
+      {
+        "player": "Tzolakis",
+        "team": "FPL",
+        "cost": 5.0,
+        "eo": 3,
+        "advantage": "💎 Huge Rank Boost",
+        "xp": 5.0
+      },
+      {
+        "player": "Tarkowski",
+        "team": "FPL",
+        "cost": 5.0,
+        "eo": 8,
+        "advantage": "💎 Huge Rank Boost",
+        "xp": 5.0
+      },
+      {
+        "player": "Calafiori",
+        "team": "FPL",
+        "cost": 5.0,
+        "eo": 8,
+        "advantage": "💎 Huge Rank Boost",
+        "xp": 5.0
+      },
+      {
+        "player": "Thomas",
+        "team": "FPL",
+        "cost": 5.0,
+        "eo": 8,
+        "advantage": "💎 Huge Rank Boost",
+        "xp": 5.0
+      },
+      {
+        "player": "Gakpo",
+        "team": "FPL",
+        "cost": 5.0,
+        "eo": 22,
+        "advantage": "🟢 Differential Weapon",
+        "xp": 5.0
+      },
+      {
+        "player": "Stach",
+        "team": "FPL",
+        "cost": 5.0,
+        "eo": 4,
+        "advantage": "💎 Huge Rank Boost",
+        "xp": 5.0
+      }
+    ],
+    "leagues": [
+      {
+        "name": "beIN SPORTS League",
+        "rank": 1420,
+        "leader_points_delta": -18,
+        "status": "⚔️ Hunting Leader",
+        "rival_to_watch": "League Leader #1",
+        "risk_index": "Medium"
+      },
+      {
+        "name": "ال هيخلص الاخير بياخد فيها",
+        "rank": 1,
+        "leader_points_delta": 0,
+        "status": "👑 Leader (Defend Rank)",
+        "rival_to_watch": "Team Mo Salah",
+        "risk_index": "Low"
+      }
+    ],
+    "overall_threat_score": 68
+  }
 }
