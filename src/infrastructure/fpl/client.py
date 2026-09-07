@@ -5,6 +5,7 @@ import requests
 from ...domain.interfaces.fpl_gateway import IFPLGateway
 from ...domain.models.transfer import Transfer
 from ...config import config
+from .authenticator import PlaywrightFPLAuthenticator
 
 logger = logging.getLogger("FPLClient")
 
@@ -32,20 +33,15 @@ class FPLClient(IFPLGateway):
         self.is_authenticated = False
 
     def login(self) -> bool:
+        if self.email and self.password:
+            self.is_authenticated = True
+            logger.info("Autonomous FPL credentials ready.")
+            return True
         if self.cookie and len(self.cookie.strip()) > 10:
             cookie_val = self.cookie.strip()
-            if "=" in cookie_val:
-                for part in cookie_val.split(";"):
-                    if "=" in part:
-                        k, v = part.strip().split("=", 1)
-                        self.session.cookies.set(k, v, domain=".premierleague.com")
-            else:
-                self.session.cookies.set("pl_profile", cookie_val, domain=".premierleague.com")
+            self.session.cookies.set("pl_profile", cookie_val, domain=".premierleague.com")
             self.is_authenticated = True
-            logger.info("Authenticated using session cookie.")
             return True
-
-        logger.info("No session cookie provided in FPL_COOKIE. Running in Read-Only / Simulation mode.")
         return False
 
     def get_history_and_chips(self, team_id: int) -> Dict[str, Any]:
@@ -145,46 +141,30 @@ class FPLClient(IFPLGateway):
 
     def set_lineup(self, team_id: int, picks_payload: List[Dict[str, Any]], chip: Optional[str] = None) -> Dict[str, Any]:
         payload = {"chip": chip, "picks": picks_payload}
-        if self.dry_run or not self.is_authenticated:
+        if self.dry_run:
             logger.info("[DRY RUN] Lineup submission simulated.")
             return {"status": "simulated", "dry_run": True, "payload": payload}
-
-        headers = {
-            "Content-Type": "application/json; charset=UTF-8",
-            "X-Requested-With": "XMLHttpRequest",
-            "Referer": f"https://fantasy.premierleague.com/entry/{team_id}/event/",
-        }
+        if self.email and self.password:
+            return PlaywrightFPLAuthenticator(self.email, self.password).submit_lineup_live(team_id, picks_payload, chip)
+        headers = {"Content-Type": "application/json; charset=UTF-8", "X-Requested-With": "XMLHttpRequest"}
         res = self.session.post(f"{config.fpl_my_team_url}/{team_id}/", json=payload, headers=headers, timeout=15)
         return {"status": "success" if res.status_code == 200 else "error", "code": res.status_code}
 
     def make_transfers(self, team_id: int, transfers: List[Transfer], next_gw: int, chip: Optional[str] = None) -> Dict[str, Any]:
         if not transfers:
             return {"status": "noop", "message": "No transfers to execute."}
-
-        transfers_list = [{
-            "element_in": t.player_in.id,
-            "element_out": t.player_out.id,
-            "purchase_price": t.player_in.now_cost,
-            "selling_price": t.player_out.selling_price or t.player_out.now_cost
-        } for t in transfers]
-
         payload = {
-            "confirmed": True,
-            "entry": team_id,
-            "event": next_gw,
-            "transfers": transfers_list,
-            "wildcard": (chip == "wildcard"),
-            "freehit": (chip == "freehit")
+            "confirmed": True, "entry": team_id, "event": next_gw,
+            "transfers": [{"element_in": t.player_in.id, "element_out": t.player_out.id,
+                           "purchase_price": t.player_in.now_cost,
+                           "selling_price": t.player_out.selling_price or t.player_out.now_cost} for t in transfers],
+            "wildcard": (chip == "wildcard"), "freehit": (chip == "freehit")
         }
-
-        if self.dry_run or not self.is_authenticated:
+        if self.dry_run:
             logger.info(f"[DRY RUN] Transfers simulated for {len(transfers)} player(s).")
             return {"status": "simulated", "dry_run": True, "payload": payload}
-
-        headers = {
-            "Content-Type": "application/json; charset=UTF-8",
-            "X-Requested-With": "XMLHttpRequest",
-            "Referer": "https://fantasy.premierleague.com/a/squad/transfers",
-        }
+        if self.email and self.password:
+            return PlaywrightFPLAuthenticator(self.email, self.password).submit_transfers_live(team_id, payload)
+        headers = {"Content-Type": "application/json; charset=UTF-8", "X-Requested-With": "XMLHttpRequest"}
         res = self.session.post(config.fpl_transfers_url, json=payload, headers=headers, timeout=15)
         return {"status": "success" if res.status_code in (200, 201) else "error", "code": res.status_code}
