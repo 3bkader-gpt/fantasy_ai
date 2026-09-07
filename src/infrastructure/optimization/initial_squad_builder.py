@@ -43,10 +43,12 @@ class InitialSquadBuilder:
         for i, p in enumerate(candidates):
             c_obj[i] = -p.horizon_xp                    # s_i
             c_obj[N + i] = -bench_weight * p.horizon_xp # b_i (down-weighted bench insurance)
-            # Captaincy EV: Talisman floor and home advantage boost
+            # Captaincy EV: Talisman floor, venue & fixture FDR weighting
             cap_ev = p.horizon_xp * (1.18 if (p.position == "FWD" and p.cost >= 11.5) else (1.08 if p.cost >= 10.0 else 1.0))
             if "(H)" in p.next_fixture: cap_ev *= 1.06
             elif "(A)" in p.next_fixture and p.position == "MID": cap_ev *= 0.94
+            if "[FDR 2]" in p.next_fixture: cap_ev *= 1.10
+            elif "[FDR 4]" in p.next_fixture or "[FDR 5]" in p.next_fixture: cap_ev *= 0.88
             c_obj[2 * N + i] = -round(cap_ev, 2)        # c_i (captain double points)
 
         integrality = np.ones(3 * N)

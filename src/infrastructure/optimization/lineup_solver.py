@@ -38,11 +38,13 @@ class LineupSolver:
                     bench_outfield = sorted(defs[n_def:] + mids[n_mid:] + fwds[n_fwd:], key=lambda x: x.xp, reverse=True)
                     best_bench = ([bench_gk] if bench_gk else []) + bench_outfield
 
-        # Captain and Vice-Captain with Talisman & Venue EV weighting
+        # Captain and Vice-Captain with Talisman, Venue & Fixture FDR EV weighting
         def cap_eval(p: Player) -> float:
             ev = p.xp * (1.18 if (p.position == "FWD" and p.cost >= 11.5) else (1.08 if p.cost >= 10.0 else 1.0))
             if "(H)" in p.next_fixture: ev *= 1.06
             elif "(A)" in p.next_fixture and p.position == "MID": ev *= 0.94
+            if "[FDR 2]" in p.next_fixture: ev *= 1.10
+            elif "[FDR 4]" in p.next_fixture or "[FDR 5]" in p.next_fixture: ev *= 0.88
             return ev
 
         sorted_xi = sorted(best_xi, key=cap_eval, reverse=True)
