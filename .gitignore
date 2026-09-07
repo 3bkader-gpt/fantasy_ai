@@ -22,3 +22,6 @@ Desktop.ini
 .idea/
 cloned_repos/
 *.tmp
+.wrangler/
+node_modules/
+scratch/

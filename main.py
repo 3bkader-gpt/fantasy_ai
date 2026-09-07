@@ -12,7 +12,7 @@ from src.infrastructure.optimization import SquadOptimizer
 from src.infrastructure.ai import GeminiAdvisor
 from src.infrastructure.notifications import TelegramNotifier
 from src.application.use_cases import OptimizeGameweekUseCase, BuildInitialSquadUseCase
-from src.presentation import ConsolePresenter
+from src.presentation import ConsolePresenter, DashboardExporter
 
 logging.basicConfig(
     level=logging.INFO,
@@ -49,8 +49,9 @@ def run_manager(team_id: int, dry_run: bool, max_hits: int):
         horizon_decay=config.horizon_decay
     )
 
-    # 4. Present (Presentation)
+    # 4. Present & Export
     ConsolePresenter().display_plan(dto)
+    DashboardExporter().export(dto)
     return dto
 
 
