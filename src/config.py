@@ -40,6 +40,8 @@ class AppConfig:
     fpl_fixtures_url: str = "https://fantasy.premierleague.com/api/fixtures/"
     fpl_my_team_url: str = "https://fantasy.premierleague.com/api/my-team"
     fpl_transfers_url: str = "https://fantasy.premierleague.com/api/transfers/"
+    root_dir: Path = ROOT_DIR
+    base_dir: Path = ROOT_DIR
     data_cache_dir: Path = ROOT_DIR / "data_cache"
 
 
