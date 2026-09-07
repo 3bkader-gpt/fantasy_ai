@@ -43,7 +43,11 @@ class InitialSquadBuilder:
         for i, p in enumerate(candidates):
             c_obj[i] = -p.horizon_xp                    # s_i
             c_obj[N + i] = -bench_weight * p.horizon_xp # b_i (down-weighted bench insurance)
-            c_obj[2 * N + i] = -p.horizon_xp            # c_i (captain double points)
+            # Captaincy EV: Talisman floor and home advantage boost
+            cap_ev = p.horizon_xp * (1.18 if (p.position == "FWD" and p.cost >= 11.5) else (1.08 if p.cost >= 10.0 else 1.0))
+            if "(H)" in p.next_fixture: cap_ev *= 1.06
+            elif "(A)" in p.next_fixture and p.position == "MID": cap_ev *= 0.94
+            c_obj[2 * N + i] = -round(cap_ev, 2)        # c_i (captain double points)
 
         integrality = np.ones(3 * N)
         bounds_lb = np.zeros(3 * N)
@@ -90,17 +94,10 @@ class InitialSquadBuilder:
         lb_list = []
         ub_list = []
 
-        # 1. Exactly 11 Starters
-        row = np.zeros(3 * N); row[:N] = 1.0
-        A_rows.append(row); lb_list.append(11); ub_list.append(11)
-
-        # 2. Exactly 4 Bench
-        row = np.zeros(3 * N); row[N:2*N] = 1.0
-        A_rows.append(row); lb_list.append(4); ub_list.append(4)
-
-        # 3. Exactly 1 Captain
-        row = np.zeros(3 * N); row[2*N:] = 1.0
-        A_rows.append(row); lb_list.append(1); ub_list.append(1)
+        # 1-3. Exactly 11 Starters, 4 Bench, 1 Captain
+        for (st, en), count in [((0, N), 11), ((N, 2 * N), 4), ((2 * N, 3 * N), 1)]:
+            r = np.zeros(3 * N); r[st:en] = 1.0
+            A_rows.append(r); lb_list.append(count); ub_list.append(count)
 
         # 4. Captain must be in Starting XI: c_i - s_i <= 0
         for i in range(N):
@@ -139,14 +136,20 @@ class InitialSquadBuilder:
                 if p.position == pos: r_str[i] = 1.0
             A_rows.append(r_str); lb_list.append(s_min); ub_list.append(s_max)
 
-        # 10. Club Limits: max 3 per club
+        # 10. Club Limits: max 3 per club, and anti-stacking (max 1 attacker from non-top6 in XI)
+        top6 = {1, 6, 14, 15, 16, 19}
         teams: Set[int] = set(p.team_id for p in candidates)
         for t_id in teams:
             row = np.zeros(3 * N)
+            att_row = np.zeros(3 * N)
             for i, p in enumerate(candidates):
                 if p.team_id == t_id:
                     row[i] = 1.0; row[N + i] = 1.0
+                    if p.position in ("MID", "FWD") and t_id not in top6:
+                        att_row[i] = 1.0
             A_rows.append(row); lb_list.append(0); ub_list.append(max_per_club)
+            if np.sum(att_row) > 1.0:
+                A_rows.append(att_row); lb_list.append(-np.inf); ub_list.append(1.0)
 
         # Solve MILP
         A = np.array(A_rows)

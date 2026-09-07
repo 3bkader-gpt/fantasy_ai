@@ -38,10 +38,17 @@ class LineupSolver:
                     bench_outfield = sorted(defs[n_def:] + mids[n_mid:] + fwds[n_fwd:], key=lambda x: x.xp, reverse=True)
                     best_bench = ([bench_gk] if bench_gk else []) + bench_outfield
 
-        # Captain and Vice-Captain
-        sorted_xi = sorted(best_xi, key=lambda x: x.xp, reverse=True)
+        # Captain and Vice-Captain with Talisman & Venue EV weighting
+        def cap_eval(p: Player) -> float:
+            ev = p.xp * (1.18 if (p.position == "FWD" and p.cost >= 11.5) else (1.08 if p.cost >= 10.0 else 1.0))
+            if "(H)" in p.next_fixture: ev *= 1.06
+            elif "(A)" in p.next_fixture and p.position == "MID": ev *= 0.94
+            return ev
+
+        sorted_xi = sorted(best_xi, key=cap_eval, reverse=True)
         captain = sorted_xi[0]
-        vice_captain = sorted_xi[1] if len(sorted_xi) > 1 else sorted_xi[0]
+        vc_cands = sorted([p for p in best_xi if p.id != captain.id], key=lambda x: x.xp, reverse=True)
+        vice_captain = vc_cands[0] if vc_cands else captain
 
         # Construct official FPL API picks payload (1-15)
         api_picks: List[Dict[str, Any]] = [

@@ -59,13 +59,25 @@ class RuleBasedXPEngine(IXPEngine):
         if exp_mins <= 0.0 or not fixtures:
             return 0.0
 
-        # Base performance blend (65% form + 35% ppg)
-        if player.minutes < 90 and player.total_points < 5:
-            base_pts_90 = 1.5
-        else:
-            base_pts_90 = (0.65 * player.form) + (0.35 * player.points_per_game)
-            if base_pts_90 <= 0.0:
-                base_pts_90 = 1.2
+        # 1. Price-tier Bayesian prior baseline (PTS/90 based on market valuation)
+        prior_pts_90 = max(1.5, (player.cost - 3.5) * 0.72 + 1.6)
+        if player.position == "FWD" and player.cost >= 12.0:
+            prior_pts_90 = max(prior_pts_90, 8.5)
+
+        # 2. Bayesian Shrinkage (regresses small early-season samples to the prior)
+        sample_pts_90 = (0.60 * player.form) + (0.40 * player.points_per_game)
+        if sample_pts_90 <= 0.0:
+            sample_pts_90 = prior_pts_90
+        w_sample = min(1.0, max(0.15, player.minutes / 360.0))
+        base_pts_90 = (w_sample * sample_pts_90) + ((1.0 - w_sample) * prior_pts_90)
+
+        # 3. Underlying threat adjustments (Opta xGI)
+        if player.position in ("MID", "FWD") and player.minutes >= 90:
+            xgi_90 = (player.expected_goal_involvements / player.minutes) * 90.0
+            if xgi_90 < 0.12 and player.cost <= 6.0:
+                base_pts_90 *= 0.85  # CDM penalty (low goal involvement)
+            elif xgi_90 >= 0.50:
+                base_pts_90 *= 1.08  # Elite goal threat talisman
 
         gw_xp_sum = 0.0
         for fix in fixtures:
@@ -74,21 +86,20 @@ class RuleBasedXPEngine(IXPEngine):
             pos = player.position
 
             # FDR multiplier
-            if pos in ("GK", "DEF"):
-                fdr_mult = 1.0 + (3.0 - fdr) * 0.14
-            else:
-                fdr_mult = 1.0 + (3.0 - fdr) * 0.09
-
+            fdr_mult = 1.0 + (3.0 - fdr) * (0.14 if pos in ("GK", "DEF") else 0.09)
             venue_mult = 1.08 if is_home else 0.92
 
-            underlying_boost = 1.0
-            if pos in ("MID", "FWD") and (player.expected_goal_involvements > 3.0 or player.ict_index > 40.0):
-                underlying_boost = 1.05
+            full_match_xp = base_pts_90 * fdr_mult * venue_mult
 
-            full_match_xp = base_pts_90 * fdr_mult * venue_mult * underlying_boost
-
-            # Scale by expected minutes fraction (E[Minutes] / 90)
+            # Scale by expected minutes fraction
             scaled_match_xp = full_match_xp * (exp_mins / 90.0)
+
+            # 4. Realistic price-tier ceiling (Hard sanity check against budget hype)
+            if player.cost <= 5.0 and pos != "GK":
+                scaled_match_xp = min(5.8, scaled_match_xp)
+            elif player.cost <= 6.0 and pos != "GK":
+                scaled_match_xp = min(7.0, scaled_match_xp)
+
             gw_xp_sum += scaled_match_xp
 
         return round(max(0.0, gw_xp_sum), 2)
