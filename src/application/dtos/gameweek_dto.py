@@ -24,3 +24,7 @@ class GameweekPlanDTO:
     briefing: str
     dry_run: bool
     execution_status: Dict[str, Any]
+    press_conference_insights: Optional[List[Dict[str, Any]]] = None
+    press_wire: Optional[List[Dict[str, Any]]] = None
+
+

@@ -39,6 +39,9 @@ class TelegramNotifier(INotifier):
 
         return success
 
+    def send_markdown_message(self, text: str) -> bool:
+        return self.send_message(text)
+
     def send_gameweek_summary(
         self,
         gw: int,

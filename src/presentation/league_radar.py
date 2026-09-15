@@ -26,7 +26,7 @@ class LeagueRadarService:
     @classmethod
     def generate_radar_data(cls, squad_players: List[Any], leagues_data: List[Dict[str, Any]]) -> Dict[str, Any]:
         """Generates threats, differentials, and mini-league intelligence."""
-        owned_names = {p.web_name if hasattr(p, 'web_name') else p.get('name', '') for p in squad_players}
+        owned_names = {p.web_name if hasattr(p, 'web_name') else getattr(p, 'name', '') for p in squad_players}
 
         threats = []
         for name, data in cls.BENCHMARK_EO.items():
@@ -42,7 +42,7 @@ class LeagueRadarService:
 
         differentials = []
         for p in squad_players:
-            name = p.web_name if hasattr(p, 'web_name') else p.get('name', '')
+            name = p.web_name if hasattr(p, 'web_name') else getattr(p, 'name', '')
             data = cls.BENCHMARK_EO.get(name, {"eo": 8, "threat": "LOW"})
             if data["eo"] <= 30:
                 differentials.append({

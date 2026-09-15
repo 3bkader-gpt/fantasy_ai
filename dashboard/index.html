@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fantasy AI | Autonomous FPL Manager & Command Center</title>
-  <meta name="description" content="Autonomous AI-powered Fantasy Premier League management dashboard deployed on Cloudflare Pages.">
+  <title>Fantasy AI | Executive Command Center</title>
+  <meta name="description" content="Clean, executive FPL Command Center powered by Pure AI autonomous engine.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
-  <!-- Marked for markdown rendering -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- Executive Navbar -->
   <header class="navbar">
     <div class="nav-container">
       <div class="brand">
@@ -21,18 +19,18 @@
         <div>
           <div style="display: flex; align-items: center; gap: 8px;">
             <h1 class="brand-title">FANTASY AI</h1>
-            <span class="brand-badge">WAR ROOM</span>
+            <span class="brand-badge">EXECUTIVE</span>
           </div>
-          <div style="font-size: 0.75rem; color: var(--text-muted);" id="nav-subtitle">Pep GPT • هبد اصطناعي</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);" id="nav-subtitle">Pure AI Autonomous Manager • Team ID: 10469492</div>
         </div>
       </div>
       <div class="nav-status">
-        <div class="status-badge">
+        <div class="status-badge" style="background: rgba(0, 255, 135, 0.12); border-color: rgba(0, 255, 135, 0.35);">
           <div class="pulse-dot"></div>
-          <span id="system-status">AGENT LIVE</span>
+          <span id="system-status" style="color: var(--fpl-mint); font-weight: 700;">PURE AI ACTIVE (24/7)</span>
         </div>
-        <div class="status-badge" style="background: rgba(0, 255, 135, 0.1); border-color: rgba(0, 255, 135, 0.25);">
-          <strong id="gw-pill" style="color: var(--fpl-mint);">GW 4</strong>
+        <div class="status-badge" style="background: rgba(4, 245, 255, 0.1); border-color: rgba(4, 245, 255, 0.3);">
+          <strong id="gw-pill" style="color: var(--fpl-cyan);">GW 4</strong>
         </div>
       </div>
     </div>
@@ -40,57 +38,24 @@
 
   <!-- Main Container -->
   <main class="main-container">
-    <!-- Command & Control Center Bar -->
-    <div class="control-bar">
-      <!-- Strategy Mood Selector -->
-      <div class="control-group">
-        <span class="control-label">Tactical Mood:</span>
-        <div class="mood-selector" id="mood-selector">
-          <button class="mood-btn" data-mood="conservative" title="Conservative: Zero hits, safe template">🛡️ Safe</button>
-          <button class="mood-btn active" data-mood="balanced" title="Balanced: High ROI, optimal risk-reward">⚖️ Balanced</button>
-          <button class="mood-btn" data-mood="aggressive" title="Aggressive: Upside differentials & hits allowed">⚔️ Attack</button>
-        </div>
-      </div>
-
-      <!-- View Switcher Tabs -->
-      <div class="control-group">
-        <span class="control-label">View:</span>
-        <div class="view-tabs" id="view-tabs">
-          <button class="view-tab active" data-view="pitch">⚽ Pitch View</button>
-          <button class="view-tab" data-view="matrix">📅 5-GW Matrix</button>
-          <button class="view-tab" data-view="radar">🕵️ League Spy & Radar</button>
-        </div>
-      </div>
-
-      <!-- Cloud Trigger Button & Mode -->
-      <div class="control-group">
-        <div class="status-badge" id="mode-badge" style="cursor: pointer;" title="Click to toggle simulation mode">
-          <span id="mode-text">🛡️ SIMULATION</span>
-        </div>
-        <button class="btn-trigger" id="btn-trigger-agent">
-          <span>⚡ Run Cloud Agent</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Hero Stats Grid -->
+    <!-- Executive KPI Bar -->
     <section class="hero-grid">
       <div class="stat-card accent-mint">
         <div class="stat-header">
-          <span class="stat-label">Projected xP</span>
-          <span class="stat-icon">📈</span>
+          <span class="stat-label">GW Live Points</span>
+          <span class="stat-icon">⚽</span>
         </div>
-        <div class="stat-value" id="stat-xp">87.2</div>
-        <div class="stat-sub" id="stat-xp-sub">MILP Optimal Horizon</div>
+        <div class="stat-value" id="stat-live-points">48</div>
+        <div class="stat-sub" id="stat-live-sub">8 players played</div>
       </div>
 
       <div class="stat-card accent-cyan">
         <div class="stat-header">
-          <span class="stat-label">In The Bank</span>
-          <span class="stat-icon">💰</span>
+          <span class="stat-label">Projected Horizon xP</span>
+          <span class="stat-icon">📈</span>
         </div>
-        <div class="stat-value" id="stat-bank">£1.2m</div>
-        <div class="stat-sub" id="stat-team-val">Team Value: £100.0m</div>
+        <div class="stat-value" id="stat-xp">83.5</div>
+        <div class="stat-sub">MILP Optimal Lineup</div>
       </div>
 
       <div class="stat-card accent-gold">
@@ -104,335 +69,144 @@
 
       <div class="stat-card">
         <div class="stat-header">
-          <span class="stat-label">GW4 Deadline</span>
+          <span class="stat-label">In The Bank</span>
+          <span class="stat-icon">💰</span>
+        </div>
+        <div class="stat-value" id="stat-bank">£1.2m</div>
+        <div class="stat-sub" id="stat-team-val">Team Value: £100.2m</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-label">Next Deadline</span>
           <span class="stat-icon">⏳</span>
         </div>
-        <div class="stat-value" id="stat-deadline-countdown" style="font-size: 1.5rem;">--:--:--</div>
-        <div class="stat-sub" id="stat-deadline-date">Sep 12, 2026</div>
+        <div class="stat-value" id="stat-deadline-countdown" style="font-size: 1.35rem;">--:--:--</div>
+        <div class="stat-sub" id="stat-deadline-date">Sep 18, 2026</div>
       </div>
     </section>
 
-    <!-- Dashboard Content Layout -->
+    <!-- Main Content Layout -->
     <div class="dashboard-layout">
-      <!-- Left Column: Pitch OR Fixture Matrix -->
-      <div class="view-container-wrapper">
-        <!-- 1. Pitch View -->
-        <section class="pitch-wrapper" id="view-pitch">
-          <div class="pitch-header">
-            <div class="pitch-title">
-              <span>Active Lineup</span>
-              <span class="formation-tag" id="formation-tag">3-5-2</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 14px;">
-              <div class="pitch-theme-picker" id="pitch-theme-picker">
-                <button class="theme-btn active" data-theme="cyber" title="Cyber Dark Mode">🌌 Cyber</button>
-                <button class="theme-btn" data-theme="emerald" title="Emerald Turf">🌿 Emerald</button>
-                <button class="theme-btn" data-theme="chalkboard" title="Tactical Chalkboard">📋 Board</button>
-                <button class="theme-btn" data-theme="stadium" title="3D Stadium Perspective">🏟️ 3D</button>
-              </div>
-              <div style="font-size: 0.85rem; color: var(--text-secondary);">
-                Captain: <strong id="header-captain" style="color: var(--fpl-gold);">Gakpo</strong> | 
-                VC: <strong id="header-vc" style="color: var(--fpl-silver);">Fernandes</strong>
-              </div>
-            </div>
+      <!-- Left Column: Clean Tactical Pitch Field -->
+      <section class="pitch-wrapper">
+        <div class="pitch-header">
+          <div class="pitch-title">
+            <span>Starting XI</span>
+            <span class="formation-tag" id="formation-tag">3-5-2</span>
           </div>
-
-          <!-- 3-5-2 Pitch Field -->
-          <div class="pitch-field" id="pitch-field">
-            <!-- Row 1: Goalkeeper -->
-            <div class="pitch-row" id="row-gk"></div>
-            <!-- Row 2: Defenders -->
-            <div class="pitch-row" id="row-def"></div>
-            <!-- Row 3: Midfielders -->
-            <div class="pitch-row" id="row-mid"></div>
-            <!-- Row 4: Forwards -->
-            <div class="pitch-row" id="row-fwd"></div>
+          <div class="pitch-captain-info">
+            Captain: <strong id="header-captain" style="color: var(--fpl-gold);">Isak</strong> | 
+            VC: <strong id="header-vc" style="color: var(--fpl-silver);">Fernandes</strong>
           </div>
+        </div>
 
-          <!-- Bench Section -->
-          <div class="bench-wrapper">
-            <div class="bench-header">Substitutes Bench</div>
-            <div class="bench-row" id="row-bench"></div>
-          </div>
-        </section>
+        <!-- Visual Football Pitch -->
+        <div class="pitch-field" id="pitch-field">
+          <!-- Row 1: Goalkeeper -->
+          <div class="pitch-row" id="row-gk"></div>
+          <!-- Row 2: Defenders -->
+          <div class="pitch-row" id="row-def"></div>
+          <!-- Row 3: Midfielders -->
+          <div class="pitch-row" id="row-mid"></div>
+          <!-- Row 4: Forwards -->
+          <div class="pitch-row" id="row-fwd"></div>
+        </div>
 
-        <!-- 2. 5-GW Fixture Matrix View -->
-        <section class="matrix-container" id="view-matrix">
-          <div class="pitch-header">
-            <div class="pitch-title">
-              <span>📅 5-Gameweek Fixture Difficulty Matrix</span>
-            </div>
-            <div style="font-size: 0.8rem; color: var(--text-secondary);">
-              FDR: <span style="color: #34d399;">2=Easy</span> • <span style="color: #cbd5e1;">3=Medium</span> • <span style="color: #f87171;">4=Hard</span> • <span style="color: #fca5a5;">5=Very Hard</span>
-            </div>
-          </div>
-          <div style="overflow-x: auto;">
-            <table class="matrix-table">
-              <thead>
-                <tr>
-                  <th>Player</th>
-                  <th>Pos</th>
-                  <th>Cost</th>
-                  <th>GW4</th>
-                  <th>GW5</th>
-                  <th>GW6</th>
-                  <th>GW7</th>
-                  <th>GW8</th>
-                  <th style="text-align: right;">Difficulty</th>
-                </tr>
-              </thead>
-              <tbody id="matrix-tbody">
-                <!-- Dynamically generated rows -->
-              </tbody>
-            </table>
-          </div>
-        </section>
+        <!-- Substitutes Bench -->
+        <div class="bench-wrapper">
+          <div class="bench-header">Substitutes Bench (Auto-Sub Priority)</div>
+          <div class="bench-row" id="row-bench"></div>
+        </div>
+      </section>
 
-        <!-- 3. Mini-League Spy & EO Radar View -->
-        <section class="radar-container" id="view-radar">
-          <div class="pitch-header">
-            <div class="pitch-title">
-              <span>🕵️ Mini-League Spy & Competitor EO Radar</span>
-            </div>
-            <div class="radar-score-pill" title="Overall Competitor Threat Rating">
-              Threat Score: <strong id="threat-score-val" style="color: var(--fpl-gold);">68/100</strong>
-            </div>
-          </div>
-
-          <div class="radar-content-grid">
-            <!-- Left: Competitor Threats -->
-            <div class="radar-card">
-              <div class="radar-card-header">
-                <div style="display: flex; align-items: center; gap: 8px;">
-                  <span style="font-size: 1.2rem;">🚨</span>
-                  <div>
-                    <div style="font-weight: 700; color: #fff;">Competitor Threats</div>
-                    <div style="font-size: 0.72rem; color: var(--text-muted);">High EO players owned by rivals (Not in squad)</div>
-                  </div>
-                </div>
-                <span class="threat-badge-counter" id="threats-count">3 Targets</span>
-              </div>
-              <div class="radar-list" id="threats-list">
-                <!-- Dynamically populated threats -->
-              </div>
-            </div>
-
-            <!-- Right: Differential Superpowers -->
-            <div class="radar-card">
-              <div class="radar-card-header">
-                <div style="display: flex; align-items: center; gap: 8px;">
-                  <span style="font-size: 1.2rem;">💎</span>
-                  <div>
-                    <div style="font-weight: 700; color: #fff;">Differential Superpowers</div>
-                    <div style="font-size: 0.72rem; color: var(--text-muted);">Low EO weapons in your squad (Rank multipliers)</div>
-                  </div>
-                </div>
-                <span class="diff-badge-counter" id="differentials-count">6 Weapons</span>
-              </div>
-              <div class="radar-list" id="differentials-list">
-                <!-- Dynamically populated differentials -->
-              </div>
-            </div>
-          </div>
-
-          <!-- Mini-League Standings Tracker Cards -->
-          <div class="radar-leagues-section">
-            <h4 style="font-family: var(--font-heading); margin-bottom: 12px; font-size: 1rem; color: var(--text-secondary); display: flex; align-items: center; gap: 6px;">
-              <span>🏆</span> Mini-League Competitive Trackers
-            </h4>
-            <div class="radar-leagues-grid" id="radar-leagues-grid">
-              <!-- Dynamically populated league cards -->
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <!-- Right Column: AI Intel & Standings -->
+      <!-- Right Column: Executive AI Plan & Mini-Leagues -->
       <aside class="side-column">
-        <!-- AI Briefing Card -->
-        <div class="side-card">
-          <div class="card-title">
-            <span>🧠</span>
-            <span>Tactical Director Intelligence</span>
-          </div>
-          <div class="ai-briefing-box" id="ai-briefing-content" dir="auto">
-            <p style="color: var(--text-muted);">Loading tactical briefing...</p>
-          </div>
-        </div>
-
-        <!-- Mini-Leagues Card -->
-        <div class="side-card">
-          <div class="card-title">
-            <span>🏆</span>
-            <span>League Standings</span>
-          </div>
-          <table class="leagues-table">
-            <thead>
-              <tr>
-                <th>League</th>
-                <th style="text-align: right;">Rank</th>
-              </tr>
-            </thead>
-            <tbody id="leagues-body">
-              <tr>
-                <td colspan="2" style="color: var(--text-muted);">Loading leagues...</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Agent Execution Card -->
+        <!-- 1. Pure AI Strategy Card -->
         <div class="side-card">
           <div class="card-title">
             <span>🤖</span>
-            <span>Autonomous Pipeline</span>
+            <span>Next Gameweek Autonomous Strategy</span>
           </div>
-          <div style="font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 8px;">
-            <div style="display: flex; justify-content: space-between;">
-              <span>Cloud Status:</span>
-              <strong style="color: var(--fpl-mint);">GitHub Actions 24/7 (Active)</strong>
+          <div class="strategy-box" id="strategy-plan-box">
+            <div class="plan-item">
+              <span class="plan-label">Recommended Move:</span>
+              <div class="plan-value" id="plan-transfer-desc" style="color: var(--fpl-mint); font-weight: 700;">
+                🔄 Roll Free Transfer (Accumulate for GW6)
+              </div>
             </div>
-            <div style="display: flex; justify-content: space-between;">
-              <span>Solver Engine:</span>
-              <strong style="color: #fff;">Two-Tier MILP (PuLP)</strong>
+            <div class="plan-item">
+              <span class="plan-label">Optimal Captain:</span>
+              <div class="plan-value" id="plan-captain-desc" style="color: var(--fpl-gold); font-weight: 700;">
+                👑 Alexander Isak (xP: 8.7)
+              </div>
             </div>
-            <div style="display: flex; justify-content: space-between;">
-              <span>Telegram Bot:</span>
-              <strong style="color: var(--fpl-cyan);">@fantasy_gpt_bot</strong>
+            <div class="plan-item">
+              <span class="plan-label">Vice Captain:</span>
+              <div class="plan-value" id="plan-vc-desc" style="color: #cbd5e1;">
+                Bruno Fernandes (xP: 9.0)
+              </div>
             </div>
-            <div style="display: flex; justify-content: space-between;">
-              <span>Last Sync:</span>
-              <span id="last-updated-text" style="color: var(--text-muted);">Just now</span>
+            <div class="plan-item">
+              <span class="plan-label">Target Formation:</span>
+              <div class="plan-value" id="plan-formation-desc" style="color: var(--fpl-cyan); font-weight: 700;">
+                3-5-2 Attacking Shape
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Mini-Leagues Standings Card -->
+        <div class="side-card">
+          <div class="card-title">
+            <span>🏆</span>
+            <span>Private Mini-Leagues</span>
+          </div>
+          <div style="overflow-y: auto; max-height: 280px;">
+            <table class="leagues-table">
+              <thead>
+                <tr>
+                  <th>League</th>
+                  <th style="text-align: right;">Rank</th>
+                </tr>
+              </thead>
+              <tbody id="leagues-body">
+                <tr>
+                  <td colspan="2" style="color: var(--text-muted); text-align: center;">Loading leagues...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 3. Engine Status & Mobile Monitoring -->
+        <div class="side-card">
+          <div class="card-title">
+            <span>🛡️</span>
+            <span>Travel Mode Status</span>
+          </div>
+          <div class="engine-specs">
+            <div class="spec-row">
+              <span>Pure AI Engine:</span>
+              <strong style="color: var(--fpl-mint);">Autonomous 24/7 Daemon</strong>
+            </div>
+            <div class="spec-row">
+              <span>Anti-Correlation Guard:</span>
+              <strong style="color: var(--fpl-cyan);">Active (No GK Conflicts)</strong>
+            </div>
+            <div class="spec-row">
+              <span>Pre-Deadline Pulse:</span>
+              <strong style="color: #fff;">T-2.5h & T-20m Self-Healing</strong>
+            </div>
+            <div class="spec-row">
+              <span>Telegram Dispatch:</span>
+              <strong style="color: var(--fpl-gold);">@fantasy_gpt_bot</strong>
             </div>
           </div>
         </div>
       </aside>
     </div>
   </main>
-
-  <!-- Floating What-If Action Bar -->
-  <div class="whatif-bar" id="whatif-bar">
-    <div class="whatif-stat">
-      <span style="color: var(--fpl-gold); font-weight: 700;">🧪 WHAT-IF:</span>
-      <span id="whatif-swap-count">1 player replaced</span>
-    </div>
-    <div class="whatif-stat">
-      <span>xP Delta:</span>
-      <span class="whatif-delta positive" id="whatif-delta-xp">+0.0</span>
-    </div>
-    <div class="whatif-stat">
-      <span>Simulated Bank:</span>
-      <span id="whatif-sim-bank" style="font-weight: 700; color: #fff;">£1.2m</span>
-    </div>
-    <button class="whatif-btn-reset" id="whatif-btn-reset">↺ Reset to AI Baseline</button>
-  </div>
-
-  <!-- Player Detail Modal -->
-  <div class="modal-overlay" id="player-modal" role="dialog" aria-modal="true">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <div id="modal-jersey-icon" style="font-size: 1.5rem;">👕</div>
-          <div>
-            <h3 id="modal-player-name" style="font-family: var(--font-heading); font-size: 1.25rem;">Player Name</h3>
-            <div id="modal-player-team-pos" style="font-size: 0.8rem; color: var(--text-muted);">MID • LIV</div>
-          </div>
-        </div>
-        <button class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
-      </div>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
-        <div style="background: rgba(255,255,255,0.04); padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
-          <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Current Cost</div>
-          <div id="modal-cost" style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700;">£0.0m</div>
-        </div>
-        <div style="background: rgba(0,255,135,0.08); padding: 10px; border-radius: var(--radius-sm); border: 1px solid rgba(0,255,135,0.2);">
-          <div style="font-size: 0.7rem; color: var(--fpl-mint); text-transform: uppercase;">GW xP</div>
-          <div id="modal-xp" style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; color: var(--fpl-mint);">0.0</div>
-        </div>
-        <div style="background: rgba(255,255,255,0.04); padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
-          <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">3-GW Horizon xP</div>
-          <div id="modal-horizon-xp" style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700;">0.0</div>
-        </div>
-        <div style="background: rgba(255,255,255,0.04); padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
-          <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Expected Mins</div>
-          <div id="modal-mins" style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700;">90'</div>
-        </div>
-      </div>
-
-      <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); margin-bottom: 16px;">
-        <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px;">UPCOMING FIXTURE & FDR</div>
-        <div id="modal-fixture" style="font-weight: 700; font-size: 0.95rem;">FUL (H) [FDR 2]</div>
-      </div>
-
-      <button id="modal-swap-btn" style="width: 100%; background: linear-gradient(135deg, #04f5ff, #00bdc7); color: #000; border: none; padding: 10px; border-radius: var(--radius-md); font-weight: 700; font-size: 0.9rem; cursor: pointer;">
-        🔄 Test Swap in What-If Simulator
-      </button>
-    </div>
-  </div>
-
-  <!-- Player Swap Modal (What-If Market Candidates) -->
-  <div class="modal-overlay" id="swap-modal" role="dialog" aria-modal="true">
-    <div class="modal-content" style="max-width: 520px;">
-      <div class="modal-header">
-        <div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.2rem;">🔄 Replace Player</h3>
-          <div style="font-size: 0.8rem; color: var(--text-muted);" id="swap-target-desc">Select alternative candidate</div>
-        </div>
-        <button class="modal-close" id="swap-close-btn" aria-label="Close modal">&times;</button>
-      </div>
-
-      <input type="text" class="candidate-search-box" id="candidate-search" placeholder="🔍 Search player or club..." autocomplete="off">
-
-      <div class="candidate-list" id="candidate-list">
-        <!-- Dynamically rendered candidates -->
-      </div>
-    </div>
-  </div>
-
-  <!-- AI Tactical Copilot Floating Action Button -->
-  <button class="copilot-floating-btn" id="btn-open-copilot" title="Chat with Pep GPT AI Copilot" aria-label="Open AI Copilot">
-    <span class="copilot-pulse"></span>
-    <span class="copilot-icon">🤖</span>
-    <span class="copilot-label">AI Copilot</span>
-  </button>
-
-  <!-- AI Tactical Copilot Slide-in Drawer -->
-  <div class="copilot-drawer" id="copilot-drawer">
-    <div class="copilot-header">
-      <div class="copilot-title">
-        <span class="copilot-avatar">🤖</span>
-        <div>
-          <h4>Pep GPT Copilot</h4>
-          <span class="copilot-status"><span class="status-dot"></span> Tactical Director Online</span>
-        </div>
-      </div>
-      <button class="copilot-close" id="btn-close-copilot" aria-label="Close Copilot">&times;</button>
-    </div>
-
-    <!-- Quick Suggestions Chips -->
-    <div class="copilot-quick-prompts">
-      <button class="prompt-chip" data-prompt="Should I keep the captaincy on Gakpo or switch to Bruno?">🎯 Captain Gakpo vs Bruno?</button>
-      <button class="prompt-chip" data-prompt="Why is rolling the transfer recommended for GW4?">🔄 Why roll the transfer?</button>
-      <button class="prompt-chip" data-prompt="Who is the biggest threat in my mini-league?">⚠️ Biggest rival threat?</button>
-      <button class="prompt-chip" data-prompt="Suggest an attacking midfielder under £7.5m">💎 Sub-£7.5m midfielder?</button>
-    </div>
-
-    <!-- Conversation Feed -->
-    <div class="copilot-messages" id="copilot-messages">
-      <div class="copilot-msg ai">
-        <div class="msg-bubble">
-          أهلاً بك يا بطل! أنا <strong>Pep GPT</strong>، مديرك التكتيكي الذكي لفريق <em>هبد اصطناعي</em>. تشكيلتنا 3-5-2 ومجموع نقاطنا المتوقعة 87.2 xP. اسألني عن أي خيار تكتيكي، كابتنة، أو رادار المنافسين!
-        </div>
-      </div>
-    </div>
-
-    <!-- Message Input Bar -->
-    <div class="copilot-input-bar">
-      <input type="text" id="copilot-input" placeholder="Ask Pep GPT about tactics, transfers, or captains..." autocomplete="off" />
-      <button id="copilot-send" title="Send message" aria-label="Send message">➤</button>
-    </div>
-  </div>
 
   <script src="js/app.js"></script>
 </body>

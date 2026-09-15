@@ -23,7 +23,9 @@ class OptimizeGameweekUseCase:
         xp_engine: IXPEngine,
         optimizer_factory: Callable[[List[Player]], IOptimizer],
         ai_advisor: IAIAdvisor,
-        notifier: INotifier
+        notifier: INotifier,
+        news_service: Optional[Any] = None,
+        press_analyst: Optional[Any] = None
     ):
         self.repository = repository
         self.gateway = fpl_gateway
@@ -31,6 +33,18 @@ class OptimizeGameweekUseCase:
         self.optimizer_factory = optimizer_factory
         self.advisor = ai_advisor
         self.notifier = notifier
+
+        if news_service is None:
+            from ...infrastructure.news.premier_league_news import PremierLeagueNewsService
+            self.news_service = PremierLeagueNewsService()
+        else:
+            self.news_service = news_service
+
+        if press_analyst is None:
+            from ...infrastructure.ai.press_conference_analyst import PressConferenceAnalyst
+            self.press_analyst = PressConferenceAnalyst()
+        else:
+            self.press_analyst = press_analyst
 
     def execute(
         self,
@@ -63,17 +77,58 @@ class OptimizeGameweekUseCase:
         manager_name = team_status.get("manager_name", "FPL Manager")
         team_name = team_status.get("team_name", "FPL Squad")
 
-        # 4. Compute xP across all players
+        # 4. Compute xP across all players & perform NLP Press Conference Analysis
         all_players = self.repository.get_all_players()
+        squad_ids = {pick.get("element") for pick in raw_picks}
+
+        # Track squad members + elite form targets
+        tracked_candidates = [
+            p for p in all_players 
+            if p.id in squad_ids or p.form >= 4.0 or p.selected_by_percent >= 15.0
+        ]
+        tracked_dicts = [
+            {
+                "id": p.id,
+                "web_name": p.name,
+                "team_name": p.team_name,
+                "status": p.status,
+                "chance_of_playing_next_round": p.chance_of_playing_next_round
+            }
+            for p in tracked_candidates
+        ]
+
+        nlp_insights: Dict[int, Dict[str, Any]] = {}
+        try:
+            raw_news = self.news_service.fetch_recent_news()
+            relevant_news = self.news_service.filter_tactical_and_injury_news(
+                raw_news, [p.name for p in tracked_candidates]
+            )
+            fpl_flags = [
+                {
+                    "player_id": p.id,
+                    "web_name": p.name,
+                    "status": p.status,
+                    "chance_of_playing": p.chance_of_playing_next_round,
+                    "news": p.news
+                }
+                for p in tracked_candidates if p.news or p.status != "a"
+            ]
+            if relevant_news or fpl_flags:
+                nlp_insights = self.press_analyst.analyze_news(relevant_news, fpl_flags, tracked_dicts)
+        except Exception as e:
+            logger.warning(f"Error during NLP press conference analysis: {e}")
+
         team_fixtures = self.repository.get_team_fixtures(next_gw, weeks_ahead=horizon_weeks)
         enriched_players = self.xp_engine.enrich_players_with_horizon_xp(
             players=all_players,
             team_fixtures=team_fixtures,
             next_gw=next_gw,
             weeks_ahead=horizon_weeks,
-            decay=horizon_decay
+            decay=horizon_decay,
+            nlp_insights=nlp_insights
         )
         players_by_id = {p.id: p for p in enriched_players}
+
 
         # Map current squad picks
         current_squad: List[Player] = []
@@ -150,5 +205,9 @@ class OptimizeGameweekUseCase:
             plan=plan,
             briefing=briefing,
             dry_run=dry_run,
-            execution_status=execution_status
+            execution_status=execution_status,
+            press_conference_insights=list(nlp_insights.values()),
+            press_wire=relevant_news[:10] if 'relevant_news' in locals() else []
         )
+
+

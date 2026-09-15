@@ -26,8 +26,10 @@ class DashboardExporter:
             "expected_minutes": getattr(p, "expected_minutes", 90),
             "is_captain": is_c,
             "is_vice_captain": is_vc,
-            "fixtures_5gw": getattr(p, "fixtures_5gw", [])
+            "fixtures_5gw": getattr(p, "fixtures_5gw", []),
+            "press_insight": getattr(p, "press_insight", None)
         }
+
 
     def export(self, dto: GameweekPlanDTO, output_path: str = "dashboard/data/squad_data.json") -> str:
         lineup = dto.plan.final_lineup
@@ -103,8 +105,14 @@ class DashboardExporter:
             "market_candidates": candidates,
             "briefing": dto.briefing,
             "leagues": radar_data["leagues"],
-            "eo_radar": radar_data
+            "eo_radar": radar_data,
+            "press_insights": getattr(dto, "press_conference_insights", None) or [
+                p.get("press_insight") for p in (starters + bench) if p.get("press_insight")
+            ],
+            "press_wire": getattr(dto, "press_wire", [])
         }
+
+
 
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         with open(output_path, "w", encoding="utf-8") as f:

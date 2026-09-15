@@ -35,6 +35,36 @@ export default {
 
         const apiKey = env.GEMINI_API_KEY || body.clientApiKey;
 
+        // Fetch Live FPL Data to act as a mini-RAG and prevent outdated hallucinations
+        let liveFplContext = "Live API Data: Season 2024/2025.";
+        try {
+          const fplRes = await fetch("https://fantasy.premierleague.com/api/bootstrap-static/", {
+            headers: { "User-Agent": "FantasyAI-Agent/1.0" },
+            cf: { cacheTtl: 3600 } // Cache for 1 hour on Cloudflare edge
+          });
+          if (fplRes.ok) {
+            const fplData = await fplRes.json();
+            const currentEvent = fplData.events.find(e => e.is_current) || fplData.events.find(e => e.is_next) || {};
+            
+            // Dynamically map top players to their current real-world teams
+            const teamMap = {};
+            if (fplData.teams) {
+              fplData.teams.forEach(t => teamMap[t.id] = t.name);
+            }
+            let topPlayersContext = "";
+            if (fplData.elements) {
+              const topPlayers = fplData.elements
+                .sort((a, b) => parseFloat(b.selected_by_percent) - parseFloat(a.selected_by_percent))
+                .slice(0, 25);
+              topPlayersContext = topPlayers.map(p => `${p.web_name} (${teamMap[p.team] || 'Unknown'})`).join(', ');
+            }
+
+            liveFplContext = `Live API Data: Current Real-World GW is ${currentEvent.name || 'Unknown'}. Most owned players and their CURRENT clubs right now: ${topPlayersContext}.`;
+          }
+        } catch (err) {
+          console.error("FPL API Fetch Error:", err);
+        }
+
         if (!apiKey) {
           // Provide intelligent tactical mock reply if no API key is set in environment
           return new Response(
@@ -52,7 +82,11 @@ export default {
         }
 
         const systemInstruction = `You are Pep GPT (ببيب جي بي تي), the autonomous AI Tactical Director and FPL Manager for the squad '${squadContext.team_name || "هبد اصطناعي"}'.
-Current Squad State (GW4):
+
+[CRITICAL LIVE CONTEXT]: ${liveFplContext}
+IMPORTANT: The player-club mappings provided in the live context above are the ABSOLUTE TRUTH for the current season. Disregard any pre-training knowledge about where players like Salah, Alexander-Arnold, or others play if it contradicts the live context.
+
+Current Squad State:
 - Formation: ${squadContext.formation || "3-5-2"}
 - Captain: ${squadContext.captain_name || "Gakpo"} (xP: ${squadContext.captain_xp || "9.7"})
 - Vice Captain: ${squadContext.vc_name || "B.Fernandes"} (xP: ${squadContext.vc_xp || "9.0"})

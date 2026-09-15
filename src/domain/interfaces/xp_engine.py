@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import List, Dict
+from typing import List, Dict, Optional
 from ..models.player import Player
 from ..models.fixture import Fixture
 
@@ -19,7 +19,9 @@ class IXPEngine(ABC):
         team_fixtures: Dict[int, List[Fixture]],
         next_gw: int,
         weeks_ahead: int,
-        decay: float
+        decay: float,
+        nlp_insights: Optional[Dict[int, Dict]] = None
     ) -> List[Player]:
         """Calculates 1-GW and multi-GW decayed xP and market momentum flags."""
         pass
+

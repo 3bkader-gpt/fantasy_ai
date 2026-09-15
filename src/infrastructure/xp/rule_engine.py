@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List, Dict, Optional
 from ...domain.interfaces.xp_engine import IXPEngine
 from ...domain.models.player import Player
 from ...domain.models.fixture import Fixture
@@ -11,7 +11,7 @@ class RuleBasedXPEngine(IXPEngine):
     """
 
     @staticmethod
-    def calculate_expected_minutes(player: Player) -> float:
+    def calculate_expected_minutes(player: Player, nlp_insight: Optional[Dict] = None) -> float:
         """Computes expected playing minutes probabilistically instead of binary exclusion."""
         if player.status in ("i", "u", "s", "n"):
             return 0.0
@@ -50,14 +50,30 @@ class RuleBasedXPEngine(IXPEngine):
                 base_mins = 15.0 if player.points_per_game > 1.0 else 0.0
 
         exp_mins = prob_avail * base_mins
+
+        # Dynamic Press Conference NLP Modifier
+        insight = nlp_insight or getattr(player, "press_insight", None)
+        if insight:
+            mult = insight.get("minute_multiplier", 1.0)
+            exp_mins *= mult
+            if insight.get("fitness_sentiment") == "ruled_out":
+                exp_mins = 0.0
+
         return round(exp_mins, 1)
 
-    def calculate_player_xp(self, player: Player, fixtures: List[Fixture]) -> float:
-        exp_mins = self.calculate_expected_minutes(player)
+    def calculate_player_xp(
+        self, 
+        player: Player, 
+        fixtures: List[Fixture], 
+        nlp_insight: Optional[Dict] = None
+    ) -> float:
+        insight = nlp_insight or getattr(player, "press_insight", None)
+        exp_mins = self.calculate_expected_minutes(player, insight)
         player.expected_minutes = exp_mins
 
         if exp_mins <= 0.0 or not fixtures:
             return 0.0
+
 
         # 1. Price-tier Bayesian prior baseline (PTS/90 based on market valuation)
         prior_pts_90 = max(1.5, (player.cost - 3.5) * 0.72 + 1.6)
@@ -99,6 +115,16 @@ class RuleBasedXPEngine(IXPEngine):
                 scaled_match_xp = min(5.8, scaled_match_xp)
             elif player.cost <= 6.0 and pos != "GK":
                 scaled_match_xp = min(7.0, scaled_match_xp)
+            elif pos == "GK":
+                # Goalkeepers playing away against top attacks (FDR 4 or 5)
+                # have very low clean-sheet probability (<15%) and high conceded goals expectation.
+                if fdr >= 4 and not is_home:
+                    scaled_match_xp = min(3.8, scaled_match_xp * 0.82)
+                elif fdr >= 4:
+                    scaled_match_xp = min(4.4, scaled_match_xp * 0.90)
+                elif fdr <= 2:
+                    # Favorable clean-sheet matchup bonus
+                    scaled_match_xp *= 1.08
 
             gw_xp_sum += scaled_match_xp
 
@@ -110,12 +136,17 @@ class RuleBasedXPEngine(IXPEngine):
         team_fixtures: Dict[int, List[Fixture]],
         next_gw: int,
         weeks_ahead: int = 3,
-        decay: float = 0.85
+        decay: float = 0.85,
+        nlp_insights: Optional[Dict[int, Dict]] = None
     ) -> List[Player]:
         for p in players:
+            if nlp_insights and p.id in nlp_insights:
+                p.press_insight = nlp_insights[p.id]
+
             all_fixes = team_fixtures.get(p.team_id, [])
             gw1_fixes = [f for f in all_fixes if f.event == next_gw]
             p.xp = self.calculate_player_xp(p, gw1_fixes)
+
 
             # Rolling horizon calculation with exponential decay
             horizon_total = 0.0
