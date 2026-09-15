@@ -17,6 +17,52 @@ const MAIN_KEYBOARD = {
   is_persistent: true
 };
 
+function formatDeadline12h(isoStr) {
+  if (!isoStr) return "غير محدد";
+  try {
+    const d = new Date(isoStr);
+    const dateFormatted = d.toLocaleString("ar-EG", {
+      timeZone: "Africa/Cairo",
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+      numberingSystem: "latn"
+    });
+    return `${dateFormatted} (توقيت مصر/مكة)`;
+  } catch (e) {
+    return isoStr;
+  }
+}
+
+function formatRemainingTime(diffMinutes) {
+  if (diffMinutes <= 0) return "انتهى موعد الديدلاين";
+  const days = Math.floor(diffMinutes / (60 * 24));
+  const hours = Math.floor((diffMinutes % (60 * 24)) / 60);
+  const mins = diffMinutes % 60;
+
+  const parts = [];
+  if (days === 1) parts.push("يوم واحد");
+  else if (days === 2) parts.push("يومان");
+  else if (days >= 3 && days <= 10) parts.push(`${days} أيام`);
+  else if (days > 10) parts.push(`${days} يوماً`);
+
+  if (hours === 1) parts.push("ساعة واحدة");
+  else if (hours === 2) parts.push("ساعتان");
+  else if (hours >= 3 && hours <= 10) parts.push(`${hours} ساعات`);
+  else if (hours > 10) parts.push(`${hours} ساعة`);
+
+  if (days === 0 && mins > 0) {
+    if (mins === 1) parts.push("دقيقة واحدة");
+    else if (mins === 2) parts.push("دقيقتان");
+    else if (mins >= 3 && mins <= 10) parts.push(`${mins} دقائق`);
+    else parts.push(`${mins} دقيقة`);
+  }
+  return parts.length > 0 ? parts.join(" و ") : "أقل من دقيقة";
+}
+
 async function getFplGameweekInfo() {
   const res = await fetch("https://fantasy.premierleague.com/api/bootstrap-static/", {
     headers: { "User-Agent": "FantasyAI-Sentinel/1.0" }
@@ -34,7 +80,9 @@ async function getFplGameweekInfo() {
     currentGw: currentEvent.id || 4,
     nextGw: nextEvent.id || 5,
     nextGwName: nextEvent.name || "Gameweek 5",
-    deadlineTime: nextEvent.deadline_time,
+    deadlineIso: nextEvent.deadline_time,
+    deadlineFormatted: formatDeadline12h(nextEvent.deadline_time),
+    remainingFormatted: formatRemainingTime(diffMinutes),
     diffMinutes: diffMinutes,
     hoursUntil: Math.floor(diffMinutes / 60),
     minsUntil: Math.max(0, diffMinutes % 60)
@@ -172,7 +220,8 @@ async function sendMainMenu(env, chatId = null, messageId = null) {
       `━━━━━━━━━━━━━━━━━━━━\n` +
       `أهلاً بك يا قائد! فريقك تحت المراقبة السحابية الذاتية 24/7 عبر <b>Cloudflare Edge</b>.\n\n` +
       `• <b>الجولة القادمة:</b> ${gw.nextGwName}\n` +
-      `• <b>الديدلاين:</b> <code>${gw.deadlineTime}</code> (باقي: ${gw.hoursUntil}h ${gw.minsUntil}m)\n` +
+      `• <b>موعد الديدلاين:</b> ⏰ <b>${gw.deadlineFormatted}</b>\n` +
+      `• <b>الوقت المتبقي:</b> ⏳ <b>${gw.remainingFormatted}</b>\n` +
       `• <b>الحالة:</b> 🟢 مراقبة نشطة وحارس الطوارئ جاهز\n\n` +
       `اختر الإجراء المطلوب عبر الأزرار أدناه:`;
 
@@ -247,8 +296,8 @@ async function sendStatus(env, chatId = null, messageId = null) {
   const text = `📊 <b>حالة المنظومة وفريق الفانتازي:</b>\n` +
     `━━━━━━━━━━━━━━━━━━━━\n` +
     `• <b>الجولة القادمة:</b> ${gw.nextGwName}\n` +
-    `• <b>موعد الديدلاين:</b> <code>${gw.deadlineTime}</code>\n` +
-    `• <b>الوقت المتبقي:</b> ${gw.hoursUntil} ساعة و ${gw.minsUntil} دقيقة\n` +
+    `• <b>موعد الديدلاين:</b> ⏰ <b>${gw.deadlineFormatted}</b>\n` +
+    `• <b>الوقت المتبقي:</b> ⏳ <b>${gw.remainingFormatted}</b>\n` +
     `• <b>الحارس السحابي:</b> 🟢 مراقبة نشطة 24/7 على سيرفرات Cloudflare Edge\n` +
     `• <b>الخطة المعتمدة:</b> 🔄 بيع Stach واستقدام Tavernier (3-5-2)\n` +
     `━━━━━━━━━━━━━━━━━━━━\n` +
@@ -370,7 +419,9 @@ export default {
             env,
             `⏱️ <b>[حارس كلاودفلير الذكي – Cloudflare Sentinel]</b>\n` +
             `━━━━━━━━━━━━━━━━━━━━\n` +
-            `تم رصد اقتراب موعد ديدلاين <b>الجولة ${gw.nextGw}</b> (متبقي: ${gw.hoursUntil} ساعة و ${gw.minsUntil} دقيقة).\n\n` +
+            `تم رصد اقتراب موعد ديدلاين <b>الجولة ${gw.nextGw}</b>!\n` +
+            `• <b>موعد الإغلاق:</b> ⏰ <b>${gw.deadlineFormatted}</b>\n` +
+            `• <b>الوقت المتبقي:</b> ⏳ <b>${gw.remainingFormatted}</b>\n\n` +
             `🚀 <b>جاري إطلاق سيرفر التنفيذ السحابي (Stage 1: MILP & Transfers) فوراً!</b>`,
             {
               reply_markup: {
@@ -402,7 +453,8 @@ export default {
             env,
             `🛡️ <b>[حارس كلاودفلير الذكي – نبض الأمان T-20m]</b>\n` +
             `━━━━━━━━━━━━━━━━━━━━\n` +
-            `متبقي 20 دقيقة على إغلاق الجولة ${gw.nextGw}!\n\n` +
+            `متبقي 20 دقيقة على إغلاق الجولة ${gw.nextGw}!\n` +
+            `• <b>موعد الإغلاق:</b> ⏰ <b>${gw.deadlineFormatted}</b>\n\n` +
             `جاري فحص تقارير الإحماء النهائية، غيابات اللحظات الأخيرة، وتفادي تضارب الحراس على السيرفر السحابي فوراً.`,
             {
               reply_markup: {
@@ -434,8 +486,9 @@ export default {
           sentinel: "active",
           engine: "Cloudflare Edge 24/7 Sentinel",
           next_gameweek: gw.nextGw,
-          deadline_time_utc: gw.deadlineTime,
-          time_remaining: `${gw.hoursUntil}h ${gw.minsUntil}m`,
+          deadline_time_12h: gw.deadlineFormatted,
+          time_remaining: gw.remainingFormatted,
+          deadline_time_utc: gw.deadlineIso,
           diff_minutes: gw.diffMinutes,
           dashboard_url: "https://fantasy-ai-dashboard.pages.dev/"
         }, null, 2), {
