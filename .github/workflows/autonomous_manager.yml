@@ -59,10 +59,9 @@ jobs:
       - name: 🤖 Run Autonomous FPL Manager
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: ${{ secrets.GEMINI_MODEL || 'gemini-2.5-flash' }}
+          GEMINI_MODEL: 'gemini-3.8-flash'
           FPL_EMAIL: ${{ secrets.FPL_EMAIL }}
           FPL_PASSWORD: ${{ secrets.FPL_PASSWORD }}
-          FPL_COOKIE: ${{ secrets.FPL_COOKIE }}
           FPL_TEAM_ID: ${{ secrets.FPL_TEAM_ID || '10469492' }}
           MAX_ALLOWED_HITS: ${{ secrets.MAX_ALLOWED_HITS || '1' }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
