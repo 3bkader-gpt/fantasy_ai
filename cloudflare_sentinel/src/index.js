@@ -4,14 +4,14 @@
  * 24/7 autonomous edge sentinel running on Cloudflare's global network.
  * 1. Monitors FPL deadlines with zero server latency.
  * 2. Instantly dispatches GitHub Actions workflows for Stage 1 (T-2.5h) and Stage 2 (T-20m).
- * 3. Acts as an interactive Telegram Bot Webhook with rich buttons and help guide.
+ * 3. Acts as an interactive Telegram Bot Webhook with rich inline buttons, back navigation, and help guide.
  */
 
 const MAIN_KEYBOARD = {
   keyboard: [
     [{ text: "📊 حالة الفريق والجولة" }, { text: "🚀 تشغيل الذكاء الاصطناعي" }],
     [{ text: "🛡️ نبض الأمان (T-20m)" }, { text: "🌐 فتح الداشبورد" }],
-    [{ text: "ℹ️ دليل استخدام البوت" }]
+    [{ text: "🔙 🏠 القائمة الرئيسية" }, { text: "ℹ️ دليل استخدام البوت" }]
   ],
   resize_keyboard: true,
   is_persistent: true
@@ -91,7 +91,7 @@ async function checkRecentRuns(env) {
 
 async function sendTelegram(env, text, extra = {}) {
   const botToken = env.TELEGRAM_BOT_TOKEN;
-  const chatId = env.TELEGRAM_CHAT_ID;
+  const chatId = extra.chat_id || env.TELEGRAM_CHAT_ID;
   if (!botToken || !chatId) return;
 
   const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
@@ -101,8 +101,7 @@ async function sendTelegram(env, text, extra = {}) {
       text: text,
       parse_mode: "HTML",
       disable_web_page_preview: true,
-      reply_markup: extra.reply_markup || MAIN_KEYBOARD,
-      ...extra
+      reply_markup: extra.reply_markup || MAIN_KEYBOARD
     };
     await fetch(url, {
       method: "POST",
@@ -129,6 +128,226 @@ async function answerCallbackQuery(env, callbackQueryId, text = "") {
   }
 }
 
+async function sendOrEditTelegram(env, text, extra = {}) {
+  const botToken = env.TELEGRAM_BOT_TOKEN;
+  const chatId = extra.chat_id || env.TELEGRAM_CHAT_ID;
+  if (!botToken || !chatId) return;
+
+  // Try editing existing message if message_id is provided
+  if (extra.message_id) {
+    const editUrl = `https://api.telegram.org/bot${botToken}/editMessageText`;
+    try {
+      const editPayload = {
+        chat_id: chatId,
+        message_id: extra.message_id,
+        text: text,
+        parse_mode: "HTML",
+        disable_web_page_preview: true,
+        reply_markup: extra.reply_markup || undefined
+      };
+      const res = await fetch(editUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(editPayload)
+      });
+      if (res.ok) return;
+
+      // Ignore "message is not modified" Telegram error
+      const errText = await res.text();
+      if (errText.includes("message is not modified")) return;
+      console.warn("editMessageText non-ok, falling back to sendMessage:", errText);
+    } catch (e) {
+      console.warn("editMessageText exception:", e);
+    }
+  }
+
+  // Otherwise send as new message
+  return sendTelegram(env, text, extra);
+}
+
+async function sendMainMenu(env, chatId = null, messageId = null) {
+  try {
+    const gw = await getFplGameweekInfo();
+    const text = `🏠 <b>غرفة التحكم الرئيسية – Fantasy AI</b> ⚽\n` +
+      `━━━━━━━━━━━━━━━━━━━━\n` +
+      `أهلاً بك يا قائد! فريقك تحت المراقبة السحابية الذاتية 24/7 عبر <b>Cloudflare Edge</b>.\n\n` +
+      `• <b>الجولة القادمة:</b> ${gw.nextGwName}\n` +
+      `• <b>الديدلاين:</b> <code>${gw.deadlineTime}</code> (باقي: ${gw.hoursUntil}h ${gw.minsUntil}m)\n` +
+      `• <b>الحالة:</b> 🟢 مراقبة نشطة وحارس الطوارئ جاهز\n\n` +
+      `اختر الإجراء المطلوب عبر الأزرار أدناه:`;
+
+    const inline_keyboard = [
+      [
+        { text: "📊 حالة الفريق والخطة", callback_data: "status" },
+        { text: "🚀 تشغيل الذكاء الاصطناعي", callback_data: "run" }
+      ],
+      [
+        { text: "🛡️ نبض الأمان (T-20m)", callback_data: "safety" },
+        { text: "🌐 فتح الداشبورد المباشر", url: "https://fantasy-ai-dashboard.pages.dev/" }
+      ],
+      [
+        { text: "ℹ️ دليل استخدام وشرح البوت", callback_data: "help" }
+      ]
+    ];
+
+    await sendOrEditTelegram(env, text, {
+      chat_id: chatId,
+      message_id: messageId,
+      reply_markup: { inline_keyboard: inline_keyboard }
+    });
+  } catch (err) {
+    await sendOrEditTelegram(env, `🏠 <b>القائمة الرئيسية:</b>\nاختر من الأزرار بالأسفل:`, {
+      chat_id: chatId,
+      message_id: messageId
+    });
+  }
+}
+
+async function sendHelpGuide(env, chatId = null, messageId = null) {
+  const guide = `🤖 <b>دليل استخدام بوت Fantasy AI المستقل</b> ⚽\n` +
+    `━━━━━━━━━━━━━━━━━━━━\n` +
+    `هذا البوت مربوط بمحرك <b>Pure AI</b> السحابي المدعوم بسيرفرات <b>Cloudflare Edge</b> العالمية، ليدير فريقك تلقائياً بنسبة 100% دون الحاجة لفتح اللابتوب أثناء سفرك:\n\n` +
+    `🔹 <b>المراقبة التلقائية الذكية (24/7 Sentinel):</b>\n` +
+    `• <b>قبل الديدلاين بـ ساعتين ونصف (Stage 1):</b>\n` +
+    `يقوم السيرفر بحساب التشكيلة الأفضل رياضياً (Two-Tier MILP) وينفذ التبديلات على حسابك ويرسل لك تقريراً تفصيلياً بالتشكيلة والكابتن.\n\n` +
+    `• <b>قبل الديدلاين بـ 20 دقيقة (Stage 2):</b>\n` +
+    `يقوم بفحص تقارير الإحماء النهائية، ولو حدثت إصابة مفاجئة أو تضارب حراس، يستبدل اللاعب تلقائياً لضمان عدم ضياع أي نقطة.\n\n` +
+    `🔹 <b>أزرار التحكم المباشرة:</b>\n` +
+    `• 📊 <b>حالة الفريق والجولة:</b> عداد الديدلاين وتفاصيل الخطة.\n` +
+    `• 🚀 <b>تشغيل الذكاء الاصطناعي:</b> إطلاق السيرفر وتنفيذ التبديل فوراً.\n` +
+    `• 🛡️ <b>نبض الأمان:</b> فحص سريع لإصابات اللحظات الأخيرة.\n` +
+    `• 🌐 <b>فتح الداشبورد:</b> رابط لوحة التحكم المباشرة.\n` +
+    `• 🔙 <b>رجوع:</b> العودة للقائمة الرئيسية في أي وقت.\n` +
+    `━━━━━━━━━━━━━━━━━━━━\n` +
+    `<i>سافر وأنت مطمئن، فريقك في أيدٍ أمينة مع الذكاء الاصطناعي على مدار الساعة!</i> ⚡`;
+
+  await sendOrEditTelegram(env, guide, {
+    chat_id: chatId,
+    message_id: messageId,
+    reply_markup: {
+      inline_keyboard: [
+        [
+          { text: "📊 حالة الفريق", callback_data: "status" },
+          { text: "🚀 تشغيل الذكاء الاصطناعي", callback_data: "run" }
+        ],
+        [
+          { text: "🛡️ نبض الأمان (T-20m)", callback_data: "safety" },
+          { text: "🌐 فتح الداشبورد", url: "https://fantasy-ai-dashboard.pages.dev/" }
+        ],
+        [
+          { text: "🔙 🏠 رجوع للقائمة الرئيسية", callback_data: "main_menu" }
+        ]
+      ]
+    }
+  });
+}
+
+async function sendStatus(env, chatId = null, messageId = null) {
+  const gw = await getFplGameweekInfo();
+  const text = `📊 <b>حالة المنظومة وفريق الفانتازي:</b>\n` +
+    `━━━━━━━━━━━━━━━━━━━━\n` +
+    `• <b>الجولة القادمة:</b> ${gw.nextGwName}\n` +
+    `• <b>موعد الديدلاين:</b> <code>${gw.deadlineTime}</code>\n` +
+    `• <b>الوقت المتبقي:</b> ${gw.hoursUntil} ساعة و ${gw.minsUntil} دقيقة\n` +
+    `• <b>الحارس السحابي:</b> 🟢 مراقبة نشطة 24/7 على سيرفرات Cloudflare Edge\n` +
+    `• <b>الخطة المعتمدة:</b> 🔄 بيع Stach واستقدام Tavernier (3-5-2)\n` +
+    `━━━━━━━━━━━━━━━━━━━━\n` +
+    `🌐 <b>الداشبورد المباشر:</b> https://fantasy-ai-dashboard.pages.dev/`;
+
+  await sendOrEditTelegram(env, text, {
+    chat_id: chatId,
+    message_id: messageId,
+    reply_markup: {
+      inline_keyboard: [
+        [
+          { text: "🚀 تشغيل التبديل الآن", callback_data: "run" },
+          { text: "🛡️ نبض الأمان T-20m", callback_data: "safety" }
+        ],
+        [
+          { text: "🌐 فتح الداشبورد المباشر", url: "https://fantasy-ai-dashboard.pages.dev/" },
+          { text: "ℹ️ دليل البوت", callback_data: "help" }
+        ],
+        [
+          { text: "🔙 🏠 رجوع للقائمة الرئيسية", callback_data: "main_menu" }
+        ]
+      ]
+    }
+  });
+}
+
+async function sendSafety(env, chatId = null, messageId = null) {
+  const text = `🛡️ <b>[نبض الأمان الفوري – T-20m Pulse]</b>\n` +
+    `━━━━━━━━━━━━━━━━━━━━\n` +
+    `تم إطلاق فحص الأمان السحابي فوراً!\n` +
+    `يتم الآن التحقق من تقارير الإحماء، غيابات اللحظات الأخيرة، وتفادي تضارب الحراس على السيرفر السحابي.`;
+
+  await sendOrEditTelegram(env, text, {
+    chat_id: chatId,
+    message_id: messageId,
+    reply_markup: {
+      inline_keyboard: [
+        [
+          { text: "📊 حالة الفريق", callback_data: "status" },
+          { text: "🌐 فتح الداشبورد المباشر", url: "https://fantasy-ai-dashboard.pages.dev/" }
+        ],
+        [
+          { text: "🔙 🏠 رجوع للقائمة الرئيسية", callback_data: "main_menu" }
+        ]
+      ]
+    }
+  });
+  await triggerGitHubWorkflow(env, "safety", "live");
+}
+
+async function sendRun(env, chatId = null, messageId = null) {
+  const text = `🚀 <b>[إطلاق محرك Pure AI السحابي]</b>\n` +
+    `━━━━━━━━━━━━━━━━━━━━\n` +
+    `تم بدء تشغيل سيرفر الـ MILP وحل التشكيلة التكتيكية وتطبيق التبديلات على حسابك في الفانتازي فوراً.\n` +
+    `ستصلك رسالة بالتشكيلة والتقرير النهائي خلال دقيقة واحدة.`;
+
+  await sendOrEditTelegram(env, text, {
+    chat_id: chatId,
+    message_id: messageId,
+    reply_markup: {
+      inline_keyboard: [
+        [
+          { text: "📊 حالة الفريق", callback_data: "status" },
+          { text: "🌐 فتح الداشبورد المباشر", url: "https://fantasy-ai-dashboard.pages.dev/" }
+        ],
+        [
+          { text: "🔙 🏠 رجوع للقائمة الرئيسية", callback_data: "main_menu" }
+        ]
+      ]
+    }
+  });
+  await triggerGitHubWorkflow(env, "tactical", "live");
+}
+
+async function sendDashboard(env, chatId = null, messageId = null) {
+  const text = `🌐 <b>رابط الداشبورد التنفيذي المباشر:</b>\n` +
+    `━━━━━━━━━━━━━━━━━━━━\n` +
+    `اضغط على الزر أدناه لفتح لوحة التحكم ومتابعة التشكيلة الحية، الرادار التكتيكي، والتحليلات:`;
+
+  await sendOrEditTelegram(env, text, {
+    chat_id: chatId,
+    message_id: messageId,
+    reply_markup: {
+      inline_keyboard: [
+        [
+          { text: "⚡ الدخول إلى الداشبورد ⚡", url: "https://fantasy-ai-dashboard.pages.dev/" }
+        ],
+        [
+          { text: "📊 حالة الفريق", callback_data: "status" },
+          { text: "ℹ️ دليل البوت", callback_data: "help" }
+        ],
+        [
+          { text: "🔙 🏠 رجوع للقائمة الرئيسية", callback_data: "main_menu" }
+        ]
+      ]
+    }
+  });
+}
+
 export default {
   // 1. Cron Trigger Handler (Runs every 15 minutes globally on Cloudflare edge)
   async scheduled(event, env, ctx) {
@@ -152,7 +371,19 @@ export default {
             `⏱️ <b>[حارس كلاودفلير الذكي – Cloudflare Sentinel]</b>\n` +
             `━━━━━━━━━━━━━━━━━━━━\n` +
             `تم رصد اقتراب موعد ديدلاين <b>الجولة ${gw.nextGw}</b> (متبقي: ${gw.hoursUntil} ساعة و ${gw.minsUntil} دقيقة).\n\n` +
-            `🚀 <b>جاري إطلاق سيرفر التنفيذ السحابي (Stage 1: MILP & Transfers) فوراً!</b>`
+            `🚀 <b>جاري إطلاق سيرفر التنفيذ السحابي (Stage 1: MILP & Transfers) فوراً!</b>`,
+            {
+              reply_markup: {
+                inline_keyboard: [
+                  [{ text: "🌐 فتح الداشبورد المباشر", url: "https://fantasy-ai-dashboard.pages.dev/" }],
+                  [
+                    { text: "📊 حالة الفريق", callback_data: "status" },
+                    { text: "🛡️ نبض الأمان", callback_data: "safety" }
+                  ],
+                  [{ text: "🔙 🏠 رجوع للقائمة الرئيسية", callback_data: "main_menu" }]
+                ]
+              }
+            }
           );
           await triggerGitHubWorkflow(env, "tactical", "live");
         }
@@ -172,7 +403,16 @@ export default {
             `🛡️ <b>[حارس كلاودفلير الذكي – نبض الأمان T-20m]</b>\n` +
             `━━━━━━━━━━━━━━━━━━━━\n` +
             `متبقي 20 دقيقة على إغلاق الجولة ${gw.nextGw}!\n\n` +
-            `جاري فحص تقارير الإحماء النهائية، غيابات اللحظات الأخيرة، وتفادي تضارب الحراس على السيرفر السحابي فوراً.`
+            `جاري فحص تقارير الإحماء النهائية، غيابات اللحظات الأخيرة، وتفادي تضارب الحراس على السيرفر السحابي فوراً.`,
+            {
+              reply_markup: {
+                inline_keyboard: [
+                  [{ text: "🌐 فتح الداشبورد المباشر", url: "https://fantasy-ai-dashboard.pages.dev/" }],
+                  [{ text: "📊 حالة الفريق", callback_data: "status" }],
+                  [{ text: "🔙 🏠 رجوع للقائمة الرئيسية", callback_data: "main_menu" }]
+                ]
+              }
+            }
           );
           await triggerGitHubWorkflow(env, "safety", "live");
         }
@@ -220,7 +460,16 @@ export default {
       if (res.success) {
         await sendTelegram(
           env,
-          `⚡ <b>[أمر تشغيل فوري من كلاودفلير]</b>\n━━━━━━━━━━━━━━━━━━━━\nتم إطلاق سيرفر التنفيذ السحابي (Stage: <code>${stage}</code>, Mode: <code>${mode}</code>) بنجاح!`
+          `⚡ <b>[أمر تشغيل فوري من كلاودفلير]</b>\n━━━━━━━━━━━━━━━━━━━━\nتم إطلاق سيرفر التنفيذ السحابي (Stage: <code>${stage}</code>, Mode: <code>${mode}</code>) بنجاح!`,
+          {
+            reply_markup: {
+              inline_keyboard: [
+                [{ text: "🌐 فتح الداشبورد المباشر", url: "https://fantasy-ai-dashboard.pages.dev/" }],
+                [{ text: "📊 فحص الفريق", callback_data: "status" }],
+                [{ text: "🔙 🏠 رجوع للقائمة الرئيسية", callback_data: "main_menu" }]
+              ]
+            }
+          }
         );
         return new Response(JSON.stringify({ success: true, message: `Workflow dispatched (${stage}, ${mode})` }), {
           headers: { "Content-Type": "application/json" }
@@ -234,97 +483,58 @@ export default {
       try {
         const update = await request.json();
 
-        // Handle inline button callback clicks
+        // 1. Handle inline button callback clicks
         if (update.callback_query) {
           const cb = update.callback_query;
           const data = cb.data;
-          await answerCallbackQuery(env, cb.id, "جاري التنفيذ...");
+          const chatId = cb.message ? cb.message.chat.id : null;
+          const messageId = cb.message ? cb.message.message_id : null;
+          await answerCallbackQuery(env, cb.id, "جاري المعالجة...");
 
-          if (data === "status") {
-            const gw = await getFplGameweekInfo();
-            await sendTelegram(env,
-              `📊 <b>حالة المنظومة على Cloudflare:</b>\n` +
-              `━━━━━━━━━━━━━━━━━━━━\n` +
-              `• <b>الجولة القادمة:</b> ${gw.nextGwName}\n` +
-              `• <b>موعد الديدلاين:</b> <code>${gw.deadlineTime}</code>\n` +
-              `• <b>الوقت المتبقي:</b> ${gw.hoursUntil} ساعة و ${gw.minsUntil} دقيقة\n` +
-              `• <b>الحارس السحابي:</b> 🟢 شغال 24/7 على سيرفرات Cloudflare Edge\n\n` +
-              `🌐 [افتح الداشبورد المباشر](https://fantasy-ai-dashboard.pages.dev/)`,
-              {
-                reply_markup: {
-                  inline_keyboard: [
-                    [{ text: "🌐 فتح الداشبورد المباشر", url: "https://fantasy-ai-dashboard.pages.dev/" }],
-                    [{ text: "🚀 تشغيل التبديل الآن", callback_data: "run" }]
-                  ]
-                }
-              }
-            );
+          if (data === "main_menu") {
+            await sendMainMenu(env, chatId, messageId);
+          } else if (data === "status") {
+            await sendStatus(env, chatId, messageId);
           } else if (data === "safety") {
-            await sendTelegram(env, `🛡️ <b>جاري تشغيل نبض الأمان T-20m السحابي فوراً...</b>\nجاري فحص الإصابات وتضارب الحراس.`);
-            await triggerGitHubWorkflow(env, "safety", "live");
+            await sendSafety(env, chatId, messageId);
           } else if (data === "run") {
-            await sendTelegram(env, `🚀 <b>جاري تشغيل محرك Pure AI السحابي فوراً...</b>\nسيتم حل الخوارزميات وتنفيذ التبديل وإرسال التقرير خلال دقيقة.`);
-            await triggerGitHubWorkflow(env, "tactical", "live");
+            await sendRun(env, chatId, messageId);
           } else if (data === "help") {
-            await sendHelpGuide(env);
+            await sendHelpGuide(env, chatId, messageId);
           }
           return new Response("OK");
         }
 
-        // Handle text messages & menu buttons
+        // 2. Handle text messages & reply keyboard buttons
         const message = update.message;
         if (message && message.text) {
           const text = message.text.trim();
+          const chatId = message.chat.id;
 
-          if (text === "📊 حالة الفريق والجولة" || text.startsWith("/status")) {
-            const gw = await getFplGameweekInfo();
-            await sendTelegram(env,
-              `📊 <b>حالة المنظومة والفريق:</b>\n` +
-              `━━━━━━━━━━━━━━━━━━━━\n` +
-              `• <b>الجولة القادمة:</b> ${gw.nextGwName}\n` +
-              `• <b>موعد الديدلاين:</b> <code>${gw.deadlineTime}</code>\n` +
-              `• <b>الوقت المتبقي:</b> ${gw.hoursUntil} ساعة و ${gw.minsUntil} دقيقة\n` +
-              `• <b>الحارس السحابي:</b> 🟢 مراقبة نشطة 24/7 على Cloudflare\n` +
-              `• <b>الخطة المعتمدة:</b> 🔄 بيع Stach واستقدام Tavernier (3-5-2)\n` +
-              `━━━━━━━━━━━━━━━━━━━━\n` +
-              `🌐 <b>الداشبورد المباشر:</b> https://fantasy-ai-dashboard.pages.dev/`,
-              {
-                reply_markup: {
-                  inline_keyboard: [
-                    [{ text: "🌐 فتح الداشبورد المباشر", url: "https://fantasy-ai-dashboard.pages.dev/" }]
-                  ]
-                }
-              }
-            );
-          } else if (text === "🚀 تشغيل الذكاء الاصطناعي" || text.startsWith("/run")) {
-            await sendTelegram(env,
-              `🚀 <b>جاري إطلاق محرك Pure AI السحابي فوراً...</b>\n` +
-              `━━━━━━━━━━━━━━━━━━━━\n` +
-              `يتم الآن حساب التشكيلة المثالية بنماذج الـ MILP وتحديث حسابك في الفانتازي ونشر التقرير بعد دقيقة واحدة.`
-            );
-            await triggerGitHubWorkflow(env, "tactical", "live");
-          } else if (text === "🛡️ نبض الأمان (T-20m)" || text.startsWith("/safety")) {
-            await sendTelegram(env,
-              `🛡️ <b>جاري تشغيل نبض الأمان الفوري (T-20m)...</b>\n` +
-              `━━━━━━━━━━━━━━━━━━━━\n` +
-              `يتم فحص الغيابات وتضارب الحراس على السيرفر السحابي فوراً.`
-            );
-            await triggerGitHubWorkflow(env, "safety", "live");
-          } else if (text === "🌐 فتح الداشبورد" || text.startsWith("/dashboard")) {
-            await sendTelegram(env,
-              `🌐 <b>رابط الداشبورد التنفيذي المباشر:</b>\n\n` +
-              `اضغط على الزر أدناه لفتح لوحة التحكم ومتابعة التشكيلة والنقاط الحية:`,
-              {
-                reply_markup: {
-                  inline_keyboard: [
-                    [{ text: "⚡ الدخول إلى الداشبورد ⚡", url: "https://fantasy-ai-dashboard.pages.dev/" }]
-                  ]
-                }
-              }
-            );
+          if (
+            text === "🔙 🏠 القائمة الرئيسية" ||
+            text === "🏠 القائمة الرئيسية" ||
+            text === "رجوع" ||
+            text === "الرجوع" ||
+            text === "/menu" ||
+            text === "/start" ||
+            text.includes("رجوع") ||
+            text.includes("القائمة الرئيسية") ||
+            text.toLowerCase() === "back"
+          ) {
+            await sendMainMenu(env, chatId);
+          } else if (text === "📊 حالة الفريق والجولة" || text.startsWith("/status") || text.includes("حالة الفريق")) {
+            await sendStatus(env, chatId);
+          } else if (text === "🚀 تشغيل الذكاء الاصطناعي" || text.startsWith("/run") || text.includes("تشغيل")) {
+            await sendRun(env, chatId);
+          } else if (text === "🛡️ نبض الأمان (T-20m)" || text.startsWith("/safety") || text.includes("نبض الأمان") || text.includes("الامان") || text.includes("الأمان")) {
+            await sendSafety(env, chatId);
+          } else if (text === "🌐 فتح الداشبورد" || text.startsWith("/dashboard") || text.includes("الداشبورد")) {
+            await sendDashboard(env, chatId);
+          } else if (text === "ℹ️ دليل استخدام البوت" || text.startsWith("/help") || text.includes("دليل") || text.includes("مساعدة")) {
+            await sendHelpGuide(env, chatId);
           } else {
-            // Default: Send Help Guide with Full Interactive Keyboard
-            await sendHelpGuide(env);
+            await sendHelpGuide(env, chatId);
           }
         }
         return new Response("OK");
@@ -337,32 +547,3 @@ export default {
     return new Response("Not Found", { status: 404 });
   }
 };
-
-async function sendHelpGuide(env) {
-  const guide = `🤖 <b>دليل استخدام بوت Fantasy AI المستقل</b> ⚽
-━━━━━━━━━━━━━━━━━━━━
-هذا البوت مربوط بمحرك <b>Pure AI</b> السحابي المدعوم بسيرفرات <b>Cloudflare Edge</b> العالمية، ليدير فريقك تلقائياً بنسبة 100% دون الحاجة لفتح اللابتوب أثناء سفرك:
-
-🔹 <b>المراقبة التلقائية الذكية (24/7 Sentinel):</b>
-• <b>قبل الديدلاين بـ ساعتين ونصف (Stage 1):</b>
-يقوم السيرفر بحساب التشكيلة الأفضل رياضياً (Two-Tier MILP) وينفذ التبديلات على حسابك ويرسل لك تقريراً تفصيلياً بالتشكيلة والكابتن.
-
-• <b>قبل الديدلاين بـ 20 دقيقة (Stage 2):</b>
-يقوم بفحص تقارير الإحماء النهائية، ولو حدثت إصابة مفاجئة أو تضارب حراس، يستبدل اللاعب تلقائياً لضمان عدم ضياع أي نقطة.
-
-🔹 <b>أزرار التحكم المباشرة (في الشات بالأسفل):</b>
-• 📊 <b>حالة الفريق والجولة:</b> عداد الديدلاين والخطة الحالية.
-• 🚀 <b>تشغيل الذكاء الاصطناعي:</b> إطلاق السيرفر وتنفيذ التبديل فوراً بضغطة واحدة.
-• 🛡️ <b>نبض الأمان:</b> فحص سريع لإصابات اللحظات الأخيرة.
-• 🌐 <b>فتح الداشبورد:</b> رابط مباشر للوحة التحكم التنفيذية.
-━━━━━━━━━━━━━━━━━━━━
-<i>سافر وأنت مطمئن، فريقك في أيدٍ أمينة مع الذكاء الاصطناعي على مدار الساعة!</i> ⚡`;
-
-  await sendTelegram(env, guide, {
-    reply_markup: {
-      inline_keyboard: [
-        [{ text: "🌐 فتح الداشبورد المباشر", url: "https://fantasy-ai-dashboard.pages.dev/" }]
-      ]
-    }
-  });
-}

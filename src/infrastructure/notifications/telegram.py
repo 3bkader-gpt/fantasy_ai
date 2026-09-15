@@ -61,6 +61,16 @@ class TelegramNotifier(INotifier):
         if parse_mode == "HTML" and any(k in text for k in ("###", "**", "---", "`")):
             text = markdown_to_telegram_html(text)
 
+        if reply_markup is None:
+            reply_markup = {
+                "inline_keyboard": [
+                    [
+                        {"text": "🌐 فتح الداشبورد", "url": "https://fantasy-ai-dashboard.pages.dev/"},
+                        {"text": "🔙 🏠 القائمة الرئيسية", "callback_data": "main_menu"}
+                    ]
+                ]
+            }
+
         chunks = [text[i:i + 4000] for i in range(0, len(text), 4000)]
         success = True
 
@@ -127,8 +137,12 @@ class TelegramNotifier(INotifier):
                     {"text": "🌐 فتح الداشبورد المباشر", "url": "https://fantasy-ai-dashboard.pages.dev/"}
                 ],
                 [
-                    {"text": "📊 فحص الفريق", "callback_data": "status"},
+                    {"text": "📊 حالة الفريق", "callback_data": "status"},
                     {"text": "🛡️ نبض الأمان T-20m", "callback_data": "safety"}
+                ],
+                [
+                    {"text": "ℹ️ دليل استخدام البوت", "callback_data": "help"},
+                    {"text": "🔙 🏠 القائمة الرئيسية", "callback_data": "main_menu"}
                 ]
             ]
         }
