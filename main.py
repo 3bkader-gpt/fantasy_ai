@@ -99,5 +99,12 @@ if __name__ == "__main__":
         print("💡 Or run 'python main.py --build-squad' to generate an initial 15-man squad from scratch.")
         sys.exit(1)
 
-    run_manager(team_id=args.team_id, dry_run=effective_dry_run, max_hits=args.hits)
+    try:
+        run_manager(team_id=args.team_id, dry_run=effective_dry_run, max_hits=args.hits)
+        sys.exit(0)
+    except Exception as e:
+        import traceback
+        print(f"\n❌ Error during execution: {e}")
+        traceback.print_exc()
+        sys.exit(1)
 

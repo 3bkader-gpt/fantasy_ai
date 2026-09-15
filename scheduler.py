@@ -211,10 +211,18 @@ if __name__ == "__main__":
     parser.add_argument("--final-mins", type=int, default=config.final_safety_check_mins, help="Minutes before deadline for Stage 2 (default: 20)")
     parser.add_argument("--live", action="store_true", help="Run in Live Execution mode on real FPL account")
     parser.add_argument("--pure-ai", action="store_true", help="Run 100% autonomous hands-free mode for travel")
+    parser.add_argument("--safety-check", action="store_true", help="Run one-off T-20m safety pulse check and exit")
     parser.add_argument("--dry-run", action="store_true", help="Force simulation mode")
     args = parser.parse_args()
 
     force_live = args.live or (args.pure_ai and not args.dry_run)
+
+    if args.safety_check:
+        print("🛡️ Running one-off FPL safety pulse check...")
+        repo = FPLDataRepository(cache_ttl_minutes=0)
+        check_final_safety(repo, team_id=config.fpl_team_id, dry_run=not force_live, auto_fix=True)
+        sys.exit(0)
+
     run_scheduler(
         hours_before_deadline=args.hours_before,
         final_check_mins=args.final_mins,

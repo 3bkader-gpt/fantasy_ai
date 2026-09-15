@@ -15,6 +15,14 @@ on:
         options:
           - live
           - dry-run
+      stage:
+        description: 'Stage (tactical = MILP Optimization & Transfers, safety = T-20m Lineup Safety Check)'
+        required: false
+        default: 'tactical'
+        type: choice
+        options:
+          - tactical
+          - safety
 
 permissions:
   contents: write
@@ -61,11 +69,20 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           MODE="${{ github.event.inputs.execution_mode || 'live' }}"
-          echo "🚀 Starting Autonomous Agent in mode: $MODE"
-          if [ "$MODE" = "live" ]; then
-            python main.py --live
+          STAGE="${{ github.event.inputs.stage || 'tactical' }}"
+          echo "🚀 Starting Autonomous Agent (Mode: $MODE, Stage: $STAGE)"
+
+          FLAG="--live"
+          if [ "$MODE" = "dry-run" ]; then
+            FLAG="--dry-run"
+          fi
+
+          if [ "$STAGE" = "safety" ]; then
+            echo "🛡️ Running T-20m Pre-Deadline Safety Pulse..."
+            python scheduler.py --safety-check $FLAG
           else
-            python main.py --dry-run
+            echo "⚽ Running Tactical Optimization & Transfers..."
+            python main.py $FLAG
           fi
 
       - name: 🚀 Deploy Dashboard to Cloudflare Pages

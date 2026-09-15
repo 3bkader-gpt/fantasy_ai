@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fantasy-ai-sentinel",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-01",
+  "triggers": {
+    "crons": ["*/15 * * * *"]
+  },
+  "vars": {
+    "GITHUB_REPO": "3bkader-gpt/fantasy_ai",
+    "ADMIN_KEY": "pure_ai_secret_2026"
+  }
+}
