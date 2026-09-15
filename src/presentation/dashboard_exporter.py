@@ -75,10 +75,16 @@ class DashboardExporter:
                         "fixtures_5gw": getattr(p, "fixtures_5gw", [])
                     })
 
-        raw_leagues = [
-            {"name": "beIN SPORTS League", "rank": 1420, "entry_rank": 1420},
-            {"name": "ال هيخلص الاخير بياخد فيها", "rank": 1, "entry_rank": 1}
-        ]
+        raw_leagues = getattr(dto, "leagues", None)
+        if not raw_leagues:
+            try:
+                from ..infrastructure.fpl.client import FPLClient
+                status = FPLClient().get_team_status(10469492)
+                raw_leagues = status.get("leagues", [])
+            except Exception as e:
+                logger.warning(f"Could not load real leagues: {e}")
+                raw_leagues = []
+
         radar_data = LeagueRadarService.generate_radar_data(lineup.starting_xi + lineup.bench, raw_leagues)
 
         data = {

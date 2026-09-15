@@ -58,18 +58,46 @@ class LeagueRadarService:
         threats.sort(key=lambda x: x["eo"], reverse=True)
         differentials.sort(key=lambda x: x["xp"], reverse=True)
 
-        # Enriched leagues
+        # Enriched leagues from real FPL API
         enriched_leagues = []
         for lg in leagues_data:
-            rank = lg.get("rank", 1)
+            rank = lg.get("entry_rank") or lg.get("rank") or 1
+            last_rank = lg.get("entry_last_rank", 0)
+            total = lg.get("rank_count") or lg.get("max_entries") or 0
+            league_type = lg.get("league_type", "x")
+            name = lg.get("name", "Classic League")
+            is_private = (league_type == "x" or league_type == "h2h")
+
+            if rank == 1:
+                status = "👑 المتصدر (Leader)"
+            elif total > 0 and rank == total:
+                status = f"⚠️ الترتيب الأخير ({rank}/{total})"
+            elif last_rank > 0 and rank < last_rank:
+                status = f"🟢 صعود (+{last_rank - rank} مركز)"
+            elif last_rank > 0 and rank > last_rank:
+                status = f"🔴 تراجع (-{rank - last_rank} مركز)"
+            elif total > 0:
+                status = f"⚔️ المركز {rank} من {total}"
+            else:
+                status = f"⚔️ المركز #{rank}"
+
             enriched_leagues.append({
-                "name": lg.get("name", "Classic League"),
+                "id": lg.get("id"),
+                "name": name,
                 "rank": rank,
+                "entry_rank": rank,
+                "last_rank": last_rank,
+                "total": total,
+                "league_type": league_type,
+                "is_private": is_private,
+                "status": status,
                 "leader_points_delta": 0 if rank == 1 else -18,
-                "status": "👑 Leader (Defend Rank)" if rank == 1 else "⚔️ Hunting Leader",
-                "rival_to_watch": "Team Mo Salah" if rank == 1 else "League Leader #1",
-                "risk_index": "Low" if rank == 1 else "Medium"
+                "rival_to_watch": "Leader" if rank > 1 else "Challenger",
+                "risk_index": "Low" if rank <= 3 else "Medium"
             })
+
+        # Sort: Private mini-leagues first (sorted by rank asc), then public/global leagues
+        enriched_leagues.sort(key=lambda x: (0 if x["is_private"] else 1, x["rank"]))
 
         return {
             "threats": threats[:6],

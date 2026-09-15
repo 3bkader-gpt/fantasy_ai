@@ -26,5 +26,6 @@ class GameweekPlanDTO:
     execution_status: Dict[str, Any]
     press_conference_insights: Optional[List[Dict[str, Any]]] = None
     press_wire: Optional[List[Dict[str, Any]]] = None
+    leagues: Optional[List[Dict[str, Any]]] = None
 
 

@@ -189,7 +189,7 @@ function renderLeagues(leagues) {
   if (!leagues || leagues.length === 0) {
     tbody.innerHTML = `
       <tr>
-        <td colspan="2" style="color: var(--text-muted); text-align: center; padding: 12px;">Active in Private Mini-Leagues</td>
+        <td colspan="2" style="color: var(--text-muted); text-align: center; padding: 16px;">لا توجد دوريات مسجلة</td>
       </tr>
     `;
     return;
@@ -199,18 +199,30 @@ function renderLeagues(leagues) {
   leagues.forEach(lg => {
     const tr = document.createElement('tr');
     const isLeader = lg.rank === 1;
-    const rankColor = isLeader ? 'var(--fpl-gold)' : 'var(--fpl-cyan)';
-    const badgeText = isLeader ? '👑 Leader' : `#${lg.rank}`;
+    const isPrivate = lg.is_private || lg.league_type === 'x' || lg.league_type === 'h2h';
+    const rankColor = isLeader ? 'var(--fpl-gold)' : (isPrivate ? 'var(--fpl-cyan)' : '#94a3b8');
+    
+    let badgeText = isLeader ? '👑 #1' : `#${Number(lg.rank).toLocaleString()}`;
+    if (lg.total && lg.total > 0 && lg.total <= 200) {
+      badgeText = isLeader ? `👑 #1 / ${lg.total}` : `#${lg.rank} / ${lg.total}`;
+    }
+
+    const typeBadge = isPrivate 
+      ? '<span style="font-size: 0.65rem; background: rgba(6, 182, 212, 0.18); color: var(--fpl-cyan); border: 1px solid rgba(6, 182, 212, 0.3); padding: 1px 6px; border-radius: 4px; font-weight: 700;">🔒 خاص</span>'
+      : '<span style="font-size: 0.65rem; background: rgba(148, 163, 184, 0.12); color: #cbd5e1; border: 1px solid rgba(255, 255, 255, 0.08); padding: 1px 6px; border-radius: 4px; font-weight: 500;">🌐 عام</span>';
 
     tr.innerHTML = `
-      <td>
-        <div style="font-weight: 600; color: #fff;">${escapeHtml(lg.name)}</div>
-        <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 2px;">
-          ${escapeHtml(lg.status || 'Active')}
+      <td style="padding: 10px 8px; vertical-align: middle;">
+        <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+          ${typeBadge}
+          <span style="font-weight: 600; color: #f8fafc; font-size: 0.88rem;">${escapeHtml(lg.name)}</span>
+        </div>
+        <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 3px;">
+          ${escapeHtml(lg.status || 'نشط')}
         </div>
       </td>
-      <td style="text-align: right;">
-        <span style="font-family: var(--font-heading); font-size: 1rem; font-weight: 800; color: ${rankColor};">
+      <td style="text-align: right; vertical-align: middle; white-space: nowrap; padding: 10px 8px;">
+        <span style="font-family: var(--font-heading); font-size: 0.95rem; font-weight: 800; color: ${rankColor};">
           ${badgeText}
         </span>
       </td>

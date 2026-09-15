@@ -142,7 +142,7 @@ class FPLClient(IFPLGateway):
             "rank": entry_data.get("summary_overall_rank") or history.get("overall_rank"),
             "total_points": entry_data.get("summary_overall_points", 0),
             "team_value": team_val,
-            "leagues": entry_data.get("leagues", {}).get("classic", []),
+            "leagues": (entry_data.get("leagues", {}).get("classic", []) or []) + (entry_data.get("leagues", {}).get("h2h", []) or []),
             "manager_name": f"{entry_data.get('player_first_name', '')} {entry_data.get('player_last_name', '')}".strip(),
             "team_name": entry_data.get("name", "FPL Squad")
         }

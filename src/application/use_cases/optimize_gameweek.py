@@ -207,7 +207,8 @@ class OptimizeGameweekUseCase:
             dry_run=dry_run,
             execution_status=execution_status,
             press_conference_insights=list(nlp_insights.values()),
-            press_wire=relevant_news[:10] if 'relevant_news' in locals() else []
+            press_wire=relevant_news[:10] if 'relevant_news' in locals() else [],
+            leagues=team_status.get("leagues", [])
         )
 
 
