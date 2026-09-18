@@ -39,7 +39,7 @@ class PressConferenceAnalyst:
             "contents": [{"role": "user", "parts": [{"text": prompt}]}],
             "generationConfig": {
                 "temperature": 0.1,  # Low temperature for precise structured extraction
-                "maxOutputTokens": 2048,
+                "maxOutputTokens": 4096,
                 "responseMimeType": "application/json"
             }
         }

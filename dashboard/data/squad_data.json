@@ -4,46 +4,46 @@
     "team_name": "هبد اصطناعي",
     "gameweek": 5,
     "deadline": "2026-09-18T17:30:00Z",
-    "rank": 10621074,
+    "rank": 10621065,
     "total_points": 51,
     "team_value": 100.6,
     "bank": 1.1,
     "free_transfers": 1,
-    "dry_run": false,
-    "last_updated": "2026-09-18T15:17:37.536012Z"
+    "dry_run": true,
+    "last_updated": "2026-09-18T15:40:50.417269Z"
   },
   "formation": "3-5-2",
-  "total_xp": 81.4,
+  "total_xp": 77.6,
   "captain": {
-    "id": 229,
-    "name": "Tarkowski",
-    "team": "EVE",
-    "position": "DEF",
-    "cost": 6.1,
-    "xp": 8.7,
-    "horizon_xp": 19.7,
-    "fixture": "IPS (H) [FDR 2]",
+    "id": 426,
+    "name": "B.Fernandes",
+    "team": "MUN",
+    "position": "MID",
+    "cost": 12.0,
+    "xp": 7.0,
+    "horizon_xp": 19.0,
+    "fixture": "FUL (A) [FDR 3]",
     "expected_minutes": 88.0,
     "is_captain": true,
     "is_vice_captain": false,
     "fixtures_5gw": [
       {
         "gw": 5,
-        "opponent": "IPS",
-        "is_home": true,
-        "fdr": 2
+        "opponent": "FUL",
+        "is_home": false,
+        "fdr": 3
       },
       {
         "gw": 6,
-        "opponent": "HUL",
-        "is_home": false,
-        "fdr": 2
+        "opponent": "TOT",
+        "is_home": true,
+        "fdr": 3
       },
       {
         "gw": 7,
-        "opponent": "CHE",
-        "is_home": true,
-        "fdr": 4
+        "opponent": "LEE",
+        "is_home": false,
+        "fdr": 3
       },
       {
         "gw": 8,
@@ -61,35 +61,35 @@
     "press_insight": null
   },
   "vice_captain": {
-    "id": 68,
-    "name": "Tavernier",
-    "team": "BOU",
+    "id": 12,
+    "name": "Saka",
+    "team": "ARS",
     "position": "MID",
-    "cost": 6.1,
-    "xp": 7.4,
-    "horizon_xp": 19.1,
-    "fixture": "LIV (H) [FDR 4]",
+    "cost": 9.5,
+    "xp": 7.2,
+    "horizon_xp": 20.2,
+    "fixture": "BHA (A) [FDR 3]",
     "expected_minutes": 88.0,
     "is_captain": false,
     "is_vice_captain": true,
     "fixtures_5gw": [
       {
         "gw": 5,
-        "opponent": "LIV",
-        "is_home": true,
-        "fdr": 4
+        "opponent": "BHA",
+        "is_home": false,
+        "fdr": 3
       },
       {
         "gw": 6,
-        "opponent": "CHE",
-        "is_home": false,
-        "fdr": 4
+        "opponent": "LEE",
+        "is_home": true,
+        "fdr": 2
       },
       {
         "gw": 7,
-        "opponent": "SUN",
-        "is_home": true,
-        "fdr": 2
+        "opponent": "NFO",
+        "is_home": false,
+        "fdr": 3
       },
       {
         "gw": 8,
@@ -159,11 +159,11 @@
       "team": "EVE",
       "position": "DEF",
       "cost": 6.1,
-      "xp": 8.7,
-      "horizon_xp": 19.7,
+      "xp": 6.2,
+      "horizon_xp": 15.9,
       "fixture": "IPS (H) [FDR 2]",
       "expected_minutes": 88.0,
-      "is_captain": true,
+      "is_captain": false,
       "is_vice_captain": false,
       "fixtures_5gw": [
         {
@@ -206,7 +206,7 @@
       "position": "DEF",
       "cost": 5.8,
       "xp": 6.0,
-      "horizon_xp": 16.2,
+      "horizon_xp": 15.6,
       "fixture": "BHA (A) [FDR 3]",
       "expected_minutes": 88.0,
       "is_captain": false,
@@ -252,7 +252,7 @@
       "position": "DEF",
       "cost": 4.1,
       "xp": 5.6,
-      "horizon_xp": 14.5,
+      "horizon_xp": 14.9,
       "fixture": "NEW (A) [FDR 3]",
       "expected_minutes": 88.0,
       "is_captain": false,
@@ -302,7 +302,7 @@
       "fixture": "LIV (H) [FDR 4]",
       "expected_minutes": 88.0,
       "is_captain": false,
-      "is_vice_captain": true,
+      "is_vice_captain": false,
       "fixtures_5gw": [
         {
           "gw": 5,
@@ -348,7 +348,7 @@
       "fixture": "BHA (A) [FDR 3]",
       "expected_minutes": 88.0,
       "is_captain": false,
-      "is_vice_captain": false,
+      "is_vice_captain": true,
       "fixtures_5gw": [
         {
           "gw": 5,
@@ -393,7 +393,7 @@
       "horizon_xp": 19.0,
       "fixture": "FUL (A) [FDR 3]",
       "expected_minutes": 88.0,
-      "is_captain": false,
+      "is_captain": true,
       "is_vice_captain": false,
       "fixtures_5gw": [
         {
@@ -668,7 +668,7 @@
       "position": "DEF",
       "cost": 4.2,
       "xp": 5.5,
-      "horizon_xp": 14.5,
+      "horizon_xp": 14.8,
       "fixture": "NEW (A) [FDR 3]",
       "expected_minutes": 88.0,
       "is_captain": false,
@@ -1615,13 +1615,55 @@
       ]
     },
     {
+      "id": 115,
+      "name": "De Cuyper",
+      "team": "BHA",
+      "position": "DEF",
+      "cost": 4.9,
+      "xp": 6.2,
+      "horizon_xp": 15.9,
+      "fixture": "ARS (H) [FDR 4]",
+      "fixtures_5gw": [
+        {
+          "gw": 5,
+          "opponent": "ARS",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 6,
+          "opponent": "SUN",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 7,
+          "opponent": "CRY",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 8,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 229,
       "name": "Tarkowski",
       "team": "EVE",
       "position": "DEF",
       "cost": 6.1,
-      "xp": 8.7,
-      "horizon_xp": 19.7,
+      "xp": 6.2,
+      "horizon_xp": 15.9,
       "fixture": "IPS (H) [FDR 2]",
       "fixtures_5gw": [
         {
@@ -1662,8 +1704,8 @@
       "team": "MCI",
       "position": "DEF",
       "cost": 5.7,
-      "xp": 7.0,
-      "horizon_xp": 17.3,
+      "xp": 6.2,
+      "horizon_xp": 15.9,
       "fixture": "SUN (H) [FDR 2]",
       "fixtures_5gw": [
         {
@@ -1683,132 +1725,6 @@
           "opponent": "IPS",
           "is_home": true,
           "fdr": 2
-        },
-        {
-          "gw": 8,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 388,
-      "name": "Guéhi",
-      "team": "MCI",
-      "position": "DEF",
-      "cost": 6.0,
-      "xp": 7.0,
-      "horizon_xp": 16.3,
-      "fixture": "SUN (H) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 5,
-          "opponent": "SUN",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 6,
-          "opponent": "LIV",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 7,
-          "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 8,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "name": "Calafiori",
-      "team": "ARS",
-      "position": "DEF",
-      "cost": 5.8,
-      "xp": 6.0,
-      "horizon_xp": 16.2,
-      "fixture": "BHA (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 5,
-          "opponent": "BHA",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 6,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 7,
-          "opponent": "NFO",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 8,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 115,
-      "name": "De Cuyper",
-      "team": "BHA",
-      "position": "DEF",
-      "cost": 4.9,
-      "xp": 5.8,
-      "horizon_xp": 14.9,
-      "fixture": "ARS (H) [FDR 4]",
-      "fixtures_5gw": [
-        {
-          "gw": 5,
-          "opponent": "ARS",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 6,
-          "opponent": "SUN",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 7,
-          "opponent": "CRY",
-          "is_home": true,
-          "fdr": 3
         },
         {
           "gw": 8,
@@ -1830,8 +1746,8 @@
       "team": "LEE",
       "position": "DEF",
       "cost": 4.6,
-      "xp": 5.8,
-      "horizon_xp": 14.4,
+      "xp": 6.2,
+      "horizon_xp": 15.1,
       "fixture": "CRY (H) [FDR 3]",
       "fixtures_5gw": [
         {
@@ -1867,13 +1783,55 @@
       ]
     },
     {
+      "id": 388,
+      "name": "Guéhi",
+      "team": "MCI",
+      "position": "DEF",
+      "cost": 6.0,
+      "xp": 6.2,
+      "horizon_xp": 15.0,
+      "fixture": "SUN (H) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 5,
+          "opponent": "SUN",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 6,
+          "opponent": "LIV",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 7,
+          "opponent": "IPS",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 8,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 233,
       "name": "Mykolenko",
       "team": "EVE",
       "position": "DEF",
       "cost": 4.5,
-      "xp": 5.8,
-      "horizon_xp": 14.2,
+      "xp": 6.2,
+      "horizon_xp": 14.6,
       "fixture": "IPS (H) [FDR 2]",
       "fixtures_5gw": [
         {
@@ -1893,6 +1851,48 @@
           "opponent": "CHE",
           "is_home": true,
           "fdr": 4
+        },
+        {
+          "gw": 8,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Calafiori",
+      "team": "ARS",
+      "position": "DEF",
+      "cost": 5.8,
+      "xp": 6.0,
+      "horizon_xp": 15.6,
+      "fixture": "BHA (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 5,
+          "opponent": "BHA",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 6,
+          "opponent": "LEE",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 7,
+          "opponent": "NFO",
+          "is_home": false,
+          "fdr": 3
         },
         {
           "gw": 8,
@@ -1999,7 +1999,7 @@
       "position": "DEF",
       "cost": 4.1,
       "xp": 5.6,
-      "horizon_xp": 14.5,
+      "horizon_xp": 14.9,
       "fixture": "NEW (A) [FDR 3]",
       "fixtures_5gw": [
         {
@@ -2041,7 +2041,7 @@
       "position": "DEF",
       "cost": 4.2,
       "xp": 5.5,
-      "horizon_xp": 14.5,
+      "horizon_xp": 14.8,
       "fixture": "NEW (A) [FDR 3]",
       "fixtures_5gw": [
         {
@@ -2167,7 +2167,7 @@
       "position": "DEF",
       "cost": 8.0,
       "xp": 5.4,
-      "horizon_xp": 15.4,
+      "horizon_xp": 14.6,
       "fixture": "BHA (A) [FDR 3]",
       "fixtures_5gw": [
         {
@@ -2209,7 +2209,7 @@
       "position": "DEF",
       "cost": 4.0,
       "xp": 5.3,
-      "horizon_xp": 14.1,
+      "horizon_xp": 14.5,
       "fixture": "NEW (A) [FDR 3]",
       "fixtures_5gw": [
         {
@@ -2251,7 +2251,7 @@
       "position": "DEF",
       "cost": 5.0,
       "xp": 5.3,
-      "horizon_xp": 14.0,
+      "horizon_xp": 14.3,
       "fixture": "ARS (H) [FDR 4]",
       "fixtures_5gw": [
         {
@@ -2293,7 +2293,7 @@
       "position": "DEF",
       "cost": 4.0,
       "xp": 5.2,
-      "horizon_xp": 12.9,
+      "horizon_xp": 13.2,
       "fixture": "EVE (A) [FDR 3]",
       "fixtures_5gw": [
         {
@@ -3463,6 +3463,48 @@
       ]
     },
     {
+      "id": 316,
+      "name": "Emersonn",
+      "team": "IPS",
+      "position": "FWD",
+      "cost": 5.5,
+      "xp": 4.8,
+      "horizon_xp": 13.0,
+      "fixture": "EVE (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 5,
+          "opponent": "EVE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 6,
+          "opponent": "FUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 7,
+          "opponent": "MCI",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 8,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 464,
       "name": "Wissa",
       "team": "NEW",
@@ -3657,48 +3699,6 @@
           "opponent": "NFO",
           "is_home": false,
           "fdr": 3
-        },
-        {
-          "gw": 8,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 316,
-      "name": "Emersonn",
-      "team": "IPS",
-      "position": "FWD",
-      "cost": 5.5,
-      "xp": 3.6,
-      "horizon_xp": 9.7,
-      "fixture": "EVE (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 5,
-          "opponent": "EVE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 6,
-          "opponent": "FUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 7,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
         },
         {
           "gw": 8,
@@ -4135,7 +4135,7 @@
       ]
     }
   ],
-  "briefing": "مرحباً بك أيها المدرب. بصفتي المدير الفني الأعلى كفاءة، إليك التقرير التكتيكي الشامل والجريء للجولة رقم 5، المصمم لانتشال الفريق من المناطق المتأخرة وصعود سلم الترتيب بأسرع معدل ممكن.\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب (Aggressive Catch-up Strategy)\n\n* **الوضع الحالي:** الترتيب العام (10,621,074) يتطلب منا التخلي التام عن النهج المحافظ. نحن في وضعية **\"الهجوم التعويضي\" (AGGRESSIVE)**.\n* **الرسم التكتيكي (3-5-2):** اعتماد خط وسط خماسي مرعب يتكون من (Saka, Palmer, B.Fernandes, Gakpo, Tavernier) يمنحنا أعلى سقف نقاط ممكن (High Ceiling). خط الوسط هو المحرك الأساسي للنقاط هذا الموسم، والاعتماد على خماسي هجومي يضمن لنا الاستفادة من أي انفجار هجومي (Booming GW).\n\n---\n\n### 2. التحليل الرياضي والتكتيكي للتبديل (Transfer Breakdown)\n\n* **التبديل:** 🔴 بيع **Stach** (LEE) ──► 🟢 شراء **Tavernier** (BOU)\n* **التكلفة:** 0- نقطة (تبديل مجاني).\n* **الفارق الرياضي المباشر (Net xP Gain):** **+1.57 نقطة** لصالح Tavernier في هذه الجولة فقط.\n\n#### **التبرير التكتيكي والتحليلي:**\n1. **قاعدة \"Points are Points\":** الاستغناء عن Stach (xP: 5.8) جاء لجمود مردوده الهجومي، بينما يمتلك Tavernier (xP: 7.4) نسبة مشاركة هجومية أعلى (xGI)، بالإضافة إلى تنفيذه للكرات الثابتة.\n2. **جدول الجولات الـ 3 القادمة لـ Tavernier:**\n   * **الجولة 5:** LIV (H) [FDR: 4] ── مباراة صعبة نظرياً، لكن ليفربول يترك مساحات خلف أظهيرته يناسب أسلوب Tavernier في التحولات السريعة.\n   * **الجولة 6:** CHE (A) [FDR: 4] ── مواجهة تكتيكية مفتوحة.\n   * **الجولة 7:** SUN (H)",
+  "briefing": "إليك التقرير التكتيكي الشامل للجولة الخامسة، المُعد خصيصاً لتحقيق القفزة المطلوبة في الترتيب العام باستخدام التحليل الرياضي المتقدم (xP) وجدول صعوبة المباريات (FDR).\n\n---\n\n# 📋 التقرير التكتيكي للجولة الخامسة: خطة الهجوم التعويضي (Aggressive Push)\n\n**من: المدير الفني الذكي (Elite Autonomous FPL AI Manager)**  \n**إلى: مدير الفريق**  \n**الهدف: اختراق الصفوف وصعود الترتيب العام عبر تكتيك هجومي عالي المرونة.**\n\n---\n\n### 1. الاستراتيجية التكتيكية وموقف الترتيب: \"الهجوم هو خير وسيلة للتعويض\"\n* **موقف الترتيب الحالي:** 10,621,065  \n* **الاستراتيجية المعتمدة:** **AGGRESSIVE (هجومي تعويضي)**  \n* **التشكيل التكتيكي:** **3-5-2**\n\n**التحليل التكتيكي للموقف:**  \nالترتيب الحالي يفرض علينا التخلي عن الحذر واللعب بجرأة مدروسة. شعارنا الثابت هو **\"Points are Points\"** (النقاط هي النقاط بغض النظر عن الأسماء). بالنظر إلى تشكيلتنا، نعتمد على خط وسط خماسي فائق القوة والانفجارية (Saka, Palmer, Fernandes, Gakpo, Tavernier). هذا الخماسي يمنحنا تفوقاً رقمياً كبيراً في صناعة الفرص والتسجيل، بينما نؤمن الدفاع بثلاثي صلب بقيادة Calafiori وTarkowski، معتمدين على ثنائي هجومي حركي (Isak وJoão Pedro) قادر على استغلال المساحات.\n\n---\n\n### 2. التحليل الرياضي والتكتيكي للتبديلات (The Transfer Blueprint)\n\n* **🔴 المغادرة:** Stach (MID - LEE) | النقاط المتوقعة: [xP: 5.8]  \n* **🟢 الانضمام:** Tavernier (MID - BOU) | النقاط المتوقعة: [xP: 7.4] | السعر: £6.1m  \n* **التكلفة:** 0- نقطة (تبديل مجاني)  \n* **صافي الزيادة المتوقعة:** **+1.75 نقطة** في هذه الجولة فقط.\n\n```\n[Stach: xP 5.8]  ───► (تبديل مجاني) ───► [Tavernier: xP 7.4] (+1.75 Net Expected Points)\n```\n\n**التبرير الرياضي والتكتيكي:**  \n1. **تر",
   "leagues": [
     {
       "id": 2024890,
@@ -4196,13 +4196,13 @@
     {
       "id": 83,
       "name": "Egypt",
-      "rank": 795041,
-      "entry_rank": 795041,
+      "rank": 795039,
+      "entry_rank": 795039,
       "last_rank": 0,
       "total": 797754,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 795041 من 797754",
+      "status": "⚔️ المركز 795039 من 797754",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4210,13 +4210,13 @@
     {
       "id": 2260821,
       "name": "beIN SPORTS League",
-      "rank": 2094212,
-      "entry_rank": 2094212,
+      "rank": 2094206,
+      "entry_rank": 2094206,
       "last_rank": 0,
       "total": 2103282,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 2094212 من 2103282",
+      "status": "⚔️ المركز 2094206 من 2103282",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4224,13 +4224,13 @@
     {
       "id": 431170,
       "name": "Adobe Express Badge League",
-      "rank": 2626575,
-      "entry_rank": 2626575,
+      "rank": 2626573,
+      "entry_rank": 2626573,
       "last_rank": 0,
       "total": 2587868,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 2626575 من 2587868",
+      "status": "⚔️ المركز 2626573 من 2587868",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4238,13 +4238,13 @@
     {
       "id": 320,
       "name": "Rookie",
-      "rank": 2698023,
-      "entry_rank": 2698023,
+      "rank": 2698021,
+      "entry_rank": 2698021,
       "last_rank": 0,
       "total": 2726245,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 2698023 من 2726245",
+      "status": "⚔️ المركز 2698021 من 2726245",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4252,13 +4252,13 @@
     {
       "id": 314,
       "name": "Overall",
-      "rank": 10621074,
-      "entry_rank": 10621074,
+      "rank": 10621065,
+      "entry_rank": 10621065,
       "last_rank": 0,
       "total": 10673914,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 10621074 من 10673914",
+      "status": "⚔️ المركز 10621065 من 10673914",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4293,14 +4293,6 @@
     ],
     "differentials": [
       {
-        "player": "Tarkowski",
-        "team": "FPL",
-        "cost": 6.1,
-        "eo": 8,
-        "advantage": "💎 Huge Rank Boost",
-        "xp": 8.67
-      },
-      {
         "player": "Tavernier",
         "team": "FPL",
         "cost": 6.1,
@@ -4331,6 +4323,14 @@
         "eo": 22,
         "advantage": "🟢 Differential Weapon",
         "xp": 6.36
+      },
+      {
+        "player": "Tarkowski",
+        "team": "FPL",
+        "cost": 6.1,
+        "eo": 8,
+        "advantage": "💎 Huge Rank Boost",
+        "xp": 6.2
       },
       {
         "player": "Calafiori",
@@ -4401,13 +4401,13 @@
       {
         "id": 83,
         "name": "Egypt",
-        "rank": 795041,
-        "entry_rank": 795041,
+        "rank": 795039,
+        "entry_rank": 795039,
         "last_rank": 0,
         "total": 797754,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 795041 من 797754",
+        "status": "⚔️ المركز 795039 من 797754",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4415,13 +4415,13 @@
       {
         "id": 2260821,
         "name": "beIN SPORTS League",
-        "rank": 2094212,
-        "entry_rank": 2094212,
+        "rank": 2094206,
+        "entry_rank": 2094206,
         "last_rank": 0,
         "total": 2103282,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 2094212 من 2103282",
+        "status": "⚔️ المركز 2094206 من 2103282",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4429,13 +4429,13 @@
       {
         "id": 431170,
         "name": "Adobe Express Badge League",
-        "rank": 2626575,
-        "entry_rank": 2626575,
+        "rank": 2626573,
+        "entry_rank": 2626573,
         "last_rank": 0,
         "total": 2587868,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 2626575 من 2587868",
+        "status": "⚔️ المركز 2626573 من 2587868",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4443,13 +4443,13 @@
       {
         "id": 320,
         "name": "Rookie",
-        "rank": 2698023,
-        "entry_rank": 2698023,
+        "rank": 2698021,
+        "entry_rank": 2698021,
         "last_rank": 0,
         "total": 2726245,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 2698023 من 2726245",
+        "status": "⚔️ المركز 2698021 من 2726245",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4457,13 +4457,13 @@
       {
         "id": 314,
         "name": "Overall",
-        "rank": 10621074,
-        "entry_rank": 10621074,
+        "rank": 10621065,
+        "entry_rank": 10621065,
         "last_rank": 0,
         "total": 10673914,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 10621074 من 10673914",
+        "status": "⚔️ المركز 10621065 من 10673914",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4471,19 +4471,23 @@
     ],
     "overall_threat_score": 68
   },
-  "press_insights": [
-    {
-      "player_id": 316,
-      "player_name": "Emersonn",
-      "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "يخضع لاختبار بدني أخيرة قبل مواجهة إيفرتون، مما يجعله موضع شك طفيف للمشاركة أساسياً.",
-      "summary_en": "Faces a late fitness check ahead of the clash against Everton, making him a slight doubt to start.",
-      "risk_level": "MEDIUM",
-      "headline_reference": "Armstrong Update & Everton Team News For Ipswich Clash"
-    }
-  ],
+  "press_insights": [],
   "press_wire": [
+    {
+      "id": 4720528,
+      "title": "Cottage Tactico: Man Utd's remodelled midfield",
+      "summary": "For most of my childhood, Manchester United were dominant. For most of my adult life, Manchester United have seemed to be either in the midst of - or trying to recover from - a period of crisis. After a tough week, there are some reasons to think they visit the Cottage on Sunday on the cusp of another one. A constant throughout both eras, though, has been a style of football that looks most threatening on the counter attack, showcasing players who catch the eye when playing quickly. It’s almost a cliché to say the modern Manchester United are good on the break and struggle to control games. But it’s also true. Since the start of last season, United have played 10 games in which they’ve had 40% or less of the ball. They’ve won them all. In the 20 games played where they’ve had over 55% of possession, they’ve won seven, drawn seven and lost six. So, why do their team still exhibit these tendencies? What has Michael Carrick tried to do with that in mind? And how will it impact our game this Sunday? ATTACK, ATTACK, ATTACK Be it through the direct passing of someone like Bruno Fernandes, or the direct running of a succession of speedy attackers who like to break into big space, United have shown time and again that they can be deadly when allowed to play in transition. However, as Premier League teams have wised up to this and increasingly deployed watertight out-of-possession plans, Man Utd have been challenged to break down stubborn blocks with plenty of the ball. Admittedly, as their four fixtures include two newly promoted teams and a Man City side reduced to 10 men, the sample is skewed, but so far this season Carrick’s men have had 60.5% of possession, with only City themselves and Brighton averaging more. Whether it is by design or simply because teams force them to, United need to try and win games with the ball more reliably. Carrick’s setup seems to have this in mind. On the ball, United tend to form a 3-2-5 or 3-1-6, with the FBs taking turns to either support play or advance. And, crucially, you’ll often see them set up little rondo-like moments with a group of players passing the ball in small spaces in quick succession. This looks to draw in defenders and engineer that big space we have noted their attackers thrive in outside of increasingly rare counter attacking scenarios. That desire to play through pressure in tight combinations can lead to them heavily overload whichever side of the pitch they are playing down, offering isolated space for two men on the other side of the pitch. They can also overload centrally to open up opportunities for both of their wide forwards to make runs. However, when teams don’t bite and instead sit off, this space doesn’t emerge. And in those scenarios the direct instincts of the likes of Bryan Mbeumo, Matheus Cunha and Marcus Rashford aren’t as well suited to patient patterns camped out on the edge of their opponents' box. As a result, their dangerman Bruno Fernandes can grow frustrated and try too hard to force the play when quick chances do not materialise. Similarly, when Benjamin Sesko isn’t on the pitch, a lack of reliable box presence means resorting to crosses isn’t a reliable route to goal, either. I thought Carrick would have acted earlier in bringing on Sesko for Cunha last week, and will be interested to see who gets the nod from the start at the Cottage. Midfield remodelling Whenever I’ve talked to frustrated fans of the club in recent years, a constant complaint tends to come up: ‘United need a midfield rebuild.’ Carrick retired from football in 2018. Some eight years later he is the man in the dugout overseeing the latest attempt to rebuild that midfield since his own departure. He seems to have identified the need for small space technicians who have often been lacking in United’s setup. Carrick’s first instinct when taking over was to reverse Ruben Amorim’s decision to permanently bench exactly the profile of midfielder United have coveted for years in Kobbie Mainoo, who has taken a leap forward in both progressive passing and carrying. Interestingly, the first two midfield recruits to join him this summer share elements of his profile. Youri Tielemans and Andrey Santos offer a similar desire to progress through tight space. This new midfield should suit some of Carrick’s preferences in possession. They fit in nicely to those rondo-like moments we noted earlier, and in theory offer some control and craft breaking sides down. However, as Fulham fans remember all too well from the Marco Silva era, when teams sit off you in a low block and high quality chances aren’t flowing, there is a tendency to overcommit. And none of Tielemans, Santos or Mainoo really suit eating up vast space to put out fires going the other way. Presumably that is the thinking behind the signing of Carlos Baleba. However, with him not featuring thus far this season, there might be opportunities for Fulham if they turnover the ball. That said, Carrick has said his new signing has a chance of making his debut on Sunday. Same old story at the back United have done something quite unusual in recent transfer windows. They’ve upgraded one area of the pitch at a time. Last season it was the attack, with Mbeumo, Cunha and Sesko. This season, as noted, it has been the midfield. But that does mean their first choice defence of Luke Shaw, Harry Maguire, Lisandro Martinez and Diogo Dalot is made up of players bought by Louis van Gaal, Jose Mourinho, Ole Gunnar Solskjaer and Erik ten Hag. Going forward, the FBs can lack dynamism and reliable final third quality, despite often being the free players holding width outside narrow opposition blocks. And from a purely defensive standpoint, there have been some moments of strife at the back. However, there are some wider reasons why that defence find themselves dealing with more high jeopardy moments than most. A breakdown of United’s running stats hints at an issue. Whilst the side rank towards the top of the league in high intensity stats on the ball, they are solidly at the bottom of it when it comes to running out of possession. Sometimes, Carrick’s side seem caught between a desire to press and a desire to sit off in a mid block to open up space behind the opposition defence. And that inconsistent press, coupled with players who seem to struggle to get back urgently after losing it high up the pitch, can leave their CBs exposed. Whilst Maguire is dominant in the air and Martinez is among the best passing CBs in the league, neither suit defending big space. Fulham will surely look to create such moments this weekend. The key: Kobbie Mainoo Every time I watch Man Utd, I tend to end up just watching Kobbie Mainoo pull the strings in the middle of the park and questioning how he was ignored by Amorim for most of last season. Mainoo’s passing and carrying has become the key source of tempo for this United team, and it is clear the new manager’s trust in him is being rewarded. Carrick has been in charge of 21 Premier League games since returning to Old Trafford. Mainoo has started 19 of them. On the two occasions he hasn’t - Leeds (A) and Hull City (A) - United lost. That’s the same number they’ve lost in the 19 Mainoo started, one of which was last week’s derby. The views, opinions, and/or recommendations expressed in this article are attributed to the author of Cottage Tactico and not necessarily Fulham FC. You can read more of Kish Koria’s tactical takes on FFC on X and across social media, @CottageTactico.",
+      "date": "2026-09-18T15:30:00Z",
+      "url": "https://www.fulhamfc.com/news/2026/september/18/cottage-tactico-man-uts-remodelled-midfield/",
+      "matched_players": [
+        "king",
+        "trafford",
+        "mbeumo",
+        "cunha",
+        "mainoo",
+        "hall"
+      ]
+    },
     {
       "id": 4720488,
       "title": "Vote for your Player of the Match as Palace power past Poznan",
@@ -4567,19 +4571,6 @@
       "date": "2026-09-18T13:02:00Z",
       "url": "https://www.leedsunited.com/en/news/daniel-farke-discusses-fresh-injury-concerns-ahead-of-palace",
       "matched_players": []
-    },
-    {
-      "id": 4720468,
-      "title": "FOREST PREVIEW | REDS RETURN TO HOME TURF AGAINST SKY BLUES",
-      "summary": "Reds face Sky Blues Meeting will be first in over six years Forest looking to extend run to four unbeaten Nottingham Forest take on Coventry City at the City Ground for the first time in four years on Saturday 19 September. Forest are unbeaten in three Premier League matches going into the contest, while Frank Lampard’s Sky Blues are without a point or a goal in the league since their return to the top flight. The Reds twice went ahead against Aston Villa at Villa Park last weekend through first Liam Delap, then Igor Jesus, with the Brazilian netting just minutes before additional time was announced. That win followed successful draws with Liverpool away from home and Tottenham Hotspur at the City Ground. Coventry, meanwhile, suffered a 5-0 defeat on home soil against Brighton & Hove Albion after former Red Taiwo Awoniyi was sent off in the 53rd minute. In total, the sides have met 96 times in all competitions since the first game in 1910, which Coventry won 3-1, with Forest winning 48 of those meetings and drawing 28. The remaining 20 games have been won by the Sky Blues. Our opponents Coventry have had a tough start to life back in the Premier League, with the Sky Blues having faced last season’s top two, Arsenal and Manchester City, in their opening four league fixtures. Lampard’s side travelled to the Emirates for the Premier League curtain-raiser, suffering a 3-0 loss in north London. However, after a narrow home defeat to fellow promoted side Hull City at the Coventry Building Society Arena, the Sky Blues battled against Manchester City away from home, losing just 1-0. Last weekend, Coventry played for more than 30 minutes with 10 players after Awoniyi was dismissed against Brighton, before they fell to a heavy defeat against the Seagulls. 12 new faces came through the door during the summer transfer window as Lampard looks to keep his side in the division. The key OPTA stats & facts Nottingham Forest have won each of their last six home league games against Coventry, with this their first since a 2-0 Championship victory in April 2022. This is the first Premier League meeting between Nottingham Forest and Coventry since January 1999, and a 4-0 home win for Coventry. The Sky Blues have won two of their last three top-flight games against Forest (L1), as many as in their previous 23 (D9 L12). Nottingham Forest have failed to score a home Premier League goal this season but have never started a season failing to net in their first three at home in the league, while Coventry are also goalless and last failed to score in their first three on the road in 1998/99. Coventry City have lost each of their four Premier League matches this season without finding the net. In top-flight history, only Crystal Palace in 2017/18 have had a longer losing start without scoring, losing the first seven. Since last Christmas, the only ever-present Premier League side with fewer home points than Nottingham Forest (11) is Tottenham (8), while Forest are the lowest home scorers in that time with nine goals. Coventry City are looking to avoid losing five consecutive league games for the first time since February 2017, when they were in League One. In their first Premier League spell between 1992-93 and 2000-01, they only lost five on the bounce once, in October/November 2000. Nottingham Forest boss Oliver Glasner didn't lose any of his first 10 Premier League games against promoted sides (W6 D4) but he's picked up just one point in his last four against them (D1 L3). The most recent of these games was a 0-0 draw between his Crystal Palace side and Leeds in March, a game which had the worst overall passing accuracy (73.2%) in the 2025/26 season. Since the 2022/23 season, 38 managers have taken charge of 25+ Premier League games and Coventry boss Frank Lampard's win ratio of 12.1% (P33 W4 D8 L21) is the second worst in that time, ahead only of Kieran McKenna (10.5%, P38 W4 D10 L24). Only three Premier League players have had more shot involvements (shots & chances created) without registering a goal or assist this season than Coventry City's Jack Rudoni, who has had five shots and created eight chances without success so far. Only Bruno Fernandes (7 goals, 15 assists) has been involved in more Premier League goals in 2026 than Nottingham Forest's Morgan Gibbs-White (13 goals, 5 assists), with Gibbs-White the leading scorer this year. Only Chris Wood in 2024 (18) and Stan Collymore in 1995 (14) have netted more in one calendar year for Forest. Team news Forest will be without the services of Nikola Milenković for the meeting with the Sky Blues. The Serbian defender missed last weekend’s win against Aston Villa with a hamstring injury, joining Nicolò Savona on the injury list. Jair Cunha, meanwhile, could be available, with Oliver Glasner telling the media the Brazilian had returned to training ahead of the match. Lampard, meanwhile, does not expect Aurèle Amenda to be available at the City Ground after going off injured against Aston Villa in the Carabao Cup in midweek. The Sky Blues will be without Josh Eccles, Kaine Kesler-Hayden, Luke Woolfenden and Haji Wright for the game on Trentside. Taiwo Awoniyi is suspended following last weekend’s red card. What they're saying “I’ve got a lot of respect for what he (Oliver Glasner) has done and what he did at Crystal Palace and before. “We played them behind closed doors in the summer and I met him then; he was very warm and we had a good 15-minute chat about football. “I think we have a fairly good understanding of how his teams play and those things. They have a high-quality squad. They’re good in transition, getting the ball forward, and they have talented players between the lines. “It’s a good system and he has players that suit that. It will be a tough match. Every week is a test; we have to have an understanding of individual qualities.” Oliver Glasner's pre-match press conference Kit confirmations Both sides will done the traditional home colours when Forest meet Coventry on Trentside. Forest will sport our 2026/27 adidas home kit for the fourth time this season. The Sky Blues will also wear their Sky Blue home colours. Last five against Coventry 06/04/2022 – Forest 2-0 Coventry City 08/08/2021 – Coventry City 2-1 Forest 02/02/2021 – Coventry City 1-2 Forest 04/11/2020 – Forest 2-1 Coventry City 18/02/2012 – Forest 2-0 Coventry City Classic action In the middle Jarred Gillett will officiate Forest’s clash with the Sky Blues at the City Ground. Neil Davies and Nick Greenhalgh will run the lines, with Bobby Madley as the fourth official. Paul Howard is the VAR and Craig Taylor the assistant VAR.",
-      "date": "2026-09-18T13:00:00Z",
-      "url": "https://www.nottinghamforest.co.uk/news/2026/september/18/forest-preview---reds-return-to-home-turf-against-sky-blues/",
-      "matched_players": [
-        "white",
-        "king",
-        "cunha",
-        "gibbs-white"
-      ]
     }
   ]
 }

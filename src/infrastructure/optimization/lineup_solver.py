@@ -91,9 +91,22 @@ class LineupSolver:
                         best_bench_gk = candidate_bench_gk
                         best_bench = ([candidate_bench_gk] if candidate_bench_gk else []) + bench_outfield
 
-        # Captain and Vice-Captain with Talisman, Venue & Fixture FDR EV weighting
+        # Captain and Vice-Captain with Talisman, Venue, Clean-Sheet Variance & Fixture FDR EV weighting
         def cap_eval(p: Player) -> float:
-            ev = p.xp * (1.18 if (p.position == "FWD" and p.cost >= 11.5) else (1.08 if p.cost >= 10.0 else 1.0))
+            ev = p.xp
+            # Clean Sheet Variance Asymmetry:
+            # Defenders/GKs carry binary clean-sheet wipeout risk (1 goal conceded wipes 4 pts),
+            # and lack explosive multi-goal/assist upside. Captaincy must heavily discount defenders/GKs.
+            if p.position in ("DEF", "GK"):
+                ev *= 0.55
+            elif p.position in ("MID", "FWD"):
+                # Attackers have compounding ceiling (braces, hat-tricks, penalties, bonus)
+                ev *= 1.15
+                if getattr(p, "cost", 0.0) >= 10.0:
+                    ev *= 1.08
+                elif getattr(p, "cost", 0.0) >= 7.5:
+                    ev *= 1.04
+
             if "(H)" in p.next_fixture:
                 ev *= 1.06
             elif "(A)" in p.next_fixture and p.position == "MID":
@@ -107,7 +120,7 @@ class LineupSolver:
         sorted_xi = sorted(best_xi, key=cap_eval, reverse=True)
         captain = sorted_xi[0] if sorted_xi else (gks[0] if gks else None)
         vc_cands = [p for p in best_xi if p.id != captain.id]
-        vice_captain = sorted(vc_cands, key=lambda x: x.xp, reverse=True)[0] if vc_cands else captain
+        vice_captain = sorted(vc_cands, key=cap_eval, reverse=True)[0] if vc_cands else captain
 
         starting_gk = best_starting_gk or (gks[0] if gks else None)
         bench_gk = best_bench_gk

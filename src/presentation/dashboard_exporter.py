@@ -79,7 +79,7 @@ class DashboardExporter:
         if not raw_leagues:
             try:
                 from ..infrastructure.fpl.client import FPLClient
-                status = FPLClient().get_team_status(10469492)
+                status = FPLClient().get_my_team(10469492)
                 raw_leagues = status.get("leagues", [])
             except Exception as e:
                 logger.warning(f"Could not load real leagues: {e}")

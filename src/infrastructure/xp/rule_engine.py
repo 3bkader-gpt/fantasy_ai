@@ -110,8 +110,10 @@ class RuleBasedXPEngine(IXPEngine):
             # Scale by expected minutes fraction
             scaled_match_xp = full_match_xp * (exp_mins / 90.0)
 
-            # 4. Realistic price-tier ceiling (Hard sanity check against budget hype)
-            if player.cost <= 5.0 and pos != "GK":
+            # 4. Realistic price-tier and position ceilings (Hard sanity check against budget hype)
+            if pos == "DEF":
+                scaled_match_xp = min(6.2, scaled_match_xp)
+            elif player.cost <= 5.0 and pos != "GK":
                 scaled_match_xp = min(5.8, scaled_match_xp)
             elif player.cost <= 6.0 and pos != "GK":
                 scaled_match_xp = min(7.0, scaled_match_xp)
