@@ -4,16 +4,16 @@
     "team_name": "هبد اصطناعي",
     "gameweek": 5,
     "deadline": "2026-09-18T17:30:00Z",
-    "rank": 10621065,
+    "rank": 10621059,
     "total_points": 51,
     "team_value": 100.6,
     "bank": 1.1,
     "free_transfers": 1,
-    "dry_run": true,
-    "last_updated": "2026-09-18T15:40:50.417269Z"
+    "dry_run": false,
+    "last_updated": "2026-09-18T16:04:11.600942Z"
   },
-  "formation": "3-5-2",
-  "total_xp": 77.6,
+  "formation": "4-5-1",
+  "total_xp": 76.8,
   "captain": {
     "id": 426,
     "name": "B.Fernandes",
@@ -292,6 +292,52 @@
       "press_insight": null
     },
     {
+      "id": 279,
+      "name": "Ajayi",
+      "team": "HUL",
+      "position": "DEF",
+      "cost": 4.2,
+      "xp": 5.5,
+      "horizon_xp": 14.8,
+      "fixture": "NEW (A) [FDR 3]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 5,
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 6,
+          "opponent": "EVE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 7,
+          "opponent": "FUL",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 8,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
       "id": 68,
       "name": "Tavernier",
       "team": "BOU",
@@ -522,52 +568,6 @@
       "press_insight": null
     },
     {
-      "id": 165,
-      "name": "João Pedro",
-      "team": "CHE",
-      "position": "FWD",
-      "cost": 7.8,
-      "xp": 6.4,
-      "horizon_xp": 17.3,
-      "fixture": "BRE (A) [FDR 3]",
-      "expected_minutes": 70.4,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 5,
-          "opponent": "BRE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 6,
-          "opponent": "BOU",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 7,
-          "opponent": "EVE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 8,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
       "id": 379,
       "name": "Isak",
       "team": "LIV",
@@ -662,33 +662,33 @@
       "press_insight": null
     },
     {
-      "id": 279,
-      "name": "Ajayi",
-      "team": "HUL",
-      "position": "DEF",
-      "cost": 4.2,
-      "xp": 5.5,
-      "horizon_xp": 14.8,
-      "fixture": "NEW (A) [FDR 3]",
-      "expected_minutes": 88.0,
+      "id": 165,
+      "name": "João Pedro",
+      "team": "CHE",
+      "position": "FWD",
+      "cost": 7.8,
+      "xp": 4.8,
+      "horizon_xp": 13.0,
+      "fixture": "BRE (A) [FDR 3]",
+      "expected_minutes": 52.8,
       "is_captain": false,
       "is_vice_captain": false,
       "fixtures_5gw": [
         {
           "gw": 5,
-          "opponent": "NEW",
+          "opponent": "BRE",
           "is_home": false,
           "fdr": 3
         },
         {
           "gw": 6,
-          "opponent": "EVE",
+          "opponent": "BOU",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 7,
-          "opponent": "FUL",
+          "opponent": "EVE",
           "is_home": false,
           "fdr": 3
         },
@@ -705,7 +705,16 @@
           "fdr": 3
         }
       ],
-      "press_insight": null
+      "press_insight": {
+        "player_id": 165,
+        "player_name": "João Pedro",
+        "fitness_sentiment": "minor_doubt",
+        "minute_multiplier": 0.75,
+        "summary_ar": "يحوم الشك حول مشاركة جواو بيدرو بنسبة 75% بسبب إصابة غير محددة، لذا يظل محل مراقبة.",
+        "summary_en": "João Pedro has an unspecified injury with a 75% chance of playing, making him a minor doubt for the weekend.",
+        "risk_level": "MEDIUM",
+        "headline_reference": "Unspecified injury - 75% chance of playing"
+      }
     },
     {
       "id": 173,
@@ -3337,48 +3346,6 @@
       ]
     },
     {
-      "id": 165,
-      "name": "João Pedro",
-      "team": "CHE",
-      "position": "FWD",
-      "cost": 7.8,
-      "xp": 6.4,
-      "horizon_xp": 17.3,
-      "fixture": "BRE (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 5,
-          "opponent": "BRE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 6,
-          "opponent": "BOU",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 7,
-          "opponent": "EVE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 8,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
       "id": 379,
       "name": "Isak",
       "team": "LIV",
@@ -3489,6 +3456,48 @@
           "opponent": "MCI",
           "is_home": false,
           "fdr": 5
+        },
+        {
+          "gw": 8,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 165,
+      "name": "João Pedro",
+      "team": "CHE",
+      "position": "FWD",
+      "cost": 7.8,
+      "xp": 4.8,
+      "horizon_xp": 13.0,
+      "fixture": "BRE (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 5,
+          "opponent": "BRE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 6,
+          "opponent": "BOU",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 7,
+          "opponent": "EVE",
+          "is_home": false,
+          "fdr": 3
         },
         {
           "gw": 8,
@@ -4135,7 +4144,7 @@
       ]
     }
   ],
-  "briefing": "إليك التقرير التكتيكي الشامل للجولة الخامسة، المُعد خصيصاً لتحقيق القفزة المطلوبة في الترتيب العام باستخدام التحليل الرياضي المتقدم (xP) وجدول صعوبة المباريات (FDR).\n\n---\n\n# 📋 التقرير التكتيكي للجولة الخامسة: خطة الهجوم التعويضي (Aggressive Push)\n\n**من: المدير الفني الذكي (Elite Autonomous FPL AI Manager)**  \n**إلى: مدير الفريق**  \n**الهدف: اختراق الصفوف وصعود الترتيب العام عبر تكتيك هجومي عالي المرونة.**\n\n---\n\n### 1. الاستراتيجية التكتيكية وموقف الترتيب: \"الهجوم هو خير وسيلة للتعويض\"\n* **موقف الترتيب الحالي:** 10,621,065  \n* **الاستراتيجية المعتمدة:** **AGGRESSIVE (هجومي تعويضي)**  \n* **التشكيل التكتيكي:** **3-5-2**\n\n**التحليل التكتيكي للموقف:**  \nالترتيب الحالي يفرض علينا التخلي عن الحذر واللعب بجرأة مدروسة. شعارنا الثابت هو **\"Points are Points\"** (النقاط هي النقاط بغض النظر عن الأسماء). بالنظر إلى تشكيلتنا، نعتمد على خط وسط خماسي فائق القوة والانفجارية (Saka, Palmer, Fernandes, Gakpo, Tavernier). هذا الخماسي يمنحنا تفوقاً رقمياً كبيراً في صناعة الفرص والتسجيل، بينما نؤمن الدفاع بثلاثي صلب بقيادة Calafiori وTarkowski، معتمدين على ثنائي هجومي حركي (Isak وJoão Pedro) قادر على استغلال المساحات.\n\n---\n\n### 2. التحليل الرياضي والتكتيكي للتبديلات (The Transfer Blueprint)\n\n* **🔴 المغادرة:** Stach (MID - LEE) | النقاط المتوقعة: [xP: 5.8]  \n* **🟢 الانضمام:** Tavernier (MID - BOU) | النقاط المتوقعة: [xP: 7.4] | السعر: £6.1m  \n* **التكلفة:** 0- نقطة (تبديل مجاني)  \n* **صافي الزيادة المتوقعة:** **+1.75 نقطة** في هذه الجولة فقط.\n\n```\n[Stach: xP 5.8]  ───► (تبديل مجاني) ───► [Tavernier: xP 7.4] (+1.75 Net Expected Points)\n```\n\n**التبرير الرياضي والتكتيكي:**  \n1. **تر",
+  "briefing": "أهلاً بك أيها المدرب العظيم. بصفتي المدير الفني الأعلى كفاءة لفريقك في فانتازي الدوري الإنجليزي (FPL AI)، إليك التقرير التكتيكي الشامل والمحسّن رياضياً استعداداً لمعركة الجولة الخامسة. \n\nنحن هنا لا نعترف بالعواطف، \"النقاط وحدها هي ما يهم\" (Points are Points)، ومركزنا الحالي يتطلب منا هجوماً شرساً ومدروساً لتقليص الفارق والزحف نحو القمة.\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب\n* **الترتيب الحالي:** 10,621,059\n* **الاستراتيجية المعتمدة:** **AGGRESSIVE - هجومي تعويضي**\n* **التحليل التكتيكي:** بالنظر إلى موقعنا الحالي في الترتيب العام، فإن الاستراتيجية الدفاعية أو المحافظة لم تعد جدية. نحن بحاجة إلى قفزات نوعية في النقاط المتوقعة (xP). التشكيل الأساسي يعتمد على رسم تكتيكي (4-5-1) يضمن كثافة عالية في خط الوسط وهجوماً كاسحاً يرتكز على أسماء ذات معدلات تهديفية وصناعية مرتفعة، مع الاستفادة القصوى من جدول المباريات (FDR).\n\n---\n\n### 2. التحليل الرياضي وتبرير التبديلات (Transfer Analysis)\n* **القرار التنفيذي:** \n  * 🔴 **بيع:** Stach (MID - LEE) [xP: 5.8]\n  * 🟢 **شراء:** Tavernier (MID - BOU) [xP: 7.4 | £6.1m]\n* **تكلفة التبديلات:** 0 نقطة (مجاني) | **صافي الزيادة المتوقعة:** **+1.75 نقطة**\n* **المبرر الرياضي والتكتيكي:**\n  * بيع *Stach* يأتي في إطار التخلص من الأصول ذات النمو البطيء في xP، خصوصاً مع تباين أدائه وقوة مباريات ليدز المقبلة مقارنة بالقيمة السوقية.\n  * شراء *Tavernier* مدعوم بأرقام إحصائية قوية ومؤشر xP يبلغ 7.4. جدول بورنموث القادم يوفر فرصة ذهبية (مواجهة سندرلاند في الجولة بعد القادمة بفارق صعوبة منخفض FDR: 2، واستغلال لعبه على أرضه). الفارق في النقاط المتوقعة يبرر تماماً جلبه لتعزيز خط الوسط وتحقيق عائد فوري على الاستثمار (ROI).\n\n---\n\n### 3. مبررات شارة القيادة (C) والنائب (VC)\n* **الكابتن (C): B.Fernandes (MUN)** - [xP: 7.0]\n  * **المبرر:** برونو فرنانديز يظل القلب النافذ لمانشستر يونايتد، ومسؤولاً عن ركلات الجزاء والكرات الثابتة والصناعة المطلقة. معدل xP الخاص به يجعله خياراً هجومياً ممتازاً لتعويض النقاط ومضاعفتها، خاصة مع بحث الشياطين الحمر عن فرض إيقاعهم الهجومي.\n* **النائب (VC): Saka (ARS)** - [xP: 7.2]\n  * **المبرر:** بوكايو ساكا يتمتع بأعلى معدل xP في الفريق (7.2)، وهو ضمانة حقيقية للمساهمة الهجومية لأرسنال. وجوده كخيار ثانٍ يمنحنا طمأنينة تامة في حال غاب برونو لأي طارئ (مما يفعّل شارة القيادة تلقائياً لساكا).\n\n---\n\n### 4. نصيحة استراتيجية الخواص وإدارة الميزانية\n* **الخواص (Chips):**\n  * **التوصية:** **الاحتفاظ بالخواص بالكامل** (Wildcard, Free Hit, 3XC, BB). الجولات الأولى مخصصة لبناء الأساس الصلب، والهدف الأساسي هو ادخار هذه الخواص للجولات المزدوجة (DGWs) والجولات الحاسمة في منتصف ونهاية الموسم حيث تتضاعف قيمة العائد النقطي.\n* **الميزانية والسيولة:**\n  * نمتلك حالياً رصيداً نقدياً قدره **£1.1m**، وهو ما يمنحنا مرونة مالية هائلة في السوق للتدخل السريع وجلب أي \"ديفرنشال\" صاعد دون الحاجة لخصومات سالبة مكلفة (Hits).\n* **رادار السوق:**\n  * **Differentials للراصدين:** *Tavernier* (الذي تم جلبه)، *Scott*، و *Schade*.\n  * **مخاطر يجب تجنبها/بيعها:** تجنب تماماً أصول مثل *Konsa* و *Dubravka* نظراً لتراجع أرقامهم الدفاعية وسلبية العوائد المتوقعة.\n\n---\n**الخلاصة التكتيكية:** الفريق جاهز، التبديل محسوب بدقة رياضية لرفع الـ xP، والشارة في أمين الأيقونات. إلى القمة!",
   "leagues": [
     {
       "id": 2024890,
@@ -4182,13 +4191,13 @@
     {
       "id": 279,
       "name": "Gameweek 4",
-      "rank": 230012,
-      "entry_rank": 230012,
+      "rank": 230013,
+      "entry_rank": 230013,
       "last_rank": 0,
       "total": 268192,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 230012 من 268192",
+      "status": "⚔️ المركز 230013 من 268192",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4196,13 +4205,13 @@
     {
       "id": 83,
       "name": "Egypt",
-      "rank": 795039,
-      "entry_rank": 795039,
+      "rank": 795040,
+      "entry_rank": 795040,
       "last_rank": 0,
       "total": 797754,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 795039 من 797754",
+      "status": "⚔️ المركز 795040 من 797754",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4238,13 +4247,13 @@
     {
       "id": 320,
       "name": "Rookie",
-      "rank": 2698021,
-      "entry_rank": 2698021,
+      "rank": 2698019,
+      "entry_rank": 2698019,
       "last_rank": 0,
       "total": 2726245,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 2698021 من 2726245",
+      "status": "⚔️ المركز 2698019 من 2726245",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4252,13 +4261,13 @@
     {
       "id": 314,
       "name": "Overall",
-      "rank": 10621065,
-      "entry_rank": 10621065,
+      "rank": 10621059,
+      "entry_rank": 10621059,
       "last_rank": 0,
       "total": 10673914,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 10621065 من 10673914",
+      "status": "⚔️ المركز 10621059 من 10673914",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4309,14 +4318,6 @@
         "xp": 6.44
       },
       {
-        "player": "João Pedro",
-        "team": "FPL",
-        "cost": 7.8,
-        "eo": 8,
-        "advantage": "💎 Huge Rank Boost",
-        "xp": 6.37
-      },
-      {
         "player": "Gakpo",
         "team": "FPL",
         "cost": 7.2,
@@ -4339,6 +4340,14 @@
         "eo": 8,
         "advantage": "💎 Huge Rank Boost",
         "xp": 5.98
+      },
+      {
+        "player": "Egan",
+        "team": "FPL",
+        "cost": 4.1,
+        "eo": 8,
+        "advantage": "💎 Huge Rank Boost",
+        "xp": 5.58
       }
     ],
     "leagues": [
@@ -4387,13 +4396,13 @@
       {
         "id": 279,
         "name": "Gameweek 4",
-        "rank": 230012,
-        "entry_rank": 230012,
+        "rank": 230013,
+        "entry_rank": 230013,
         "last_rank": 0,
         "total": 268192,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 230012 من 268192",
+        "status": "⚔️ المركز 230013 من 268192",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4401,13 +4410,13 @@
       {
         "id": 83,
         "name": "Egypt",
-        "rank": 795039,
-        "entry_rank": 795039,
+        "rank": 795040,
+        "entry_rank": 795040,
         "last_rank": 0,
         "total": 797754,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 795039 من 797754",
+        "status": "⚔️ المركز 795040 من 797754",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4443,13 +4452,13 @@
       {
         "id": 320,
         "name": "Rookie",
-        "rank": 2698021,
-        "entry_rank": 2698021,
+        "rank": 2698019,
+        "entry_rank": 2698019,
         "last_rank": 0,
         "total": 2726245,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 2698021 من 2726245",
+        "status": "⚔️ المركز 2698019 من 2726245",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4457,13 +4466,13 @@
       {
         "id": 314,
         "name": "Overall",
-        "rank": 10621065,
-        "entry_rank": 10621065,
+        "rank": 10621059,
+        "entry_rank": 10621059,
         "last_rank": 0,
         "total": 10673914,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 10621065 من 10673914",
+        "status": "⚔️ المركز 10621059 من 10673914",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4471,8 +4480,57 @@
     ],
     "overall_threat_score": 68
   },
-  "press_insights": [],
+  "press_insights": [
+    {
+      "player_id": 123,
+      "player_name": "Hinshelwood",
+      "fitness_sentiment": "ruled_out",
+      "minute_multiplier": 0.0,
+      "summary_ar": "لاعب برايتون مصاب في الكاحل ومن المتوقع عودته في 10 أكتوبر، مما يجعله غائباً تماماً عن هذه الجولة.",
+      "summary_en": "Brighton's Hinshelwood is sidelined with an ankle injury and expected back on Oct 10, ruling him out completely.",
+      "risk_level": "CRITICAL",
+      "headline_reference": "Ankle injury - Expected back 10 Oct"
+    },
+    {
+      "player_id": 165,
+      "player_name": "João Pedro",
+      "fitness_sentiment": "minor_doubt",
+      "minute_multiplier": 0.75,
+      "summary_ar": "يحوم الشك حول مشاركة جواو بيدرو بنسبة 75% بسبب إصابة غير محددة، لذا يظل محل مراقبة.",
+      "summary_en": "João Pedro has an unspecified injury with a 75% chance of playing, making him a minor doubt for the weekend.",
+      "risk_level": "MEDIUM",
+      "headline_reference": "Unspecified injury - 75% chance of playing"
+    },
+    {
+      "player_id": 586,
+      "player_name": "Mendy",
+      "fitness_sentiment": "ruled_out",
+      "minute_multiplier": 0.0,
+      "summary_ar": "يعاني من إصابة ارتجاج في المخ ومن المتوقع عودته في 11 أكتوبر، وهو خارج حسابات المباراة تماماً.",
+      "summary_en": "Suffering from a concussion with an expected return on Oct 11, completely ruled out for this fixture.",
+      "risk_level": "CRITICAL",
+      "headline_reference": "Concussion - Expected back 11 Oct"
+    },
+    {
+      "player_id": 454,
+      "player_name": "Elanga",
+      "fitness_sentiment": "ruled_out",
+      "minute_multiplier": 0.0,
+      "summary_ar": "إلانغا يعاني من إصابة غير محددة بدون موعد عودة محدد، ولن يشارك في المباريات القادمة.",
+      "summary_en": "Elanga is sidelined with an unspecified injury and an unknown return date, ruling him out.",
+      "risk_level": "CRITICAL",
+      "headline_reference": "Unspecified injury - Unknown return date"
+    }
+  ],
   "press_wire": [
+    {
+      "id": 4720532,
+      "title": "Two key players available again for Ipswich",
+      "summary": "",
+      "date": "2026-09-18T15:40:00Z",
+      "url": "https://www.itfc.co.uk/news/2026/september/18/early-everton-team-news/",
+      "matched_players": []
+    },
     {
       "id": 4720528,
       "title": "Cottage Tactico: Man Utd's remodelled midfield",
@@ -4563,14 +4621,6 @@
       "matched_players": [
         "rice"
       ]
-    },
-    {
-      "id": 4720449,
-      "title": "Farke discusses fresh injury concerns ahead of Crystal Palace",
-      "summary": "",
-      "date": "2026-09-18T13:02:00Z",
-      "url": "https://www.leedsunited.com/en/news/daniel-farke-discusses-fresh-injury-concerns-ahead-of-palace",
-      "matched_players": []
     }
   ]
 }
