@@ -4,16 +4,16 @@
     "team_name": "هبد اصطناعي",
     "gameweek": 5,
     "deadline": "2026-09-18T17:30:00Z",
-    "rank": 10621059,
+    "rank": 10621051,
     "total_points": 51,
     "team_value": 100.6,
-    "bank": 1.1,
+    "bank": 1.2,
     "free_transfers": 1,
     "dry_run": false,
-    "last_updated": "2026-09-18T16:04:11.600942Z"
+    "last_updated": "2026-09-18T16:36:00.125217Z"
   },
-  "formation": "4-5-1",
-  "total_xp": 76.8,
+  "formation": "3-5-2",
+  "total_xp": 73.1,
   "captain": {
     "id": 426,
     "name": "B.Fernandes",
@@ -292,98 +292,6 @@
       "press_insight": null
     },
     {
-      "id": 279,
-      "name": "Ajayi",
-      "team": "HUL",
-      "position": "DEF",
-      "cost": 4.2,
-      "xp": 5.5,
-      "horizon_xp": 14.8,
-      "fixture": "NEW (A) [FDR 3]",
-      "expected_minutes": 88.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 5,
-          "opponent": "NEW",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 6,
-          "opponent": "EVE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 7,
-          "opponent": "FUL",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 8,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
-      "id": 68,
-      "name": "Tavernier",
-      "team": "BOU",
-      "position": "MID",
-      "cost": 6.1,
-      "xp": 7.4,
-      "horizon_xp": 19.1,
-      "fixture": "LIV (H) [FDR 4]",
-      "expected_minutes": 88.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 5,
-          "opponent": "LIV",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 6,
-          "opponent": "CHE",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 7,
-          "opponent": "SUN",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 8,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
       "id": 12,
       "name": "Saka",
       "team": "ARS",
@@ -568,6 +476,52 @@
       "press_insight": null
     },
     {
+      "id": 335,
+      "name": "Stach",
+      "team": "LEE",
+      "position": "MID",
+      "cost": 6.0,
+      "xp": 5.8,
+      "horizon_xp": 13.0,
+      "fixture": "CRY (H) [FDR 3]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 5,
+          "opponent": "CRY",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 6,
+          "opponent": "ARS",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 7,
+          "opponent": "MUN",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 8,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
       "id": 379,
       "name": "Isak",
       "team": "LIV",
@@ -596,54 +550,6 @@
           "gw": 7,
           "opponent": "BRE",
           "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 8,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    }
-  ],
-  "bench": [
-    {
-      "id": 109,
-      "name": "Verbruggen",
-      "team": "BHA",
-      "position": "GK",
-      "cost": 4.5,
-      "xp": 3.5,
-      "horizon_xp": 10.1,
-      "fixture": "ARS (H) [FDR 4]",
-      "expected_minutes": 90.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 5,
-          "opponent": "ARS",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 6,
-          "opponent": "SUN",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 7,
-          "opponent": "CRY",
-          "is_home": true,
           "fdr": 3
         },
         {
@@ -709,12 +615,102 @@
         "player_id": 165,
         "player_name": "João Pedro",
         "fitness_sentiment": "minor_doubt",
-        "minute_multiplier": 0.75,
-        "summary_ar": "يحوم الشك حول مشاركة جواو بيدرو بنسبة 75% بسبب إصابة غير محددة، لذا يظل محل مراقبة.",
-        "summary_en": "João Pedro has an unspecified injury with a 75% chance of playing, making him a minor doubt for the weekend.",
-        "risk_level": "MEDIUM",
-        "headline_reference": "Unspecified injury - 75% chance of playing"
+        "minute_multiplier": 0.75
       }
+    }
+  ],
+  "bench": [
+    {
+      "id": 109,
+      "name": "Verbruggen",
+      "team": "BHA",
+      "position": "GK",
+      "cost": 4.5,
+      "xp": 3.5,
+      "horizon_xp": 10.1,
+      "fixture": "ARS (H) [FDR 4]",
+      "expected_minutes": 90.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 5,
+          "opponent": "ARS",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 6,
+          "opponent": "SUN",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 7,
+          "opponent": "CRY",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 8,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
+      "id": 279,
+      "name": "Ajayi",
+      "team": "HUL",
+      "position": "DEF",
+      "cost": 4.2,
+      "xp": 5.5,
+      "horizon_xp": 14.8,
+      "fixture": "NEW (A) [FDR 3]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 5,
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 6,
+          "opponent": "EVE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 7,
+          "opponent": "FUL",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 8,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
     },
     {
       "id": 173,
@@ -809,21 +805,7 @@
       "press_insight": null
     }
   ],
-  "transfers": [
-    {
-      "player_out": {
-        "name": "Stach",
-        "team": "LEE",
-        "xp": 5.8
-      },
-      "player_in": {
-        "name": "Tavernier",
-        "team": "BOU",
-        "cost": 6.1,
-        "xp": 7.4
-      }
-    }
-  ],
+  "transfers": [],
   "market_candidates": [
     {
       "id": 1,
@@ -4144,7 +4126,7 @@
       ]
     }
   ],
-  "briefing": "أهلاً بك أيها المدرب العظيم. بصفتي المدير الفني الأعلى كفاءة لفريقك في فانتازي الدوري الإنجليزي (FPL AI)، إليك التقرير التكتيكي الشامل والمحسّن رياضياً استعداداً لمعركة الجولة الخامسة. \n\nنحن هنا لا نعترف بالعواطف، \"النقاط وحدها هي ما يهم\" (Points are Points)، ومركزنا الحالي يتطلب منا هجوماً شرساً ومدروساً لتقليص الفارق والزحف نحو القمة.\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب\n* **الترتيب الحالي:** 10,621,059\n* **الاستراتيجية المعتمدة:** **AGGRESSIVE - هجومي تعويضي**\n* **التحليل التكتيكي:** بالنظر إلى موقعنا الحالي في الترتيب العام، فإن الاستراتيجية الدفاعية أو المحافظة لم تعد جدية. نحن بحاجة إلى قفزات نوعية في النقاط المتوقعة (xP). التشكيل الأساسي يعتمد على رسم تكتيكي (4-5-1) يضمن كثافة عالية في خط الوسط وهجوماً كاسحاً يرتكز على أسماء ذات معدلات تهديفية وصناعية مرتفعة، مع الاستفادة القصوى من جدول المباريات (FDR).\n\n---\n\n### 2. التحليل الرياضي وتبرير التبديلات (Transfer Analysis)\n* **القرار التنفيذي:** \n  * 🔴 **بيع:** Stach (MID - LEE) [xP: 5.8]\n  * 🟢 **شراء:** Tavernier (MID - BOU) [xP: 7.4 | £6.1m]\n* **تكلفة التبديلات:** 0 نقطة (مجاني) | **صافي الزيادة المتوقعة:** **+1.75 نقطة**\n* **المبرر الرياضي والتكتيكي:**\n  * بيع *Stach* يأتي في إطار التخلص من الأصول ذات النمو البطيء في xP، خصوصاً مع تباين أدائه وقوة مباريات ليدز المقبلة مقارنة بالقيمة السوقية.\n  * شراء *Tavernier* مدعوم بأرقام إحصائية قوية ومؤشر xP يبلغ 7.4. جدول بورنموث القادم يوفر فرصة ذهبية (مواجهة سندرلاند في الجولة بعد القادمة بفارق صعوبة منخفض FDR: 2، واستغلال لعبه على أرضه). الفارق في النقاط المتوقعة يبرر تماماً جلبه لتعزيز خط الوسط وتحقيق عائد فوري على الاستثمار (ROI).\n\n---\n\n### 3. مبررات شارة القيادة (C) والنائب (VC)\n* **الكابتن (C): B.Fernandes (MUN)** - [xP: 7.0]\n  * **المبرر:** برونو فرنانديز يظل القلب النافذ لمانشستر يونايتد، ومسؤولاً عن ركلات الجزاء والكرات الثابتة والصناعة المطلقة. معدل xP الخاص به يجعله خياراً هجومياً ممتازاً لتعويض النقاط ومضاعفتها، خاصة مع بحث الشياطين الحمر عن فرض إيقاعهم الهجومي.\n* **النائب (VC): Saka (ARS)** - [xP: 7.2]\n  * **المبرر:** بوكايو ساكا يتمتع بأعلى معدل xP في الفريق (7.2)، وهو ضمانة حقيقية للمساهمة الهجومية لأرسنال. وجوده كخيار ثانٍ يمنحنا طمأنينة تامة في حال غاب برونو لأي طارئ (مما يفعّل شارة القيادة تلقائياً لساكا).\n\n---\n\n### 4. نصيحة استراتيجية الخواص وإدارة الميزانية\n* **الخواص (Chips):**\n  * **التوصية:** **الاحتفاظ بالخواص بالكامل** (Wildcard, Free Hit, 3XC, BB). الجولات الأولى مخصصة لبناء الأساس الصلب، والهدف الأساسي هو ادخار هذه الخواص للجولات المزدوجة (DGWs) والجولات الحاسمة في منتصف ونهاية الموسم حيث تتضاعف قيمة العائد النقطي.\n* **الميزانية والسيولة:**\n  * نمتلك حالياً رصيداً نقدياً قدره **£1.1m**، وهو ما يمنحنا مرونة مالية هائلة في السوق للتدخل السريع وجلب أي \"ديفرنشال\" صاعد دون الحاجة لخصومات سالبة مكلفة (Hits).\n* **رادار السوق:**\n  * **Differentials للراصدين:** *Tavernier* (الذي تم جلبه)، *Scott*، و *Schade*.\n  * **مخاطر يجب تجنبها/بيعها:** تجنب تماماً أصول مثل *Konsa* و *Dubravka* نظراً لتراجع أرقامهم الدفاعية وسلبية العوائد المتوقعة.\n\n---\n**الخلاصة التكتيكية:** الفريق جاهز، التبديل محسوب بدقة رياضية لرفع الـ xP، والشارة في أمين الأيقونات. إلى القمة!",
+  "briefing": "التشكيلة الرسمية المحدثة 3-5-2 بعد معالجة مخاطرة تكديس دفاع هال سيتي واستعادة جواو بيدرو للهجوم.",
   "leagues": [
     {
       "id": 2024890,
@@ -4191,13 +4173,13 @@
     {
       "id": 279,
       "name": "Gameweek 4",
-      "rank": 230013,
-      "entry_rank": 230013,
+      "rank": 230008,
+      "entry_rank": 230008,
       "last_rank": 0,
       "total": 268192,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 230013 من 268192",
+      "status": "⚔️ المركز 230008 من 268192",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4219,13 +4201,13 @@
     {
       "id": 2260821,
       "name": "beIN SPORTS League",
-      "rank": 2094206,
-      "entry_rank": 2094206,
+      "rank": 2094207,
+      "entry_rank": 2094207,
       "last_rank": 0,
       "total": 2103282,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 2094206 من 2103282",
+      "status": "⚔️ المركز 2094207 من 2103282",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4233,13 +4215,13 @@
     {
       "id": 431170,
       "name": "Adobe Express Badge League",
-      "rank": 2626573,
-      "entry_rank": 2626573,
+      "rank": 2626832,
+      "entry_rank": 2626832,
       "last_rank": 0,
       "total": 2587868,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 2626573 من 2587868",
+      "status": "⚔️ المركز 2626832 من 2587868",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4247,13 +4229,13 @@
     {
       "id": 320,
       "name": "Rookie",
-      "rank": 2698019,
-      "entry_rank": 2698019,
+      "rank": 2698010,
+      "entry_rank": 2698010,
       "last_rank": 0,
       "total": 2726245,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 2698019 من 2726245",
+      "status": "⚔️ المركز 2698010 من 2726245",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4261,13 +4243,13 @@
     {
       "id": 314,
       "name": "Overall",
-      "rank": 10621059,
-      "entry_rank": 10621059,
+      "rank": 10621051,
+      "entry_rank": 10621051,
       "last_rank": 0,
       "total": 10673914,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 10621059 من 10673914",
+      "status": "⚔️ المركز 10621051 من 10673914",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4302,14 +4284,6 @@
     ],
     "differentials": [
       {
-        "player": "Tavernier",
-        "team": "FPL",
-        "cost": 6.1,
-        "eo": 8,
-        "advantage": "💎 Huge Rank Boost",
-        "xp": 7.36
-      },
-      {
         "player": "Tzolakis",
         "team": "FPL",
         "cost": 4.6,
@@ -4340,6 +4314,14 @@
         "eo": 8,
         "advantage": "💎 Huge Rank Boost",
         "xp": 5.98
+      },
+      {
+        "player": "Stach",
+        "team": "FPL",
+        "cost": 6.0,
+        "eo": 4,
+        "advantage": "💎 Huge Rank Boost",
+        "xp": 5.79
       },
       {
         "player": "Egan",
@@ -4396,13 +4378,13 @@
       {
         "id": 279,
         "name": "Gameweek 4",
-        "rank": 230013,
-        "entry_rank": 230013,
+        "rank": 230008,
+        "entry_rank": 230008,
         "last_rank": 0,
         "total": 268192,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 230013 من 268192",
+        "status": "⚔️ المركز 230008 من 268192",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4424,13 +4406,13 @@
       {
         "id": 2260821,
         "name": "beIN SPORTS League",
-        "rank": 2094206,
-        "entry_rank": 2094206,
+        "rank": 2094207,
+        "entry_rank": 2094207,
         "last_rank": 0,
         "total": 2103282,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 2094206 من 2103282",
+        "status": "⚔️ المركز 2094207 من 2103282",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4438,13 +4420,13 @@
       {
         "id": 431170,
         "name": "Adobe Express Badge League",
-        "rank": 2626573,
-        "entry_rank": 2626573,
+        "rank": 2626832,
+        "entry_rank": 2626832,
         "last_rank": 0,
         "total": 2587868,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 2626573 من 2587868",
+        "status": "⚔️ المركز 2626832 من 2587868",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4452,13 +4434,13 @@
       {
         "id": 320,
         "name": "Rookie",
-        "rank": 2698019,
-        "entry_rank": 2698019,
+        "rank": 2698010,
+        "entry_rank": 2698010,
         "last_rank": 0,
         "total": 2726245,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 2698019 من 2726245",
+        "status": "⚔️ المركز 2698010 من 2726245",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4466,13 +4448,13 @@
       {
         "id": 314,
         "name": "Overall",
-        "rank": 10621059,
-        "entry_rank": 10621059,
+        "rank": 10621051,
+        "entry_rank": 10621051,
         "last_rank": 0,
         "total": 10673914,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 10621059 من 10673914",
+        "status": "⚔️ المركز 10621051 من 10673914",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4482,145 +4464,11 @@
   },
   "press_insights": [
     {
-      "player_id": 123,
-      "player_name": "Hinshelwood",
-      "fitness_sentiment": "ruled_out",
-      "minute_multiplier": 0.0,
-      "summary_ar": "لاعب برايتون مصاب في الكاحل ومن المتوقع عودته في 10 أكتوبر، مما يجعله غائباً تماماً عن هذه الجولة.",
-      "summary_en": "Brighton's Hinshelwood is sidelined with an ankle injury and expected back on Oct 10, ruling him out completely.",
-      "risk_level": "CRITICAL",
-      "headline_reference": "Ankle injury - Expected back 10 Oct"
-    },
-    {
       "player_id": 165,
       "player_name": "João Pedro",
       "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "يحوم الشك حول مشاركة جواو بيدرو بنسبة 75% بسبب إصابة غير محددة، لذا يظل محل مراقبة.",
-      "summary_en": "João Pedro has an unspecified injury with a 75% chance of playing, making him a minor doubt for the weekend.",
-      "risk_level": "MEDIUM",
-      "headline_reference": "Unspecified injury - 75% chance of playing"
-    },
-    {
-      "player_id": 586,
-      "player_name": "Mendy",
-      "fitness_sentiment": "ruled_out",
-      "minute_multiplier": 0.0,
-      "summary_ar": "يعاني من إصابة ارتجاج في المخ ومن المتوقع عودته في 11 أكتوبر، وهو خارج حسابات المباراة تماماً.",
-      "summary_en": "Suffering from a concussion with an expected return on Oct 11, completely ruled out for this fixture.",
-      "risk_level": "CRITICAL",
-      "headline_reference": "Concussion - Expected back 11 Oct"
-    },
-    {
-      "player_id": 454,
-      "player_name": "Elanga",
-      "fitness_sentiment": "ruled_out",
-      "minute_multiplier": 0.0,
-      "summary_ar": "إلانغا يعاني من إصابة غير محددة بدون موعد عودة محدد، ولن يشارك في المباريات القادمة.",
-      "summary_en": "Elanga is sidelined with an unspecified injury and an unknown return date, ruling him out.",
-      "risk_level": "CRITICAL",
-      "headline_reference": "Unspecified injury - Unknown return date"
+      "minute_multiplier": 0.75
     }
   ],
-  "press_wire": [
-    {
-      "id": 4720532,
-      "title": "Two key players available again for Ipswich",
-      "summary": "",
-      "date": "2026-09-18T15:40:00Z",
-      "url": "https://www.itfc.co.uk/news/2026/september/18/early-everton-team-news/",
-      "matched_players": []
-    },
-    {
-      "id": 4720528,
-      "title": "Cottage Tactico: Man Utd's remodelled midfield",
-      "summary": "For most of my childhood, Manchester United were dominant. For most of my adult life, Manchester United have seemed to be either in the midst of - or trying to recover from - a period of crisis. After a tough week, there are some reasons to think they visit the Cottage on Sunday on the cusp of another one. A constant throughout both eras, though, has been a style of football that looks most threatening on the counter attack, showcasing players who catch the eye when playing quickly. It’s almost a cliché to say the modern Manchester United are good on the break and struggle to control games. But it’s also true. Since the start of last season, United have played 10 games in which they’ve had 40% or less of the ball. They’ve won them all. In the 20 games played where they’ve had over 55% of possession, they’ve won seven, drawn seven and lost six. So, why do their team still exhibit these tendencies? What has Michael Carrick tried to do with that in mind? And how will it impact our game this Sunday? ATTACK, ATTACK, ATTACK Be it through the direct passing of someone like Bruno Fernandes, or the direct running of a succession of speedy attackers who like to break into big space, United have shown time and again that they can be deadly when allowed to play in transition. However, as Premier League teams have wised up to this and increasingly deployed watertight out-of-possession plans, Man Utd have been challenged to break down stubborn blocks with plenty of the ball. Admittedly, as their four fixtures include two newly promoted teams and a Man City side reduced to 10 men, the sample is skewed, but so far this season Carrick’s men have had 60.5% of possession, with only City themselves and Brighton averaging more. Whether it is by design or simply because teams force them to, United need to try and win games with the ball more reliably. Carrick’s setup seems to have this in mind. On the ball, United tend to form a 3-2-5 or 3-1-6, with the FBs taking turns to either support play or advance. And, crucially, you’ll often see them set up little rondo-like moments with a group of players passing the ball in small spaces in quick succession. This looks to draw in defenders and engineer that big space we have noted their attackers thrive in outside of increasingly rare counter attacking scenarios. That desire to play through pressure in tight combinations can lead to them heavily overload whichever side of the pitch they are playing down, offering isolated space for two men on the other side of the pitch. They can also overload centrally to open up opportunities for both of their wide forwards to make runs. However, when teams don’t bite and instead sit off, this space doesn’t emerge. And in those scenarios the direct instincts of the likes of Bryan Mbeumo, Matheus Cunha and Marcus Rashford aren’t as well suited to patient patterns camped out on the edge of their opponents' box. As a result, their dangerman Bruno Fernandes can grow frustrated and try too hard to force the play when quick chances do not materialise. Similarly, when Benjamin Sesko isn’t on the pitch, a lack of reliable box presence means resorting to crosses isn’t a reliable route to goal, either. I thought Carrick would have acted earlier in bringing on Sesko for Cunha last week, and will be interested to see who gets the nod from the start at the Cottage. Midfield remodelling Whenever I’ve talked to frustrated fans of the club in recent years, a constant complaint tends to come up: ‘United need a midfield rebuild.’ Carrick retired from football in 2018. Some eight years later he is the man in the dugout overseeing the latest attempt to rebuild that midfield since his own departure. He seems to have identified the need for small space technicians who have often been lacking in United’s setup. Carrick’s first instinct when taking over was to reverse Ruben Amorim’s decision to permanently bench exactly the profile of midfielder United have coveted for years in Kobbie Mainoo, who has taken a leap forward in both progressive passing and carrying. Interestingly, the first two midfield recruits to join him this summer share elements of his profile. Youri Tielemans and Andrey Santos offer a similar desire to progress through tight space. This new midfield should suit some of Carrick’s preferences in possession. They fit in nicely to those rondo-like moments we noted earlier, and in theory offer some control and craft breaking sides down. However, as Fulham fans remember all too well from the Marco Silva era, when teams sit off you in a low block and high quality chances aren’t flowing, there is a tendency to overcommit. And none of Tielemans, Santos or Mainoo really suit eating up vast space to put out fires going the other way. Presumably that is the thinking behind the signing of Carlos Baleba. However, with him not featuring thus far this season, there might be opportunities for Fulham if they turnover the ball. That said, Carrick has said his new signing has a chance of making his debut on Sunday. Same old story at the back United have done something quite unusual in recent transfer windows. They’ve upgraded one area of the pitch at a time. Last season it was the attack, with Mbeumo, Cunha and Sesko. This season, as noted, it has been the midfield. But that does mean their first choice defence of Luke Shaw, Harry Maguire, Lisandro Martinez and Diogo Dalot is made up of players bought by Louis van Gaal, Jose Mourinho, Ole Gunnar Solskjaer and Erik ten Hag. Going forward, the FBs can lack dynamism and reliable final third quality, despite often being the free players holding width outside narrow opposition blocks. And from a purely defensive standpoint, there have been some moments of strife at the back. However, there are some wider reasons why that defence find themselves dealing with more high jeopardy moments than most. A breakdown of United’s running stats hints at an issue. Whilst the side rank towards the top of the league in high intensity stats on the ball, they are solidly at the bottom of it when it comes to running out of possession. Sometimes, Carrick’s side seem caught between a desire to press and a desire to sit off in a mid block to open up space behind the opposition defence. And that inconsistent press, coupled with players who seem to struggle to get back urgently after losing it high up the pitch, can leave their CBs exposed. Whilst Maguire is dominant in the air and Martinez is among the best passing CBs in the league, neither suit defending big space. Fulham will surely look to create such moments this weekend. The key: Kobbie Mainoo Every time I watch Man Utd, I tend to end up just watching Kobbie Mainoo pull the strings in the middle of the park and questioning how he was ignored by Amorim for most of last season. Mainoo’s passing and carrying has become the key source of tempo for this United team, and it is clear the new manager’s trust in him is being rewarded. Carrick has been in charge of 21 Premier League games since returning to Old Trafford. Mainoo has started 19 of them. On the two occasions he hasn’t - Leeds (A) and Hull City (A) - United lost. That’s the same number they’ve lost in the 19 Mainoo started, one of which was last week’s derby. The views, opinions, and/or recommendations expressed in this article are attributed to the author of Cottage Tactico and not necessarily Fulham FC. You can read more of Kish Koria’s tactical takes on FFC on X and across social media, @CottageTactico.",
-      "date": "2026-09-18T15:30:00Z",
-      "url": "https://www.fulhamfc.com/news/2026/september/18/cottage-tactico-man-uts-remodelled-midfield/",
-      "matched_players": [
-        "king",
-        "trafford",
-        "mbeumo",
-        "cunha",
-        "mainoo",
-        "hall"
-      ]
-    },
-    {
-      "id": 4720488,
-      "title": "Vote for your Player of the Match as Palace power past Poznan",
-      "summary": "Crystal Palace eased to a comfortable 4-0 win over Lech Poznan for the perfect start to our first Europa League campaign – and now you've selected your Player of the Match!",
-      "date": "2026-09-18T14:30:00Z",
-      "url": "https://www.cpfc.co.uk/news/first-team/vote-for-your-player-of-the-match-as-palace-make-flying-start-to-europa-league/",
-      "matched_players": []
-    },
-    {
-      "id": 4720474,
-      "title": "Gomes set to return for Aston Villa, Bizot ruled out",
-      "summary": "",
-      "date": "2026-09-18T14:07:00Z",
-      "url": "https://www.avfc.co.uk/news/2026/september/18/prematch-team-news-for-spurs-showdown/",
-      "matched_players": []
-    },
-    {
-      "id": 4720461,
-      "title": "Liverpool’s injury situation unchanged for Bournemouth test",
-      "summary": "",
-      "date": "2026-09-18T13:56:00Z",
-      "url": "https://www.liverpoolfc.com/news/afc-bournemouth-v-liverpool-team-news-1",
-      "matched_players": []
-    },
-    {
-      "id": 4720467,
-      "title": "FOREST PFL PICKS | WEEK 5",
-      "summary": "Fantasy Football Scout brings you hints, tips and advice during the 2026/27 Fantasy Premier League (FPL) season. Scout will be using their expertise to provide advice and Gameweek tips which should prove useful in ensuring you win your mini-leagues. Best of the Reds Forest’s victory over Aston Villa last time out provided FPL managers with lots of exciting options heading into Gameweek 5. Morgan Gibbs-White (£7.9m), closely followed by Igor Jesus (£5.8m), were the two highest-scoring Forest players in FPL Gameweek 4. The pair scored eight and seven points respectively. Gibbs-White registered an assist as well as the two appearance points and all three bonus points, meanwhile Jesus scored, registered an appearance point and two bonus points. Liam Delap’s (£5.5m) goal also saw him earn himself five points. In defence, Murillo (£5.5m) scored six points thanks to a combination of his assist for the opening goal, which scored him three points, as well as getting additional points for defensive contributions. In FPL, defenders score an additional two points if they make 10 or more defensive contributions (clearances, blocks, interceptions and tackles.) Midfielders, meanwhile, need to make 12 defensive contributions to achieve their additional points. The midfielders have the same metrics; however they can also register defensive contributions for ball recoveries as well. Murillo racked up 12 defensive contributions in Gameweek 4. This means that he has now gained extra points for these actions in three out of the four games so far this season. His defensive partner Ousmane Diomande (£5.4m) registered 14 defensive contributions and in midfield, Xaver Schlager (£5.0m) made 16 and James McAtee (£5.5m) 12, meaning they all registered the two additional Defensive Contribution points. Spotlight Forest: Daniel Muñoz (£5.4m) An ever-popular pick amongst FPL managers in previous seasons, Daniel Muñoz will no doubt be a part of managers’ plans again for 26/27. Last season, he scored four goals and registered four assists despite only starting 29 matches through injury. Muñoz also created 27 chances in total, with eight of these considered big chances. Only one defender in the game created more big chances than Muñoz last season. Muñoz’ defensive numbers last season were also impressive. The defender registered 10 clean sheets and achieved Defensive Contribution points seven times, totally 196 defensive contributions. Muñoz was also awarded bonus points six times across the campaign, totalling an additional nine points. So far this season we have already seen Muñoz’s quality. In Gameweek 4, he had a shot and creating four chances for his teammates, while also having four touches in the opposition’s penalty box. He had an expected goal involvement (xGI) of 0.40 which is particularly strong for a defender. Forest Watchlist Gibbs-White’s impressive start to the season means that FPL managers are transferring him in in large numbers as the Gameweek 5 deadline approaches. Over 240,000 managers have brought Forest’s number 10 into their sides, and with good reason. He has created the most big chances across the entire game so far this season, has taken 10 shots and has already scored a goal and assisted his teammates twice across the Reds’ opening four matches. Other popular Forest picks in FPL ahead of the final game before the international break are Delap with almost 54,000 transfers in, and Williams with more than 38,000.",
-      "date": "2026-09-18T13:49:30Z",
-      "url": "https://www.nottinghamforest.co.uk/news/2026/september/18/forest-pfl-picks---week-5/",
-      "matched_players": [
-        "white",
-        "murillo",
-        "gibbs-white"
-      ]
-    },
-    {
-      "id": 4720462,
-      "title": "Emery previews Tottenham tilt",
-      "summary": "Fixtures Tottenham Hotspur Vs. Aston Villa - Sat, Sep 19 2026, 12:30 Unai Emery met with the media on Friday afternoon to look ahead to Aston Villa’s Premier League clash with Tottenham Hotspur. The Villans visit the capital on Saturday (ko 12.30pm), looking to secure back-to-back victories after Wednesday’s Carabao Cup triumph over Coventry City. And Emery sat before the local and national media outlets at his side’s Bodymoor Heath training base to preview the encounter, with Spurs, Zion Suzuki and the upcoming extended international break among the topics of discussion. Read the key lines from his pre-match press conference below… On resilience... “We are involving in different competitions, and we are performing differently for the demands, and for how we are in our process. “We won two matches in Coventry and in Bruges. Really fantastic, we played fantastic, and in Premier League, we are (in a) lack of good results, a lack of enough performance collectively and even individually. “But we are (in a) lack of the process to build the team as well, and hopefully tomorrow, we’ll watch the team improving. Improving, and competing in the level we need. “We were speaking this week about the pre-season. Now, the pre-season for us (is) still being, because now we are joining after being injured, (Johan) Manzambi, we are even joining now, after being suspended, João (Gomes). Still not being available, (Leon) Goretzka, (Brian) Madjo, and in the pre-season, the only thing we did was to work with the players we (had) last year, more or less. “And the development with some young players like, for example, George Hemmings and Madjo, but Madjo (is) still being injured after the pre-season. And now we are in this process. We are in the process, maybe, (it) was better to have one month ago, but it’s now. “We must try to understand, progressively, how Aaron Wan-Bissaka is understanding everything we want tactically, how he’s now playing minutes, getting confidence and understanding us, Manzambi. (Matteo) Ruggeri as well, he played the first match on Tuesday, tomorrow again, how he’s going to respond and to understand everything, and to adapt the demands of the opponent, and we are in this process. “Of course, we must compete and we must be ready to achieve enough performances individually and collectively to respond, and this is the challenge for tomorrow, but of course, I am being optimistic during the process, to set everything like we planned. “But joining injured players, joining new players, playing together, should be the process we have to do.” On challenges... “We are in the process to add different players in our structure, in our idea, knowing as well, each other playing the first minutes played, Manzambi is being in this direction. “Of course, it’s not now. When we joined players four years ago, three years ago, two years ago, I can remember when he was coming here, (Youri) Tielemans, the first year, he needed to be on the bench, he needed to play progressively, understanding which position was better for him, playing sometimes as a No.10, sometimes as a midfielder. “Morgan Rogers, the first six months as well, he needed to understand everything. Of course, now we want our performance quick through the players we joined – Manzambi, Ruggeri, Aaron Wan-Bissaka, young players like (Ibrahim) Mbaye, of course, the young players like Hemmings and Madjo. “Yes, we want it, but we must try to compete and be patient when the results, like until now, they are not being good enough in Premier League.” On Spurs... “Similar, like us, but their potential is a huge potential. They signed, spending, a lot of very good players, but they need as well, time to get compact everything and to achieve understanding their idea. “Of course, (Roberto) De Zerbi, he’s a fantastic manager. He played fantastic football here and performed fantastic here in Brighton. He did a fantastic job before as well, in Shakhtar, and in Italy, and after Brighton, a fantastic job in Marseille. “And now, when I can watch them, they are in this process, but of course, they are getting better, they compete fantastic, even losing against Liverpool. “They are now progressively playing with the players they were late – Savinho, Pedro Porro, (Omar) Marmoush – but their idea and style, normally, De Zerbi’s style is getting better, and tomorrow is a huge challenge for us, how we are going to respond, how we are going to play as well in our structure, being compact and feeling confidence to play, and facing them as well in a difficult match. “Of course, being very, very demanding defensively for us, trying to impose and dominate our moment with the ball as well during the game. This is the challenge. Of course, Tottenham, I expect them to be in the top four.” On Suzuki... “Some players, they need time to adapt to us and some players, they are doing quick. “One of them doing quick is Suzuki, and understanding, more or less, how we want to build up, how we want to try to play with our goalkeeper in build-up – first phase, second phase – and how we can exploit his qualities with the players we have as well when he can set some balls in the opponent behind with his capacity to do it. “This is the process we have with him, but really he is more or less giving us confidence, playing quick in our structure, with our idea, because he is performing really well.” On international break... “This break is crazy, because it’s three weeks. I really don’t like to be three weeks after tomorrow not playing, but we must accept it. “It’s the time we are not going to have the players we want to work with them, to adapt quick with us. For example, Manzambi, he played the first two matches he played with us, and tomorrow is the third one, but then he’s going with the national team, and when he’s coming back again with us, we must again try to join him with us in our structure. And again, his mind, maybe, is going to be confused. “But it’s like that, and we don’t want to use the international break matches as an excuse. We will work with the players they are going to be with us here, and the players with their national teams, of course, they are going with them. “So tomorrow, the match is being very, very important for us because we are (in a) lack of a points, but of course, we will continue in our process and working and trying to focus each match, competition, each week, trying to work as best as possible and trying to adapt the players as well in our structure.”",
-      "date": "2026-09-18T13:40:00Z",
-      "url": "https://avfc.co.uk/news/2026/september/18/prematch-emery-previews-tottenham-tilt/",
-      "matched_players": [
-        "saka",
-        "rogers",
-        "george",
-        "king",
-        "hall"
-      ]
-    },
-    {
-      "id": 4720454,
-      "title": "Armstrong and Rohl updates as Everton prepare for Ipswich",
-      "summary": "",
-      "date": "2026-09-18T13:21:00Z",
-      "url": "https://www.evertonfc.com/news/2026/september/18/everton-team-news-for-ipswich-clash/",
-      "matched_players": []
-    },
-    {
-      "id": 4720463,
-      "title": "Team news for Spurs showdown",
-      "summary": "Fixtures Tottenham Hotspur Vs. Aston Villa - Sat, Sep 19 2026, 12:30 João Gomes is set to return to Aston Villa’s squad for Saturday’s Premier League trip to Tottenham Hotspur but Marco Bizot joins a lengthy injury list. Gomes has completed his three-match suspension having been sent off at Brighton & Hove Albion on the opening day of the season and is poised to be back in the fold in north London. Unai Emery will now make final checks to make sure the midfielder, along with Matty Cash, is 100 per cent fit to face Spurs. But Bizot is unavailable for the lunchtime kick-off at Tottenham Hotspur Stadium having been replaced at half-time in Wednesday’s Carabao Cup triumph at Coventry City. The goalkeeper joins several players on the sidelines including Pau Torres, Ian Maatsen, Leon Goretzka, Brian Madjo, Amadou Onana and Modou Kéba Cissé. Emery provided a fitness update at Friday’s pre-match media conference. “We have so many players injured. It’s difficult to mention everyone,” said the Villa boss. “Marco is out, Onana, Cisse out, Pau, Maatsen out, Goretzka out, Madjo out. “I think that’s enough. The other players are ready.”",
-      "date": "2026-09-18T13:15:00Z",
-      "url": "https://avfc.co.uk/news/2026/september/18/prematch-team-news-for-spurs-showdown/",
-      "matched_players": []
-    },
-    {
-      "id": 4720464,
-      "title": "Hackney Exclusive Headlines Ipswich Programme",
-      "summary": "Evertonians can enjoy a new-look Official Matchday Programme – starting this weekend for the visit of Crystal Palace! The Blues host Ipswich Town on Saturday (3pm BST kick-off), with the matchday read now available to pre-order online, priced just £4+P&P. Click here to purchase a one-off issue now, or pick up your copy on the day of the match in or around Hill Dickinson Stadium. Hayden Hackney headlines a bumper issue, with the summer signing from Middlesbrough discussing the reasons why he already feels at home on Merseyside, and his aspirations with the Toffees. “For sure [Europe is the target],\" Hackney tells the Official Matchday Programme. \"We're unbeaten this season so far, and hopefully we can build on that.” “All the players we've got are going to have a part to play. “We're going to need everyone. In training, we can see each other every day and see the level and the quality that we've got here now, and I think we can go on to do good things this season.” On how he feels in a new environment, he continues: “I’ve settled in very well. Thanks to all the lads, they made me feel very welcome. And it was easy for me to settle and feel comfortable and just be myself, really. I've loved every minute of it. “They all spoke to me on my first day, they all made an effort to come and introduce themselves.” Every issue of the Blues' Official Matchday Programme is packed with exclusive content and all-new features – including Mastermind, where every Men's player picks a specialist subject and answers as many questions as they can on that topic in 60 seconds, and If I Was... where players ponder a range of football and non-football questions, such as what rule they would change and what teammate they'd least like to be stuck in a lift with! Elsewhere, we go behind the curtain and Inside The Kitchen with Everton and England chefs Tom Kenton and Neil Bradbury, to learn more about how they fuel the players before and after matches. This weekend's issue reveals how to make Ashley Young's favourite but \"odd\" pre-match pasta dish! >>> Click here to purchase a one-off issue of the Official Matchday Programme now!",
-      "date": "2026-09-18T13:07:00Z",
-      "url": "https://www.evertonfc.com/news/2026/september/18/hackney-exclusive-headlines-ipswich-programme/",
-      "matched_players": [
-        "rice"
-      ]
-    }
-  ]
+  "press_wire": []
 }
