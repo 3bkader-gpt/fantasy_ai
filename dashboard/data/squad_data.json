@@ -4,16 +4,16 @@
     "team_name": "هبد اصطناعي",
     "gameweek": 5,
     "deadline": "2026-09-18T17:30:00Z",
-    "rank": 10622169,
+    "rank": 10621094,
     "total_points": 51,
     "team_value": 100.6,
     "bank": 1.1,
     "free_transfers": 1,
-    "dry_run": true,
-    "last_updated": "2026-09-15T12:03:13.051028Z"
+    "dry_run": false,
+    "last_updated": "2026-09-18T13:30:38.898728Z"
   },
   "formation": "3-5-2",
-  "total_xp": 83.0,
+  "total_xp": 81.4,
   "captain": {
     "id": 229,
     "name": "Tarkowski",
@@ -61,35 +61,35 @@
     "press_insight": null
   },
   "vice_captain": {
-    "id": 165,
-    "name": "João Pedro",
-    "team": "CHE",
-    "position": "FWD",
-    "cost": 7.8,
-    "xp": 8.0,
-    "horizon_xp": 21.7,
-    "fixture": "BRE (A) [FDR 3]",
+    "id": 68,
+    "name": "Tavernier",
+    "team": "BOU",
+    "position": "MID",
+    "cost": 6.1,
+    "xp": 7.4,
+    "horizon_xp": 19.1,
+    "fixture": "LIV (H) [FDR 4]",
     "expected_minutes": 88.0,
     "is_captain": false,
     "is_vice_captain": true,
     "fixtures_5gw": [
       {
         "gw": 5,
-        "opponent": "BRE",
-        "is_home": false,
-        "fdr": 3
+        "opponent": "LIV",
+        "is_home": true,
+        "fdr": 4
       },
       {
         "gw": 6,
-        "opponent": "BOU",
-        "is_home": true,
-        "fdr": 3
+        "opponent": "CHE",
+        "is_home": false,
+        "fdr": 4
       },
       {
         "gw": 7,
-        "opponent": "EVE",
-        "is_home": false,
-        "fdr": 3
+        "opponent": "SUN",
+        "is_home": true,
+        "fdr": 2
       },
       {
         "gw": 8,
@@ -302,7 +302,7 @@
       "fixture": "LIV (H) [FDR 4]",
       "expected_minutes": 88.0,
       "is_captain": false,
-      "is_vice_captain": false,
+      "is_vice_captain": true,
       "fixtures_5gw": [
         {
           "gw": 5,
@@ -527,12 +527,12 @@
       "team": "CHE",
       "position": "FWD",
       "cost": 7.8,
-      "xp": 8.0,
-      "horizon_xp": 21.7,
+      "xp": 6.4,
+      "horizon_xp": 17.3,
       "fixture": "BRE (A) [FDR 3]",
-      "expected_minutes": 88.0,
+      "expected_minutes": 70.4,
       "is_captain": false,
-      "is_vice_captain": true,
+      "is_vice_captain": false,
       "fixtures_5gw": [
         {
           "gw": 5,
@@ -1787,7 +1787,7 @@
       "name": "De Cuyper",
       "team": "BHA",
       "position": "DEF",
-      "cost": 4.8,
+      "cost": 4.9,
       "xp": 5.8,
       "horizon_xp": 14.9,
       "fixture": "ARS (H) [FDR 4]",
@@ -1829,7 +1829,7 @@
       "name": "Bogle",
       "team": "LEE",
       "position": "DEF",
-      "cost": 4.5,
+      "cost": 4.6,
       "xp": 5.8,
       "horizon_xp": 14.4,
       "fixture": "CRY (H) [FDR 3]",
@@ -2459,7 +2459,7 @@
       "name": "Gibbs-White",
       "team": "NFO",
       "position": "MID",
-      "cost": 7.9,
+      "cost": 8.0,
       "xp": 8.1,
       "horizon_xp": 18.3,
       "fixture": "COV (H) [FDR 2]",
@@ -2623,11 +2623,53 @@
       ]
     },
     {
+      "id": 94,
+      "name": "Schade",
+      "team": "BRE",
+      "position": "MID",
+      "cost": 6.1,
+      "xp": 7.2,
+      "horizon_xp": 17.5,
+      "fixture": "CHE (H) [FDR 4]",
+      "fixtures_5gw": [
+        {
+          "gw": 5,
+          "opponent": "CHE",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 6,
+          "opponent": "AVL",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 7,
+          "opponent": "LIV",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 8,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 124,
       "name": "Groß",
       "team": "BHA",
       "position": "MID",
-      "cost": 5.6,
+      "cost": 5.7,
       "xp": 7.0,
       "horizon_xp": 18.0,
       "fixture": "ARS (H) [FDR 4]",
@@ -2649,48 +2691,6 @@
           "opponent": "CRY",
           "is_home": true,
           "fdr": 3
-        },
-        {
-          "gw": 8,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 94,
-      "name": "Schade",
-      "team": "BRE",
-      "position": "MID",
-      "cost": 6.0,
-      "xp": 7.0,
-      "horizon_xp": 17.2,
-      "fixture": "CHE (H) [FDR 4]",
-      "fixtures_5gw": [
-        {
-          "gw": 5,
-          "opponent": "CHE",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 6,
-          "opponent": "AVL",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 7,
-          "opponent": "LIV",
-          "is_home": true,
-          "fdr": 4
         },
         {
           "gw": 8,
@@ -2879,7 +2879,7 @@
       "name": "Ødegaard",
       "team": "ARS",
       "position": "MID",
-      "cost": 6.7,
+      "cost": 6.8,
       "xp": 6.2,
       "horizon_xp": 17.4,
       "fixture": "BHA (A) [FDR 3]",
@@ -3043,6 +3043,48 @@
       ]
     },
     {
+      "id": 286,
+      "name": "Belloumi",
+      "team": "HUL",
+      "position": "MID",
+      "cost": 5.1,
+      "xp": 5.6,
+      "horizon_xp": 15.3,
+      "fixture": "NEW (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 5,
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 6,
+          "opponent": "EVE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 7,
+          "opponent": "FUL",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 8,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 427,
       "name": "Mbeumo",
       "team": "MUN",
@@ -3067,48 +3109,6 @@
         {
           "gw": 7,
           "opponent": "LEE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 8,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 286,
-      "name": "Belloumi",
-      "team": "HUL",
-      "position": "MID",
-      "cost": 5.0,
-      "xp": 5.6,
-      "horizon_xp": 14.6,
-      "fixture": "NEW (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 5,
-          "opponent": "NEW",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 6,
-          "opponent": "EVE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 7,
-          "opponent": "FUL",
           "is_home": false,
           "fdr": 3
         },
@@ -3299,7 +3299,7 @@
       "name": "Haaland",
       "team": "MCI",
       "position": "FWD",
-      "cost": 15.5,
+      "cost": 15.6,
       "xp": 10.2,
       "horizon_xp": 23.7,
       "fixture": "SUN (H) [FDR 2]",
@@ -3342,8 +3342,8 @@
       "team": "CHE",
       "position": "FWD",
       "cost": 7.8,
-      "xp": 8.0,
-      "horizon_xp": 21.7,
+      "xp": 6.4,
+      "horizon_xp": 17.3,
       "fixture": "BRE (A) [FDR 3]",
       "fixtures_5gw": [
         {
@@ -3967,6 +3967,48 @@
       ]
     },
     {
+      "id": 224,
+      "name": "Nketiah",
+      "team": "CRY",
+      "position": "FWD",
+      "cost": 5.5,
+      "xp": 2.3,
+      "horizon_xp": 6.2,
+      "fixture": "LEE (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 5,
+          "opponent": "LEE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 6,
+          "opponent": "NFO",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 7,
+          "opponent": "BHA",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 8,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 439,
       "name": "Šeško",
       "team": "MUN",
@@ -4091,51 +4133,9 @@
           "fdr": 3
         }
       ]
-    },
-    {
-      "id": 224,
-      "name": "Nketiah",
-      "team": "CRY",
-      "position": "FWD",
-      "cost": 5.5,
-      "xp": 1.8,
-      "horizon_xp": 4.9,
-      "fixture": "LEE (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 5,
-          "opponent": "LEE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 6,
-          "opponent": "NFO",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 7,
-          "opponent": "BHA",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 8,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
     }
   ],
-  "briefing": "أهلاً بك يا قائد. بصفتي المدير الفني الأعلى كفاءة لفريقك، إليك التقرير التكتيكي الشامل للجولة رقم 5. مبدؤنا ثابت: **\"النقاط هي النقاط\"**، ولا مكان للجمود أو العاطفة في قراراتنا.\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب (Strategy & Rank Status)\n\n* **الوضع الحالي:** الترتيب العام (10,622,169) يتطلب منا تفعيل **النمط الهجومي التعويضي (AGGRESSIVE)**. الهدف ليس مجرد مجارات المنافسين، بل اختراق صفوفهم وقفز مراتب واسعة.\n* **الرسم التكتيكي (3-5-2):** اعتمدنا هيكلية تُعظّم النقاط المتوقعة (xP) من خط الوسط المكون من 5 لاعبين يمتلكون جميعاً نزعة هجومية حادة، مدعومين بخط هجوم قوي وثلاثي دفاعي ذي عائد مزدوج (Clean Sheet + أهداف رأسية).\n\n---\n\n### 2. التحليل الرياضي والتكتيكي للتبديلات (Transfer Breakdown)\n\n* **القرار:** 🔴 بيع: **Stach** (MID - LEE) ──► 🟢 شراء: **Tavernier** (MID - BOU)\n* **التكلفة:** **0 نقطة** (تبديل مجاني).\n* **العائد الرياضي المباشر:** صافي زيادة متوقعة **+1.57 نقطة** لهذه الجولة فقط.\n\n#### **تأسيس القرار والتبرير الفني:**\n1. **التخلص من Stach (xP: 5.8):** التراجع الإحصائي وسقف النقاط المحدود يفرضان بيعه فوراً بدون عواطف.\n2. **استقدام Tavernier (xP: 7.4 | السعر: £6.1m):**\n   * **القيمة التكتيكية:** لاعب يُعتبر \"FPL Differential\" ممتاز في هذه المرحلة. يتكفل بالكرات الثابتة ويمتلك جودة التسديد من الخارج.\n   * **نظرة على جدول الجولات الـ 3 القادمة:**\n     * **الجولة 5 - LIV (H) [FDR: 4]:** على الرغم من صعوبة المواجهة شكلياً، إلا أن ليفربول يترك مساحات للتحولات السريعة، وتفرّد Tavernier بالكرات الثابتة يرفع من فرص مساهماته.\n     ",
+  "briefing": "إليك التقرير التكتيكي الشامل للجولة الخامسة (GW5)، المعد خصيصاً لانتشال الفريق من المناطق المتأخرة والبدء في رحلة الصعود العمودي السريع باستخدام لغة الأرقام والتحليل الرياضي الصارم.\n\n---\n\n# 📋 التقرير التكتيكي للجولة الخامسة: خطة الهجوم التعويضي الكاسح (AGGRESSIVE)\n\n**\"النقاط هي النقاط، والماضي لا قيمة له أمام لغة الأرقام والبيانات المستقبلية.\"**\n\n---\n\n### 1️⃣ الموقف الحالي والاستراتيجية المعتمدة (Tactical Stance & Rank)\n* **الترتيب الحالي:** 10,621,094\n* **الاستراتيجية:** **AGGRESSIVE (هجومية تعويضية)**\n\n**التحليل التكتيكي للموقف:**\nالترتيب الحالي يفرض علينا التخلي التام عن \"اللعب الآمن\" أو مجاراة الخيارات الشائعة (Template). للبدء في قفزات ترتيبية ضخمة، اعتمدنا تشكيل **(3-5-2)** الذي يركز القوة الضاربة في خط الوسط الخماسي. هذا التشكيل يمنحنا مرونة هجومية فائقة، وقدرة على الاستفادة من عوائد الأهداف والتمريرات الحاسمة للاعبي الوسط التي تمنح نقاطاً أعلى مقارنة بالمهاجمين.\n\n---\n\n### 2️⃣ تشريح سوق الانتقالات: التبديل الذهبي (Transfer Analysis)\n\n* **🔴 المغادر:** Stach (MID - LEE) | المتوقع: 5.8 نقاط\n* **🟢 القادم:** Tavernier (MID - BOU) | المتوقع: 7.4 نقاط\n* **التكلفة:** 0 نقطة (انتقال مجاني)\n* **صافي الزيادة المتوقعة (Net xP Gain):** **+1.57 نقطة** (على المدى القصير)\n\n```\n",
   "leagues": [
     {
       "id": 2024890,
@@ -4154,13 +4154,13 @@
     {
       "id": 1239806,
       "name": "ع الله الموسم التااااسع",
-      "rank": 48,
-      "entry_rank": 48,
+      "rank": 49,
+      "entry_rank": 49,
       "last_rank": 0,
       "total": 48,
       "league_type": "x",
       "is_private": true,
-      "status": "⚠️ الترتيب الأخير (48/48)",
+      "status": "⚔️ المركز 49 من 48",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4168,13 +4168,13 @@
     {
       "id": 10,
       "name": "Fulham",
-      "rank": 32796,
-      "entry_rank": 32796,
+      "rank": 32795,
+      "entry_rank": 32795,
       "last_rank": 0,
       "total": 33050,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 32796 من 33050",
+      "status": "⚔️ المركز 32795 من 33050",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4182,13 +4182,13 @@
     {
       "id": 279,
       "name": "Gameweek 4",
-      "rank": 230137,
-      "entry_rank": 230137,
+      "rank": 230011,
+      "entry_rank": 230011,
       "last_rank": 0,
       "total": 268192,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 230137 من 268192",
+      "status": "⚔️ المركز 230011 من 268192",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4196,13 +4196,13 @@
     {
       "id": 83,
       "name": "Egypt",
-      "rank": 795130,
-      "entry_rank": 795130,
+      "rank": 795041,
+      "entry_rank": 795041,
       "last_rank": 0,
       "total": 797754,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 795130 من 797754",
+      "status": "⚔️ المركز 795041 من 797754",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4210,13 +4210,13 @@
     {
       "id": 2260821,
       "name": "beIN SPORTS League",
-      "rank": 2094416,
-      "entry_rank": 2094416,
+      "rank": 2094214,
+      "entry_rank": 2094214,
       "last_rank": 0,
       "total": 2103282,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 2094416 من 2103282",
+      "status": "⚔️ المركز 2094214 من 2103282",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4224,13 +4224,13 @@
     {
       "id": 431170,
       "name": "Adobe Express Badge League",
-      "rank": 2592881,
-      "entry_rank": 2592881,
+      "rank": 2625562,
+      "entry_rank": 2625562,
       "last_rank": 0,
       "total": 2587868,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 2592881 من 2587868",
+      "status": "⚔️ المركز 2625562 من 2587868",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4238,13 +4238,13 @@
     {
       "id": 320,
       "name": "Rookie",
-      "rank": 2698636,
-      "entry_rank": 2698636,
+      "rank": 2698039,
+      "entry_rank": 2698039,
       "last_rank": 0,
       "total": 2726245,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 2698636 من 2726245",
+      "status": "⚔️ المركز 2698039 من 2726245",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4252,13 +4252,13 @@
     {
       "id": 314,
       "name": "Overall",
-      "rank": 10622110,
-      "entry_rank": 10622110,
+      "rank": 10621094,
+      "entry_rank": 10621094,
       "last_rank": 0,
       "total": 10673914,
       "league_type": "s",
       "is_private": false,
-      "status": "⚔️ المركز 10622110 من 10673914",
+      "status": "⚔️ المركز 10621094 من 10673914",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4301,14 +4301,6 @@
         "xp": 8.67
       },
       {
-        "player": "João Pedro",
-        "team": "FPL",
-        "cost": 7.8,
-        "eo": 8,
-        "advantage": "💎 Huge Rank Boost",
-        "xp": 7.97
-      },
-      {
         "player": "Tavernier",
         "team": "FPL",
         "cost": 6.1,
@@ -4323,6 +4315,14 @@
         "eo": 3,
         "advantage": "💎 Huge Rank Boost",
         "xp": 6.44
+      },
+      {
+        "player": "João Pedro",
+        "team": "FPL",
+        "cost": 7.8,
+        "eo": 8,
+        "advantage": "💎 Huge Rank Boost",
+        "xp": 6.37
       },
       {
         "player": "Gakpo",
@@ -4359,13 +4359,13 @@
       {
         "id": 1239806,
         "name": "ع الله الموسم التااااسع",
-        "rank": 48,
-        "entry_rank": 48,
+        "rank": 49,
+        "entry_rank": 49,
         "last_rank": 0,
         "total": 48,
         "league_type": "x",
         "is_private": true,
-        "status": "⚠️ الترتيب الأخير (48/48)",
+        "status": "⚔️ المركز 49 من 48",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4373,13 +4373,13 @@
       {
         "id": 10,
         "name": "Fulham",
-        "rank": 32796,
-        "entry_rank": 32796,
+        "rank": 32795,
+        "entry_rank": 32795,
         "last_rank": 0,
         "total": 33050,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 32796 من 33050",
+        "status": "⚔️ المركز 32795 من 33050",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4387,13 +4387,13 @@
       {
         "id": 279,
         "name": "Gameweek 4",
-        "rank": 230137,
-        "entry_rank": 230137,
+        "rank": 230011,
+        "entry_rank": 230011,
         "last_rank": 0,
         "total": 268192,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 230137 من 268192",
+        "status": "⚔️ المركز 230011 من 268192",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4401,13 +4401,13 @@
       {
         "id": 83,
         "name": "Egypt",
-        "rank": 795130,
-        "entry_rank": 795130,
+        "rank": 795041,
+        "entry_rank": 795041,
         "last_rank": 0,
         "total": 797754,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 795130 من 797754",
+        "status": "⚔️ المركز 795041 من 797754",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4415,13 +4415,13 @@
       {
         "id": 2260821,
         "name": "beIN SPORTS League",
-        "rank": 2094416,
-        "entry_rank": 2094416,
+        "rank": 2094214,
+        "entry_rank": 2094214,
         "last_rank": 0,
         "total": 2103282,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 2094416 من 2103282",
+        "status": "⚔️ المركز 2094214 من 2103282",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4429,13 +4429,13 @@
       {
         "id": 431170,
         "name": "Adobe Express Badge League",
-        "rank": 2592881,
-        "entry_rank": 2592881,
+        "rank": 2625562,
+        "entry_rank": 2625562,
         "last_rank": 0,
         "total": 2587868,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 2592881 من 2587868",
+        "status": "⚔️ المركز 2625562 من 2587868",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4443,13 +4443,13 @@
       {
         "id": 320,
         "name": "Rookie",
-        "rank": 2698636,
-        "entry_rank": 2698636,
+        "rank": 2698039,
+        "entry_rank": 2698039,
         "last_rank": 0,
         "total": 2726245,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 2698636 من 2726245",
+        "status": "⚔️ المركز 2698039 من 2726245",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4457,13 +4457,13 @@
       {
         "id": 314,
         "name": "Overall",
-        "rank": 10622110,
-        "entry_rank": 10622110,
+        "rank": 10621094,
+        "entry_rank": 10621094,
         "last_rank": 0,
         "total": 10673914,
         "league_type": "s",
         "is_private": false,
-        "status": "⚔️ المركز 10622110 من 10673914",
+        "status": "⚔️ المركز 10621094 من 10673914",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4471,142 +4471,98 @@
     ],
     "overall_threat_score": 68
   },
-  "press_insights": [
-    {
-      "player_id": 454,
-      "player_name": "Elanga",
-      "fitness_sentiment": "ruled_out",
-      "minute_multiplier": 0.0,
-      "summary_ar": "تم تأكيد غيابه عن مواجهة ليدز بسبب إصابة غير محددة.",
-      "summary_en": "Confirmed to miss the encounter against Leeds due to an unspecified injury.",
-      "risk_level": "CRITICAL",
-      "headline_reference": "Elanga misses Leeds encounter due to injury"
-    },
-    {
-      "player_id": 123,
-      "player_name": "Hinshelwood",
-      "fitness_sentiment": "ruled_out",
-      "minute_multiplier": 0.0,
-      "summary_ar": "يغيب بسبب إصابة في الكاحل ومن غير المتوقع عودته قبل منتصف أكتوبر.",
-      "summary_en": "Sidelined with an ankle injury and not expected back until mid-October.",
-      "risk_level": "CRITICAL",
-      "headline_reference": "FPL Status Flag"
-    },
-    {
-      "player_id": 586,
-      "player_name": "Mendy",
-      "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.5,
-      "summary_ar": "يخضع لبروتوكول الارتجاج ولديه فرصة 50% للمشاركة في الجولة القادمة.",
-      "summary_en": "Subject to concussion protocols with a 50% chance of featuring in the upcoming fixture.",
-      "risk_level": "HIGH",
-      "headline_reference": "FPL Status Flag"
-    },
-    {
-      "player_id": 330,
-      "player_name": "Bogle",
-      "fitness_sentiment": "fit_starter",
-      "minute_multiplier": 1.0,
-      "summary_ar": "جاهز تماماً للمشاركة بعد تصريحاته الإيجابية عقب المباراة الأخيرة.",
-      "summary_en": "Fully fit and expected to start following positive post-match comments.",
-      "risk_level": "LOW",
-      "headline_reference": "Bogle: It's a massive result for us"
-    }
-  ],
+  "press_insights": [],
   "press_wire": [
     {
-      "id": 4719747,
-      "title": "Arteta could start Max Dowman at Portman Road",
+      "id": 4720454,
+      "title": "Armstrong and Rohl updates as Everton prepare for Ipswich",
       "summary": "",
-      "date": "2026-09-15T11:52:00Z",
-      "url": "https://www.arsenal.com/news/arteta-our-players-are-willing-for-more-alI4x0h71Cf9",
+      "date": "2026-09-18T13:21:00Z",
+      "url": "https://www.evertonfc.com/news/2026/september/18/everton-team-news-for-ipswich-clash/",
       "matched_players": []
     },
     {
-      "id": 4719678,
-      "title": "Ipswich (A) tickets",
-      "summary": "Tickets for Fulham's away trip to Portman Road will begin to go on sale from tomorrow! Join us on the road as we face Ipswich Town in Premier League action on Saturday 10th October, kick-off 3pm! Tickets for this fixture will go on sale to 2026/27 Season Ticket Holders at 2pm on Wednesday 16th September. 2026/27 Members will be able to purchase tickets from 9:30am on Friday 18th September. Any remaining tickets will then go on sale to Supporters with Previous Booking History from 9:30am on Monday 21st September. Further matchday information, including a full list of on sale dates and ticket prices, can be found here. Supporters can purchase up to two tickets per person online at fulhamfc.com/tickets, by calling the Ticket Office on 0203 871 0810 (Mon-Fri, 9:30am-5pm) or in person from the Ticket Office (Mon-Fri, 9:30am-4:30pm). BUY TICKETS FROM WEDNESDAY Important Information The 2026/27 season will see new Premier League requirements implemented for assigning tickets to supporters, with every seat sold being assigned to the individual who intends on attending the related match. Each attendee's name and contact details must be registered with the club. This means if a supporter purchases two tickets for a fixture, each ticket will need to be assigned to a unique client reference number. In the instance of a Season Ticket Holder purchasing additional tickets during their priority window, each ticket that they are purchasing will need to be assigned to each individual who intends on attending the related match. We therefore encourage all supporters planning on attending Premier League fixtures, home or away, to update their friends and family network ahead of the start of the season to ensure they can easily assign tickets at the point of purchase. Supporters can follow our step-by-step guide on how to do this here.",
-      "date": "2026-09-15T10:15:00Z",
-      "url": "https://www.fulhamfc.com/news/2026/september/15/ipswich-away-tickets/",
-      "matched_players": [
-        "rice",
-        "king"
-      ]
-    },
-    {
-      "id": 4719649,
-      "title": "Where To Go For Live Coverage & Highlights Of Everton v Wolves",
-      "summary": "Everton continue their Carabao Cup journey against Wolves at Hill Dickinson Stadium on Wednesday (7.45pm BST kick-off) – and you can enjoy comprehensive coverage of the game here on evertonfc.com, as well as on our social channels. Our interactive live match centre on evertonfc.com will include a live blog, match stats and a full match report on the final whistle – and is free for all. Forever Blue+, Season Ticket and Premium Members, as well as evertontv+ subscribers can join live audio commentary of the game. Click here to tune-in. When the game is over, we'll have reaction from manager Moyes and some of the key performers – and you can watch two-minute highlights package here on evertonfc.com and across our Social channels from 10.45pm (BST). Season Ticket, Premium and Forever Blue+ Members will also be able to view the match in full from midnight (BST) here on evertonfc.com. Forever Blue and Forever Blue+ Memberships for the 2026/27 season are now on sale. Click here to find out more and to become a Member today! At A Glance - When And Where We Will Be Showing Everton v Wolves Highlights Kick-Off Which Platform? Who Has Access? Length of highlights When are they available? Wednesday, 7.45pm evertonfc.com YT, Twitter and Facebook evertonfc.com FB, STM, PM Everyone STM, PM, FB+M only 2 mins 2 mins Full game 10.45pm 10.45pm Midnight Key: YT= YouTube; FB=Forever Blue; STM=Season Ticket Members; PM= Premium Members; FB+M=Forever Blue+ (All times are BST)",
-      "date": "2026-09-15T10:00:00Z",
-      "url": "https://www.evertonfc.com/news/2026/september/15/where-to-go-for-live-coverage---highlights-of-everton-v-wolves/",
+      "id": 4720449,
+      "title": "Farke discusses fresh injury concerns ahead of Crystal Palace",
+      "summary": "",
+      "date": "2026-09-18T13:02:00Z",
+      "url": "https://www.leedsunited.com/en/news/daniel-farke-discusses-fresh-injury-concerns-ahead-of-palace",
       "matched_players": []
     },
     {
-      "id": 4719647,
-      "title": "Fan Engagement Plan 2026/27",
-      "summary": "Aston Villa is pleased to release the club’s Fan Engagement Plan for the 2026/27 season. Our supporters are central to the identity, heritage and future of the Club. This plan sets out how we will engage with fans throughout the season and work towards our ambition of delivering best-in-class fan engagement. Our Fan Advisory Board will remain the principal forum for structured dialogue, supported by working groups, supporter organisations, surveys, fan forums and direct consultation. These channels will help supporters contribute to discussions on subjects including heritage assets, ticketing, matchday experience, accessibility, equality, diversity and inclusion. We will communicate openly, listen carefully and report on our progress. By involving supporters from across our local, national and international fanbase, we aim to make better-informed decisions and strengthen the connection between Aston Villa and the people who represent it. In our Fan Engagement Plan, supporters can read a message from President of Business Operations Francesco Calvo, discover the club’s aims and objectives, key personnel, heritage assets, structure of the Fan Advisory Board, additional working groups, wider consultation and more. For further information on our Fan Engagement Plans and Reports, including our 2026/27 edition, click here. Aston Villa Fan Engagement Plan 2026/27",
-      "date": "2026-09-15T10:00:00Z",
-      "url": "https://avfc.co.uk/news/2026/september/15/fans-engagement-plan-2026-27/",
-      "matched_players": [
-        "king"
-      ]
-    },
-    {
-      "id": 4719633,
-      "title": "Tickets on sale for today's EFL Trophy opener at Swindon!",
-      "summary": "Crystal Palace Under-21s will take on Swindon Town in the EFL Trophy this evening (15th September, 19:00 BST) – with tickets still available!",
-      "date": "2026-09-15T09:00:00Z",
-      "url": "https://www.cpfc.co.uk/news/announcement/tickets-on-sale-for-tuesdays-palace-u21s-match-at-swindon/",
+      "id": 4689959,
+      "title": "LIVE: Man City receive Doku injury boost; Iraola discusses Bournemouth return",
+      "summary": "Get all the build-up with FPL insights before Brentford face Chelsea",
+      "date": "2026-09-18T08:00:00Z",
+      "url": "https://www.premierleague.com/en/matchweek/2026_5/blog",
       "matched_players": []
     },
     {
-      "id": 4719651,
-      "title": "Goal-Hungry Barry Explains Importance Of Shifting Focus",
-      "summary": "Thierno Barry admits he was left \"sad\" at being denied adding to his early-season goal tally during Everton's goalless draw at Tottenham Hotspur – and says he is hungry to get back on the scoresheet ahead of an important double-header at Hill Dickinson Stadium. The Blues host Wolves in the Carabao Cup third round on Wednesday, with Barry looking to keep up momentum after being named Player of the Round for a superb hat-trick in the 4-0 away victory over Preston North End in the previous stage of the competition. Then the Toffees switch their focus back to Premier League matters this weekend with the visit of Ipswich Town, before an extended international break. Watch Barry's full evertontv interview via the player below, or click here to be redirected.",
-      "date": "2026-09-15T08:59:00Z",
-      "url": "https://www.evertonfc.com/news/2026/september/15/Goal-Hungry-Barry-Explains-Importance-Of-Shifting-Focus/",
+      "id": 4720437,
+      "title": "What it means: Palace make perfect start to Europa League",
+      "summary": "Crystal Palace enjoyed a dream return to the European stage on Thursday evening after sweeping aside Polish Champions Lech Poznan at Selhurst Park.",
+      "date": "2026-09-18T12:24:45Z",
+      "url": "https://www.cpfc.co.uk/news/first-team/what-it-means-palace-make-perfect-start-to-europa-league/",
+      "matched_players": []
+    },
+    {
+      "id": 4720428,
+      "title": "FOREST SUPPORTS WORLD HEART DAY",
+      "summary": "Nottingham Forest is pleased to support World Heart Day (September 29), which unites global organisations in raising awareness of cardiovascular disease (CVD). Organised by the World Heart Federation, it aims to prevent millions of premature deaths linked to CVD by encouraging people to take care of their hearts and ensuring everybody makes heart health a priority. This year’s campaign continues the momentum of ‘Don’t Miss a Beat’, raising awareness of the hidden or unnoticed symptoms of heart disease, and urging people to stay active, while also being proactive about routine screenings and warning signs. Heart disease kills around one in three people, more than any other condition – often due to symptoms being missed or overlooked. It can affect anyone, regardless of their age, fitness or lifestyle. Most deaths related to CVD are caused by risk factors that can be prevented or managed, which means that by making small, consistent changes, people can significantly improve their heart health over time. Modifiable risks include poor diet, physical inactivity, tobacco use, high cholesterol and high blood pressure. With this in mind, we’re joining other organisations in encouraging people to move for 20 minutes each day in September. Whether that’s running, cycling, playing a sport, or even walking to the shops – it all counts. Press here to download the oﬀicial World Heart Day app and join the movement. You can track your physical activities, get instant advice, and keep your heart healthy every day.",
+      "date": "2026-09-18T12:00:00Z",
+      "url": "https://www.nottinghamforest.co.uk/news/2026/september/18/forest-supports-world-heart-day/",
       "matched_players": [
         "king"
       ]
     },
     {
-      "id": 4719497,
-      "title": "Brentford vs Chelsea preview: TV channel, kick-off time and how to watch",
-      "summary": "Chelsea travel to Brentford in the Premier League on Friday and this match preview has everything you need to know, including how you can watch the game on TV, the kick-off time, live stream information, and where to follow Brentford vs Chelsea live updates...",
-      "date": "2026-09-15T08:00:00Z",
-      "url": "https://www.chelseafc.com/en/news/article/brentford-vs-chelsea-preview-tv-channel-kick-off-time-and-how-to-watch",
+      "id": 4720146,
+      "title": "Predicted line-ups for Premier League teams in Matchweek 5",
+      "summary": "See who we think will start for their Premier League clubs this weekend",
+      "date": "2026-09-18T12:00:00Z",
+      "url": "https://www.premierleague.com/en/news/4720146",
       "matched_players": []
     },
     {
-      "id": 4719493,
-      "title": "Andre | 'Teams which want promotion need to defend better'",
-      "summary": "Andre insists Wolves need to start keeping clean sheets if they’re to challenge this season, so said Sunday’s stop out at Sheffield United was a good start.",
-      "date": "2026-09-15T08:00:00Z",
-      "url": "https://www.wolves.co.uk/news/mens-first-team/20260914-andre-teams-which-want-promotion-need-to-defend-better/",
+      "id": 4720426,
+      "title": "Game4Hope Set For Goodison Park As Legends Return To Grand Old Lady",
+      "summary": "Game4Hope will now take place at Goodison Park on Saturday 26 September, giving some of football’s biggest names – and a host of Everton and Liverpool favourite – the opportunity to return to one of the sport’s most iconic stadiums. The inaugural charity fixture, which will raise vital funds and awareness in the fight against homelessness, will see Tim Cahill’s star-studded Merseyside XI take on a Rest of the World XI captained by Brazilian great Rivaldo, with kick-off remaining at 4.45pm (BST). The move from Hill Dickinson Stadium to Goodison Park adds another special dimension to an event already bringing together an extraordinary collection of football legends, celebrities and music stars. >>>SECURE YOUR GAME4HOPE AT GOODISON PARK TICKETS NOW<<< For Everton, this includes former players like Cahill, Leighton Baines, Phil Jagielka, Gareth Barry, Louis Saha and Joleon Lescott, it provides the opportunity to once again step out at the Grand Old Lady and play in front of supporters at a ground where they created so many memories. Everton Giant Peter Reid and Liverpool legend John Barnes will jointly manage the Merseyside XI – bringing together two men synonymous with opposite sides of one of football’s great city rivalries. For Reid, Goodison was the setting for some of the defining moments of his career. A central figure in Everton’s great side of the 1980s, he helped the Club win the 1984 FA Cup, League Championships in 1985 and 1987 and the 1985 European Cup Winners’ Cup, and was at the heart of one of Goodison’s most celebrated nights as Everton defeated Bayern Munich on the way to European glory. Returning to Goodison will therefore bring Reid back to a stadium indelibly linked to the most successful period of his playing career. For Barnes, the memories are very different but no less significant. During a decade as one of Liverpool’s greatest players, Goodison was the setting for some memorable and fiercely-contested Merseyside derbies. Barnes scored four times against the Blues, including in the famous 4-4 draw at Goodison in 1991. Now, rather than standing on opposite sides of the city’s rivalry, Reid and Barnes will share the Goodison dugout and unite Everton and Liverpool greats for a cause bigger than football. And there will be a sense of history for two of the biggest names in the Rest of the World XI. Brazilian World Cup winners Rivaldo and Cafu will return to Goodison Park more than 30 years after Brazil visited the stadium during the 1995 Umbro Cup where they took on and beat Japan. They will be joined in the Rest of the World squad by a host of international stars, including Clarence Seedorf, Jaap Stam, Jimmy Floyd Hasselbaink, Mustapha Hadji and Des Walker. The football will be just one part of a packed day of entertainment, with supporters also able to enjoy live music, celebrity appearances, family activities and entertainment throughout the day. Chart-topping artist Tinie Tempah will provide the half-time entertainment. A host of stars from the worlds of television, film and sport will also take part, including Tony Bellew, Roman Kemp, Molly McCann, James Nelson-Joyce, Big Zuu, Liam Smith and Still Ryan, alongside Ted Lasso actors Toheeb Jimoh and Moe Hashim, former boxing world champion Johnny Nelson and Gladiators star Nitro. At the heart of Game4Hope is an issue far bigger than football. The event will raise funds and awareness for Everton in the Community and Shelter, supporting their work with people experiencing, or at risk of, homelessness across Merseyside and beyond. Game4Hope will bring Blues, Reds and football supporters from across the region together for an afternoon of football and entertainment while using the power of the game to shine a spotlight on one of the most significant challenges facing communities across the country. EXISTING GAME4HOPE TICKET HOLDERS Supporters who have already purchased tickets or Premium packages for Game4Hope at Hill Dickinson Stadium do not need to take any action at this stage. Everton’s Fan Centre and Premium teams will contact all existing purchasers directly with further information about their revised ticketing and package arrangements for the event at Goodison Park. With Cahill, Rivaldo, Cafu, Seedorf and some of the most recognisable names from Everton and Liverpool’s recent history preparing to grace the Goodison turf – alongside live music, celebrity guests and entertainment for the whole family – supporters are encouraged to secure their place now to avoid disappointment. >>>SECURE YOUR GAME4HOPE TICKETS NOW<<<",
+      "date": "2026-09-18T11:59:00Z",
+      "url": "https://www.evertonfc.com/news/2026/september/18/game4hope/",
       "matched_players": [
-        "hall"
+        "scott",
+        "hall",
+        "barnes"
       ]
     },
     {
-      "id": 4719496,
-      "title": "Three points in Europe and Alysson off the mark",
-      "summary": "We are two more games down in the world of Aston Villa, who are now on the board in this season’s UEFA Champions League. The Villans secured a 3-2 triumph over Club Brugge in an entertaining clash in Belgium last week, before netting their opening goal of the Premier League season against Nottingham Forest at Villa Park on Saturday. The weekend delivered Alysson’s first strike in claret and blue, after Nicolas Jackson had done similar at Jan Breydelstadion in European action. And Villa’s first team stars have been as active as ever across social media over the past seven days. Here are some posts you may have missed… UCL action begins Three first-half goals in Bruges saw the Villans emerge victorious in their first Champions League game of the season, making a winning start to the league phase. Captain John McGinn joined Jackson in toasting three points, after Leon Goretzka had delivered a heartfelt message on Instagram the day before… Narrowly defeated in B6 Alysson’s maiden Villa goal could not help Emery’s men from falling to defeat on home soil over the weekend. The Brazilian celebrated a proud personal achievement, while injured Ian Maatsen began the road to recovery…",
-      "date": "2026-09-15T07:00:00Z",
-      "url": "https://avfc.co.uk/news/2026/september/15/feature-three-points-in-europe-and-alysson-off-the-mark/",
+      "id": 4720423,
+      "title": "Pre-Man Utd Press Conference",
+      "summary": "Álvaro Arbeloa knows Fulham will need to maintain recent levels if we’re to get a positive result against Manchester United on Sunday. A goalless draw at Anfield, followed by progression in the Carabao Cup from a testing fixture, has lifted the mood at Motspur Park going into our final game before the international break. “It’s obviously important winning games,” Arbeloa acknowledged. “I think it's the most important thing, and we have been talking for the last two or three weeks how important winning games is, even when you are doing a lot of things very well, you need to get points. And after that victory against West Ham, I think it has been a good week for us. “And now we are preparing for the game against Man United, and we are still believing that we can beat them, if we do a very good match from the first minute, and we know that we have to play at our best level – same level that we saw at Anfield – and that's our target.” It’s been a less rosy week for United, who exited the Carabao Cup after squandering a two-goal lead, a result which came after a controversial defeat in the Manchester derby. But Arbeloa laughed off any notions that this could be a good time to face Michael Carrick’s men. “When I see the players that they have, you can see they can win the game in one second,” he stated. “[Marcus] Rashford, [Matheus] Cunha, Bruno [Fernandes], [Youri] Tielemans, even the full-backs, they like to go forward. “They have very talented and top players and, of course, they are Man United, so you know what it means, and like I said before, if we want to beat them – and we believe that we can beat them – we need to play at the very high level that we did at Anfield for 90 minutes. “And even doing that, we couldn't beat Liverpool, we couldn't beat Chelsea, and I think in both games, we did really well. So, we are facing one of the best teams in the world, we know that, and we need to be ready.” Asked what it would mean to get that first Premier League win at the weekend, Arbeloa replied: “I think it will be so important. Not for me – for my team, for my players. I think I am not the important one here. “Fulham is important, and I think our supporters deserve one victory against Man United. I know that is so difficult, and the last time that we beat them here at Craven Cottage was too many years ago, so we will give our best and try to give them a victory.”",
+      "date": "2026-09-18T11:44:52Z",
+      "url": "https://www.fulhamfc.com/news/2026/september/18/pre-man-utd-press-conference/",
       "matched_players": [
         "king",
-        "egan"
+        "cunha"
       ]
     },
     {
-      "id": 2884829,
-      "title": "FPL player price changes - risers, fallers and top transfers in Gameweek 5",
-      "summary": "Find out which Fantasy Premier League picks have changed in price overnight, and see the most-transferred players",
-      "date": "2026-09-14T01:00:00Z",
-      "url": "https://www.premierleague.com/en/news/2884829",
+      "id": 4720420,
+      "title": "Fulham FC and Fulham Pier welcome PSS as Official Partner",
+      "summary": "Fulham Football Club and Fulham Pier are pleased to announce a new partnership with PSS, a leading provider of professional cleaning services, as Official Venue Cleaning Partner. PSS plays an important role in maintaining the highest standards across Fulham’s key venues, providing professional cleaning services at Craven Cottage, Fulham Pier and our training ground. With a strong focus on quality, consistency and attention to detail, PSS helps ensure these spaces are maintained to the highest standards for supporters, staff, players, guests and visitors throughout the year. As an Official Partner, PSS joins the Club’s network of partners, strengthening an established relationship and creating opportunities to develop connections across Fulham’s wider business community. The partnership also reflects PSS’s commitment to working alongside leading organisations and supporting the smooth day-to-day operation of high-profile sporting, hospitality, retail and corporate environments. Looking ahead, the partnership will continue to evolve beyond matchdays, with PSS playing an important role in supporting the Club’s extensive operations and maintaining the exceptional standards across its everyday venues. This includes Fulham Pier’s premium destinations such as Lighthouse Social, Constance and Sael Spa, where attention to detail, presentation and guest experience are central to the offering. PSS’s expertise will help ensure these premium environments consistently deliver the quality and standards expected by guests, supporters and visitors alike. Jon Don Carolis, Chief Revenue Officer at Fulham Football Club, commented: “It is with pleasure that we welcome PSS as a new Official Partner. Having demonstrated their expertise and commitment to maintaining the highest standards across our venues over the last few years, we are delighted to have strengthened our relationship and formally welcome PSS to our partner network.” Mike Jones, Managing Director for PSS said: “We are delighted to formalise our partnership with Fulham Football Club and Fulham Pier and to become an Official Venue Cleaning Partner. Having supported the Club and its venues for several years, this is a natural progression of a relationship built on trust and shared high standards. “Our teams take great pride in supporting the experience across Craven Cottage, Motspur Park and Fulham Pier, ensuring every environment is maintained to the standards expected by supporters, guests, staff and visitors. We look forward to building on this partnership and supporting Fulham’s continued growth and success.” Fulham supporters and the wider business community can expect to see PSS’s presence grow throughout the season, as both organisations continue to build on an established relationship and work together towards an ambitious and successful partnership.",
+      "date": "2026-09-18T11:30:00Z",
+      "url": "https://www.fulhamfc.com/news/2026/september/18/fulham-fc-and-fulham-pier-welcome-pss-as-official-partner/",
       "matched_players": [
-        "rice"
+        "king"
       ]
+    },
+    {
+      "id": 4720410,
+      "title": "Fulham team news: Tete ruled out, but Sessegnon could return",
+      "summary": "",
+      "date": "2026-09-18T11:11:00Z",
+      "url": "https://www.fulhamfc.com/news/2026/september/18/team-news-concussion-rules-tete-out-but-sessegnon-could-return/",
+      "matched_players": []
     }
   ]
 }
