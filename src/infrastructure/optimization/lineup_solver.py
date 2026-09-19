@@ -134,14 +134,24 @@ class LineupSolver:
                             best_bench_gk = candidate_bench_gk
                             best_bench = ([candidate_bench_gk] if candidate_bench_gk else []) + bench_outfield
 
-        # Captain and Vice-Captain with Talisman, Venue, Clean-Sheet Variance & Fixture FDR EV weighting
+        # Captain and Vice-Captain with Talisman, Venue, Clean-Sheet Variance & Dynamic Attacking Threat EV weighting
         def cap_eval(p: Player) -> float:
             ev = p.xp
-            # Clean Sheet Variance Asymmetry:
-            # Defenders/GKs carry binary clean-sheet wipeout risk (1 goal conceded wipes 4 pts),
-            # and lack explosive multi-goal/assist upside. Captaincy must heavily discount defenders/GKs.
-            if p.position in ("DEF", "GK"):
-                ev *= 0.55
+            # Clean Sheet Variance Asymmetry & Dynamic Attacking Threat:
+            # GKs and pure CBs carry binary clean-sheet wipeout risk with zero/low attacking ceiling.
+            # Elite attacking fullbacks/wing-backs with high xGI (e.g. Trent, Porro, Gvardiol) retain higher ceiling.
+            if p.position == "GK":
+                ev *= 0.50
+            elif p.position == "DEF":
+                xgi_90 = (p.expected_goal_involvements / p.minutes * 90.0) if getattr(p, "minutes", 0) >= 90 else 0.0
+                if xgi_90 >= 0.25 or getattr(p, "cost", 0.0) >= 7.0:
+                    ev *= 0.75  # Elite attacking fullback / set-piece specialist
+                elif xgi_90 >= 0.15:
+                    ev *= 0.65  # Moderate attacking threat
+                elif xgi_90 >= 0.08:
+                    ev *= 0.58  # Occasional set-piece target
+                else:
+                    ev *= 0.50  # Traditional center-back (pure clean-sheet dependency)
             elif p.position in ("MID", "FWD"):
                 # Attackers have compounding ceiling (braces, hat-tricks, penalties, bonus)
                 ev *= 1.15

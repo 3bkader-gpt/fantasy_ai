@@ -112,7 +112,12 @@ class RuleBasedXPEngine(IXPEngine):
 
             # 4. Realistic price-tier and position ceilings (Hard sanity check against budget hype)
             if pos == "DEF":
-                scaled_match_xp = min(6.2, scaled_match_xp)
+                # Dynamic ceiling based on attacking threat (Opta xGI/90)
+                xgi_90 = (player.expected_goal_involvements / player.minutes * 90.0) if player.minutes >= 90 else 0.0
+                if xgi_90 >= 0.20 or player.cost >= 7.0:
+                    scaled_match_xp = min(7.5, scaled_match_xp)  # Elite attacking fullbacks / wing-backs
+                else:
+                    scaled_match_xp = min(6.5, scaled_match_xp)  # Traditional center-backs
             elif player.cost <= 5.0 and pos != "GK":
                 scaled_match_xp = min(5.8, scaled_match_xp)
             elif player.cost <= 6.0 and pos != "GK":
