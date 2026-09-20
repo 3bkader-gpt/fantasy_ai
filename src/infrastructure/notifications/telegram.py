@@ -27,6 +27,9 @@ def markdown_to_telegram_html(text: str) -> str:
 
     # Convert bold **text**
     text = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', text)
+    # Clean up unclosed or trailing ** at line/text endings
+    text = re.sub(r'\*\*([^*]+)$', r'<b>\1</b>', text)
+    text = text.replace('**', '')
 
     # Convert horizontal rules
     text = re.sub(r'^[ \t]*[-*_]{3,}[ \t]*$', '────────────────────────', text, flags=re.MULTILINE)
@@ -43,6 +46,65 @@ def markdown_to_telegram_html(text: str) -> str:
     return text.strip()
 
 
+def split_telegram_message(text: str, max_length: int = 3800) -> List[str]:
+    """Splits long message into Telegram-safe chunks without breaking HTML tags or words."""
+    if not text or len(text) <= max_length:
+        return [text] if text else []
+
+    chunks = []
+    current_text = text
+
+    while len(current_text) > max_length:
+        split_pos = -1
+        # Prioritize natural markdown / structural split points
+        candidates = [
+            "\n\n────────────────────────\n\n",
+            "\n────────────────────────\n",
+            "\n\n📌 ",
+            "\n\n",
+            "\n",
+            " "
+        ]
+        for delim in candidates:
+            pos = current_text.rfind(delim, 0, max_length)
+            if pos != -1 and pos > max_length // 3:
+                split_pos = pos + len(delim)
+                break
+
+        if split_pos == -1:
+            split_pos = max_length
+
+        chunk = current_text[:split_pos].rstrip()
+        current_text = current_text[split_pos:].lstrip()
+
+        # Balance HTML tags across chunk boundaries
+        tag_pattern = re.compile(r'<(/)?([a-zA-Z0-9]+)[^>]*>')
+        stack = []
+        for match in tag_pattern.finditer(chunk):
+            is_closing = bool(match.group(1))
+            tag_name = match.group(2).lower()
+            if not is_closing:
+                stack.append(tag_name)
+            else:
+                if stack and stack[-1] == tag_name:
+                    stack.pop()
+
+        # Close any open tags in current chunk
+        closed_chunk = chunk
+        for tag in reversed(stack):
+            closed_chunk += f"</{tag}>"
+        chunks.append(closed_chunk)
+
+        # Re-open the same tags at the start of the next chunk
+        prefix = "".join(f"<{tag}>" for tag in stack)
+        current_text = prefix + current_text
+
+    if current_text:
+        chunks.append(current_text)
+
+    return chunks
+
+
 class TelegramNotifier(INotifier):
     """Sends tactical briefings and transfer alerts directly to Telegram with rich HTML & buttons."""
 
@@ -57,9 +119,10 @@ class TelegramNotifier(INotifier):
 
         url = f"https://api.telegram.org/bot{self.token}/sendMessage"
 
-        # Auto-convert if markdown detected and HTML requested
-        if parse_mode == "HTML" and any(k in text for k in ("###", "**", "---", "`")):
-            text = markdown_to_telegram_html(text)
+        # Only auto-convert if it contains markdown AND has no HTML tags already
+        if parse_mode == "HTML" and not re.search(r'</?(?:b|i|code|pre|a)>', text):
+            if any(k in text for k in ("###", "**", "---", "`")):
+                text = markdown_to_telegram_html(text)
 
         if reply_markup is None:
             reply_markup = {
@@ -71,7 +134,7 @@ class TelegramNotifier(INotifier):
                 ]
             }
 
-        chunks = [text[i:i + 4000] for i in range(0, len(text), 4000)]
+        chunks = split_telegram_message(text, max_length=3800)
         success = True
 
         for i, chunk in enumerate(chunks):
@@ -88,6 +151,9 @@ class TelegramNotifier(INotifier):
             try:
                 resp = requests.post(url, json=payload, timeout=12)
                 if resp.status_code != 200:
+                    logger.warning(f"Telegram parse_mode={parse_mode} failed ({resp.status_code}): {resp.text}. Falling back to plain text.")
+                    plain_text = re.sub(r'<[^>]+>', '', chunk)
+                    payload["text"] = plain_text
                     payload.pop("parse_mode", None)
                     resp2 = requests.post(url, json=payload, timeout=12)
                     success = (resp2.status_code == 200)
