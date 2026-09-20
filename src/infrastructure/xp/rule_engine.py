@@ -181,8 +181,14 @@ class RuleBasedXPEngine(IXPEngine):
             if gw1_fixes:
                 f0 = gw1_fixes[0]
                 p.next_fixture = f"{f0.opponent_name} ({'H' if f0.is_home else 'A'}) [FDR {f0.difficulty}]"
+                p.next_opponent_short = f0.opponent_name.upper()
+                p.next_is_home = f0.is_home
+                p.next_fdr = f0.difficulty
             else:
                 p.next_fixture = "BLANK"
+                p.next_opponent_short = ""
+                p.next_is_home = True
+                p.next_fdr = 3
 
             # Tactical flags
             if p.selected_by_percent < 10.0 and p.xp >= 5.0:

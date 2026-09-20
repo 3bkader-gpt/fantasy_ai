@@ -25,7 +25,8 @@ class OptimizeGameweekUseCase:
         ai_advisor: IAIAdvisor,
         notifier: INotifier,
         news_service: Optional[Any] = None,
-        press_analyst: Optional[Any] = None
+        press_analyst: Optional[Any] = None,
+        gold_rule_config: Optional[Any] = None
     ):
         self.repository = repository
         self.gateway = fpl_gateway
@@ -33,6 +34,15 @@ class OptimizeGameweekUseCase:
         self.optimizer_factory = optimizer_factory
         self.advisor = ai_advisor
         self.notifier = notifier
+
+        if gold_rule_config is None:
+            try:
+                from ...infrastructure.analysis.gold_rule_loader import load_gold_rule_config
+                self.gold_rule_config = load_gold_rule_config()
+            except Exception:
+                self.gold_rule_config = None
+        else:
+            self.gold_rule_config = gold_rule_config
 
         if news_service is None:
             from ...infrastructure.news.premier_league_news import PremierLeagueNewsService
@@ -141,7 +151,19 @@ class OptimizeGameweekUseCase:
                 current_squad.append(p)
 
         # 5. Solve optimization (formation, captain, transfers, chips)
-        optimizer = self.optimizer_factory(enriched_players)
+        if self.gold_rule_config and self.gold_rule_config.is_active:
+            logger.info(
+                f"Applying {len(self.gold_rule_config.extracted_rules)} Hindsight Gold Rules "
+                f"to GW{next_gw} optimization (Aggressive Hits: {self.gold_rule_config.aggressive_hits_enabled}, "
+                f"Midfield Bonus: +{self.gold_rule_config.midfield_formation_bonus}, "
+                f"Captain Mid Multiplier: {self.gold_rule_config.captain_mid_multiplier}x)."
+            )
+
+        try:
+            optimizer = self.optimizer_factory(enriched_players, gold_rule_config=self.gold_rule_config)
+        except TypeError:
+            optimizer = self.optimizer_factory(enriched_players)
+
         plan = optimizer.optimize_transfers(
             current_squad=current_squad,
             bank=bank,

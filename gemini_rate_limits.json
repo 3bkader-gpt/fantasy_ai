@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-18 15:40:49 UTC",
+  "last_updated": "2026-09-20 17:52:59 UTC",
   "models": {
     "gemini-3.8-flash": {
       "display_name": "Gemini 3.8 Flash",
@@ -14,11 +14,11 @@
     "gemini-3.7-flash": {
       "display_name": "Gemini 3.7 Flash",
       "category": "Text-out models",
-      "rpm_current": 6,
+      "rpm_current": 8,
       "rpm_limit": 5,
-      "tpm_current": 15511,
+      "tpm_current": 21089,
       "tpm_limit": 250000,
-      "rpd_current": 6,
+      "rpd_current": 8,
       "rpd_limit": 20
     },
     "gemini-3.6-flash": {
@@ -34,11 +34,11 @@
     "gemini-3.5-flash": {
       "display_name": "Gemini 3.5 Flash",
       "category": "Text-out models",
-      "rpm_current": 6,
+      "rpm_current": 7,
       "rpm_limit": 5,
-      "tpm_current": 16197,
+      "tpm_current": 18963,
       "tpm_limit": 250000,
-      "rpd_current": 6,
+      "rpd_current": 7,
       "rpd_limit": 20
     },
     "gemini-3.5-flash-lite": {

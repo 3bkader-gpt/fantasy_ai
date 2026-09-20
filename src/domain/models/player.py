@@ -39,12 +39,20 @@ class Player:
     horizon_xp: float = 0.0
     horizon_fixtures: str = ""
     next_fixture: str = ""
+    next_opponent_short: str = ""
+    next_is_home: bool = True
+    next_fdr: int = 3
     net_transfers: int = 0
     price_trend: str = "STABLE ⚖️"
     is_differential: bool = False
     is_flop_risk: bool = False
     fixtures_5gw: list = field(default_factory=list)
     press_insight: Optional[dict] = None
+
+    def clone(self) -> 'Player':
+        """Creates a shallow copy of the player for isolated simulation runs."""
+        import copy
+        return copy.copy(self)
 
     @property
     def is_available(self) -> bool:

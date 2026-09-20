@@ -138,8 +138,8 @@ class InitialSquadBuilder:
                 if p.position == pos: r_str[i] = 1.0
             A_rows.append(r_str); lb_list.append(s_min); ub_list.append(s_max)
 
-        # 10. Club Limits: max 3 per club, and anti-stacking (max 1 attacker from non-top6 in XI)
-        top6 = {1, 6, 14, 15, 16, 19}
+        # 10. Club Limits: max 3 per club, and anti-stacking (max 1 attacker from non-elite in XI)
+        elite_clubs = {"ARS", "MCI", "LIV", "CHE", "MUN", "NEW", "TOT"}
         teams: Set[int] = set(p.team_id for p in candidates)
         for t_id in teams:
             row = np.zeros(3 * N)
@@ -147,7 +147,7 @@ class InitialSquadBuilder:
             for i, p in enumerate(candidates):
                 if p.team_id == t_id:
                     row[i] = 1.0; row[N + i] = 1.0
-                    if p.position in ("MID", "FWD") and t_id not in top6:
+                    if p.position in ("MID", "FWD") and p.team_short.upper() not in elite_clubs:
                         att_row[i] = 1.0
             A_rows.append(row); lb_list.append(0); ub_list.append(max_per_club)
             if np.sum(att_row) > 1.0:

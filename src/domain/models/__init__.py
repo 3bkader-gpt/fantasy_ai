@@ -3,6 +3,12 @@ from .squad import Pick, Squad, LineupSelection
 from .fixture import Fixture, Gameweek
 from .transfer import Transfer, TransferPlan
 from .chip import ChipType, ChipRecommendation
+from .hindsight_models import (
+    PlayerGameweekRecord,
+    HindsightGameweekDecision,
+    HindsightResult,
+    GoldRule,
+)
 
 __all__ = [
     "Player",
@@ -15,4 +21,8 @@ __all__ = [
     "TransferPlan",
     "ChipType",
     "ChipRecommendation",
+    "PlayerGameweekRecord",
+    "HindsightGameweekDecision",
+    "HindsightResult",
+    "GoldRule",
 ]

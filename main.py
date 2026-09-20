@@ -3,6 +3,14 @@ import argparse
 import logging
 import warnings
 
+# Ensure UTF-8 output on Windows consoles
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 warnings.filterwarnings("ignore")
 
 from src.config import config
@@ -11,7 +19,11 @@ from src.infrastructure.xp import RuleBasedXPEngine
 from src.infrastructure.optimization import SquadOptimizer
 from src.infrastructure.ai import GeminiAdvisor
 from src.infrastructure.notifications import TelegramNotifier
-from src.application.use_cases import OptimizeGameweekUseCase, BuildInitialSquadUseCase
+from src.application.use_cases import (
+    OptimizeGameweekUseCase,
+    BuildInitialSquadUseCase,
+    RunHindsightUseCase,
+)
 from src.presentation import ConsolePresenter, DashboardExporter
 
 logging.basicConfig(
@@ -21,7 +33,20 @@ logging.basicConfig(
 )
 
 
-def run_manager(team_id: int, dry_run: bool, max_hits: int):
+def run_hindsight(gw_start: int = 1, gw_end: int = None, budget: float = 100.0, output_json: str = "hindsight_gold_rules.json"):
+    """Runs the Hindsight Optimization Engine to discover the absolute maximum point path and Gold Rules."""
+    use_case = RunHindsightUseCase()
+    result, rules, export_path = use_case.execute(
+        gw_start=gw_start,
+        gw_end=gw_end,
+        initial_budget=budget,
+        export_json=True,
+        output_filename=output_json,
+    )
+    return result, rules, export_path
+
+
+def run_manager(team_id: int, dry_run: bool, max_hits: int, apply_gold_rules: bool = True):
     """Composition Root: Wires dependencies and runs the gameweek optimization use case."""
     # 1. Instantiate Adapters (Infrastructure)
     repository = FPLDataRepository()
@@ -30,14 +55,20 @@ def run_manager(team_id: int, dry_run: bool, max_hits: int):
     advisor = GeminiAdvisor()
     notifier = TelegramNotifier()
 
+    gold_rule_config = None
+    if apply_gold_rules:
+        from src.infrastructure.analysis import load_gold_rule_config
+        gold_rule_config = load_gold_rule_config("output/hindsight_gold_rules.json")
+
     # 2. Inject into Use Case (Application)
     use_case = OptimizeGameweekUseCase(
         repository=repository,
         fpl_gateway=gateway,
         xp_engine=xp_engine,
-        optimizer_factory=lambda players: SquadOptimizer(players),
+        optimizer_factory=lambda players, gold_rule_config=None: SquadOptimizer(players, gold_rule_config=gold_rule_config),
         ai_advisor=advisor,
-        notifier=notifier
+        notifier=notifier,
+        gold_rule_config=gold_rule_config
     )
 
     # 3. Execute
@@ -85,8 +116,28 @@ if __name__ == "__main__":
     parser.add_argument("--build-squad", action="store_true", help="Build optimal initial 15-man squad (Draft 1) for £100m")
     parser.add_argument("--budget", type=float, default=100.0, help="Initial budget in millions (default: 100.0)")
     parser.add_argument("--min-chance", type=int, default=config.min_starter_chance, help="Minimum playing chance %% for starters (default: 75)")
+    parser.add_argument("--hindsight", action="store_true", help="Run Hindsight Optimization Engine on finished gameweeks")
+    parser.add_argument("--gw-start", type=int, default=1, help="Starting gameweek for hindsight analysis (default: 1)")
+    parser.add_argument("--gw-end", type=int, default=None, help="Ending gameweek for hindsight analysis (default: current played GW)")
+    parser.add_argument("--output-json", type=str, default="hindsight_gold_rules.json", help="Filename for exported Gold Rules JSON (default: hindsight_gold_rules.json)")
+    parser.add_argument("--no-gold-rules", action="store_true", help="Disable Hindsight Gold Rules heuristics and use unweighted baseline")
 
     args = parser.parse_args()
+
+    if args.hindsight:
+        try:
+            run_hindsight(
+                gw_start=args.gw_start,
+                gw_end=args.gw_end,
+                budget=args.budget,
+                output_json=args.output_json,
+            )
+            sys.exit(0)
+        except Exception as e:
+            import traceback
+            print(f"\n❌ Error during hindsight optimization: {e}")
+            traceback.print_exc()
+            sys.exit(1)
 
     if args.build_squad:
         run_build_squad(budget=args.budget, min_chance=args.min_chance)
@@ -97,10 +148,16 @@ if __name__ == "__main__":
     if not args.team_id:
         print("❌ Error: Please provide your FPL Team ID via --team-id or in .env file (FPL_TEAM_ID).")
         print("💡 Or run 'python main.py --build-squad' to generate an initial 15-man squad from scratch.")
+        print("💡 Or run 'python main.py --hindsight' to run the Hindsight Optimization Engine.")
         sys.exit(1)
 
     try:
-        run_manager(team_id=args.team_id, dry_run=effective_dry_run, max_hits=args.hits)
+        run_manager(
+            team_id=args.team_id,
+            dry_run=effective_dry_run,
+            max_hits=args.hits,
+            apply_gold_rules=(not args.no_gold_rules)
+        )
         sys.exit(0)
     except Exception as e:
         import traceback

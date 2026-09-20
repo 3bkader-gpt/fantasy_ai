@@ -18,8 +18,7 @@ from main import run_manager
 
 def check_final_safety(repo: FPLDataRepository, team_id: int, dry_run: bool, auto_fix: bool = True):
     """Executes a zero-cache live sanity check T-20min before deadline,
-
-    with autonomous self-healing in Pure AI mode.
+    with autonomous self-healing via LineupSolver in Pure AI mode.
     """
     print("\n🛡️ [FINAL SAFETY PULSE - T-20m] Checking live team status & warmup reports...")
     notifier = TelegramNotifier()
@@ -33,8 +32,23 @@ def check_final_safety(repo: FPLDataRepository, team_id: int, dry_run: bool, aut
             print("⚠️ No team picks found to verify.")
             return
 
+        current_gw, next_gw, _ = repo.get_current_and_next_gw()
+        target_gw = next_gw or (current_gw + 1 if current_gw else 1)
+        team_fixtures = repo.get_team_fixtures(target_gw, weeks_ahead=1)
+
+        from src.infrastructure.xp.rule_engine import RuleBasedXPEngine
+        from src.infrastructure.optimization.lineup_solver import LineupSolver, get_opponent_code
+
+        xp_engine = RuleBasedXPEngine()
+        squad_15 = [all_players[pick["element"]] for pick in picks if pick.get("element") in all_players]
+        enriched_squad = xp_engine.enrich_players_with_horizon_xp(
+            players=squad_15,
+            team_fixtures=team_fixtures,
+            next_gw=target_gw,
+            weeks_ahead=1
+        )
+
         starters = picks[:11]
-        bench = picks[11:]
         alerts = []
         needs_lineup_resubmit = False
 
@@ -44,46 +58,24 @@ def check_final_safety(repo: FPLDataRepository, team_id: int, dry_run: bool, aut
             if not p:
                 continue
             is_cap = pick.get("is_captain", False)
-            if p.status in ("i", "u", "s", "n") or (p.chance_of_playing_next_round is not None and p.chance_of_playing_next_round == 0):
+            if not p.is_available:
                 alerts.append(f"🚨 **إصابة مفاجئة مؤكدة**: {p.name} ({p.team_short}) لن يشارك!")
-                if auto_fix and bench:
-                    # Find first fit bench outfield player
-                    for b_pick in bench[1:]:  # skip bench GK
-                        bp = all_players.get(b_pick.get("element"))
-                        if bp and bp.status == "a":
-                            # swap positions
-                            pos_starter = pick["position"]
-                            pick["position"] = b_pick["position"]
-                            b_pick["position"] = pos_starter
-                            needs_lineup_resubmit = True
-                            alerts.append(f"🔄 **تصحيح ذاتي**: تم تبديل {p.name} بالبديل {bp.name} تلقائياً.")
-                            break
-
+                needs_lineup_resubmit = True
             elif p.chance_of_playing_next_round is not None and p.chance_of_playing_next_round < config.min_starter_chance:
                 alerts.append(f"⚠️ Starter {p.name} ({p.team_short}) doubt! Status: '{p.status}' | Chance: {p.chance_of_playing_next_round}%")
+                needs_lineup_resubmit = True
 
             # Captain safety
             if is_cap and (p.status != "a" or (p.chance_of_playing_next_round is not None and p.chance_of_playing_next_round < 100)):
-                alerts.append(f"🚨 CAPTAIN {p.name} ({p.team_short}) doubt! Switching armband to Vice-Captain.")
-                if auto_fix:
-                    for s_pick in starters:
-                        if s_pick.get("is_vice_captain"):
-                            pick["is_captain"] = False
-                            s_pick["is_captain"] = True
-                            needs_lineup_resubmit = True
-                            vc_p = all_players.get(s_pick.get("element"))
-                            alerts.append(f"👑 **تصحيح ذاتي**: تم نقل شارة الكابتن إلى {vc_p.name if vc_p else 'نائب الكابتن'} فوراً.")
-                            break
+                alerts.append(f"🚨 CAPTAIN {p.name} ({p.team_short}) doubt! Armband must be switched.")
+                needs_lineup_resubmit = True
 
         # 2. Goalkeeper Anti-Correlation & Conflict of Interest Check
         starting_gk_pick = starters[0] if starters else None
-        bench_gk_pick = bench[0] if bench else None
-        if starting_gk_pick and bench_gk_pick:
+        if starting_gk_pick:
             gk_player = all_players.get(starting_gk_pick.get("element"))
-            bench_gk_player = all_players.get(bench_gk_pick.get("element"))
             if gk_player:
-                from src.infrastructure.optimization.lineup_solver import get_opponent_code
-                gk_opp = get_opponent_code(gk_player.next_fixture)
+                gk_opp = get_opponent_code(gk_player)
                 if gk_opp:
                     conflicting_att = [
                         all_players[pick["element"]].name
@@ -97,26 +89,23 @@ def check_final_safety(repo: FPLDataRepository, team_id: int, dry_run: bool, aut
                             f"⚔️ **تضارب مصالح تكتيكي (Conflict of Interest)**: الحارس الأساسي {gk_player.name} ({gk_player.team_short}) "
                             f"يواجه مهاجمينا ({', '.join(conflicting_att)})!"
                         )
-                        if auto_fix and bench_gk_player and bench_gk_player.status == "a":
-                            # Check if bench GK has conflict
-                            bench_opp = get_opponent_code(bench_gk_player.next_fixture)
-                            bench_conflict = any(
-                                all_players[pk["element"]].team_short.upper() == bench_opp
-                                for pk in starters[1:] if pk.get("element") in all_players
-                            )
-                            if not bench_conflict:
-                                pos_start = starting_gk_pick["position"]
-                                starting_gk_pick["position"] = bench_gk_pick["position"]
-                                bench_gk_pick["position"] = pos_start
-                                needs_lineup_resubmit = True
-                                alerts.append(f"🧤 **تصحيح تكتيكي ذاتي**: تم تصعيد الحارس {bench_gk_player.name} أساسياً ونزول {gk_player.name} دكة لتفادي تضارب المصالح.")
+                        needs_lineup_resubmit = True
 
-        # 3. Submit self-healing lineup if modified
-        if needs_lineup_resubmit:
-            sorted_picks = sorted(picks, key=lambda x: x["position"])
-            res = gateway.set_lineup(team_id=team_id, picks_payload=sorted_picks)
-            print(f"✅ Self-healing lineup submitted to FPL: {res}")
-            alerts.append("🚀 **تم حفظ واعتماد التشكيلة المعدلة ذاتياً على سيرفرات الفانتازي بنجاح.**")
+        # 3. Submit self-healing lineup solved globally via LineupSolver
+        if needs_lineup_resubmit and auto_fix:
+            from src.infrastructure.analysis import load_gold_rule_config
+            gold_rule_config = load_gold_rule_config("output/hindsight_gold_rules.json")
+            solver = LineupSolver(gold_rule_config=gold_rule_config)
+            solved_lineup = solver.solve(enriched_squad)
+            res = gateway.set_lineup(team_id=team_id, picks_payload=solved_lineup.api_picks)
+            print(f"✅ Self-healing lineup solved and submitted to FPL: {res}")
+            alerts.append(
+                f"🚀 **تم تصحيح وتعديل التشكيلة آلياً بالكامل عبر المحرك الرياضي (LineupSolver)**:\n"
+                f"• التشكيل الجديد: {solved_lineup.formation}\n"
+                f"• الكابتن: {solved_lineup.captain.name} ({solved_lineup.captain.team_short})\n"
+                f"• نائب الكابتن: {solved_lineup.vice_captain.name} ({solved_lineup.vice_captain.team_short})\n"
+                f"• الحارس الأساسي: {solved_lineup.starting_xi[0].name}"
+            )
 
         if alerts:
             msg = "🛡️ **تقرير فحص الأمان الآلي قبل الديدلاين (Pure AI Pulse - T-20m)**:\n\n" + "\n\n".join(alerts)
