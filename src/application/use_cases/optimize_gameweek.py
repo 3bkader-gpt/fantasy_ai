@@ -174,6 +174,11 @@ class OptimizeGameweekUseCase:
         )
 
         # 6. Consult Gemini AI Advisor for tactical briefing
+        gold_rules_list = (
+            self.gold_rule_config.extracted_rules
+            if (self.gold_rule_config and self.gold_rule_config.is_active)
+            else None
+        )
         briefing = self.advisor.generate_briefing(
             gw=next_gw,
             deadline=deadline,
@@ -187,7 +192,8 @@ class OptimizeGameweekUseCase:
             chips_available=chips_available,
             chip_recommendation=plan.chip_recommendation,
             market_trends=enriched_players,
-            leagues=team_status.get("leagues", [])
+            leagues=team_status.get("leagues", []),
+            gold_rules=gold_rules_list
         )
 
         # 7. Execute changes on FPL account if live

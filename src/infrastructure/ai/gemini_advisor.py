@@ -81,7 +81,8 @@ class GeminiAdvisor(IAIAdvisor):
         chips_available: Optional[Dict[str, int]] = None,
         chip_recommendation: Optional[Dict[str, Any]] = None,
         market_trends: Optional[List[Player]] = None,
-        leagues: Optional[List[Dict[str, Any]]] = None
+        leagues: Optional[List[Dict[str, Any]]] = None,
+        gold_rules: Optional[List[Dict[str, Any]]] = None
     ) -> str:
         posture = (
             f"DEFENSIVE - تأمين الترتيب ({rank:,})" if rank and rank < 50000 else
@@ -91,9 +92,9 @@ class GeminiAdvisor(IAIAdvisor):
 
         system_instruction = (
             "أنت الخبير والمدير الفني الأعلى كفاءة لفريق فانتازي الدوري الإنجليزي (Elite Autonomous FPL AI Manager).\n"
-            "تعتمد على أحدث التحليلات الإحصائية (xP + FDR) والبرمجة الرياضية.\n"
-            "مبادئك: 'Points are Points'، بيع اللاعبين المتراجعين بلا عواطف، ومراعاة جدول الـ 3 جولات القادمة.\n"
-            "أسلوبك حاسم، تحليلي، ومحفز باللغة العربية الفصحى الأنيقة."
+            "تعتمد على أحدث التحليلات الإحصائية (xP + FDR) والبرمجة الرياضية ومحرك القواعد الذهبية التاريخية (Hindsight Gold Rules Engine).\n"
+            "مبادئك: 'Points are Points'، بيع اللاعبين المتراجعين بلا عواطف، الجرأة المحسوبة في أخذ الـ Hits إذا أثبتت القواعد الذهبية جدواها (+6.8 net gain)، وتفضيل الكباتن ذوي السقف العالي وفقاً للأنماط التاريخية المثبتة.\n"
+            "أسلوبك حاسم، تحليلي، عميق، ومحفز باللغة العربية الفصحى الأنيقة."
         )
 
         transfers_desc = []
@@ -127,10 +128,23 @@ class GeminiAdvisor(IAIAdvisor):
             if diffs: market_str += f"- Differentials واعدة: {', '.join(diffs)}\n"
             if flops: market_str += f"- مخاطر Flop تجنبها أو بادر ببيعها: {', '.join(flops)}\n"
 
+        gold_rules_str = ""
+        if gold_rules:
+            rules_formatted = []
+            for r in gold_rules:
+                cat = r.get("category", "").upper()
+                text = r.get("rule_text", "")
+                conf = r.get("confidence", 0.0)
+                rules_formatted.append(f"  • [{cat}] {text} (نسبة الثقة: {conf*100:.0f}%)")
+            gold_rules_str = "\n".join(rules_formatted)
+
         prompt = f"""
 تحليل خطة الجولة رقم {gw}:
 - استراتيجية الترتيب: {posture} | الديدلاين: {deadline or 'قريباً'}
 - الرصيد: £{bank:.1f}m | تكلفة التبديلات: -{hits_cost} نقطة | صافي الزيادة المتوقعة: +{points_gain:.2f} نقطة
+
+القواعد الذهبية المستخرجة من محرك الـ Hindsight التاريخي:
+{gold_rules_str or 'لا توجد قواعد تاريخية محملة.'}
 
 قرارات التبديل:
 {chr(10).join(transfers_desc)}
@@ -154,8 +168,9 @@ class GeminiAdvisor(IAIAdvisor):
 المطلوب:
 اكتب تقريراً تكتيكياً شاملاً ومقنعاً باللغة العربية يشمل:
 1. التكتيك المعتمد وموقف الترتيب.
-2. التحليل الرياضي والتكتيكي للتبديلات وتبرير بيع اللاعبين وشراء البدلاء وجدوى الـ Hit إن وجد على مدى 3 جولات.
-3. مبررات شارة القيادة (C) والنائب (VC).
-4. نصيحة استراتيجية الخواص وحماية ميزانية الفريق.
+2. مدى مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance): حلل وبرهن صراحة كيف يتوافق قرار التبديل، وجدوى السالب (-4 Hit)، واختيار الكابتن، وتشكيل خط الوسط مع القواعد التاريخية المثبتة.
+3. التحليل الرياضي والتكتيكي للتبديلات وتبرير بيع اللاعبين وشراء البدلاء وجدوى الـ Hit إن وجد على مدى 3 جولات.
+4. مبررات شارة القيادة (C) والنائب (VC) بالاستناد إلى قاعدة الكابتن الذهبية.
+5. نصيحة استراتيجية الخواص وحماية ميزانية الفريق.
 """
         return self._call_gemini(prompt, system_instruction)
