@@ -1,120 +1,159 @@
-# ⚽ FPL Autonomous AI Manager 🤖🏆
+<div align="center">
 
-نظام ذكي ومستقل بالكامل لإدارة فريق فانتازي الدوري الإنجليزي الممتاز (Fantasy Premier League) مدعوم بنماذج **Google Gemini** والبرمجة الرياضية الخطية (Mathematical Optimization).
+# ⚽ FPL Autonomous AI Manager (`fantasy_ai`)
 
-مستوحى ومبني بالاعتماد على أفضل الممارسات من نخبة المشاريع العالمية مفتوحة المصدر:
-* **[AIrsenal](https://github.com/alan-turing-institute/AIrsenal)** *(معهد آلان تورنج)*: معايير التنبؤ بالنقاط وتأثير الـ Form وصعوبة الملاعب (Home/Away).
-* **[FPL-Optimization-Tools](https://github.com/sertalpbilal/FPL-Optimization-Tools)**: البرمجة الخطية واختيار التشكيلة المثالية، استراتيجية تفعيل الخواص (Chips)، وتقييم الجولات المتعددة (Multi-Horizon EV).
-* **[fantasy-ai](https://github.com/k1lgor/fantasy-ai)**: التفكير التكتيكي، تقييم الإصابات، وتبرير التبديلات وخصم النقاط (-4 Hits)، واستراتيجية الترتيب (Rank-Aware Posture).
-* **[amosbastian/fpl](https://github.com/amosbastian/fpl)**: آلية الاتصال المشفر، سحب تاريخ الفريق والدوريات، وتنفيذ التبديلات والكابتنة على حسابك مباشرة.
-* **[fantasy-football-bot & FPL-Auto](https://github.com/search?q=fpl-auto)**: نظام التنبيهات المباشرة على Telegram ورصد تحركات أسعار اللاعبين (Risers/Fallers).
+### Autonomous Fantasy Premier League Squad Manager Powered by Gemini AI & Mathematical Optimization
 
----
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
+[![Google Gemini](https://img.shields.io/badge/AI-Gemini%20Flash%20Reasoning-4285F4.svg?logo=google&logoColor=white)](https://ai.google.dev/)
+[![Optimization](https://img.shields.io/badge/Optimization-MILP%20%26%20PuLP-red.svg)](https://coin-or.github.io/pulp/)
+[![OR-Tools](https://img.shields.io/badge/Solver-Google%20OR--Tools-blue.svg)](https://developers.google.com/optimization)
+[![Playwright](https://img.shields.io/badge/Playwright-Headless%20Execution-45BA4B.svg?logo=playwright&logoColor=white)](https://playwright.dev/)
+[![Cloudflare](https://img.shields.io/badge/Sentinel-Cloudflare%20Workers-F38020.svg?logo=cloudflare&logoColor=white)](https://workers.cloudflare.com/)
+[![Telegram](https://img.shields.io/badge/Alerts-Telegram%20Bot-26A5E4.svg?logo=telegram&logoColor=white)](https://telegram.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## 🌟 الميزات الرئيسية
+**Linear Programming Solver • Multi-Horizon xP Decay • Press Conference NLP • Autonomous FPL Live Submissions**
 
-1. **مدير فني مستقل بالكامل (Fully Autonomous):**
-   - يسحب بيانات الدوري بالكامل (اللاعبين، الفرق، الإصابات، وصعوبة المواجهات FDR).
-   - يحسب النقاط المتوقعة (Expected Points - xP) لكل لاعب عبر أفق زمني مرن (3 جولات قادمة مع معامل الاضمحلال التناقصي Decay).
-   - يختار أفضل 11 لاعب، التشكيل الأمثل (مثل 3-5-2)، الكابتن (C) والنائب (VC)، وترتيب الدكة.
-   - يقرر التبديلات التلقائية (Free Transfers) ويحسب ما إذا كان خصم (-4) يستحق رياضياً (Points are Points).
-2. **عقل تحليلي بـ Google Gemini:**
-   - يحلل الخيارات ويكتب تقريراً تكتيكياً شاملاً باللغة العربية يشرح للمدرب أسباب كل قرار، توقيت الخواص (Chips)، وحركة أسعار السوق.
-   - يدعم التبديل الآلي بين النماذج (Model Failover) لضمان عدم توقف العمل عند حدوث ضغط على خوادم الذكاء الاصطناعي.
-3. **تنبيهات فورية على Telegram:**
-   - يرسل تقرير الجولة والتشكيلة والتبديلات مباشرة إلى هاتفك عبر بوت تيليجرام.
-4. **وضع الأمان المزدوج (Dry-Run vs Live):**
-   - **وضع المحاكاة (Dry Run):** يقوم بكل الحسابات والتحليلات دون لمس حسابك الحقيقي، لتطمئن على دقة القرارات.
-   - **وضع التنفيذ المباشر (Live Mode):** ينفذ التبديلات ويغير التشكيل والكابتن مباشرة على خوادم اللعبة الرسمية.
-5. **مشغل مجدول أوتوماتيكي (Automated Scheduler):**
-   - يراقب مواعيد الـ Deadlines تلقائياً ويستيقظ قبل الديدلاين بساعتين ونصف لينفذ خطة الجولة.
+[System Architecture](#-system-architecture) • [Core Capabilities](#-core-capabilities) • [Mathematical Optimization](#-mathematical-solver--xp-engine) • [Quick Start](#-installation--quick-start)
+
+</div>
 
 ---
 
-## 🚀 التثبيت والتشغيل السريع
+## 🎯 Overview
 
-### 1. إعداد البيئة وتثبيت المتطلبات:
+**FPL Autonomous AI Manager** is an end-to-end intelligent squad management system engineered to automate decision-making in Fantasy Premier League (FPL).
+
+By combining **Mixed Integer Linear Programming (MILP)** with **Google Gemini Large Language Models**, the platform eliminates human emotional bias. It solves mathematical team knapsacks over multi-gameweek horizons, synthesizes press conference injury reports via NLP, optimizes captaincy picks, and automatically executes optimal transfers and starting lineups directly onto the official FPL platform via headless automation.
+
+---
+
+## 🏗 System Architecture
+
+```mermaid
+flowchart TD
+    FPLAPI["🌐 Official Premier League API<br/>(Fixtures, Rosters, Price Changes)"]
+    NewsSources["📰 Press Conferences & Injury Feeds"]
+    
+    subgraph Data & Telemetry Tier
+        DataRepo["📥 Automated Data Repository"]
+        NLPAnalyzer["🤖 Gemini Press Conference & Injury NLP Analyst"]
+    end
+    
+    subgraph Optimization & Intelligence Tier
+        xPEngine["⚡ Multi-Horizon xP Engine (Time-Decay Weights)"]
+        MILPSolver["🧮 MILP Solver (PuLP & Google OR-Tools)"]
+        GeminiAdvisor["🧠 Gemini Strategic Advisor & Rationale Generator"]
+    end
+    
+    subgraph Automated Operations Tier
+        Scheduler["⏰ Deadline Watchdog & Scheduler"]
+        PlaywrightExecutor["🎭 Playwright Headless Submitter (Live / Dry-Run)"]
+        TelegramNotifier["📱 Telegram Bot Dispatcher"]
+        CloudflareSentinel["🛡️ Cloudflare Worker Edge Sentinel"]
+    end
+
+    FPLAPI --> DataRepo
+    NewsSources --> NLPAnalyzer
+    NLPAnalyzer --> xPEngine
+    DataRepo --> xPEngine
+    
+    xPEngine --> MILPSolver
+    MILPSolver --> GeminiAdvisor
+    
+    Scheduler --> MILPSolver
+    GeminiAdvisor --> PlaywrightExecutor
+    GeminiAdvisor --> TelegramNotifier
+    CloudflareSentinel -.->|Health & Edge Failover| Scheduler
+    PlaywrightExecutor -->|Submit Lineup & Transfers| FPLAPI
+```
+
+---
+
+## 🌟 Core Capabilities
+
+- 🤖 **Fully Autonomous Squad Management:** Automatically ingests gameweek fixture difficulty (FDR), player injury status, historical home/away performance, and market price changes without manual inputs.
+- 🧮 **Mixed-Integer Linear Programming (MILP):** Formulates squad selection as a constrained knapsack problem (100.0M budget, max 3 players per club, valid formations 3-5-2, 3-4-3, 4-3-3, 4-4-2).
+- 📈 **Multi-Horizon Expected Points (xP):** Evaluates player utility across a rolling 3-to-5 gameweek window utilizing geometric decay multipliers to prioritize immediate returns while preserving structural squad longevity.
+- 🔍 **Press Conference NLP Analysis:** Leverages **Google Gemini** to extract sentiment, press conference quotes, rotation risks, and subtle injury signals that standard statistics miss.
+- 🎭 **Headless Live / Dry-Run Execution:** Supports dry-run simulation mode for safety, or full headless Playwright execution to automatically log in, submit transfers, and adjust starting 11 before deadlines.
+- 📱 **Real-Time Telegram Intelligence:** Dispatches rich gameweek briefing reports, tactical transfer justifications, captaincy recommendations, and chip timing directly to Telegram.
+
+---
+
+## 🧮 Mathematical Solver & xP Engine
+
+The mathematical solver maximizes total expected points ($xP$) subject to official FPL constraints:
+
+$$\max \sum_{i \in \text{Players}} \sum_{w=1}^{H} \gamma^{w-1} \cdot xP_{i,w} \cdot x_{i,w} - \text{Cost}(\text{Hits})$$
+
+Where:
+- $H$ is the planning horizon (e.g., 3 weeks).
+- $\gamma$ is the time-decay factor (default: $0.85$).
+- Constraints enforce team budget $\le 100.0\text{M}$, exactly 15 squad members (2 GK, 5 DEF, 5 MID, 3 FWD), and $\le 3$ players per Premier League club.
+
+---
+
+## 💻 Installation & Quick Start
+
+### 1. Prerequisites
+- **Python 3.10+**
+- Google Gemini API Key
+
+### 2. Setup Environment
 ```bash
+# Clone the repository
+git clone https://github.com/3bkader-gpt/fantasy_ai.git
+cd fantasy_ai
+
+# Setup virtual environment
+python -m venv .venv
+
+# On Linux/macOS:
+source .venv/bin/activate
+# On Windows:
+.venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. ضبط ملف الإعدادات (`.env`):
-افتح ملف `.env` وقم بملء البيانات الخاصة بك:
+### 3. Configuration (`.env`)
+Create a `.env` file based on `.env.example`:
 ```ini
 # Google Gemini API
 GEMINI_API_KEY=your_gemini_api_key_here
-GEMINI_MODEL=gemini-3.6-flash
+GEMINI_MODEL=gemini-2.0-flash
 
-# بيانات حسابك في الفانتازي
-# الخيار أ: الإيميل والباسورد
+# Fantasy Premier League Credentials
 FPL_EMAIL=your_email@example.com
 FPL_PASSWORD=your_password
-
-# الخيار ب (الموصى به لتفادي أي كابتشا): كوكي pl_profile من المتصفح
-FPL_COOKIE=
-
-# رقم فريقك في الفانتازي
 FPL_TEAM_ID=123456
 
-# إعدادات التخطيط والأفق الزمني
-HORIZON_WEEKS=3
-HORIZON_DECAY=0.85
-
-# بوت تيليجرام (اختياري لتلقي التنبيهات على هاتفك)
-TELEGRAM_BOT_TOKEN=
-TELEGRAM_CHAT_ID=
-
-# وضع الأمان (True للمحاكاة، False للتنفيذ الفعلي)
+# Operational Mode
 DRY_RUN=True
+HORIZON_WEEKS=3
 
-# أقصى عدد تبديلات إضافية بخصم (-4) مسموح للـ AI استخدامها
-MAX_ALLOWED_HITS=1
+# Telegram Notifications
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+TELEGRAM_CHAT_ID=your_chat_id
+```
+
+### 4. Running the Optimization
+```bash
+# Execute single-gameweek tactical analysis
+python main.py
+
+# Run pure AI evaluation
+python run_pure_ai.py
+
+# Run test suite
+pytest tests/ -v
 ```
 
 ---
 
-## 🎮 أوامر التشغيل
+## 📄 License
 
-### 1. تشغيل تجريبي / محاكاة (Dry Run):
-لعرض ما سيفعله الـ AI وقراءة التقرير التكتيكي دون تغيير أي شيء بحسابك:
-```bash
-python main.py --dry-run
-```
-
-أو فحص أي فريق عام برقم الـ Team ID:
-```bash
-python main.py --team-id 6589598 --dry-run
-```
-
-### 2. تشغيل التنفيذ الفعلي (Live Execution):
-لتطبيق التبديلات وضبط الكابتن والتشكيلة الأساسية على حسابك الرسمي:
-```bash
-python main.py --live
-```
-
-### 3. تشغيل المجدول الآلي (Scheduler):
-لتشغيل البوت في الخلفية ليراقب مواعيد الجولات وينفذ المهام تلقائياً قبل الديدلاين:
-```bash
-python scheduler.py
-```
-
----
-
-## 📁 هيكل المشروع
-
-```
-fantasy_ai/
-├── config.py          # إعدادات النظام وقراءة ملف .env
-├── data_manager.py    # سحب وتخزين بيانات الـ FPL الرسمية ومواعيد الجولات
-├── xp_engine.py       # محرك حساب النقاط المتوقعة (xP) وتأثير الـ Horizon و FDR
-├── optimizer.py       # محرك التحسين الرياضي للتشكيلة، الكابتنة، والتبديلات والخواص
-├── ai_manager.py      # عقل Gemini AI وتوليد التقارير التكتيكية باللغة العربية
-├── notifier.py        # نظام إرسال التنبيهات والتقارير عبر Telegram
-├── fpl_client.py      # الاتصال بحساب الفانتازي وتنفيذ الأوامر (Transfers & Lineup)
-├── main.py            # السكربت الرئيسي لتشغيل النظام
-├── scheduler.py       # المشغل التلقائي المجدول قبل الـ Deadlines
-├── requirements.txt   # المكتبات المطلوبة
-├── .env               # المتغيرات والبيانات السرية (مخفية عن Git)
-└── .gitignore         # حماية الملفات السرية
-```
-
+This project is licensed under the [MIT License](LICENSE).
