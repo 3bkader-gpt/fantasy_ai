@@ -4,16 +4,16 @@
     "team_name": "هبد اصطناعي",
     "gameweek": 6,
     "deadline": "2026-10-10T10:00:00Z",
-    "rank": 10601450,
+    "rank": 10601382,
     "total_points": 95,
     "team_value": 100.8,
-    "bank": 1.2,
+    "bank": 5.0,
     "free_transfers": 1,
     "dry_run": false,
-    "last_updated": "2026-09-25T14:29:57.041821Z"
+    "last_updated": "2026-09-26T13:17:26.170072Z"
   },
-  "formation": "4-4-2",
-  "total_xp": 80.2,
+  "formation": "3-5-2",
+  "total_xp": 80.7,
   "captain": {
     "id": 426,
     "name": "B.Fernandes",
@@ -61,35 +61,35 @@
     "press_insight": null
   },
   "vice_captain": {
-    "id": 94,
-    "name": "Schade",
-    "team": "BRE",
+    "id": 12,
+    "name": "Saka",
+    "team": "ARS",
     "position": "MID",
-    "cost": 6.2,
-    "xp": 7.7,
-    "horizon_xp": 20.6,
-    "fixture": "AVL (A) [FDR 3]",
+    "cost": 9.5,
+    "xp": 6.9,
+    "horizon_xp": 16.9,
+    "fixture": "LEE (H) [FDR 3]",
     "expected_minutes": 88.0,
     "is_captain": false,
     "is_vice_captain": true,
     "fixtures_5gw": [
       {
         "gw": 6,
-        "opponent": "AVL",
-        "is_home": false,
+        "opponent": "LEE",
+        "is_home": true,
         "fdr": 3
       },
       {
         "gw": 7,
-        "opponent": "LIV",
-        "is_home": true,
-        "fdr": 4
+        "opponent": "NFO",
+        "is_home": false,
+        "fdr": 3
       },
       {
         "gw": 8,
-        "opponent": "HUL",
-        "is_home": false,
-        "fdr": 2
+        "opponent": "EVE",
+        "is_home": true,
+        "fdr": 3
       },
       {
         "gw": 9,
@@ -135,52 +135,6 @@
         {
           "gw": 8,
           "opponent": "BRE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
-      "id": 305,
-      "name": "Davis",
-      "team": "IPS",
-      "position": "DEF",
-      "cost": 4.0,
-      "xp": 6.6,
-      "horizon_xp": 13.8,
-      "fixture": "FUL (H) [FDR 2]",
-      "expected_minutes": 88.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 6,
-          "opponent": "FUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 7,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
-          "gw": 8,
-          "opponent": "NFO",
           "is_home": true,
           "fdr": 3
         },
@@ -384,35 +338,35 @@
       "press_insight": null
     },
     {
-      "id": 94,
-      "name": "Schade",
-      "team": "BRE",
+      "id": 124,
+      "name": "Groß",
+      "team": "BHA",
       "position": "MID",
-      "cost": 6.2,
-      "xp": 7.7,
-      "horizon_xp": 20.6,
-      "fixture": "AVL (A) [FDR 3]",
+      "cost": 5.8,
+      "xp": 7.0,
+      "horizon_xp": 18.0,
+      "fixture": "SUN (A) [FDR 3]",
       "expected_minutes": 88.0,
       "is_captain": false,
-      "is_vice_captain": true,
+      "is_vice_captain": false,
       "fixtures_5gw": [
         {
           "gw": 6,
-          "opponent": "AVL",
+          "opponent": "SUN",
           "is_home": false,
           "fdr": 3
         },
         {
           "gw": 7,
-          "opponent": "LIV",
+          "opponent": "CRY",
           "is_home": true,
-          "fdr": 4
+          "fdr": 2
         },
         {
           "gw": 8,
-          "opponent": "HUL",
+          "opponent": "LIV",
           "is_home": false,
-          "fdr": 2
+          "fdr": 4
         },
         {
           "gw": 9,
@@ -440,7 +394,7 @@
       "fixture": "LEE (H) [FDR 3]",
       "expected_minutes": 88.0,
       "is_captain": false,
-      "is_vice_captain": false,
+      "is_vice_captain": true,
       "fixtures_5gw": [
         {
           "gw": 6,
@@ -522,6 +476,52 @@
       "press_insight": null
     },
     {
+      "id": 69,
+      "name": "Scott",
+      "team": "BOU",
+      "position": "MID",
+      "cost": 6.1,
+      "xp": 5.4,
+      "horizon_xp": 15.2,
+      "fixture": "CHE (A) [FDR 4]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 6,
+          "opponent": "CHE",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 7,
+          "opponent": "SUN",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 8,
+          "opponent": "MUN",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 10,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
       "id": 379,
       "name": "Isak",
       "team": "LIV",
@@ -573,10 +573,10 @@
       "team": "CHE",
       "position": "FWD",
       "cost": 7.7,
-      "xp": 4.5,
-      "horizon_xp": 11.3,
+      "xp": 6.0,
+      "horizon_xp": 15.1,
       "fixture": "BOU (H) [FDR 3]",
-      "expected_minutes": 52.8,
+      "expected_minutes": 70.4,
       "is_captain": false,
       "is_vice_captain": false,
       "fixtures_5gw": [
@@ -611,16 +611,7 @@
           "fdr": 3
         }
       ],
-      "press_insight": {
-        "player_id": 165,
-        "player_name": "João Pedro",
-        "fitness_sentiment": "minor_doubt",
-        "minute_multiplier": 0.75,
-        "summary_ar": "جواو بيدرو يعاني من إصابة في الركبة مع فرصة مشاركة 75%.",
-        "summary_en": "João Pedro has a knee injury and a 75% chance of playing.",
-        "risk_level": "MEDIUM",
-        "headline_reference": "FPL Status Update"
-      }
+      "press_insight": null
     }
   ],
   "bench": [
@@ -717,35 +708,35 @@
       "press_insight": null
     },
     {
-      "id": 154,
-      "name": "Palmer",
-      "team": "CHE",
-      "position": "MID",
-      "cost": 9.7,
-      "xp": 2.9,
-      "horizon_xp": 7.2,
-      "fixture": "BOU (H) [FDR 3]",
-      "expected_minutes": 52.8,
+      "id": 279,
+      "name": "Ajayi",
+      "team": "HUL",
+      "position": "DEF",
+      "cost": 4.2,
+      "xp": 4.3,
+      "horizon_xp": 10.5,
+      "fixture": "EVE (H) [FDR 3]",
+      "expected_minutes": 88.0,
       "is_captain": false,
       "is_vice_captain": false,
       "fixtures_5gw": [
         {
           "gw": 6,
-          "opponent": "BOU",
+          "opponent": "EVE",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 7,
-          "opponent": "EVE",
+          "opponent": "FUL",
           "is_home": false,
           "fdr": 3
         },
         {
           "gw": 8,
-          "opponent": "TOT",
+          "opponent": "BRE",
           "is_home": true,
-          "fdr": 2
+          "fdr": 3
         },
         {
           "gw": 9,
@@ -760,16 +751,7 @@
           "fdr": 3
         }
       ],
-      "press_insight": {
-        "player_id": 154,
-        "player_name": "Palmer",
-        "fitness_sentiment": "minor_doubt",
-        "minute_multiplier": 0.75,
-        "summary_ar": "يعاني بالمر من إصابة عضلية ونسبة مشاركته تبلغ 75%.",
-        "summary_en": "Palmer is nursing a muscular injury with a 75% chance of playing.",
-        "risk_level": "MEDIUM",
-        "headline_reference": "FPL Status Update"
-      }
+      "press_insight": null
     },
     {
       "id": 320,
@@ -826,23 +808,23 @@
         "xp": 5.0
       },
       "player_in": {
-        "name": "Schade",
-        "team": "BRE",
-        "cost": 6.2,
-        "xp": 7.7
+        "name": "Groß",
+        "team": "BHA",
+        "cost": 5.8,
+        "xp": 7.0
       }
     },
     {
       "player_out": {
-        "name": "Ajayi",
-        "team": "HUL",
-        "xp": 4.3
+        "name": "Palmer",
+        "team": "CHE",
+        "xp": 3.8
       },
       "player_in": {
-        "name": "Davis",
-        "team": "IPS",
-        "cost": 4.0,
-        "xp": 6.6
+        "name": "Scott",
+        "team": "BOU",
+        "cost": 6.1,
+        "xp": 5.4
       }
     }
   ],
@@ -2028,7 +2010,7 @@
       "name": "De Cuyper",
       "team": "BHA",
       "position": "DEF",
-      "cost": 4.9,
+      "cost": 5.0,
       "xp": 5.5,
       "horizon_xp": 15.3,
       "fixture": "SUN (A) [FDR 3]",
@@ -3200,6 +3182,48 @@
       ]
     },
     {
+      "id": 397,
+      "name": "Semenyo",
+      "team": "MCI",
+      "position": "MID",
+      "cost": 8.4,
+      "xp": 4.8,
+      "horizon_xp": 14.3,
+      "fixture": "LIV (A) [FDR 4]",
+      "fixtures_5gw": [
+        {
+          "gw": 6,
+          "opponent": "LIV",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 7,
+          "opponent": "IPS",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 8,
+          "opponent": "AVL",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 10,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 214,
       "name": "Kamada",
       "team": "CRY",
@@ -3284,74 +3308,32 @@
       ]
     },
     {
-      "id": 542,
-      "name": "E.Le Fée",
-      "team": "SUN",
-      "position": "MID",
-      "cost": 5.7,
-      "xp": 4.4,
-      "horizon_xp": 10.7,
-      "fixture": "BHA (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 6,
-          "opponent": "BHA",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 7,
-          "opponent": "BOU",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 8,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 268,
-      "name": "King",
-      "team": "FUL",
+      "id": 432,
+      "name": "Mainoo",
+      "team": "MUN",
       "position": "MID",
       "cost": 5.5,
-      "xp": 4.3,
-      "horizon_xp": 11.8,
-      "fixture": "IPS (A) [FDR 2]",
+      "xp": 4.5,
+      "horizon_xp": 10.4,
+      "fixture": "TOT (H) [FDR 2]",
       "fixtures_5gw": [
         {
           "gw": 6,
-          "opponent": "IPS",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 7,
-          "opponent": "HUL",
+          "opponent": "TOT",
           "is_home": true,
           "fdr": 2
         },
         {
-          "gw": 8,
-          "opponent": "COV",
+          "gw": 7,
+          "opponent": "LEE",
           "is_home": false,
-          "fdr": 2
+          "fdr": 3
+        },
+        {
+          "gw": 8,
+          "opponent": "BOU",
+          "is_home": true,
+          "fdr": 3
         },
         {
           "gw": 9,
@@ -3452,6 +3434,48 @@
       ]
     },
     {
+      "id": 165,
+      "name": "João Pedro",
+      "team": "CHE",
+      "position": "FWD",
+      "cost": 7.7,
+      "xp": 6.0,
+      "horizon_xp": 15.1,
+      "fixture": "BOU (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 6,
+          "opponent": "BOU",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 7,
+          "opponent": "EVE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 8,
+          "opponent": "TOT",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 10,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 138,
       "name": "Kostoulas",
       "team": "BHA",
@@ -3536,32 +3560,32 @@
       ]
     },
     {
-      "id": 165,
-      "name": "João Pedro",
-      "team": "CHE",
+      "id": 552,
+      "name": "Brobbey",
+      "team": "SUN",
       "position": "FWD",
-      "cost": 7.7,
-      "xp": 4.5,
-      "horizon_xp": 11.3,
-      "fixture": "BOU (H) [FDR 3]",
+      "cost": 5.7,
+      "xp": 4.8,
+      "horizon_xp": 11.7,
+      "fixture": "BHA (H) [FDR 3]",
       "fixtures_5gw": [
         {
           "gw": 6,
-          "opponent": "BOU",
+          "opponent": "BHA",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 7,
-          "opponent": "EVE",
+          "opponent": "BOU",
           "is_home": false,
           "fdr": 3
         },
         {
           "gw": 8,
-          "opponent": "TOT",
+          "opponent": "LEE",
           "is_home": true,
-          "fdr": 2
+          "fdr": 3
         },
         {
           "gw": 9,
@@ -3646,48 +3670,6 @@
           "opponent": "ARS",
           "is_home": false,
           "fdr": 5
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 552,
-      "name": "Brobbey",
-      "team": "SUN",
-      "position": "FWD",
-      "cost": 5.7,
-      "xp": 3.6,
-      "horizon_xp": 8.7,
-      "fixture": "BHA (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 6,
-          "opponent": "BHA",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 7,
-          "opponent": "BOU",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 8,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
         },
         {
           "gw": 9,
@@ -4208,7 +4190,7 @@
       ]
     }
   ],
-  "briefing": "أهلاً بك أيها المدرب العازم على الصعود. بصفتي المدير الفني الأعلى كفاءة لفريق فانتازي الدوري الإنجليزي، إليك التقرير التكتيكي الشامل والمحسوب بدقة رياضية للجولة رقم 6 وفقاً لأحدث نماذج (xP + FDR) وقواعدنا الذهبية التاريخية.\n\n### 1. التكتيك المعتمد وموقف الترتيب\nاستراتيجيتنا لهذه الجولة مصنفة كـ **AGGRESSIVE (هجومي تعويضي)** بهدف الإطاحة بالفارق النقطي والتقدم الحثيث من مركزنا الحالي (10,601,450). لا مجال للتردد أو الركون للحلول التقليدية؛ نحن نتعامل مع اللعبة بمنظور استثماري بحت حيث \"النقاط هي النقاط\" ولا مكان للعواطف. التكتيك يعتمد على ضخ سيولة ذكية في خط الوسط والهجوم واقتناص الفوارق النقطية الفورية، مستفيدين من رصيد مالي قدره £1.2m لتعزيز مرونة الفريق وقدرته على امتصاص أي تقلبات مفاجئة في جدول المباريات.\n\n### 2. مدى مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance)\nتأتي قراراتنا لهذه الجولة مطابقة تماماً لمحرك الـ Hindsight Gold Rules Engine؛ حيث يتماشى قرار جلب شادي (Schade) وديفيس (Davis) مع القاعدة التاريخية التي تؤكد أن الصفقات المثلى تحقق معدل 13.4 نقطة في جولة الظهور الأولى مقارنة بـ 2.6 نقطة للاعبين المباعين (صافي ربح فوري مستهدف يتجاوز +10.8 نقطة). كما أن أخذ الـ Hit (-4 نقاط) مبرر رياضياً تماماً بناءً على قاعدة الأداء التفجيري (-80 نقطة تاريخياً عبر الجولات كاستراتيجية مثلى)، في حين يتوافق اختيار الكابتن ببرونو فيرنانديز وتمركز ميزانية خط الوسط (باعتباره يمثل الأولوية القصوى بنسبة 39.8% من الإنفاق الأساسي) مع المعايير التاريخية التي تضمن أعلى عائد نقطي لكل مليون منفق.\n\n### 3. التحليل الرياضي والتكتيكي للتبديلات وتبرير الـ Hit\nقمنا بتنفيذ تبديلين حاسمين بخصم (-4 نقاط): بيع تافيرنييه (Tavernier - xP: 5.0) وتعويضه بشادي (Schade - xP: 7.7) الذي يمتلك جدول مباريات واعداً يجمع بين القوة والمرونة (AVL A, LIV H, HUL A)، وبيع أجاجي (Ajayi - xP: 4.3) لجلب ديفيس (Davis - xP: 6.6) بسعر ممتاز (£4.0m) وجدول يخدم الخط الخلفي (FUL H, MCI A, NFO H). هذا الاستثمار يولد صافي زيارة متوقعة (+1.46 نقطة) فوق تكلفة الـ Hit، فضلاً عن القفزة الهائلة في سقف النقاط المتوقع (xP) لكل لاعب خلال المدى القريب على مدار الجولات الثلاث القادمة.\n\n### 4. مبررات شارة القيادة (C) والنائب (VC)\nقع اختيارنا لشارة القيادة (C) على البرتغالي B.Fernandes (MUN) بسقف متوقع يبلغ (xP: 8.4)، مستندين إلى قاعدة الكابتن الذهبية التي تمنح الأفضلية المطلقة للأصول الممتازة (Premium Assets >= £9.5m) التي تملك معدلات تاريخية عالية في صناعة الفارق واستغلال سهولة الخصوم. بينما وقع اختيار النائب (VC) على المتألق شادي (Schade - BRE) بسقف (xP: 7.7)، لضمان تأمين الفريق بأعلى عائد ممكن في حال حدوث أي طارئ لـكابتن الأساس، مستفيدين من جاهزيته التكتيكية وإحصائياته الهجومية المتصاعدة.\n\n### 5. نصيحة استراتيجية الخواص وحماية ميزانية الفريق\nتضم قائمة خواصنا المتاحة (Wildcard: 2, Freehit: 1, 3XC: 1, BBoost: 1)، والتوصية الفنية الحاسمة هي **الاحتفاظ بها بالكامل** وعدم هدرها في هذه الجولة، توفيراً لها للاستثمار الأمثل في جولات المزدوَج (DGW) القادمة التي تصنع الفارق الحقيقي في الترتيب العام. كما نحذر بشدة من أصول الـ Flop المذكورة في رادار السوق مثل (Konsa, Palmer, Szoboszlai) وندعو لتجنبها أو التخلص منها فوراً، مع مراقبة أقطاب الـ Differentials مثل (Scott, Kostoulas, Vuskovic) لاقتناصهم في التبديلات القادمة.\n\n**الخلاصة التنفيذية:** نحن ندخل الجولة رقم 6 بعقلية استثمارية هجومية لا ترحم؛ استغلال السيولة بذكاء، تنفيذ تبديلات محسوبة بدقة رياضية تتجاوز تكلفة الـ Hit، وتوجيه شارة القيادة لأصل ممتاز يضمن أعلى سقف نقطي، مع الحفاظ على الخواص الاستراتيجية للمعارك الكبرى القادمة لضمان الهيمنة المطلقة في جدول الترتيب.",
+  "briefing": "### 1. التكتيك المعتمد وموقف الترتيب (Tactical Posture & Rank Dynamics)\n\nيقبع الفريق حالياً في الترتيب العام المتأخر (10,601,382)، وهو ما يفرض علينا تبني استراتيجية هجومية تعويضية صارمة (**Aggressive Recovery Mode**). في هذه المرحلة المتأخرة رقمياً، يصبح اللعب التحفظي أو مسايرة اختيارات الأغلبية (Template) انتحاراً تكتيكياً يقيد القدرة على الصعود. الشعار هنا هو: *\"النقاط هي النقاط أياً كان مصدرها\"*. \n\nيقوم تكتيك الجولة 6 على تفكيك الأصول المتراجعة بلا تردد، وتوظيف سيولة البنك البالغة **£5.0m** لفتح آفاق مرونة مستقبلية واسعة، مع تكثيف القوة الضاربة في خط الوسط (3-5-2) لمهاجمة الفارق النقطي وتقليص الفجوة الترتيبية سريعاً عبر فوارق نقطية حاسمة (Differentials).\n\n---\n\n### 2. مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance)\n\nجاءت القرارات الفنية لهذه الجولة منسجمة بصورة تامة مع محرك القواعد التاريخية المثبتة:\n\n* **جدوى كسر النقاط (Hit Validation):** تنص القاعدة الذهبية (بنسبة ثقة 80%) على أن أخذ خصومات نقطية مجدولة تاريخياً (حتى 20 ضربة سالبة بمحصلة -80 نقطة عبر الموسم) يعد الأمثل رياضياً لاقتناص الانفجارات التهديفية. الخصم الحالي (-4) ليس مخاطرة عشوائية، بل هو استثمار فوري محسوب لإعادة هيكلة خط الوسط بمعدل عائد متوقع يفوق كلفة الخصم سريعاً.\n* **كفاءة الميزانية (Price Efficiency):** أثبتت القاعدة (بنسبة ثقة 80%) أن الفئة السعرية الاقتصادية الأقل من **£6.0m** هي الأعلى إنتاجية تاريخياً بمعدل (2.69 نقطة لكل مليون جنيه). استقطاب باسكال غروس (**Groß**) بسعر **£5.8m** يجسد التطبيق الحرفي لهذه القاعدة، حيث يجمع بين السعر الاقتصادي ومعدل النقاط المتوقعة المرتفع.\n* **ثقل خط الوسط (Position Allocation):** توجيه التشكيلة للاعتماد على 5 أسطر في الوسط يحاكي التوزيع المثالي للإنفاق الذي يمنح خط الوسط ما يقارب **39.8%** من ميزانية التشكيل الأساسي؛ نظراً لأن لاعبي الوسط يحصدون نقاطاً أعلى للشباك النظيفة والأهداف، وهو ما يضمن الاستغلال الأقصى للمعادلة الرياضية.\n\n---\n\n### 3. التحليل الرياضي للتبديلات وجدوى الخصم (-4 Hit) على مدى 3 جولات\n\nالقرارات المنفذة قائمة على النماذج التنبؤية (xP) والجدول التنافسي (FDR) دون أي ارتباط عاطفي بالأسماء:\n\n| التبديل | اللاعب المغادر (OUT) | xP | اللاعب القادم (IN) | السعر | xP | الجولات القادمة (GW 6-8) |\n| :--- | :--- | :---: | :--- | :---: | :---: | :--- |\n| **1** | Tavernier (BOU) | 5.0 | **Groß (BHA)** | £5.8m | **7.0** | SUN (A) [3] \\| CRY (H) [2] \\| LIV (A) [4] |\n| **2** | Palmer (CHE) | 3.8 | **Scott (BOU)** | £6.1m | **5.4** | CHE (A) [4] \\| SUN (H) [3] \\| MUN (A) [4] |\n\n* **تحليل الخروج:** تم التخلص من **Palmer** بلا تردد؛ إذ يعكس مؤشره التوقعي المتدني (**3.8 xP**) تراجعاً حاداً في الإنتاجية الهجومية مقابل سعره المرتفع، بينما وصل **Tavernier** إلى سقف مردوده (**5.0 xP**) مع توافر بديل أكثر حسماً في الكرات الثابتة والمساهمات التهديفية.\n* **تحليل الدخول:** يمثل **Groß** صفقة النخبة لهذه الجولة بمعدل **7.0 xP** وجدول مثالي يتضمن مواجهة كريستال بالاس على الأرض (FDR: 2)، بينما يوفر **Scott** فاعلية هجومية بسعر متوازن وفارق تنافسي (Differential) بملكية متدنية للغاية.\n* **معادلة الـ Hit على مدى 3 جولات:**\n  * النقاط المتوقعة الفورية للبدلاء: $(7.0 + 5.4) = 12.4$ نقطة.\n  * النقاط المتوقعة للراحلين: $(5.0 + 3.8) = 8.8$ نقطة.\n  * الفارق الفوري المباشر: $+3.6$ نقطة، وهو ما يغطي تقريباً كامل تكلفة الخصم (-4) من الجولة الأولى وحدها. وبامتداد الأفق الرياضي لثلاث جولات، وبفضل جدول برايتون المؤاتي واحتكار غروس للكرات الثابتة، فإن صافي العائد المتوقع يتجاوز **+7.5 نقطة صافية** فوق تكلفة الـ Hit، محققاً شرط الجدوى الرياضية الصارمة.\n\n---\n\n### 4. حسم شارة القيادة (C) والنائب (VC)\n\n* **الكابتن (C): برونو فيرنانديز (B.Fernandes - MUN) | xP: 8.4**  \n  الاختيار الأساسي المستحق رياضياً؛ فاللاعب يمتلك أعلى معدل نقاط متوقعة في التشكيل بالكامل (**8.4 xP**)، وتمركزاً شاملاً في صناعة اللعب وتنفيذ ركلات الجزاء والكرات الثابتة. يمنحنا برونو سقفاً نقطياً مرتفعاً (High Explosive Ceiling) يتطابق مع متطلبات استراتيجيتنا الهجومية الصارمة لتعويض النقاط وكسر متوسط الجولة.\n\n* **نائب الكابتن (VC): بوكايو ساكا (Saka - ARS) | xP: 6.9**  \n  يمثل ساكا صمام الأمان المثالي والتأمين الإحصائي الأول بمعدل أمان ثابت (**Floor**) ومعدل مشاركة هجومية مرتفع مع أرسنال، ليكون الجدار الحامي في حال حدوث أي غياب مفاجئ لبرونو فيرنانديز قبل انطلاق المباريات.\n\n---\n\n### 5. استراتيجية الخواص وإدارة الميزانية (Chips & Bank Strategy)\n\n* **تجميد الخواص:** يمتلك الفريق ترسانة كاملة غير مستهلكة (2 Wildcard، 1 Free Hit، 1 Triple Captain، 1 Bench Boost). القاعدة الفنية الصارمة هنا هي **الامتناع التام عن تفعيل أي خاصية في هذه الجولة**؛ حيث تشير البيانات التاريخية إلى أن القيمة المضاعفة للخواص تبلغ ذروتها حصراً في جولات الحسم والمضاعفة (Double Gameweeks) وجولات الفراغ الكبرى (Blank Gameweeks) لتعظيم مكاسب النقاط.\n* **قوة السيولة البنكية (£5.0m):** إبقاء هذا المبلغ الضخم في البنك ليس هدراً، بل هو قوة مالية كامنة تمنحنا مرونة مطلقة (Flexibility) في الجولات القادمة للقفز فوراً إلى أي عنصر سوبر-بريميوم يفرض نفسه في الساحة دون الحاجة لاقتطاع نقاط إضافية أو استخدام خاصية مبكرة.\n\n---\n\n### الخلاصة التنفيذية (Executive Summary)\n\nندخل الجولة 6 بتشكيل 3-5-2 هجومي متوازن وقائم على استثمار فوري مدروس لخصم النقاط (-4). القرارات ترتكز على طرد تراجع بالمر وتافرنيير، واقتناص إنتاجية غروس الاقتصادية وسكوت، مع إسناد القيادة إلى المحرك الإحصائي الأعلى برونو فيرنانديز (8.4 xP). الفريق الآن في أفضل وضعية تكتيكية للانطلاق بقوة في مسار التعويض مع حماية كاملة للخواص وتأمين سيولة نقدية ضخمة تصنع الفارق للجولات القادمة.",
   "leagues": [
     {
       "id": 2024890,
@@ -4241,13 +4223,13 @@
     {
       "id": 10,
       "name": "Fulham",
-      "rank": 32674,
-      "entry_rank": 32674,
+      "rank": 32672,
+      "entry_rank": 32672,
       "last_rank": 32797,
       "total": 33413,
       "league_type": "s",
       "is_private": false,
-      "status": "🟢 صعود (+123 مركز)",
+      "status": "🟢 صعود (+125 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4255,13 +4237,13 @@
     {
       "id": 279,
       "name": "Gameweek 4",
-      "rank": 223694,
-      "entry_rank": 223694,
+      "rank": 223690,
+      "entry_rank": 223690,
       "last_rank": 230141,
       "total": 267830,
       "league_type": "s",
       "is_private": false,
-      "status": "🟢 صعود (+6447 مركز)",
+      "status": "🟢 صعود (+6451 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4269,13 +4251,13 @@
     {
       "id": 83,
       "name": "Egypt",
-      "rank": 793353,
-      "entry_rank": 793353,
+      "rank": 793345,
+      "entry_rank": 793345,
       "last_rank": 795140,
       "total": 810883,
       "league_type": "s",
       "is_private": false,
-      "status": "🟢 صعود (+1787 مركز)",
+      "status": "🟢 صعود (+1795 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4283,13 +4265,13 @@
     {
       "id": 2260821,
       "name": "beIN SPORTS League",
-      "rank": 2088995,
-      "entry_rank": 2088995,
+      "rank": 2088984,
+      "entry_rank": 2088984,
       "last_rank": 2094474,
       "total": 2145082,
       "league_type": "s",
       "is_private": false,
-      "status": "🟢 صعود (+5479 مركز)",
+      "status": "🟢 صعود (+5490 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4297,13 +4279,13 @@
     {
       "id": 431170,
       "name": "Adobe Express Badge League",
-      "rank": 2657407,
-      "entry_rank": 2657407,
+      "rank": 2657639,
+      "entry_rank": 2657639,
       "last_rank": 2578076,
       "total": 2677252,
       "league_type": "s",
       "is_private": false,
-      "status": "🔴 تراجع (-79331 مركز)",
+      "status": "🔴 تراجع (-79563 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4311,13 +4293,13 @@
     {
       "id": 320,
       "name": "Rookie",
-      "rank": 2687345,
-      "entry_rank": 2687345,
+      "rank": 2687308,
+      "entry_rank": 2687308,
       "last_rank": 2698661,
       "total": 2837969,
       "league_type": "s",
       "is_private": false,
-      "status": "🟢 صعود (+11316 مركز)",
+      "status": "🟢 صعود (+11353 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4325,13 +4307,13 @@
     {
       "id": 314,
       "name": "Overall",
-      "rank": 10601450,
-      "entry_rank": 10601450,
+      "rank": 10601382,
+      "entry_rank": 10601382,
       "last_rank": 10622213,
       "total": 10833601,
       "league_type": "s",
       "is_private": false,
-      "status": "🟢 صعود (+20763 مركز)",
+      "status": "🟢 صعود (+20831 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4356,6 +4338,14 @@
         "impact": "Goal/Assist drops your rank by ~8.4%"
       },
       {
+        "player": "Palmer",
+        "team": "CHE",
+        "cost": 10.6,
+        "eo": 58,
+        "threat_level": "MODERATE",
+        "impact": "Goal/Assist drops your rank by ~5.8%"
+      },
+      {
         "player": "Alexander-Arnold",
         "team": "LIV",
         "cost": 7.1,
@@ -4366,12 +4356,12 @@
     ],
     "differentials": [
       {
-        "player": "Schade",
+        "player": "Groß",
         "team": "FPL",
-        "cost": 6.2,
+        "cost": 5.8,
         "eo": 8,
         "advantage": "💎 Huge Rank Boost",
-        "xp": 7.66
+        "xp": 7.0
       },
       {
         "player": "Tzolakis",
@@ -4382,20 +4372,20 @@
         "xp": 6.83
       },
       {
-        "player": "Davis",
-        "team": "FPL",
-        "cost": 4.0,
-        "eo": 8,
-        "advantage": "💎 Huge Rank Boost",
-        "xp": 6.6
-      },
-      {
         "player": "Tarkowski",
         "team": "FPL",
         "cost": 6.1,
         "eo": 8,
         "advantage": "💎 Huge Rank Boost",
         "xp": 6.5
+      },
+      {
+        "player": "João Pedro",
+        "team": "FPL",
+        "cost": 7.7,
+        "eo": 8,
+        "advantage": "💎 Huge Rank Boost",
+        "xp": 6.0
       },
       {
         "player": "Gakpo",
@@ -4446,13 +4436,13 @@
       {
         "id": 10,
         "name": "Fulham",
-        "rank": 32674,
-        "entry_rank": 32674,
+        "rank": 32672,
+        "entry_rank": 32672,
         "last_rank": 32797,
         "total": 33413,
         "league_type": "s",
         "is_private": false,
-        "status": "🟢 صعود (+123 مركز)",
+        "status": "🟢 صعود (+125 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4460,13 +4450,13 @@
       {
         "id": 279,
         "name": "Gameweek 4",
-        "rank": 223694,
-        "entry_rank": 223694,
+        "rank": 223690,
+        "entry_rank": 223690,
         "last_rank": 230141,
         "total": 267830,
         "league_type": "s",
         "is_private": false,
-        "status": "🟢 صعود (+6447 مركز)",
+        "status": "🟢 صعود (+6451 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4474,13 +4464,13 @@
       {
         "id": 83,
         "name": "Egypt",
-        "rank": 793353,
-        "entry_rank": 793353,
+        "rank": 793345,
+        "entry_rank": 793345,
         "last_rank": 795140,
         "total": 810883,
         "league_type": "s",
         "is_private": false,
-        "status": "🟢 صعود (+1787 مركز)",
+        "status": "🟢 صعود (+1795 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4488,13 +4478,13 @@
       {
         "id": 2260821,
         "name": "beIN SPORTS League",
-        "rank": 2088995,
-        "entry_rank": 2088995,
+        "rank": 2088984,
+        "entry_rank": 2088984,
         "last_rank": 2094474,
         "total": 2145082,
         "league_type": "s",
         "is_private": false,
-        "status": "🟢 صعود (+5479 مركز)",
+        "status": "🟢 صعود (+5490 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4502,13 +4492,13 @@
       {
         "id": 431170,
         "name": "Adobe Express Badge League",
-        "rank": 2657407,
-        "entry_rank": 2657407,
+        "rank": 2657639,
+        "entry_rank": 2657639,
         "last_rank": 2578076,
         "total": 2677252,
         "league_type": "s",
         "is_private": false,
-        "status": "🔴 تراجع (-79331 مركز)",
+        "status": "🔴 تراجع (-79563 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4516,13 +4506,13 @@
       {
         "id": 320,
         "name": "Rookie",
-        "rank": 2687345,
-        "entry_rank": 2687345,
+        "rank": 2687308,
+        "entry_rank": 2687308,
         "last_rank": 2698661,
         "total": 2837969,
         "league_type": "s",
         "is_private": false,
-        "status": "🟢 صعود (+11316 مركز)",
+        "status": "🟢 صعود (+11353 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4530,13 +4520,13 @@
       {
         "id": 314,
         "name": "Overall",
-        "rank": 10601450,
-        "entry_rank": 10601450,
+        "rank": 10601382,
+        "entry_rank": 10601382,
         "last_rank": 10622213,
         "total": 10833601,
         "league_type": "s",
         "is_private": false,
-        "status": "🟢 صعود (+20763 مركز)",
+        "status": "🟢 صعود (+20831 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4544,173 +4534,111 @@
     ],
     "overall_threat_score": 68
   },
-  "press_insights": [
-    {
-      "player_id": 552,
-      "player_name": "Brobbey",
-      "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "تعرض بروبي للإصابة أثناء المشاركة مع منتخب بلاده، وحالته تحت التقييم مع احتمالية لعب بنسبة 75%.",
-      "summary_en": "Brobbey suffered an injury on international duty and is being assessed with a 75% chance of playing.",
-      "risk_level": "MEDIUM",
-      "headline_reference": "Brobbey suffers injury on international duty"
-    },
-    {
-      "player_id": 13,
-      "player_name": "Rice",
-      "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "ديس بريس يعاني من إصابة غير محددة ونسبة مشاركته 75%.",
-      "summary_en": "Rice has an unspecified injury with a 75% chance of playing.",
-      "risk_level": "MEDIUM",
-      "headline_reference": "FPL Status Update"
-    },
-    {
-      "player_id": 116,
-      "player_name": "Dunk",
-      "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "يعاني دانك من إصابة في الرقبة وتبلغ نسبة مشاركته 75%.",
-      "summary_en": "Dunk is dealing with a neck injury and has a 75% chance of playing.",
-      "risk_level": "MEDIUM",
-      "headline_reference": "FPL Status Update"
-    },
-    {
-      "player_id": 154,
-      "player_name": "Palmer",
-      "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "يعاني بالمر من إصابة عضلية ونسبة مشاركته تبلغ 75%.",
-      "summary_en": "Palmer is nursing a muscular injury with a 75% chance of playing.",
-      "risk_level": "MEDIUM",
-      "headline_reference": "FPL Status Update"
-    },
-    {
-      "player_id": 165,
-      "player_name": "João Pedro",
-      "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "جواو بيدرو يعاني من إصابة في الركبة مع فرصة مشاركة 75%.",
-      "summary_en": "João Pedro has a knee injury and a 75% chance of playing.",
-      "risk_level": "MEDIUM",
-      "headline_reference": "FPL Status Update"
-    },
-    {
-      "player_id": 397,
-      "player_name": "Semenyo",
-      "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "سيمنيو يعاني من إصابة في الكاحل ونسبة مشاركته 75%.",
-      "summary_en": "Semenyo is carrying an ankle injury with a 75% chance of playing.",
-      "risk_level": "MEDIUM",
-      "headline_reference": "FPL Status Update"
-    },
-    {
-      "player_id": 432,
-      "player_name": "Mainoo",
-      "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "ماينو يعاني من إصابة غير مشخصة ونسبة مشاركته 75%.",
-      "summary_en": "Mainoo has an unspecified injury with a 75% chance of playing.",
-      "risk_level": "MEDIUM",
-      "headline_reference": "FPL Status Update"
-    }
-  ],
+  "press_insights": [],
   "press_wire": [
     {
-      "id": 4726957,
-      "title": "JAIR CUNHA EARNS FIRST BRAZIL CAP",
-      "summary": "Jair earns first Brazil cap Defender rises from the bench in draw Brazil have two fixtures to come Jair Cunha made his senior Brazil debut in an international friendly against Australia on Friday 25 September. The Nottingham Forest defender was named in Carlo Ancelotti’s squad for the first time earlier this month following a standout six months in Forest colours since earning a regular place in our starting XI at the end of the 2025/26 season. Jair rose from the substitutes’ bench in the second period of the 1-1 draw in Townsville, where AFC Bournemouth’s Rayan levelled in the final minutes of the game. Canarinho take on the Socceroos early next week before travelling to India for a first international fixture between the two countries. The club sends its congratulations to Jair on his Brazil debut.",
-      "date": "2026-09-25T13:20:20Z",
-      "url": "https://www.nottinghamforest.co.uk/news/2026/september/25/jair-cunha-earns-first-brazil-cap/",
-      "matched_players": [
-        "raya",
-        "cunha"
-      ]
-    },
-    {
-      "id": 4726914,
-      "title": "DELAP SHORTLISTED FOR PREMIER LEAGUE MONTHLY AWARD",
-      "summary": "Delap shortlisted for monthly award Forward pulled off move in recent fixture against Coventry Cast your vote here Liam Delap has been nominated for the Premier League’s Creative Moment of the Month for September. The Nottingham Forest forward expertly controlled Ousmane Diomande’s long pass into his feet on the halfway line before pirouetting away from Ethan Pinnock to set the Reds away on the attack. The moment of individual brilliance from our summer signing has been shortlisted for the monthly accolade, with supporters now able to cast their vote by pressing here. Delap is up against four other nominations for the month, with the forward the only nominee to have pulled off a roulette. The winner of the award will be announced at 1pm BST on Thursday 1 October. Supporters can vote for Liam by pressing here. Vote Here!",
-      "date": "2026-09-25T11:00:00Z",
-      "url": "https://www.nottinghamforest.co.uk/news/2026/september/25/delap-shortlisted-for-premier-league-monthly-award/",
-      "matched_players": []
-    },
-    {
-      "id": 4726911,
-      "title": "Buendía shortlisted for Premier League award",
-      "summary": "Emi Buendía has been shortlisted for the Premier League September Adobe Express Creative Moment of the Month award. The midfielder earns his nomination after an action in the fifth minute of Aston Villa’s visit of Nottingham Forest earlier this month, with voting now open. Just five minutes in at Villa Park, the Argentine demonstrated quick thinking and impressive technical ability to shift the ball to the left of his body, and backheel into Ross Barkley’s path with his right foot, away from Forest’s James McAtee. Buendía is up against actions from Arsenal midfielder Martín Zubimendi, Chelsea’s João Pedro, Abdul Fatawu of Ipswich Town and Forest forward Liam Delap. Voting will close at 12pm on Monday, September 28, with the winner to be announced at 1pm next Thursday (October 1). Click below to vote now via the Premier League website. Good luck, Emi! Premier League Creative Moment of the Month September 2026 Vote Now!",
-      "date": "2026-09-25T11:00:00Z",
-      "url": "https://avfc.co.uk/news/2026/september/25/news-buendia-shortlisted-for-premier-league-award/",
+      "id": 4727098,
+      "title": "FPL international break round-up",
+      "summary": "Aston Villa have teamed up with Fantasy Football Scout to help bring you hints, tips and advice during the 2026/27 Fantasy Premier League season. Scout will be using their expertise to provide advice and gameweek tips which should prove useful in ensuring you win your mini-leagues. Following the completion of Gameweek 5, Fantasy Premier League managers can now start to identify trends in the data and develop a better understanding of the best players to own. With that in mind, here are Aston Villa’s three highest-scoring players in FPL so far… Emi Buendía (21 points) Buendía scored a stunner in last Saturday's win at Tottenham Hotspur, capping off a fine individual display from the £5.9m midfielder. In addition to his goal, the playmaker hit the defensive contribution (DefCon) threshold for the first time this season, thanks to two interceptions, six recoveries and seven tackles, and claimed the maximum bonus for a 12-point haul. Having also netted in Europe against Club Brugge, it’s no surprise that Buendía has started to show his true potential in FPL. In terms of the underlying numbers, Buendía ranks first among teammates for shots (nine), final-third touches (95) and passes received in the penalty area (seven). Capable of contributing both goals and assists, he’s third for chances created (five), too. John McGinn (17 points) McGinn (£5.4m), of course, provided the assist for that Buendía strike in North London. The Villa captain has now supplied assists in successive matches against Nottingham Forest and Spurs, a run which has seen him deliver 12 FPL points. The underlying data further highlights McGinn’s influence on Villa’s attack. Helped by a role on set plays, no teammate can better his total of six chances created and 19 attempted crosses this season. It’s not just about his assist potential, either. Frequently playing off the right, where he can cut inside onto his stronger left foot, he has already netted in Europe and recorded four shots in the Premier League. On top of that, McGinn provides something of a guarantee with regards to minutes, having started every Premier League game in 2026/27 so far, averaging 86.2 minutes per appearance. Zion Suzuki (16 points) Suzuki (£5.0m) had big gloves to fill upon his arrival at the club this summer, but the Japan international has made an impressive start to life as a Villan. Averaging 4.0 points per start, he’s already delivered a clean sheet against Hull City in Gameweek 3. He’s also racked up 15 saves across his first four matches, which have helped him earn three additional save points. Suzuki’s distribution has certainly added a new dimension to Villa’s play. Unai Emery’s men have seemed to adopt a more direct approach this season, with Suzuki’s ability with the ball at his feet key to this tactical evolution. Calm and composed, he’s completed 101 successful passes over the last four Gameweeks. Coventry City’s Carl Rushworth (£4.5m) delivered the first goalkeeper assist of 2026/27 on Saturday. Given Suzuki’s distribution, it might not be long before he joins that list.",
+      "date": "2026-09-26T11:00:00Z",
+      "url": "https://avfc.co.uk/news/2026/september/26/feature-fpl-international-break-round-up/",
       "matched_players": [
         "buendía",
-        "joão pedro",
+        "mcginn",
+        "suzuki"
+      ]
+    },
+    {
+      "id": 4727090,
+      "title": "TICKET DETAILS | ARSENAL (H)",
+      "summary": "Arsenal ticket details confirmed Reds welcome Gunners to NG2 in mid-October Tickets on sale from 10am BST on Monday 28 September The ticket details for Nottingham Forest’s Premier League fixture against Arsenal at the City Ground have been confirmed. The Reds welcome the Gunners to NG2 on Sunday 18 October, with kick-off scheduled for 4.30pm BST. Match ticket prices will remain the same for the 2026/27 season, with adult ticket prices starting from £50 and kids’ tickets from £18 for this top-flight, Category A fixture. MyForest Pro members can secure their seats from 10am BST on Monday 28 September, with all further sales criteria listed in the table below. MyForest members are strongly advised to sync/resync (if successfully upgraded membership) to the ECAL here, where supporters can add all home game on-sale dates to their calendar to be notified ahead of each respective on-sale. Ticket Prices Category Price Adult (22-65) £50 to £70 Senior (66+) £40 to £55 Young Adult (18-21) £35 to £50 Youth (14-17) £22 to £35 Child (4-13) £18 to £30 Please visit the online Ticket Office for ticket prices in each stand. Ticket Sale Dates Date Time Sale / Access Details Monday 28 September 10am Online only* MyForest Pro members One ticket per customer number Tuesday 29 September 10am Online only* MyForest Plus members One ticket per customer number Wednesday 30 September 10am Online only* MyForest Core members | Junior Reds | International Reds One ticket per customer number Ballot Applications – MyForest Members (All Applicants) Wednesday 30 September 2pm Online only* Applications open Max six tickets per application. Each individual supporter within the application must be a MyForest member. Thursday 1 October 10am Online only* Applications close Max six tickets per application. Each individual supporter within the application must be a MyForest member. Thursday 1 October 4pm Online only* Ballot results communicated and window to purchase opens One ticket per MyForest member Friday 2 October 10am Online only* Deadline for successful ballot applicants to purchase & Second Sale Further Dates Friday 2 October 12pm Online Ticket Exchange/Ticket Forwarding & Upgrades live All sales dates are subject to ticket availability. null null *ACCESSIBILITY TICKETING Supporters with accessibility requirements, who require a disabled companion, or those who require a wheelchair, can call the NFFC Ticket Office on 0115 982 4388 for assistance. Disabled supporters can now purchase online, with all relevant information available here. ACCESSIBLE PARKING To book, please email accessibility@nottinghamforest.co.uk with your customer number, car registration and whether you require a standard or wheelchair parking space, from 10am BST on Friday 9 October. Applications received before this date and time will be rejected, and supporters will be advised to email their request again on the above date and time. BALLOTING To apply via the ballot, visit https://www.eticketing.co.uk/nottinghamforest/Events, ensuring to click the icon of a person top right so that you’re signed into your eTicketing account. If you press this and are then redirected to the main website, press “Tickets” and then when taken back to the eTicketing website, press the icon of a person top right again to sign in. You can then apply for the relevant game, where during the application process, you can press “Add another member” and scroll down slightly when the pop-up screen comes up, to then select individuals from your MyForest network, or alternatively, search for another eligible individual. We would strongly advise applying for whoever you wish to attend with in the same application, as if you apply separately, one application may be successful, and one may be unsuccessful. Once you’ve applied, you will then receive a confirmation email from us – this isn’t confirmation that you have been successful, as you will receive a different email from us after we’ve ran the ballot (see “Ticket Sales Dates” above) to inform you as to whether you’ve been successful or not. If you have been successful, you will then have the defined window specified above to purchase for yourself and the individuals (if applicable) you applied alongside. TICKET EXCHANGE/FORWARDING & UPGRADES Both the online Ticket Exchange and Ticket Forwarding & Upgrades functionality will go live at the time communicated in the “Ticket Sales Dates” table in this article, providing that the game is cleared as a General Admission sell out. Supporters can find more information regarding the Ticket Exchange here, whilst information regarding Ticket Forwarding & Upgrades can be found here. Season Card holders are reminded that for the 2026/27 season, our Every Supporter Counts seat utilisation policy has been implemented. Supporters can find more information on this here. FOREST FIRSTS INITIATIVE The Forest Firsts initiative remains in place for the 2026/27 season will allow any Junior Reds members (aged 4-13) that haven’t attended a game at the City Ground before, the opportunity to attend for the first time. We know every fan remembers their first game and we can’t wait to create those memories with us at the City Ground. For the Arsenal fixture, a parent of any Junior Reds member can apply via the following application here. Please be advised that the deadline to apply is 10am BST on Friday 2 October, with successful and unsuccessful applicants informed within a week. For each subsequent home fixture, the application form link will be communicated via the respective ticket news on-sale articles here. Should the form be completed inaccurately, or any form submitted for a Junior Reds member that already has booking history for any game at the City Ground, then the application will be refused. Up to four tickets can be applied for per application, however please be advised that each attendee must also hold MyForest membership. Due to anticipated demand, as well as this only being a small allocation for each game, we cannot guarantee that every application will be successful. Any successful applicants will receive an email from us to confirm and advise next steps. For more information on this initiative, or should you have any questions at all, please email JuniorReds@nottinghamforest.co.uk. DIGITAL TICKETING To adhere to the mandatory digital ticketing requirement for the 2026/27 season (more information here), tickets for all Premier League home fixtures will be issued as “Digital Only”. This means that the ticket(s) will be sent via email where it can then be added onto a smartphone wallet as a QR code. Disabled or elderly supporters can apply for an exception to the above by emailing accessibility@nottinghamforest.co.uk, should they wish to do so, where further assistance will be provided. T&CS Supporters can find full T&Cs and Ticketing Policy here.",
+      "date": "2026-09-26T10:00:00Z",
+      "url": "https://www.nottinghamforest.co.uk/news/2026/september/26/ticket-details---arsenal--h-/",
+      "matched_players": [
+        "rice",
         "king"
       ]
     },
     {
-      "id": 4726900,
-      "title": "Palace’s EA FC 27 ratings in detail",
-      "summary": "It’s that time of year again when the new EA FC game drops – but how are Palace’s player ratings stacking up this time around?",
-      "date": "2026-09-25T11:00:00Z",
-      "url": "https://www.cpfc.co.uk/news/first-team/palaces-ea-fc-27-ratings-in-detail/",
+      "id": 4727084,
+      "title": "Manchester City ticket details",
+      "summary": "Fixtures Aston Villa Vs. Manchester City - Sat, Oct 24 2026, 12:30 Aston Villa can confirm ticket details for our Premier League home clash against Manchester City. The Villans go head-to-head with City on Saturday, October 24 (ko 12.30pm), with Unai Emery's side having won our last three meetings at Villa Park. Prices, on-sale dates and full ticketing information for the fixture can be found below... On Sale Mon, Sep 28 Ticket Prices Category Zone 1 Zone 2 Zone 3 Zone 4 Adult £86.50 £81 £75 £61 Armed Forces £69 £64.50 £60 £48.50 Over 66 £65 £61 £57 £46.50 Under 21 £61.50 £57.50 £53.50 £44 Under 18 £61.50 £31.50 £30.50 £29.50 Under 14 £61.50 £23.50 £21 £17.50 On-Sale Dates ONLINE AND PHONE FROM 9.30AM: ON SALE TO: Monday, September 28 Adult and Junior Members *Please note, online and phone sales both commence at 9.30am on the specified dates. The club anticipates that tickets will sell out to members. Should further sales windows be required, these will be communicated in due course On Sale Mon, Sep 28 Additional Information Ticket Limitations One ticket per eligible Fan ID will be issued Ticket Ballot The ‘First Timer Ballot’ allows for up to 250 match tickets that will only be open to members who are yet to attend Villa Park for a match in 2026/27 but have attended at least one match in either of the past two seasons. This offer will be valid for Premier League and UEFA Champions League league phase matches only. Members will only be able to purchase through this ballot once during the season. The ‘Loyalty Ballot’ is designed to allow access to a limited number of match tickets to those members who have over 120 Season Ticket Waiting List points. Members who are currently on the Season Ticket Waiting List will be notified of their points total before the first game is on sale. The number of loyalty points will change throughout the season as members attend games, and therefore more members will become eligible for the Loyalty Ballot eTickets All tickets are digital and collections are not available. Tickets will appear in the Aston Villa App and will be available to download to Apple or Google Wallets Refund Deadline Tickets are non-refundable, however for the 2026/27 season, if members are unable to attend matches they have purchased tickets for, they are eligible to list their ticket for resale and if the ticket resells they will receive a refund post-match FAQs All tickets are sold subject to availability Tickets are sold on the basis they are for home fans only. Supporters purchasing for away fans or those who do not adhere to AVFC ground regulations WILL lose the right to purchase tickets for future matches Supporters are reminded to assign tickets to other attending supporters to build up booking history. This should be completed at the point of purchase as tickets CANNOT be reassigned once the match has been played. Should you experience problems while trying to assign tickets online, please contact the Ticket Office prior to the match taking place Our ticket touting policy can be found here GA+ and Hospitality Our GA+ and hospitality options offer more choices than ever before, giving you access to a host of exclusive experiences and upgrades that will make your matchday truly unforgettable. From The Terrace View and The Lower Grounds to The Aston and 82 Champions Club – there’s options to suit everyone. GA+ To explore our GA+ options, click here Hospitality To explore our hospitality options, click here Memberships Adult and Junior Memberships provide the best opportunity to secure general admission home tickets, giving access to buy when the best seats are available. Our Memberships are crafted to bring you closer to the club you love with enhanced benefits, exclusive access and unforgettable experiences. Wherever you follow from, there’s a Membership made for you. Browse our options via the link below... Aston Villa Memberships Browse Here Heart of our Club: Round Up your Ticket Purchase When purchasing tickets online, supporters have the option to either donate or round up their purchase to the nearest pound, with 100% of proceeds donated to the Aston Villa Foundation. Funds raised have had significant impact on our disability programmes, providing essential equipment, kits and coaching staff, ensuring more young people with additional needs can access inclusive football opportunities. Recently, Villa fan Jude Aston was invited to Bodymoor Heath to see the impact of the Foundation’s Ability Counts programme first hand, during a 'Play on the Pitch’ experience. With thanks to those who have supported the initiative since its inception in 2021, over £100,000 has been raised.",
+      "date": "2026-09-26T07:00:00Z",
+      "url": "https://avfc.co.uk/news/2026/september/26/ticketing-manchester-city-ticket-details/",
+      "matched_players": [
+        "rice",
+        "king"
+      ]
+    },
+    {
+      "id": 2884829,
+      "title": "FPL player price changes - risers, fallers and top transfers for Gameweek 6",
+      "summary": "Find out which Fantasy Premier League picks have changed in price overnight, and see the most-transferred players",
+      "date": "2026-09-26T01:00:00Z",
+      "url": "https://www.premierleague.com/en/news/2884829",
+      "matched_players": [
+        "rice"
+      ]
+    },
+    {
+      "id": 4727081,
+      "title": "Internationals: Shea scores dramatic Northern Ireland winner",
+      "summary": "Shea Charles scored a sensational winner for Northern Ireland in the ninth minute of added time to secure a 1-0 victory over Georgia. The Nations League tie had been goalless, with Georgia’s Khvicha Kvaratskhelia seeing his second-half penalty saved by Shea’s brother, Pierce. That was until the Fulham midfielder stepped up to smash home the only goal of the game, sealing Northern Ireland’s first-ever Nations League B victory. Speaking post-match, Shea said: “I thought we fought really hard. To just come away with that winner is just incredible. “We're still a really young group and just to be able to keep our temper and defend like that towards the end of the game and come away with the winner - it's just really good.” Elsewhere, Calvin Bassey and Alex Iwobi both completed 90 minutes for Nigeria in their 2-1 win over Madagascar. The Super Eagles had fallen behind in the AFCON Qualifier before Iwobi threaded a beautiful ball through to George Ilenikhena, who equalised. In the second half, Moses Usor scored the winner to secure victory for Nigeria. They will next face Guinea-Bissau on Tuesday. Back in the Nations League, Timothy Castagne also played the full match as Belgium beat Italy 2-0 away from home, while Hugo Larsson was an unused substitute as Sweden beat Romania 2-1. In the Under-21 European Championship Qualifiers, Josh King starred as England ran out 4-2 winners over Kazakhstan, while Gonzalo García was handed the captain’s armband in Spain’s narrow 2-1 defeat to Finland.",
+      "date": "2026-09-25T21:30:09Z",
+      "url": "https://www.fulhamfc.com/news/2026/september/25/internationals-shea-scores-dramatic-winner/",
+      "matched_players": [
+        "george",
+        "king"
+      ]
+    },
+    {
+      "id": 4727079,
+      "title": "Jackson finds net for Senegal",
+      "summary": "Nicolas Jackson was on target as Senegal played out a 1-1 draw against Mozambique in Africa Cup of Nations qualifying on Friday. The Aston Villa striker found the net with a neat finish just after the half-hour mark, only for the hosts to level in first-half injury time and ensure the spoils were shared. Jackson completed 84 minutes for Senegal while compatriot and Villa team-mate Ibrahim Mbaye was introduced as a 63rd-minute substitute. The encounter was Senegal’s first of AFCON qualifying in Group J, with a trip to Ethiopia next up on Tuesday (ko 2pm). Victor Lindelöf helped Sweden get off to a winning start in the UEFA Nations League courtesy of a 2-1 triumph over Romania. The centre-back captained his country to all three points as he completed 90 minutes in Solna. It ensures Sweden sit top of League B Group 4 following their opening fixture of the competition, with a clash against Matty Cash’s Poland to come on Monday (ko 7.45pm). Elsewhere in League B Group 4, Cash completed 90 minutes as Poland played out a goalless draw against Bosnia and Herzegovina in Warsaw. The right-back helped keep a clean sheet for his nation to leave Poland on one point from their opening Nations League fixture.",
+      "date": "2026-09-25T21:20:00Z",
+      "url": "https://avfc.co.uk/news/2026/september/25/internationals-jackson-finds-net-for-senegal/",
+      "matched_players": []
+    },
+    {
+      "id": 4727080,
+      "title": "Wins For Everton Trio On International Duty",
+      "summary": "Vitalii Mykolenko, Tyrique George and Tyler Dibling all featured in international action on Friday evening. Mykolenko played every minute as Ukraine kicked off their UEFA Nations League campaign with an impressive 1-0 victory over Hungary in Budapest. A clean sheet for the full-back, he put in a sturdy defensive showing, making 16 defensive contributions including 12 clearances. Mykolenko and Ukraine’s next test sees them face Georgia on Monday 28 September. Young Lions George and Dibling helped England Under-21s claim a 4-2 win over Kazakhstan Under-21s at Molineux. Both Blues were named on the bench for the match – a UEFA European Championship qualifier – but George was substituted on when Chelsea winger Jamie Gittens headed off the field with an injury on 39 minutes. A positive performance from Everton’s George, he made two key passes and completed seven of his nine dribbles. Toffees teammate Dibling was introduced on 79 minutes, replacing Fulham's Josh King. Next up, England Under-21s face Slovakia Under-21s on Friday 2 October.",
+      "date": "2026-09-25T21:01:47Z",
+      "url": "https://www.evertonfc.com/news/2026/september/25/wins-for-everton-trio-on-international-duty/",
+      "matched_players": [
+        "mykolenko",
+        "george",
+        "king"
+      ]
+    },
+    {
+      "id": 4726977,
+      "title": "Coventry City & Aston Villa away tickets",
+      "summary": "Tickets for Fulham's away trips to Coventry City and Aston Villa will go on sale from Thursday 1st October. Fulham take on The Sky Blues on Sunday 24th October, 3pm, and The Villans on Saturday 31st October, 8pm. Ticket Details Tickets for both these fixtures will go on sale to 2026/27 Season Ticket Holders at 9:30am on Thursday 1st October. 2026/27 Members will be able to purchase tickets from 9:30am on Monday 5th October. Any remaining tickets will then go on sale to Supporters with Previous Booking History* from 9:30am on Wednesday 7th October. Further matchday information, including a full list of on sale dates and ticket prices, can be found here: Coventry City and Aston Villa. Supporters can purchase up to two tickets per person online at fulhamfc.com/tickets, by calling the Ticket Office on 0203 871 0810 (Mon-Fri, 9:30am-5pm) or in person from the Ticket Office (Mon-Fri, 9:30am-4:30pm). BUY TICKETS FROM THURSDAY Important Information The 2026/27 season will see new Premier League requirements implemented for assigning tickets to supporters, with every seat sold being assigned to the individual who intends on attending the related match. Each attendee's name and contact details must be registered with the club. This means if a supporter purchases two tickets for a fixture, each ticket will need to be assigned to a unique client reference number. In the instance of a Season Ticket Holder purchasing additional tickets during their priority window, each ticket that they are purchasing will need to be assigned to each individual who intends on attending the related match. We therefore encourage all supporters planning on attending Premier League fixtures, home or away, to update their friends and family network ahead of the start of the season to ensure they can easily assign tickets at the point of purchase. Supporters can follow our step-by-step guide on how to do this here. *To qualify for Booking History status, supporters must have purchased a Fulham FC Men's First Team league match ticket in the past five years. Booking History status is not valid if supporters have only previously purchased tickets against the same opposition, in this case Coventry City and Aston Villa. You must have Booking History status prior to 2pm on Friday 25th September in order to be eligible to purchase tickets during this window.",
+      "date": "2026-09-25T16:00:00Z",
+      "url": "https://www.fulhamfc.com/news/2026/september/25/Coventry-City-Aston-Villa-away-tickets/",
+      "matched_players": [
+        "rice",
+        "king"
+      ]
+    },
+    {
+      "id": 4726976,
+      "title": "FOREST FIRSTS | 2026/27",
+      "summary": "Everyone remembers their first football match. Forest Firsts is our club initiative aimed at making young Nottingham Forest supporters making their first trip to the City Ground that extra bit special. With our success on the pitch growing season on season over the last six years, the demand for tickets at our world-famous venue has only risen. Our initiative gives Junior Reds members the opportunity to attend their first game with a small allocation being set aside for each game. The application form for each fixture is available when the ticket details are released for that particular game. Applications for our game against Arsenal in mid-October will be available soon. Please be advised that the parent attending must also be a MyForest member, and only two tickets can be applied for per application. Supporters should direct any queries to JuniorReds@nottinghamforest.co.uk.",
+      "date": "2026-09-25T16:00:00Z",
+      "url": "https://www.nottinghamforest.co.uk/news/2026/september/25/forest-firsts---2026-27/",
       "matched_players": [
         "king"
       ]
     },
     {
-      "id": 4725626,
-      "title": "VOTE: Adobe Express Creative Moment of the Month",
-      "summary": "Watch FIVE of the Premier League's most magical moments from September and choose your favourite",
-      "date": "2026-09-25T11:00:00Z",
-      "url": "https://www.premierleague.com/en/news/4725626",
+      "id": 4727020,
+      "title": "Sonia Bompastor gives fitness updates on Lauren James and Keira Walsh",
+      "summary": "Sonia Bompastor delivered a team news update on a key Chelsea quartet ahead of our London derby with Arsenal on Sunday afternoon.",
+      "date": "2026-09-25T15:40:00Z",
+      "url": "https://www.chelseafc.com/en/news/article/sonia-bompastor-gives-fitness-updates-on-lauren-james-and-keira-walsh",
       "matched_players": []
-    },
-    {
-      "id": 4726913,
-      "title": "Röhl Updates On Recovery & Backs Himself For Right-Back Role",
-      "summary": "Merlin Röhl speaks to evertontv about his ongoing recovery from a minor injury during the international break, as well as his keenness to excel as a right-back when called upon, and his assessment of the Blues' start to the season. Watch the full interview via the player below now!",
-      "date": "2026-09-25T10:45:00Z",
-      "url": "https://www.evertonfc.com/news/2026/september/25/r-hl-updates-on-recovery---backs-himself-for-right-back-role/",
-      "matched_players": []
-    },
-    {
-      "id": 4726850,
-      "title": "Internationals | Wolves’ Zimbabwe warriors stage stunning comeback",
-      "summary": "Marshall Munetsi and Tawanda Chirewa both starred for Zimbabwe on Thursday evening as they helped their country to an incredible Africa Cup of Nations qualification fightback.",
-      "date": "2026-09-25T09:39:06Z",
-      "url": "https://www.wolves.co.uk/news/mens-first-team/20260925-internationals-wolves-zimbabwe-warriors-stage-stunning-comeback/",
-      "matched_players": [
-        "hall"
-      ]
-    },
-    {
-      "id": 4726835,
-      "title": "Hull City sold out: Ticket Exchange open",
-      "summary": "Tickets for our 2026/27 Premier League fixture against Hull City have now sold out, thank you for your incredible support! We look forward to welcoming supporters to Craven Cottage on Saturday 17th October. As this fixture has sold out the Official Fulham FC Ticket Exchange is now available. Any 2026/27 Season Ticket Holder that cannot attend the fixture can list their ticket on the Club's official resale platform for other supporters to purchase and to help ensure that the stadium will be at maximum capacity. Should a season ticket seat be sold on the Ticket Exchange, the supporter will receive credit added to their ticketing account which can be used on future purchases, with adults receiving £20 credit, concessions receiving £10 credit and juniors receiving £5 credit. Season Ticket Holders must be logged into their OneFulham account to be able to list a seat for resale. The Ticket Exchange deadline for Fulham FC v Hull City is 1pm on Saturday 17th October. Any tickets that have been listed but are unsold by this time will be returned back to their original owners so we encourage Season Ticket Holders list their seat early for the best chance of selling your seat! FIND OUT MORE LIST YOUR SEASON TICKET BUY HULL CITY TICKETS",
-      "date": "2026-09-25T08:15:42Z",
-      "url": "https://www.fulhamfc.com/news/2026/september/25/Hull-City-sold-out-Ticket-Exchange-open/",
-      "matched_players": []
-    },
-    {
-      "id": 4726833,
-      "title": "Brobbey suffers injury on international duty",
-      "summary": "",
-      "date": "2026-09-25T08:11:00Z",
-      "url": "https://www.safc.com/news/2026/september/24/international-round-up--thursday/",
-      "matched_players": [
-        "brobbey"
-      ]
-    },
-    {
-      "id": 4726831,
-      "title": "Walker | 'It’s looking positive for the future of our players'",
-      "summary": "Richard Walker is thrilled to be taking the next step on his coaching journey as Wolves under-21 head coach, and believes the future is bright for his group of youngsters.",
-      "date": "2026-09-25T08:00:00Z",
-      "url": "https://www.wolves.co.uk/news/academy/20260925-walker-it-s-looking-positive-for-the-future-of-our-players/",
-      "matched_players": [
-        "king"
-      ]
     }
   ]
 }
