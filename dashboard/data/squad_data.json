@@ -4,13 +4,13 @@
     "team_name": "هبد اصطناعي",
     "gameweek": 6,
     "deadline": "2026-10-10T10:00:00Z",
-    "rank": 10599966,
+    "rank": 10599948,
     "total_points": 95,
     "team_value": 100.8,
     "bank": 2.7,
     "free_transfers": 1,
     "dry_run": false,
-    "last_updated": "2026-10-10T08:34:31.450330Z"
+    "last_updated": "2026-10-10T09:19:37.008791Z"
   },
   "formation": "3-5-2",
   "total_xp": 70.5,
@@ -802,8 +802,8 @@
         "player_name": "Isak",
         "fitness_sentiment": "ruled_out",
         "minute_multiplier": 0.0,
-        "summary_ar": "ألكسندر إيساك يعاني من إصابة في الفخذ ولن يشارك في المباريات القادمة.",
-        "summary_en": "Isak is ruled out due to a thigh injury with an unknown return date.",
+        "summary_ar": "تأكد غيابه عن المواجهة بسبب إصابة في الفخذ.",
+        "summary_en": "Ruled out of action following a thigh injury.",
         "risk_level": "CRITICAL",
         "headline_reference": "Iraola provides injury update on Isak and Gakpo"
       }
@@ -1889,48 +1889,6 @@
       ]
     },
     {
-      "id": 176,
-      "name": "Dasilva",
-      "team": "COV",
-      "position": "DEF",
-      "cost": 4.0,
-      "xp": 6.4,
-      "horizon_xp": 16.4,
-      "fixture": "NEW (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 6,
-          "opponent": "NEW",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 7,
-          "opponent": "TOT",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 8,
-          "opponent": "FUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
       "id": 356,
       "name": "Virgil",
       "team": "LIV",
@@ -2183,48 +2141,6 @@
       ]
     },
     {
-      "id": 233,
-      "name": "Mykolenko",
-      "team": "EVE",
-      "position": "DEF",
-      "cost": 4.6,
-      "xp": 5.7,
-      "horizon_xp": 12.6,
-      "fixture": "HUL (A) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 6,
-          "opponent": "HUL",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 7,
-          "opponent": "CHE",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 8,
-          "opponent": "ARS",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
       "id": 93,
       "name": "Schuster",
       "team": "BRE",
@@ -2435,6 +2351,48 @@
       ]
     },
     {
+      "id": 233,
+      "name": "Mykolenko",
+      "team": "EVE",
+      "position": "DEF",
+      "cost": 4.6,
+      "xp": 4.8,
+      "horizon_xp": 10.7,
+      "fixture": "HUL (A) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 6,
+          "opponent": "HUL",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 7,
+          "opponent": "CHE",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 8,
+          "opponent": "ARS",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 10,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 649,
       "name": "Maitland-Niles",
       "team": "EVE",
@@ -2503,6 +2461,48 @@
           "opponent": "CHE",
           "is_home": false,
           "fdr": 4
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 10,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Calafiori",
+      "team": "ARS",
+      "position": "DEF",
+      "cost": 5.9,
+      "xp": 4.7,
+      "horizon_xp": 11.4,
+      "fixture": "LEE (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 6,
+          "opponent": "LEE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 7,
+          "opponent": "NFO",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 8,
+          "opponent": "EVE",
+          "is_home": true,
+          "fdr": 3
         },
         {
           "gw": 9,
@@ -3023,6 +3023,48 @@
       ]
     },
     {
+      "id": 397,
+      "name": "Semenyo",
+      "team": "MCI",
+      "position": "MID",
+      "cost": 8.4,
+      "xp": 4.8,
+      "horizon_xp": 14.4,
+      "fixture": "LIV (A) [FDR 4]",
+      "fixtures_5gw": [
+        {
+          "gw": 6,
+          "opponent": "LIV",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 7,
+          "opponent": "IPS",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 8,
+          "opponent": "AVL",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 10,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 127,
       "name": "Gomez",
       "team": "BHA",
@@ -3258,48 +3300,6 @@
           "gw": 8,
           "opponent": "EVE",
           "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 397,
-      "name": "Semenyo",
-      "team": "MCI",
-      "position": "MID",
-      "cost": 8.4,
-      "xp": 4.2,
-      "horizon_xp": 12.7,
-      "fixture": "LIV (A) [FDR 4]",
-      "fixtures_5gw": [
-        {
-          "gw": 6,
-          "opponent": "LIV",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 7,
-          "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 8,
-          "opponent": "AVL",
-          "is_home": false,
           "fdr": 3
         },
         {
@@ -4199,7 +4199,7 @@
       ]
     }
   ],
-  "briefing": "إليك التقرير التكتيكي الشامل للجولة السادسة (GW6)، الصادر عن محرك التحليل الإحصائي والبرمجة الرياضية وفقاً لاستراتيجية **AGGRESSIVE (الهجوم التعويضي)**:\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب (Tactical Framework & Rank)\nيتواجد الفريق حالياً في المرتبة **10,599,966**، وهو موقف يتطلب تفعيل استراتيجية المخاطرة المحسوبة (Calculated Risk) للصعود السريع في الترتيب. يرتكز التكتيك المعتمد لهذه الجولة على رسم **3-5-2** المتوازن، والذي يضمن السيطرة الكاملة على خط الوسط بوجود خماسي ذي سقف نقاط عالٍ (Saka, Palmer, B.Fernandes, Tavernier, Kamada). الهدف المباشر للجولة هو استغلال المواجهات المباشرة الميسورة على أرض أنديتهم لتعويض الفارق النقدي وتجاوز معدل الجولة بفارق مريح.\n\n---\n\n### 2. مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance)\nأثبتت المخرجات البرمجية لمحرك القواعد التاريخية (Hindsight Engine) أن القرارات المتخذة تطابق معايير الأداء الأفضل بنسبة استثنائية:\n* **توزيع الميزانية وكفاءة الأسعار (Price Efficiency):** تنص القاعدة الذهبية على أن الأصول الاقتصادية (أقل من £6.0m) تحقق أعلى كفاءة نقاط مقابل السعر (2.69 pts/£m). شراء كامادا (£5.0m) وإيمرسون (£5.6m) يجسد هذه القاعدة بدقة.\n* **الكثافة في خط الوسط (MID Prioritization):** توافق التشكيل مع قاعدة تخصيص 39.8% من الميزانية الأساسية لخط الوسط من خلال الاستثمار القوي في بالمر، ساكا، وبرونو.\n* **شرعية خصم النقاط (Hit Justification):** تنص القواعد الإحصائية على أن أخذ الـ Hits يكون مثالياً رياضياً لتفجير السقف التهديفي إذا كان الفارق متوقعاً (+10.8 نقطة للتبديلات المثالية). أداء البدلاء المتوقع يتجاوز الخصم التشغيلي (-4) بفارق إيجابي واضح (+4.04 نقطة صافية).\n\n---\n\n### 3. التحليل الرياضي والتكتيكي للتبديلات وتبرير الـ Hit\nتم اتخاذ قرار جراحي حاسم بالتخلي عن الأصول المعطلة واستبدالها بأصول جاهزة ذات عائد فورى:\n* **🔴 بيع Gakpo (LIV) [xP: 0.0] ──► 🟢 شراء Kamada (CRY) [xP: 5.3 | £5.0m]:** خروج إجباري بسبب الإصابة وضمان عدم ضياع النقاط، مقابل التعاقد مع كامادا الذي يمتلك مواجهة بيتية سهلة ضد نوتنغهام (FDR: 3) مع أدوار هجومية متقدمة.\n* **🔴 بيع Akpom (IPS) [xP: 1.7] ──► 🟢 شراء Emersonn (IPS) [xP: 6.8 | £5.6m]:** التخلي عن أصل هامشي مقابل مهاجم أساسي يواجه فولهام على أرضه (FDR: 2)، ويمتلك أعلى xP متوقع بين مهاجمي الفئة الاقتصادية.\n* **جدوى الـ Hit (-4):** المطرودون يضمنون 1.7 نقطة متوقعة فقط، بينما البدلاء القادمون يحملون مجتمعين 12.1 نقطة متوقعة (xP). صافي الربح الفوري للجولة هو **+6.4 نقطة** (تتراجع إلى +4.04 بعد خصم الـ Hit)، مما يجعل القرار مجدياً رياضياً وتكتيكياً على مدار الجولات الثلاث القادمة.\n\n---\n\n### 4. مبررات شارة القيادة (C) والنائب (VC)\n* **الكابتن (C): João Pedro (CHE) [xP: 7.8]:** يمتلك أعلى عائد متوقع في الفريق للجولة. يتوافق القرار مع القاعدة الذهبية التي تفضل الكباتن بمتوسط سعر £6.5m - £9.5m لضمان أعلى عائد على الاستثمار (ROI) دون تجميع المخاطر في أصل واحد مرتفع السعر.\n* **نائب الكابتن (VC): Emersonn (IPS) [xP: 6.8]:** اختيار تكتيكي ممتاز للنيابة؛ حيث يلعب على أرضه بمواجهة سهلة جداً (FDR: 2)، مما يجعله غطاءً آماناً مثالياً في حال حدوث أي تدوير مفاجئ.\n\n---\n\n### 5. استراتيجية الخواص وحماية ميزانية الفريق\n* **إدارة الخواص:** التوصية الصارمة هي **الاحتفاظ بجميع الخواص (Wildcard x2, Free Hit, 3x Captain, Bench Boost)** وعدم استهلاك أي منها في هذه الجولة. تفعيل الخواص يجب أن يرتبط حتماً بالجولات المزدوجة (DGWs) أو جولات الفراغ (BGWs) لمضاعفة قيمتها النقاطية.\n* **الميزانية والرادار:** توفر رصيد بنكي بقيمة **£2.7m** يعطي مرونة مالية هائلة للجولات القادمة. يجب تفعيل \"رادار السوق\" فوراً لبيع ألكسندر إيساك (Isak) المصاب والمُهدد بهبوط السعر، والتخلص من سوبوسلاي وكونسا، والتركيز على أهداف الـ Differentials الواعدة مثل Buendía و McGinn.\n\n---\n\n### الخلاصة التنفيذية\nإن التشكيلة الحالية للجولة السادسة تعكس هيكلية هجومية صارمة قادرة على تقليص الفارق في الترتيب العام. اتخاذ قرار الـ Hit (-4) مدعوم برياضيات الـ xP والقواعد الذهبية التاريخية، حيث تم استبدال الأصول المصابة والهامشية بلاعبين يمتلكون مواجهات بيتية سهلة وسقف نقاط عالٍ. الرصيد المتبقي (£2.7m) مع الاحتفاظ الكامل بالخواص يضع الفريق في موقف متين جداً لإعادة الهيكلة المستمرة في الجولات القادمة دون خروج عن مسار التعافي الصاعد.",
+  "briefing": "إليك التقرير التكتيكي الشامل الصادر عن محرك البرمجة الرياضية والقواعد الذهبية للجولة رقم 6:\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب (Tactical Strategy & Rank Position)\n* **الموقف الحالي:** الترتيب العام (10,599,948) يتطلب تفعيل استراتيجية **AGGRESSIVE (هجومية تعويضية)** بصرامة كاملة. لا مجال للحذر التقليدي؛ الهدف هو إحداث قفزات نوعية في الترتيب عبر استغلال فروق النقاط المتوقعة (xP Swings) واللاعبين ذوي النسب المنخفضة (Differentials).\n* **الهيكل التكتيكي:** الاعتماد على تشكيل **(3-5-2)** يمنح الفريق الكثافة الهجومية المطلوبة في خط الوسط، مع بناء خط هجوم مرن يعتمد على الفعالية الاقتصادية واستغلال جدول المباريات السهل لبعض الأندية.\n\n---\n\n### 2. مدى مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance)\nأثبتت القرارات المتخذة لهذه الجولة توافقاً استراتيجياً عميقاً مع القواعد التاريخية المثبتة:\n* **قاعدة خصم النقاط (Hit Efficiency):** تشير البيانات الذهبية إلى أن أخذ الخصوم الرياضياتية (Hits) كان الخيار الأمثل تاريخياً لتفجير الطاقات الهجومية. قرارات التبديل الحالية تحقق **زيادة صافية متوقعة فورية مقدرها +4.04 نقطة** (حتى بعد خصم الـ -4 نقطة)، وهو ما يتماشى مع القاعدة المثبتة بإنتاجية تصل إلى (+10.8 نقطة صافية للتبديلات المثالية).\n* **قاعدة كفاءة الأسعار (Price Efficiency):** تظهر القواعد أن أصول الميزانية الاقتصادية (<£6.0m) تحقق أعلى معدل نقاط مقابل السعر (2.69 نقطة/مليون). تم تطبيق ذلك حرفياً بدخول **Emersonn (£5.6m)** و **Kamada (£5.0m)**.\n* **قاعدة تخصيص ميزانية خط الوسط (Position Allocation):** بالاعتماد على تشكيل 3-5-2 ووجود خيارات نخبوية ومساندة في الوسط (Saka, Palmer, B.Fernandes, Tavernier, Kamada)، يتماشى الفريق مع القاعدة الذهبية التي تدعو لتركيز القوة المال الهجومية في خط الوسط بنسبة تقارب 40%.\n* **قاعدة الشارة الاستثنائية (Captain Rule):** الاعتماد على كابتن بأسعار متوازنة أو خيارات غير مكررة يطابق القاعدة التاريخية التي أثبتت أن الكباتن من فئة النخبة للغاية (>=£9.5m) تم اختيارهم بنسبة 20% فقط في الجولات المثالية.\n\n---\n\n### 3. التحليل الرياضي والتكتيكي للتبديلات وتبرير الـ Hit (-4)\n* **البيع الأول:** 🔴 **Gakpo (LIV) [xP: 0.0]** ──► **السبب:** إصابة مؤكدة في الكاحل وتاريخ غير معلن للعودة. الاحتفاظ بلاعب ميت تكتيكياً ينافي مبدأ \"Points are Points\".\n* **الشراء الأول:** 🟢 **Kamada (CRY) [xP: 5.3 | £5.0m]** ──► **السبب:** مواجهة سهلة على أرضه ضد (NFO) بصعوبة [3]، توفير مالي ضخم، ومشاركة هجومية متوقعة عالية.\n* **البيع الثاني:** 🔴 **Akpom (IPS) [xP: 1.7]** ──► **السبب:** ضعف المردود الهجومي والانخفاض الحاد في النقاط المتوقعة.\n* **الشراء الثاني:** 🟢 **Emersonn (IPS) [xP: 6.8 | £5.6m]** ──► **السبب:** يواجه (FUL) على أرضه بصعوبة ممتازة [2]، ويمتلك أرقام xP مرتفعة جداً مقارنة بسعره.\n\n#### **جدوى السالب (-4 Hit) على مدار 3 جولات:**\n* **مجموع xP الخروج:** Akpom (1.7) + Gakpo (0.0) = **1.7 نقطة**.\n* **مجموع xP الدخول:** Emersonn (6.8) + Kamada (5.3) = **12.1 نقطة**.\n* **الفارق الفوري لجولة واحدة:** 12.1 - 1.7 = **+10.4 نقطة**.\n* **الصافي بعد خصم الـ Hit (-4):** **+6.4 نقطة صافية لصالح الفريق**.\nيمتد هذا الفارق الإيجابي عبر الجولات الثلاث القادمة بفضل جدول مباريات الإدخالات الجديد مقارنة بالغياب التام لجاكبو وضعف إنتاجية أكبوم، مما يجعل السالب قراراً رياضياً حتمياً ورابحاً.\n\n---\n\n### 4. مبررات شارة القيادة (C) والنائب (VC)\n* **الكابتن (C): João Pedro (CHE) - [xP: 7.8]**\n  * **المبرر:** يمتلك أعلى معدل نقاط متوقعة في الفريق (7.8). يمر بمنظومة هجومية قوية لـ تشيلسي، ويحقق معايير الكابتن ذو السقف العالي (High Ceiling) مع عدم التزام الجماهير العامة به بنفس النسب، مما يجعله سلاحاً رائعاً لتقليص فارق الترتيب (Rank Escalator).\n* **النائب (VC): Emersonn (IPS) - [xP: 6.8]**\n  * **المبرر:** يستفيد من مواجهة سهلة جداً على ملعبه ضد فولهام (FDR: 2)، ويمتلك معدل xP استثنائي (6.8) يجعله غطاءً أمنياً متكاملاً في حال حدوث أي غياب مفاجئ لجوائو بيدرو.\n\n---\n\n### 5. استراتيجية الخواص وحماية ميزانية الفريق\n* **إدارة الخواص:** التوصية الصارمة هي **الاحتفاظ بكافة الخواص المتاحة** (Wildcard x2, Free Hit x1, Triple Captain x1, Bench Boost x1). السعي الحالي هو بناء زخم بالتبديلات المجانية والخصوم المحسوبة، وتأجيل الخواص الثقيلة لمراحل الجولات المزدوجة (DGW) والفيصلية في النصف الثاني من الموسم للحصول على الكسب المضاعف.\n* **حماية الميزانية:** السيولة المتبقية في البنك قدرها **£2.7m**. هذه الميزانية الكبيرة توفر مرونة تكتيكية عالية جداً للجولات القادمة، مما يسمح بالترقية السريعة لأي أصول هجومية عائدة من الإصابة (مثل Isak) دون الحاجة لإجراء عمليات جراحية مؤلمة في التشكيلة.\n\n---\n\n### الخلاصة التنفيذية\nتم رسم هذه الخطة بمشرط تحليلي دقيق لخدمة الهدف الرئيسي: **الاهتمام بالنقاط الحاضرة وقمع الركود**. التبديلات المنفذة عالجت أصولاً ميتة ومصابة، وحولت السالب (-4) إلى مكسب صافٍ يرفع سقف نقاط الفريق فورياً مع الحفاظ على ميزانية مرنة قدرها £2.7m وثروة من الخواص للمستقبل. الفريق جاهز تماماً للانطلاق في الجولة 6 بخطة هجومية تعويضية حاسمة.",
   "leagues": [
     {
       "id": 2024890,
@@ -4274,13 +4274,13 @@
     {
       "id": 83,
       "name": "Egypt",
-      "rank": 793247,
-      "entry_rank": 793247,
+      "rank": 793245,
+      "entry_rank": 793245,
       "last_rank": 795140,
       "total": 810883,
       "league_type": "s",
       "is_private": false,
-      "status": "🟢 صعود (+1893 مركز)",
+      "status": "🟢 صعود (+1895 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4288,13 +4288,13 @@
     {
       "id": 2260821,
       "name": "beIN SPORTS League",
-      "rank": 2088586,
-      "entry_rank": 2088586,
+      "rank": 2088579,
+      "entry_rank": 2088579,
       "last_rank": 2094474,
       "total": 2145082,
       "league_type": "s",
       "is_private": false,
-      "status": "🟢 صعود (+5888 مركز)",
+      "status": "🟢 صعود (+5895 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4302,13 +4302,13 @@
     {
       "id": 431170,
       "name": "Adobe Express Badge League",
-      "rank": 2666570,
-      "entry_rank": 2666570,
+      "rank": 2668238,
+      "entry_rank": 2668238,
       "last_rank": 2578076,
       "total": 2677252,
       "league_type": "s",
       "is_private": false,
-      "status": "🔴 تراجع (-88494 مركز)",
+      "status": "🔴 تراجع (-90162 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4316,13 +4316,13 @@
     {
       "id": 320,
       "name": "Rookie",
-      "rank": 2686526,
-      "entry_rank": 2686526,
+      "rank": 2686519,
+      "entry_rank": 2686519,
       "last_rank": 2698661,
       "total": 2837969,
       "league_type": "s",
       "is_private": false,
-      "status": "🟢 صعود (+12135 مركز)",
+      "status": "🟢 صعود (+12142 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4330,13 +4330,13 @@
     {
       "id": 314,
       "name": "Overall",
-      "rank": 10599966,
-      "entry_rank": 10599966,
+      "rank": 10599948,
+      "entry_rank": 10599948,
       "last_rank": 10622213,
       "total": 10833601,
       "league_type": "s",
       "is_private": false,
-      "status": "🟢 صعود (+22247 مركز)",
+      "status": "🟢 صعود (+22265 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4493,13 +4493,13 @@
       {
         "id": 83,
         "name": "Egypt",
-        "rank": 793247,
-        "entry_rank": 793247,
+        "rank": 793245,
+        "entry_rank": 793245,
         "last_rank": 795140,
         "total": 810883,
         "league_type": "s",
         "is_private": false,
-        "status": "🟢 صعود (+1893 مركز)",
+        "status": "🟢 صعود (+1895 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4507,13 +4507,13 @@
       {
         "id": 2260821,
         "name": "beIN SPORTS League",
-        "rank": 2088586,
-        "entry_rank": 2088586,
+        "rank": 2088579,
+        "entry_rank": 2088579,
         "last_rank": 2094474,
         "total": 2145082,
         "league_type": "s",
         "is_private": false,
-        "status": "🟢 صعود (+5888 مركز)",
+        "status": "🟢 صعود (+5895 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4521,13 +4521,13 @@
       {
         "id": 431170,
         "name": "Adobe Express Badge League",
-        "rank": 2666570,
-        "entry_rank": 2666570,
+        "rank": 2668238,
+        "entry_rank": 2668238,
         "last_rank": 2578076,
         "total": 2677252,
         "league_type": "s",
         "is_private": false,
-        "status": "🔴 تراجع (-88494 مركز)",
+        "status": "🔴 تراجع (-90162 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4535,13 +4535,13 @@
       {
         "id": 320,
         "name": "Rookie",
-        "rank": 2686526,
-        "entry_rank": 2686526,
+        "rank": 2686519,
+        "entry_rank": 2686519,
         "last_rank": 2698661,
         "total": 2837969,
         "league_type": "s",
         "is_private": false,
-        "status": "🟢 صعود (+12135 مركز)",
+        "status": "🟢 صعود (+12142 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4549,13 +4549,13 @@
       {
         "id": 314,
         "name": "Overall",
-        "rank": 10599966,
-        "entry_rank": 10599966,
+        "rank": 10599948,
+        "entry_rank": 10599948,
         "last_rank": 10622213,
         "total": 10833601,
         "league_type": "s",
         "is_private": false,
-        "status": "🟢 صعود (+22247 مركز)",
+        "status": "🟢 صعود (+22265 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4568,9 +4568,9 @@
       "player_id": 31,
       "player_name": "Konsa",
       "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "كونسا تحوم حوله شكوك طفيفة بعد ذكر اسمه في تقارير الإصابات الأخيرة لأرتيتا بنسبة مشاركة تبلغ 75%.",
-      "summary_en": "Konsa remains a minor doubt following Arteta's injury updates, with a 75% chance of playing.",
+      "minute_multiplier": 0.85,
+      "summary_ar": "تحوم حوله شكوك خفيفة بنسبة جاهزية 75% بسبب إصابة غير معلنة، لكنه يحتفظ بفرصة جيدة للمشاركة أساسياً.",
+      "summary_en": "Carries a minor doubt with a 75% chance of playing due to an unspecified issue, but remains likely to feature.",
       "risk_level": "MEDIUM",
       "headline_reference": "Arteta provides injury update on Havertz, Konsa, Tzolis and more"
     },
@@ -4579,9 +4579,39 @@
       "player_name": "Kluivert",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "باتريك كلويفرت غائب تماماً بسبب إصابة غير محددة ولا توجد عودة قريبة.",
-      "summary_en": "Kluivert is ruled out with an unspecified injury and an unknown return date.",
+      "summary_ar": "مستبعد تماماً من المباراة القادمة بسبب الإصابة مع عدم تحديد موعد لعودته.",
+      "summary_en": "Ruled out for the upcoming match due to injury with no set return date.",
       "risk_level": "CRITICAL",
+      "headline_reference": "Latest Premier League player injuries - club by club news"
+    },
+    {
+      "player_id": 176,
+      "player_name": "Dasilva",
+      "fitness_sentiment": "ruled_out",
+      "minute_multiplier": 0.0,
+      "summary_ar": "تأكد غيابه عن اللقاء لتواجده في غرفة العلاج لمواصلة التأهيل من إصابته.",
+      "summary_en": "Confirmed unavailable as he remains in the treatment room recovering from injury.",
+      "risk_level": "CRITICAL",
+      "headline_reference": "Resuming Premier League matters at Villa Park"
+    },
+    {
+      "player_id": 233,
+      "player_name": "Mykolenko",
+      "fitness_sentiment": "minor_doubt",
+      "minute_multiplier": 0.85,
+      "summary_ar": "يعاني من إصابة خفيفة في الساق ونسبة مشاركته 75%، مرشح لبدء المباراة مع إمكانية استبداله مبكراً.",
+      "summary_en": "Managing a leg injury with a 75% chance of playing; likely to start but could have controlled minutes.",
+      "risk_level": "MEDIUM",
+      "headline_reference": "Latest Premier League player injuries - club by club news"
+    },
+    {
+      "player_id": 254,
+      "player_name": "Robinson",
+      "fitness_sentiment": "minor_doubt",
+      "minute_multiplier": 0.85,
+      "summary_ar": "شكوك بسيطة حول جاهزيته بسبب إصابة في الكاحل (75%)، لكنه يتوقع أن يشارك في التشكيل الأساسي.",
+      "summary_en": "Slight doubt due to an ankle problem (75% chance), expected to be available for selection.",
+      "risk_level": "MEDIUM",
       "headline_reference": "Latest Premier League player injuries - club by club news"
     },
     {
@@ -4589,8 +4619,8 @@
       "player_name": "Gakpo",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "كودي جاكبو غائب بسبب إصابة في الكاحل مع عدم وجود موعد محدد لعودته.",
-      "summary_en": "Gakpo is ruled out with an ankle injury and an unknown return date.",
+      "summary_ar": "مستبعد رسمياً بسبب إصابة في الكاحل مع غياب محدد للدقائق والمتوقع عودته لاحقاً.",
+      "summary_en": "Officially ruled out due to an ankle injury.",
       "risk_level": "CRITICAL",
       "headline_reference": "Iraola provides injury update on Isak and Gakpo"
     },
@@ -4599,8 +4629,8 @@
       "player_name": "Isak",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "ألكسندر إيساك يعاني من إصابة في الفخذ ولن يشارك في المباريات القادمة.",
-      "summary_en": "Isak is ruled out due to a thigh injury with an unknown return date.",
+      "summary_ar": "تأكد غيابه عن المواجهة بسبب إصابة في الفخذ.",
+      "summary_en": "Ruled out of action following a thigh injury.",
       "risk_level": "CRITICAL",
       "headline_reference": "Iraola provides injury update on Isak and Gakpo"
     },
@@ -4608,9 +4638,9 @@
       "player_id": 397,
       "player_name": "Semenyo",
       "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "سيمينيو يعاني من إصابة في الكاحل وفرصة مشاركته تقدر بنحو 75%.",
-      "summary_en": "Semenyo is a minor doubt with an ankle injury, carrying a 75% chance of playing.",
+      "minute_multiplier": 0.85,
+      "summary_ar": "لديه إصابة بسيطة في الكاحل ونسبة مشاركته 75%، مع توقعات ببدء اللقاء.",
+      "summary_en": "Carries a slight ankle issue (75% chance of playing), expected to start.",
       "risk_level": "MEDIUM",
       "headline_reference": "Latest Premier League player injuries - club by club news"
     },
@@ -4619,8 +4649,8 @@
       "player_name": "Dorgu",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "دورغو مصاب في العضلة الخلفية ومن المتوقع عودته في 25 أكتوبر.",
-      "summary_en": "Dorgu is ruled out with a hamstring injury, expected back on 25 Oct.",
+      "summary_ar": "مستبعد بسبب إصابة في أوتار الركبة ومتوقع عودته حول نهاية الشهر.",
+      "summary_en": "Ruled out with a hamstring injury, expected back around late October.",
       "risk_level": "CRITICAL",
       "headline_reference": "Latest Premier League player injuries - club by club news"
     },
@@ -4628,9 +4658,9 @@
       "player_id": 432,
       "player_name": "Mainoo",
       "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "ماينو يحوم حوله الشك بنسبة 75% للمشاركة نتيجة إصابة غير محددة.",
-      "summary_en": "Mainoo is a minor doubt with an unspecified injury, giving him a 75% chance of playing.",
+      "minute_multiplier": 0.85,
+      "summary_ar": "لديه شكوك طفيفة بنسبة 75% للمشاركة، والفرصة جيدة لتواجده أساسياً.",
+      "summary_en": "Slight fitness concern with 75% playing probability, remains likely to play.",
       "risk_level": "MEDIUM",
       "headline_reference": "Latest Premier League player injuries - club by club news"
     },
@@ -4639,8 +4669,8 @@
       "player_name": "Igor Jesus",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "إيجور خيسوس غائب بسبب إصابة في الساق ولم يتم تحديد موعد لعودته.",
-      "summary_en": "Igor Jesus is ruled out with a calf injury and an unknown return date.",
+      "summary_ar": "خارج الحسابات تماماً بسبب إصابة في ربلة الساق.",
+      "summary_en": "Ruled out due to a calf injury with no confirmed return date.",
       "risk_level": "CRITICAL",
       "headline_reference": "Two players ruled out for Forest - and Williams is a doubt"
     },
@@ -4649,8 +4679,8 @@
       "player_name": "Brobbey",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "بروبي مصاب في العضلة الخلفية ومن المتوقع عودته في 25 أكتوبر حسب تصريحات لويس بريس.",
-      "summary_en": "Brobbey is sidelined with a hamstring injury, expected back on 25 Oct.",
+      "summary_ar": "غير متاح للمشاركة بسبب إصابة في أوتار الركبة.",
+      "summary_en": "Unavailable due to a hamstring injury.",
       "risk_level": "CRITICAL",
       "headline_reference": "Sunderland team news: Le Bris reveals latest on Brobbey"
     }
