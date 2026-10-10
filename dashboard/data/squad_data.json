@@ -4,13 +4,13 @@
     "team_name": "هبد اصطناعي",
     "gameweek": 6,
     "deadline": "2026-10-10T10:00:00Z",
-    "rank": 10599984,
+    "rank": 10599966,
     "total_points": 95,
     "team_value": 100.8,
     "bank": 2.7,
     "free_transfers": 1,
     "dry_run": false,
-    "last_updated": "2026-10-10T07:35:35.258238Z"
+    "last_updated": "2026-10-10T08:34:31.450330Z"
   },
   "formation": "3-5-2",
   "total_xp": 70.5,
@@ -802,8 +802,8 @@
         "player_name": "Isak",
         "fitness_sentiment": "ruled_out",
         "minute_multiplier": 0.0,
-        "summary_ar": "إيساك يغيب للإصابة في الفخذ وليس هناك موعد محدد لعودته.",
-        "summary_en": "Isak remains sidelined with a thigh injury and an unknown return date.",
+        "summary_ar": "ألكسندر إيساك يعاني من إصابة في الفخذ ولن يشارك في المباريات القادمة.",
+        "summary_en": "Isak is ruled out due to a thigh injury with an unknown return date.",
         "risk_level": "CRITICAL",
         "headline_reference": "Iraola provides injury update on Isak and Gakpo"
       }
@@ -2183,6 +2183,48 @@
       ]
     },
     {
+      "id": 233,
+      "name": "Mykolenko",
+      "team": "EVE",
+      "position": "DEF",
+      "cost": 4.6,
+      "xp": 5.7,
+      "horizon_xp": 12.6,
+      "fixture": "HUL (A) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 6,
+          "opponent": "HUL",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 7,
+          "opponent": "CHE",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 8,
+          "opponent": "ARS",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 9,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 10,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 93,
       "name": "Schuster",
       "team": "BRE",
@@ -2461,48 +2503,6 @@
           "opponent": "CHE",
           "is_home": false,
           "fdr": 4
-        },
-        {
-          "gw": 9,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "name": "Calafiori",
-      "team": "ARS",
-      "position": "DEF",
-      "cost": 5.9,
-      "xp": 4.7,
-      "horizon_xp": 11.4,
-      "fixture": "LEE (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 6,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 7,
-          "opponent": "NFO",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 8,
-          "opponent": "EVE",
-          "is_home": true,
-          "fdr": 3
         },
         {
           "gw": 9,
@@ -4199,7 +4199,7 @@
       ]
     }
   ],
-  "briefing": "أهلاً بك أيها المدرب الطموح. بصفتي المدير الفني الأعلى كفاءة لفريق فانتازي الدوري الإنجليزي، إليك التقرير التكتيكي الشامل والمبني على لغة الأرقام الصارمة ومحرك القواعد الذهبية التاريخية (Hindsight Gold Rules Engine) لخوض غمار الجولة رقم 6 باستراتيجية هجومية تعويضية.\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب\nيتبنى الفريق استراتيجية (AGGRESSIVE) هجومية تعويضية بهدف القفز المنهجي من المركز الحالي (10,599,984) مستنداً إلى الاستغلال الأمثل للرصيد المالي المتاح (£2.7m) وتعظيم النقاط المتوقعة (xP). يعتمد التكتيك الحالي على ضخ السيولة في خط الوسط والهجوم واقتناص الفوارق السعرية للاعبين ذوي الكفاءة العالية، مع التعامل بصرمة تامة مع الإصابات وتراجع المستويات دون أي تردد عاطفي وفقاً لمبدأ \"Points are Points\".\n\n### 2. مدى مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance)\nتتطابق قرارات هذه الجولة بشكل دقيق مع مخرجات محرك القواعد الذهبية؛ حيث جاء قرار التبديل المزدوج محققاً لمتوسط النقاط المتوقعة تاريخياً للوافد الجديد في الجولة الأولى (عتبة 13.4 نقطة)، مما يبرر تماماً أخذ الـ Hit بقيمة (-4 نقاط) نظراً لتحقيقه صافي زيادة متوقعة تفوق الحد الأدنى المطلوب (+4.04 نقطة مقابل صافي تاريخي مجزٍ). كما توافق اختيار الكابتن وشارة القيادة مع معايير خوض المباريات على الأול (Home) وتجنب المخاطر غير المدروسة، إضافة إلى تكثيف الاستثمار المالي في خط الوسط الذي يستهلك النسبة الأكبر من قيمة التشكيل الأساسي طبقاً للأفضليات التاريخية المثبتة.\n\n### 3. التحليل الرياضي والتكتيكي للتبديلات وتبرير بيع اللاعبين وشراء البدلاء\nتم اتخاذ قرار بيع Akpom (FWD - IPS) ذي النقاط الهزيلة المتوقعة (xP: 1.7) لتعويضه بالمهاجم الفعّال Emersonn (FWD - IPS) بسعر £5.6m والذي يتمتع بمؤشر xP مرتفع يبلغ 6.8 وجدول مباريات مواتٍ يجمع بين السهولة والخطورة المدروسة (FUL H, MCI A, NFO H). وفي نفس السياق، تم التخلص الفوري من المصاب Gakpo (MID - LIV) بصفر نقاط متوقعة وحالته المقلقة (Ankle injury)، وجلب البديل الاستراتيجي Kamada (MID - CRY) بسعر £5.0m وبـ xP يبلغ 5.3 وجدول مباريات ممتاز (NFO H, BHA A, NEW H)، مما يجعل الـ Hit المكلف بـ (-4) استثماراً هجومياً ذكياً يضمن عوائد فورية تفوق التكلفة عبر الجولات الثلاث القادمة.\n\n### 4. مبررات شارة القيادة (C) والنائب (VC) بالاستناد إلى قاعدة الكابتن الذهبية\nوقعت اختيار القيادة (C) على João Pedro (CHE) بمؤشر نقاط متوقعة عالٍ يبلغ (xP: 7.8)، مستنداً إلى إحصائيات الاستغلال الأمثل للأرض والمباريات ذات معامل صعوبة منخفض (FDR <= 2) والتي تنص عليها قاعدة الكابتن الذهبية بنسبة ثقة عالية، بينما مُنحت شارة النائب (VC) للوافد الجديد المتألق Emersonn (IPS) بـ (xP: 6.8) لضمان تغطية هجومية ذات سقف نقاط مرتفع في حال تعطل الخيار الأول، استجابةً للأنماط التاريخية التي تفضل الأصول الهجومية ذات المردود التهديفي المباشر.\n\n### 5. نصيحة استراتيجية الخواص وحماية ميزانية الفريق\nتوصي إدارة الفريق بالاحتفاظ بجميع الخواص المتاحة حالياً (wildcard: 2, freehit: 1, 3xc: 1, bboost: 1) وعدم الهدر فيها في هذه الجولة، وتوجيه استخدامها بدقة استراتيجية نحو أسابيع الجولات المزدوجة (DGW) القادمة لمضاعفة العوائد. وفيما يتعلق بحماية الميزانية، يجب الابتعاد التام عن الأصول المصنفة في رادار مخاطر الـ Flop مثل (Konsa, Szoboszlai, Isak) لتفادي خسارة رأس المال، مع مراقبة البدائل الواعدة (Buendía, McGinn, Schuster) لتعزيز دكة البدلاء والجاهزية المستقبلية.\n\n**الخلاصة التنفيذية:**\nإن الالتزام الصارم بمعايير محرك القواعد الذهبية، وتنفيذ التبديلات الهجومية المدروسة رغم تكلفة الـ Hit، وتوجيه شارة القيادة للأوراق الرابحة على أرضها، يضع الفريق في مسار تصاعدي حاسم لتعويض النقاط المفقودة والتقدم السريع في جدول الترتيب العام بكل ثقة واحترافية.",
+  "briefing": "إليك التقرير التكتيكي الشامل للجولة السادسة (GW6)، الصادر عن محرك التحليل الإحصائي والبرمجة الرياضية وفقاً لاستراتيجية **AGGRESSIVE (الهجوم التعويضي)**:\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب (Tactical Framework & Rank)\nيتواجد الفريق حالياً في المرتبة **10,599,966**، وهو موقف يتطلب تفعيل استراتيجية المخاطرة المحسوبة (Calculated Risk) للصعود السريع في الترتيب. يرتكز التكتيك المعتمد لهذه الجولة على رسم **3-5-2** المتوازن، والذي يضمن السيطرة الكاملة على خط الوسط بوجود خماسي ذي سقف نقاط عالٍ (Saka, Palmer, B.Fernandes, Tavernier, Kamada). الهدف المباشر للجولة هو استغلال المواجهات المباشرة الميسورة على أرض أنديتهم لتعويض الفارق النقدي وتجاوز معدل الجولة بفارق مريح.\n\n---\n\n### 2. مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance)\nأثبتت المخرجات البرمجية لمحرك القواعد التاريخية (Hindsight Engine) أن القرارات المتخذة تطابق معايير الأداء الأفضل بنسبة استثنائية:\n* **توزيع الميزانية وكفاءة الأسعار (Price Efficiency):** تنص القاعدة الذهبية على أن الأصول الاقتصادية (أقل من £6.0m) تحقق أعلى كفاءة نقاط مقابل السعر (2.69 pts/£m). شراء كامادا (£5.0m) وإيمرسون (£5.6m) يجسد هذه القاعدة بدقة.\n* **الكثافة في خط الوسط (MID Prioritization):** توافق التشكيل مع قاعدة تخصيص 39.8% من الميزانية الأساسية لخط الوسط من خلال الاستثمار القوي في بالمر، ساكا، وبرونو.\n* **شرعية خصم النقاط (Hit Justification):** تنص القواعد الإحصائية على أن أخذ الـ Hits يكون مثالياً رياضياً لتفجير السقف التهديفي إذا كان الفارق متوقعاً (+10.8 نقطة للتبديلات المثالية). أداء البدلاء المتوقع يتجاوز الخصم التشغيلي (-4) بفارق إيجابي واضح (+4.04 نقطة صافية).\n\n---\n\n### 3. التحليل الرياضي والتكتيكي للتبديلات وتبرير الـ Hit\nتم اتخاذ قرار جراحي حاسم بالتخلي عن الأصول المعطلة واستبدالها بأصول جاهزة ذات عائد فورى:\n* **🔴 بيع Gakpo (LIV) [xP: 0.0] ──► 🟢 شراء Kamada (CRY) [xP: 5.3 | £5.0m]:** خروج إجباري بسبب الإصابة وضمان عدم ضياع النقاط، مقابل التعاقد مع كامادا الذي يمتلك مواجهة بيتية سهلة ضد نوتنغهام (FDR: 3) مع أدوار هجومية متقدمة.\n* **🔴 بيع Akpom (IPS) [xP: 1.7] ──► 🟢 شراء Emersonn (IPS) [xP: 6.8 | £5.6m]:** التخلي عن أصل هامشي مقابل مهاجم أساسي يواجه فولهام على أرضه (FDR: 2)، ويمتلك أعلى xP متوقع بين مهاجمي الفئة الاقتصادية.\n* **جدوى الـ Hit (-4):** المطرودون يضمنون 1.7 نقطة متوقعة فقط، بينما البدلاء القادمون يحملون مجتمعين 12.1 نقطة متوقعة (xP). صافي الربح الفوري للجولة هو **+6.4 نقطة** (تتراجع إلى +4.04 بعد خصم الـ Hit)، مما يجعل القرار مجدياً رياضياً وتكتيكياً على مدار الجولات الثلاث القادمة.\n\n---\n\n### 4. مبررات شارة القيادة (C) والنائب (VC)\n* **الكابتن (C): João Pedro (CHE) [xP: 7.8]:** يمتلك أعلى عائد متوقع في الفريق للجولة. يتوافق القرار مع القاعدة الذهبية التي تفضل الكباتن بمتوسط سعر £6.5m - £9.5m لضمان أعلى عائد على الاستثمار (ROI) دون تجميع المخاطر في أصل واحد مرتفع السعر.\n* **نائب الكابتن (VC): Emersonn (IPS) [xP: 6.8]:** اختيار تكتيكي ممتاز للنيابة؛ حيث يلعب على أرضه بمواجهة سهلة جداً (FDR: 2)، مما يجعله غطاءً آماناً مثالياً في حال حدوث أي تدوير مفاجئ.\n\n---\n\n### 5. استراتيجية الخواص وحماية ميزانية الفريق\n* **إدارة الخواص:** التوصية الصارمة هي **الاحتفاظ بجميع الخواص (Wildcard x2, Free Hit, 3x Captain, Bench Boost)** وعدم استهلاك أي منها في هذه الجولة. تفعيل الخواص يجب أن يرتبط حتماً بالجولات المزدوجة (DGWs) أو جولات الفراغ (BGWs) لمضاعفة قيمتها النقاطية.\n* **الميزانية والرادار:** توفر رصيد بنكي بقيمة **£2.7m** يعطي مرونة مالية هائلة للجولات القادمة. يجب تفعيل \"رادار السوق\" فوراً لبيع ألكسندر إيساك (Isak) المصاب والمُهدد بهبوط السعر، والتخلص من سوبوسلاي وكونسا، والتركيز على أهداف الـ Differentials الواعدة مثل Buendía و McGinn.\n\n---\n\n### الخلاصة التنفيذية\nإن التشكيلة الحالية للجولة السادسة تعكس هيكلية هجومية صارمة قادرة على تقليص الفارق في الترتيب العام. اتخاذ قرار الـ Hit (-4) مدعوم برياضيات الـ xP والقواعد الذهبية التاريخية، حيث تم استبدال الأصول المصابة والهامشية بلاعبين يمتلكون مواجهات بيتية سهلة وسقف نقاط عالٍ. الرصيد المتبقي (£2.7m) مع الاحتفاظ الكامل بالخواص يضع الفريق في موقف متين جداً لإعادة الهيكلة المستمرة في الجولات القادمة دون خروج عن مسار التعافي الصاعد.",
   "leagues": [
     {
       "id": 2024890,
@@ -4260,13 +4260,13 @@
     {
       "id": 279,
       "name": "Gameweek 4",
-      "rank": 223615,
-      "entry_rank": 223615,
+      "rank": 223614,
+      "entry_rank": 223614,
       "last_rank": 230141,
       "total": 267830,
       "league_type": "s",
       "is_private": false,
-      "status": "🟢 صعود (+6526 مركز)",
+      "status": "🟢 صعود (+6527 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4288,13 +4288,13 @@
     {
       "id": 2260821,
       "name": "beIN SPORTS League",
-      "rank": 2088591,
-      "entry_rank": 2088591,
+      "rank": 2088586,
+      "entry_rank": 2088586,
       "last_rank": 2094474,
       "total": 2145082,
       "league_type": "s",
       "is_private": false,
-      "status": "🟢 صعود (+5883 مركز)",
+      "status": "🟢 صعود (+5888 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4302,13 +4302,13 @@
     {
       "id": 431170,
       "name": "Adobe Express Badge League",
-      "rank": 2666501,
-      "entry_rank": 2666501,
+      "rank": 2666570,
+      "entry_rank": 2666570,
       "last_rank": 2578076,
       "total": 2677252,
       "league_type": "s",
       "is_private": false,
-      "status": "🔴 تراجع (-88425 مركز)",
+      "status": "🔴 تراجع (-88494 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4316,13 +4316,13 @@
     {
       "id": 320,
       "name": "Rookie",
-      "rank": 2686536,
-      "entry_rank": 2686536,
+      "rank": 2686526,
+      "entry_rank": 2686526,
       "last_rank": 2698661,
       "total": 2837969,
       "league_type": "s",
       "is_private": false,
-      "status": "🟢 صعود (+12125 مركز)",
+      "status": "🟢 صعود (+12135 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4330,13 +4330,13 @@
     {
       "id": 314,
       "name": "Overall",
-      "rank": 10599984,
-      "entry_rank": 10599984,
+      "rank": 10599966,
+      "entry_rank": 10599966,
       "last_rank": 10622213,
       "total": 10833601,
       "league_type": "s",
       "is_private": false,
-      "status": "🟢 صعود (+22229 مركز)",
+      "status": "🟢 صعود (+22247 مركز)",
       "leader_points_delta": -18,
       "rival_to_watch": "Leader",
       "risk_index": "Medium"
@@ -4479,13 +4479,13 @@
       {
         "id": 279,
         "name": "Gameweek 4",
-        "rank": 223615,
-        "entry_rank": 223615,
+        "rank": 223614,
+        "entry_rank": 223614,
         "last_rank": 230141,
         "total": 267830,
         "league_type": "s",
         "is_private": false,
-        "status": "🟢 صعود (+6526 مركز)",
+        "status": "🟢 صعود (+6527 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4507,13 +4507,13 @@
       {
         "id": 2260821,
         "name": "beIN SPORTS League",
-        "rank": 2088591,
-        "entry_rank": 2088591,
+        "rank": 2088586,
+        "entry_rank": 2088586,
         "last_rank": 2094474,
         "total": 2145082,
         "league_type": "s",
         "is_private": false,
-        "status": "🟢 صعود (+5883 مركز)",
+        "status": "🟢 صعود (+5888 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4521,13 +4521,13 @@
       {
         "id": 431170,
         "name": "Adobe Express Badge League",
-        "rank": 2666501,
-        "entry_rank": 2666501,
+        "rank": 2666570,
+        "entry_rank": 2666570,
         "last_rank": 2578076,
         "total": 2677252,
         "league_type": "s",
         "is_private": false,
-        "status": "🔴 تراجع (-88425 مركز)",
+        "status": "🔴 تراجع (-88494 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4535,13 +4535,13 @@
       {
         "id": 320,
         "name": "Rookie",
-        "rank": 2686536,
-        "entry_rank": 2686536,
+        "rank": 2686526,
+        "entry_rank": 2686526,
         "last_rank": 2698661,
         "total": 2837969,
         "league_type": "s",
         "is_private": false,
-        "status": "🟢 صعود (+12125 مركز)",
+        "status": "🟢 صعود (+12135 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4549,13 +4549,13 @@
       {
         "id": 314,
         "name": "Overall",
-        "rank": 10599984,
-        "entry_rank": 10599984,
+        "rank": 10599966,
+        "entry_rank": 10599966,
         "last_rank": 10622213,
         "total": 10833601,
         "league_type": "s",
         "is_private": false,
-        "status": "🟢 صعود (+22229 مركز)",
+        "status": "🟢 صعود (+22247 مركز)",
         "leader_points_delta": -18,
         "rival_to_watch": "Leader",
         "risk_index": "Medium"
@@ -4569,49 +4569,19 @@
       "player_name": "Konsa",
       "fitness_sentiment": "minor_doubt",
       "minute_multiplier": 0.75,
-      "summary_ar": "كونسا شوهد في تقارير الإصابات كشكوك طفيفة، لكن فرصة مشاركته تقف عند 75%.",
-      "summary_en": "Konsa is flagged as a minor doubt following recent injury updates, with a 75% chance of playing.",
+      "summary_ar": "كونسا تحوم حوله شكوك طفيفة بعد ذكر اسمه في تقارير الإصابات الأخيرة لأرتيتا بنسبة مشاركة تبلغ 75%.",
+      "summary_en": "Konsa remains a minor doubt following Arteta's injury updates, with a 75% chance of playing.",
       "risk_level": "MEDIUM",
       "headline_reference": "Arteta provides injury update on Havertz, Konsa, Tzolis and more"
-    },
-    {
-      "player_id": 41,
-      "player_name": "Buendía",
-      "fitness_sentiment": "fit_starter",
-      "minute_multiplier": 1.0,
-      "summary_ar": "بوينديا جاهز تماماً وأكد في المقابلة الصحفية تركيزه واستعداده لمواجهة برينتفورد.",
-      "summary_en": "Buendía is fully fit and expressed readiness and focus ahead of the Brentford clash.",
-      "risk_level": "LOW",
-      "headline_reference": "Buendía hopeful of more Brentford memories"
     },
     {
       "player_id": 70,
       "player_name": "Kluivert",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "كلويفرت مستبعد تماماً بسبب إصابة غير مشخصة بمدة غياب غير معروفة.",
-      "summary_en": "Kluivert is completely ruled out due to an unspecified injury with an unknown return date.",
+      "summary_ar": "باتريك كلويفرت غائب تماماً بسبب إصابة غير محددة ولا توجد عودة قريبة.",
+      "summary_en": "Kluivert is ruled out with an unspecified injury and an unknown return date.",
       "risk_level": "CRITICAL",
-      "headline_reference": "Latest Premier League player injuries - club by club news"
-    },
-    {
-      "player_id": 233,
-      "player_name": "Mykolenko",
-      "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "يعاني ميكولينكو من إصابة في الساق مع فرصة لعب تصل إلى 75%.",
-      "summary_en": "Mykolenko is nursing a leg injury with a 75% chance of featuring.",
-      "risk_level": "MEDIUM",
-      "headline_reference": "Latest Premier League player injuries - club by club news"
-    },
-    {
-      "player_id": 254,
-      "player_name": "Robinson",
-      "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "روبنسون لديه إصابة في الكاحل مع نسبة مشاركة مقدرة بـ 75%.",
-      "summary_en": "Robinson has an ankle injury keeping his chance of playing at 75%.",
-      "risk_level": "MEDIUM",
       "headline_reference": "Latest Premier League player injuries - club by club news"
     },
     {
@@ -4619,8 +4589,8 @@
       "player_name": "Gakpo",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "جاكبو خارج حسابات الفريق بسبب إصابة في الكاحل.",
-      "summary_en": "Gakpo is ruled out due to an ankle injury.",
+      "summary_ar": "كودي جاكبو غائب بسبب إصابة في الكاحل مع عدم وجود موعد محدد لعودته.",
+      "summary_en": "Gakpo is ruled out with an ankle injury and an unknown return date.",
       "risk_level": "CRITICAL",
       "headline_reference": "Iraola provides injury update on Isak and Gakpo"
     },
@@ -4629,8 +4599,8 @@
       "player_name": "Isak",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "إيساك يغيب للإصابة في الفخذ وليس هناك موعد محدد لعودته.",
-      "summary_en": "Isak remains sidelined with a thigh injury and an unknown return date.",
+      "summary_ar": "ألكسندر إيساك يعاني من إصابة في الفخذ ولن يشارك في المباريات القادمة.",
+      "summary_en": "Isak is ruled out due to a thigh injury with an unknown return date.",
       "risk_level": "CRITICAL",
       "headline_reference": "Iraola provides injury update on Isak and Gakpo"
     },
@@ -4639,28 +4609,18 @@
       "player_name": "Semenyo",
       "fitness_sentiment": "minor_doubt",
       "minute_multiplier": 0.75,
-      "summary_ar": "سيمينيو يعاني من إصابة في الكاحل ونسبة مشاركته 75%.",
-      "summary_en": "Semenyo is dealing with an ankle injury with a 75% chance of playing.",
+      "summary_ar": "سيمينيو يعاني من إصابة في الكاحل وفرصة مشاركته تقدر بنحو 75%.",
+      "summary_en": "Semenyo is a minor doubt with an ankle injury, carrying a 75% chance of playing.",
       "risk_level": "MEDIUM",
       "headline_reference": "Latest Premier League player injuries - club by club news"
-    },
-    {
-      "player_id": 411,
-      "player_name": "Haaland",
-      "fitness_sentiment": "fit_starter",
-      "minute_multiplier": 1.0,
-      "summary_ar": "تم الكشف عن جاهزية هالاند للمشاركة في المباراة القادمة ضد ليفربول.",
-      "summary_en": "Haaland's fitness to face Liverpool has been addressed by Maresca.",
-      "risk_level": "LOW",
-      "headline_reference": "Maresca reveals if Haaland is fit to face Liverpool"
     },
     {
       "player_id": 415,
       "player_name": "Dorgu",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "دورو مصاب في أوتار الركبة ومن المتوقع عودته في 25 أكتوبر.",
-      "summary_en": "Dorgu is out with a hamstring injury, expected back on 25 October.",
+      "summary_ar": "دورغو مصاب في العضلة الخلفية ومن المتوقع عودته في 25 أكتوبر.",
+      "summary_en": "Dorgu is ruled out with a hamstring injury, expected back on 25 Oct.",
       "risk_level": "CRITICAL",
       "headline_reference": "Latest Premier League player injuries - club by club news"
     },
@@ -4669,8 +4629,8 @@
       "player_name": "Mainoo",
       "fitness_sentiment": "minor_doubt",
       "minute_multiplier": 0.75,
-      "summary_ar": "ماينو يحوم حوله الشكوك بنسبة 75% بسبب إصابة غير محددة.",
-      "summary_en": "Mainoo is a minor doubt with an unspecified injury, rated at 75% to play.",
+      "summary_ar": "ماينو يحوم حوله الشك بنسبة 75% للمشاركة نتيجة إصابة غير محددة.",
+      "summary_en": "Mainoo is a minor doubt with an unspecified injury, giving him a 75% chance of playing.",
       "risk_level": "MEDIUM",
       "headline_reference": "Latest Premier League player injuries - club by club news"
     },
@@ -4679,29 +4639,51 @@
       "player_name": "Igor Jesus",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "إيغور جيسوس يعاني من إصابة في الساق تبعده عن الملاعب.",
-      "summary_en": "Igor Jesus is sidelined indefinitely due to a calf injury.",
+      "summary_ar": "إيجور خيسوس غائب بسبب إصابة في الساق ولم يتم تحديد موعد لعودته.",
+      "summary_en": "Igor Jesus is ruled out with a calf injury and an unknown return date.",
       "risk_level": "CRITICAL",
-      "headline_reference": "Latest Premier League player injuries - club by club news"
+      "headline_reference": "Two players ruled out for Forest - and Williams is a doubt"
     },
     {
       "player_id": 552,
       "player_name": "Brobbey",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "بروبي مصاب في أوتار الركبة ومن المرجح عودته نهاية أكتوبر.",
-      "summary_en": "Brobbey is out with a hamstring injury, targeting a late October return.",
+      "summary_ar": "بروبي مصاب في العضلة الخلفية ومن المتوقع عودته في 25 أكتوبر حسب تصريحات لويس بريس.",
+      "summary_en": "Brobbey is sidelined with a hamstring injury, expected back on 25 Oct.",
       "risk_level": "CRITICAL",
       "headline_reference": "Sunderland team news: Le Bris reveals latest on Brobbey"
     }
   ],
   "press_wire": [
     {
+      "id": 4730709,
+      "title": "Resuming Premier League matters at Villa Park",
+      "summary": "Fixtures Aston Villa Vs. Brentford - Sat, Oct 10 2026, 15:00 Aston Villa look to make a winning return to Premier League affairs on Saturday, as Brentford visit Villa Park (ko 3pm). Unai Emery’s men secured triumphs over Coventry City and Tottenham Hotspur – in the Carabao Cup and league respectively – before breaking for an extended window of international duty last month. They will now bid to record a third successive win in all competitions when taking on Keith Andrews’ side in B6, with what would be a first victory on home soil this season. The Bees have made an impressive start to the campaign, and remain unbeaten after five outings, sitting fourth in the league table. Brentford romped to an impressive 3-0 win at home to West London neighbours Chelsea before the international break, and like Villa, will compete in the fourth round of the Carabao Cup – away to Sunderland later this month. Stats Villa have lost just one of their 11 home league games against Brentford (W4 D6), though it was a 1-0 defeat in this exact fixture last season. Brentford completed the double over the Villans last season, having won just one of their first eight Premier League games against them (D3 L4). Villa have lost both of their Premier League games at Villa Park this season; only in 1946/47 and 1969/70 have they ever lost their opening three home matches of a league campaign. Brentford are unbeaten in their last seven league games (W2 D5), the longest active run in the Premier League; only between October 2022 and March 2023 have the Bees had a better streak without defeat in the competition (12 in a row). Aston Villa have recorded the fewest shots (48), shots on target (12) and touches in the opposition box (81) in the 2026/27 Premier League; the Villans also rank bottom for overall xG (4.65) and xG from set-pieces (0.39), while Brentford rank top for set-piece xG (3.82). Brentford have kicked off a league campaign unbeaten in five games (W2 D3) for the first time since 2013/14 in League One under Uwe Rösler, last having a longer unbeaten streak at the start of a season in 2006/07 under Leroy Rosenior (first 7 in the third tier). Only Elversberg (11.5) have faced more high turnovers per game in Europe’s big-five leagues in 2026/27 than Brentford (11.0) and Aston Villa (10.8); the Villans have conceded the joint-most goals from those turnovers in the Premier League this term (3) while the Bees have scored the joint-most (2). Brentford’s Keith Andrews could become only the sixth manager to win each of his first three top-flight meetings with Villa’s Unai Emery after José Mourinho, Luis Enrique, Michael Laudrup, Philippe Montanier, and Brendan Rodgers. Rodgers and Pep Guardiola are the only two to beat the Spaniard in each of their first three Premier League meetings. On MD5 against Tottenham Hotspur, Johan Manzambi became the second player to both score and assist on their first Premier League start for Villa, after Kevin Phillips in 2005/06; the 20-year-old could become the youngest player to net on both of their first two starts for the Villans in the competition, and the first overall since Danny Ings in 2021/22. Last season against Villa, Brentford’s Dango Ouattara became the first player to score home and away in 1-0 wins against the same team in a Premier League campaign since Raheem Sterling for Manchester City against Arsenal in 2020/21. No Bees player has netted three winning goals against the same opponent in the competition. The Last Meeting The Bees came away from Villa Park victorious in the last meeting between these two sides, in February. The Villans started strongly, with Tammy Abraham denied well by Caoimhin Kelleher, before Kevin Schade was dismissed for a stamp on Matty Cash. However, with a player less, on the stroke of half-time, Dango Ouattara squeezed home from a tight angle to notch the would-be winner. Though Villa pushed for an equaliser after the break, with Leon Bailey curling over after Tammy Abraham’s strike had been ruled out, they proved unable to salvage a draw in B6. Team News Unai Emery ruled out Ian Maatsen and Modou Kéba Cissé ahead of kick-off, as the pair continue to progress from their respective setbacks alongside long-term absentee Amadou Onana. Leon Goretzka and Brian Madjo are back in training with the group, the Emery revealed the game would come too soon for the German midfielder. Brentford, meanwhile, will be without Mikkel Damsgaard, who is set for a spell on the sidelines with an injury sustained on international duty. He joins Josh Dasilva, Antoni Milambo and young forward Kaye Furo (unspecified) in the treatment room. Nathan Collins, Sepp van den Berg and Mathias Jensen are edging closer to returns, to remain unavailable, while Dango Ouattara is a doubt. Managers' Pre-Match Thoughts “They are a team, we must try to be close with them, and of course, this season, they started better than us, and tomorrow is for us a huge challenge.” - Unai Emery “They’re a team this year that looks slightly different to what it has over the last few seasons… but clearly the work that Unai has been doing is coming into fruition.” - Keith Andrews",
+      "date": "2026-10-10T07:00:00Z",
+      "url": "https://avfc.co.uk/news/2026/october/10/prematch-resuming-premier-league-matters-at-villa-park/",
+      "matched_players": [
+        "manzambi",
+        "kelleher",
+        "schade",
+        "dasilva",
+        "hall"
+      ]
+    },
+    {
       "id": 4730682,
       "title": "Chelsea vs Bournemouth: All you need to know",
       "summary": "Chelsea’s eight-match tour of the capital from the start of the season draws to a close, with club historian Rick Glanvill and club statistician Paul Dutton previewing the Premier League visit of Bournemouth to Stamford Bridge.",
       "date": "2026-10-10T06:00:00Z",
       "url": "https://www.chelseafc.com/en/news/article/chelsea-vs-bournemouth-all-you-need-to-know-26-27",
+      "matched_players": []
+    },
+    {
+      "id": 2884829,
+      "title": "FPL player price changes - risers, fallers and top transfers for Gameweek 6",
+      "summary": "Find out which Fantasy Premier League picks have changed in price overnight, and see the most-transferred players",
+      "date": "2026-10-09T01:00:00Z",
+      "url": "https://www.premierleague.com/en/news/2884829",
       "matched_players": []
     },
     {
@@ -4767,24 +4749,6 @@
       "summary": "",
       "date": "2026-10-09T15:30:00Z",
       "url": "https://www.avfc.co.uk/news/2026/october/09/prematch-team-news-for-brentford-encounter/",
-      "matched_players": []
-    },
-    {
-      "id": 4730547,
-      "title": "Arteta provides injury update on Havertz, Konsa, Tzolis and more",
-      "summary": "",
-      "date": "2026-10-09T14:03:00Z",
-      "url": "https://www.arsenal.com/news/injury-latest-on-havertz-tzolis-rice-konsa-and-white-a5Pwa1R5zpMU",
-      "matched_players": [
-        "konsa"
-      ]
-    },
-    {
-      "id": 4729066,
-      "title": "Last Fan Standing October Entry: Win a trip to a Premier League match",
-      "summary": "The game is starting again! Choose one team each week who you think will win their fixture",
-      "date": "2026-10-01T11:53:00Z",
-      "url": "https://www.premierleague.com/en/news/4729066",
       "matched_players": []
     }
   ]
