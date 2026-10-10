@@ -15,35 +15,58 @@ class PlaywrightFPLAuthenticator:
         self.password = password
 
     def _login_and_get_page(self, playwright):
-        browser = playwright.chromium.launch(headless=True)
+        browser = playwright.chromium.launch(
+            headless=True,
+            args=[
+                "--disable-blink-features=AutomationControlled",
+                "--no-sandbox",
+                "--disable-setuid-sandbox",
+                "--disable-infobars"
+            ]
+        )
         context = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+            viewport={"width": 1280, "height": 800}
         )
         page = context.new_page()
-        page.goto("https://fantasy.premierleague.com/", wait_until="domcontentloaded", timeout=40000)
-        time.sleep(2)
+        page.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+
+        # 1. Navigate to FPL Homepage
+        page.goto("https://fantasy.premierleague.com/en/", wait_until="commit", timeout=35000)
+        time.sleep(3)
+
+        # 2. Accept Cookie Consent Banner if present
         try:
-            page.locator("#onetrust-accept-btn-handler").click()
+            page.locator("#onetrust-accept-btn-handler, button:has-text('Accept All Cookies')").first.click(timeout=5000)
+            time.sleep(1)
         except Exception:
             pass
-        time.sleep(2)
 
+        # 3. Click Log In button
         try:
-            page.locator("text='تسجيل الدخول'").first.click(timeout=8000)
+            page.locator("button:has-text('Log in'), a:has-text('Sign In'), a[href*='login']").first.click(timeout=8000)
         except Exception:
-            page.locator("text=/Sign in|Log in/i").first.click(timeout=8000)
-        user_input = page.locator("#username").first
-        user_input.wait_for(state="visible", timeout=15000)
-        pass_input = page.locator("#password").first
+            page.goto("https://fantasy.premierleague.com/en/", wait_until="commit")
+            time.sleep(2)
+            page.locator("button:has-text('Log in'), a:has-text('Sign In'), a[href*='login']").first.click(timeout=8000)
 
-        user_input.fill(self.email)
-        time.sleep(0.3)
-        pass_input.fill(self.password)
-        time.sleep(0.3)
-        pass_input.press("Enter")
+        # 4. Wait for redirect to account.premierleague.com OAuth authorization
+        page.wait_for_url(lambda u: "account.premierleague.com" in u, timeout=25000)
+        u_input = page.locator("input[type='email'], input[name='login'], #username, #email").first
+        u_input.wait_for(state="visible", timeout=15000)
+        p_input = page.locator("input[type='password'], #password").first
 
-        page.wait_for_url(lambda u: "fantasy.premierleague.com" in u and "account." not in u, timeout=30000)
-        time.sleep(5)
+        u_input.fill(self.email)
+        time.sleep(0.3)
+        p_input.fill(self.password)
+        time.sleep(0.3)
+
+        submit_btn = page.locator("button:has-text('Sign In'), button:has-text('Sign in'), button[type='submit']").first
+        submit_btn.click()
+
+        # 5. Wait for redirect back to authenticated FPL
+        page.wait_for_url(lambda u: "fantasy.premierleague.com" in u and "account." not in u, timeout=35000)
+        time.sleep(3)
         return browser, page
 
     def get_my_team_live(self, team_id: int) -> Dict[str, Any]:

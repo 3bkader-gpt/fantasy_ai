@@ -18,24 +18,36 @@ class FPLClient(IFPLGateway):
         email: str = config.fpl_email,
         password: str = config.fpl_password,
         cookie: str = config.fpl_cookie,
+        bearer_token: str = config.fpl_bearer_token,
         dry_run: bool = config.dry_run
     ):
         self.email = email
         self.password = password
         self.cookie = cookie
+        self.bearer_token = bearer_token
         self.dry_run = dry_run
         self.session = requests.Session()
         self.session.headers.update({
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
             "Accept": "application/json, text/plain, */*",
-            "Referer": "https://fantasy.premierleague.com/",
+            "Referer": "https://fantasy.premierleague.com/en/my-team",
         })
         self.is_authenticated = False
+        if self.bearer_token and len(self.bearer_token.strip()) > 10:
+            token = self.bearer_token.strip()
+            if not token.lower().startswith("bearer "):
+                token = f"Bearer {token}"
+            self.session.headers["x-api-authorization"] = token
+            self.is_authenticated = True
 
     def login(self) -> bool:
+        if self.bearer_token and len(self.bearer_token.strip()) > 10:
+            self.is_authenticated = True
+            logger.info("FPL Bearer token configured and active.")
+            return True
         if self.email and self.password:
             self.is_authenticated = True
-            logger.info("Autonomous FPL credentials ready.")
+            logger.info("Autonomous FPL Playwright credentials ready.")
             return True
         if self.cookie and len(self.cookie.strip()) > 10:
             cookie_val = self.cookie.strip()
@@ -152,8 +164,22 @@ class FPLClient(IFPLGateway):
         if self.dry_run:
             logger.info("[DRY RUN] Lineup submission simulated.")
             return {"status": "simulated", "dry_run": True, "payload": payload}
+
+        # 1. Try direct API via Bearer Token if present
+        if "x-api-authorization" in self.session.headers:
+            headers = {"Content-Type": "application/json; charset=UTF-8", "X-Requested-With": "XMLHttpRequest"}
+            try:
+                res = self.session.post(f"{config.fpl_my_team_url}/{team_id}/", json=payload, headers=headers, timeout=15)
+                if res.status_code in (200, 201):
+                    logger.info("Lineup updated successfully via Bearer token API.")
+                    return {"status": "success", "code": res.status_code}
+            except Exception as e:
+                logger.warning(f"Bearer token lineup update failed: {e}. Falling back to browser...")
+
+        # 2. Browser Playwright autonomous execution
         if self.email and self.password:
             return PlaywrightFPLAuthenticator(self.email, self.password).submit_lineup_live(team_id, picks_payload, chip)
+
         headers = {"Content-Type": "application/json; charset=UTF-8", "X-Requested-With": "XMLHttpRequest"}
         res = self.session.post(f"{config.fpl_my_team_url}/{team_id}/", json=payload, headers=headers, timeout=15)
         return {"status": "success" if res.status_code == 200 else "error", "code": res.status_code}
@@ -171,8 +197,22 @@ class FPLClient(IFPLGateway):
         if self.dry_run:
             logger.info(f"[DRY RUN] Transfers simulated for {len(transfers)} player(s).")
             return {"status": "simulated", "dry_run": True, "payload": payload}
+
+        # 1. Try direct API via Bearer Token if present
+        if "x-api-authorization" in self.session.headers:
+            headers = {"Content-Type": "application/json; charset=UTF-8", "X-Requested-With": "XMLHttpRequest"}
+            try:
+                res = self.session.post(config.fpl_transfers_url, json=payload, headers=headers, timeout=15)
+                if res.status_code in (200, 201):
+                    logger.info("Transfers executed successfully via Bearer token API.")
+                    return {"status": "success", "code": res.status_code}
+            except Exception as e:
+                logger.warning(f"Bearer token transfer execution failed: {e}. Falling back to browser...")
+
+        # 2. Browser Playwright autonomous execution
         if self.email and self.password:
             return PlaywrightFPLAuthenticator(self.email, self.password).submit_transfers_live(team_id, payload)
+
         headers = {"Content-Type": "application/json; charset=UTF-8", "X-Requested-With": "XMLHttpRequest"}
         res = self.session.post(config.fpl_transfers_url, json=payload, headers=headers, timeout=15)
         return {"status": "success" if res.status_code in (200, 201) else "error", "code": res.status_code}
