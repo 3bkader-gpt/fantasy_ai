@@ -199,14 +199,49 @@ class OptimizeGameweekUseCase:
         # 7. Execute changes on FPL account if live
         execution_status: Dict[str, Any] = {"dry_run": dry_run}
         if not dry_run:
+            execution_status["success"] = True
             if plan.transfers:
                 trans_res = self.gateway.make_transfers(team_id=team_id, transfers=plan.transfers, next_gw=next_gw)
                 execution_status["transfers"] = trans_res
+                if trans_res.get("status") != "success" and not trans_res.get("success"):
+                    execution_status["success"] = False
+                    execution_status["error"] = trans_res.get("error", "فشل تنفيذ التبديل على موقع FPL")
+                    self.notifier.send_message(
+                        f"🚨 <b>تنبيه عاجل: فشل تنفيذ التبديلات على موقع FPL!</b> ❌\n\n"
+                        f"• التفاصيل: {trans_res.get('error', 'رفض سيرفر FPL الطلب')}\n"
+                        f"⚠️ يرجى الدخول لموقع الفانتازي وعمل التبديلات يدوياً فوراً!"
+                    )
+
             lineup_res = self.gateway.set_lineup(team_id=team_id, picks_payload=plan.final_lineup.api_picks)
             execution_status["lineup"] = lineup_res
+            if lineup_res.get("status") != "success" and not lineup_res.get("success"):
+                execution_status["success"] = False
+                execution_status["error"] = lineup_res.get("error", "فشل اعتماد التشكيلة والكابتن على موقع FPL")
+                self.notifier.send_message(
+                    f"🚨 <b>تنبيه عاجل: فشل اعتماد التشكيلة والكابتن على موقع FPL!</b> ❌\n\n"
+                    f"• التفاصيل: {lineup_res.get('error', 'رفض سيرفر FPL الطلب')}\n"
+                    f"⚠️ يرجى الدخول لموقع الفانتازي واختيار الكابتن والتشكيل يدوياً!"
+                )
+            elif execution_status["success"]:
+                # Verify live squad on FPL servers
+                verified, v_details = self.gateway.verify_live_squad(
+                    team_id=team_id,
+                    expected_captain_id=plan.final_lineup.captain.id,
+                    expected_starter_ids=[p.id for p in plan.final_lineup.starting_xi]
+                )
+                execution_status["verified"] = verified
+                if not verified:
+                    execution_status["success"] = False
+                    execution_status["error"] = v_details.get("error", "عدم تطابق التشكيلة الحية مع المقترحة")
+                    self.notifier.send_message(
+                        f"⚠️ <b>تحذير التحقق الحي: تم إرسال التشكيلة لكن التحقق أظهر عدم تطابق!</b>\n\n"
+                        f"• التفاصيل: {v_details.get('error')}\n"
+                        f"يرجى فتح التطبيق والتأكد من اعتماد التغييرات."
+                    )
         else:
-            execution_status["transfers"] = {"status": "simulated"}
-            execution_status["lineup"] = {"status": "simulated"}
+            execution_status["transfers"] = {"status": "simulated", "success": True}
+            execution_status["lineup"] = {"status": "simulated", "success": True}
+            execution_status["success"] = True
 
         # 8. Notify via Telegram if configured
         self.notifier.send_gameweek_summary(
@@ -214,7 +249,8 @@ class OptimizeGameweekUseCase:
             transfers=plan.transfers,
             lineup=plan.final_lineup,
             briefing_text=briefing,
-            dry_run=dry_run
+            dry_run=dry_run,
+            execution_status=execution_status
         )
 
         return GameweekPlanDTO(

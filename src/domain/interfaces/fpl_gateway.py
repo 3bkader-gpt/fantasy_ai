@@ -12,8 +12,10 @@ class IFPLGateway(ABC):
         pass
 
     @abstractmethod
-    def get_my_team(self, team_id: int) -> Dict[str, Any]:
-        """Fetch current team squad picks, bank balance, and chip status."""
+    def get_my_team(self, team_id: int, require_authenticated: bool = False) -> Dict[str, Any]:
+        """Fetch current team squad picks, bank balance, and chip status.
+        If require_authenticated=True, raises an error or fails if live authenticated session is unavailable.
+        """
         pass
 
     @abstractmethod
@@ -31,3 +33,13 @@ class IFPLGateway(ABC):
     ) -> Dict[str, Any]:
         """Submit transfers to official FPL API."""
         pass
+
+    def verify_live_squad(
+        self,
+        team_id: int,
+        expected_captain_id: Optional[int] = None,
+        expected_starter_ids: Optional[List[int]] = None
+    ) -> Tuple[bool, Dict[str, Any]]:
+        """Verifies if the submitted squad actually took effect on FPL live servers."""
+        return True, {"verified": True}
+

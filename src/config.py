@@ -20,7 +20,9 @@ class AppConfig:
     fpl_password: str = os.getenv("FPL_PASSWORD", "")
     fpl_cookie: str = os.getenv("FPL_COOKIE", "")
     fpl_bearer_token: str = os.getenv("FPL_BEARER_TOKEN", "")
+    fpl_refresh_token: str = os.getenv("FPL_REFRESH_TOKEN", "")
     fpl_team_id: int = int(os.getenv("FPL_TEAM_ID", "0")) if os.getenv("FPL_TEAM_ID", "0").isdigit() else 0
+
 
     # Strategy & Safety
     dry_run: bool = os.getenv("DRY_RUN", "True").strip().lower() in ("true", "1", "yes")

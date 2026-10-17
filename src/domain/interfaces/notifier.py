@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import List
+from typing import List, Optional, Dict, Any
 from ..models.transfer import Transfer
 from ..models.squad import LineupSelection
 
@@ -19,7 +19,9 @@ class INotifier(ABC):
         transfers: List[Transfer],
         lineup: LineupSelection,
         briefing_text: str,
-        dry_run: bool
+        dry_run: bool,
+        execution_status: Optional[Dict[str, Any]] = None
     ) -> bool:
         """Sends a formatted gameweek card with briefing to notification channels."""
         pass
+

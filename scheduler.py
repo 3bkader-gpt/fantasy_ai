@@ -20,18 +20,45 @@ def check_final_safety(repo: FPLDataRepository, team_id: int, dry_run: bool, aut
     """Executes a zero-cache live sanity check T-20min before deadline,
     with autonomous self-healing via LineupSolver in Pure AI mode.
     """
-    print("\n🛡️ [FINAL SAFETY PULSE - T-20m] Checking live team status & warmup reports...")
+    print(f"\n🛡️ [FINAL SAFETY PULSE - T-20m] Checking live team status (mode={'DRY_RUN' if dry_run else 'LIVE'})...")
     notifier = TelegramNotifier()
     try:
-        all_players = {p.id: p for p in repo.get_all_players(force_refresh=True)}
         gateway = FPLClient(dry_run=dry_run)
         gateway.login()
-        team_data = gateway.get_my_team(team_id)
-        picks = team_data.get("picks", [])
-        if not picks:
-            print("⚠️ No team picks found to verify.")
+
+        # In LIVE mode, we MUST guarantee authenticated live access to /my-team/
+        if not dry_run and not gateway.is_authenticated:
+            err_msg = (
+                "🚨 **إنذار أمان تكتيكي حرج (T-20m)** 🚨\n\n"
+                "❌ **تعذر الاتصال المباشر بحسابك على موقع FPL!**\n"
+                "• **السبب:** بيانات المصادقة (FPL_BEARER_TOKEN) غير موجودة أو منتهية الصلاحية.\n"
+                "• **الخطورة:** التشكيلة الحية على الموقع لم تُفحص، والتبديلات قد لا تكون منفذة!\n\n"
+                "⚠️ **إجراء عاجل مطلوب:** يرجى فتح موقع/تطبيق الفانتازي والتأكد من تشكيلتك وكابتنك يدوياً الآن قبل الديدلاين!"
+            )
+            print(err_msg)
+            notifier.send_message(err_msg)
             return
 
+        try:
+            team_data = gateway.get_my_team(team_id, require_authenticated=(not dry_run))
+        except PermissionError as pe:
+            err_msg = (
+                f"🚨 **فشل فحص الأمان الحي (T-20m)** 🚨\n\n"
+                f"❌ تعذر جلب تشكيلة الفريق من سيرفر FPL الرسمي: {pe}\n"
+                f"⚠️ يرجى الدخول لموقع الفانتازي ومراجعة التشكيلة يدوياً فوراً!"
+            )
+            print(err_msg)
+            notifier.send_message(err_msg)
+            return
+
+        picks = team_data.get("picks", [])
+        if not picks:
+            err_msg = "⚠️ **تحذير فحص الأمان (T-20m)**: لم يتم العثور على أي لاعبين في التشكيلة للتحقق منهم! يرجى مراجعة الموقع."
+            print(err_msg)
+            notifier.send_message(err_msg)
+            return
+
+        all_players = {p.id: p for p in repo.get_all_players(force_refresh=True)}
         current_gw, next_gw, _ = repo.get_current_and_next_gw()
         target_gw = next_gw or (current_gw + 1 if current_gw else 1)
         team_fixtures = repo.get_team_fixtures(target_gw, weeks_ahead=1)
@@ -98,25 +125,58 @@ def check_final_safety(repo: FPLDataRepository, team_id: int, dry_run: bool, aut
             solver = LineupSolver(gold_rule_config=gold_rule_config)
             solved_lineup = solver.solve(enriched_squad)
             res = gateway.set_lineup(team_id=team_id, picks_payload=solved_lineup.api_picks)
-            print(f"✅ Self-healing lineup solved and submitted to FPL: {res}")
-            alerts.append(
-                f"🚀 **تم تصحيح وتعديل التشكيلة آلياً بالكامل عبر المحرك الرياضي (LineupSolver)**:\n"
-                f"• التشكيل الجديد: {solved_lineup.formation}\n"
-                f"• الكابتن: {solved_lineup.captain.name} ({solved_lineup.captain.team_short})\n"
-                f"• نائب الكابتن: {solved_lineup.vice_captain.name} ({solved_lineup.vice_captain.team_short})\n"
-                f"• الحارس الأساسي: {solved_lineup.starting_xi[0].name}"
-            )
+            print(f"📡 Lineup submission response from FPL: {res}")
+
+            if res.get("status") == "success" or res.get("success"):
+                verified, v_details = gateway.verify_live_squad(
+                    team_id=team_id,
+                    expected_captain_id=solved_lineup.captain.id,
+                    expected_starter_ids=[p.id for p in solved_lineup.starting_xi]
+                )
+                if verified:
+                    alerts.append(
+                        f"🚀 **تم تصحيح وتعديل التشكيلة آلياً على موقع FPL وتأكيدها بنجاح** ✅:\n"
+                        f"• التشكيل الجديد: {solved_lineup.formation}\n"
+                        f"• الكابتن المعتمد: {solved_lineup.captain.name} ({solved_lineup.captain.team_short})\n"
+                        f"• نائب الكابتن: {solved_lineup.vice_captain.name} ({solved_lineup.vice_captain.team_short})\n"
+                        f"• الحارس الأساسي: {solved_lineup.starting_xi[0].name}"
+                    )
+                else:
+                    alerts.append(
+                        f"⚠️ **تم إرسال تعديل التشكيلة ولكن التحقق الحي أظهر خللاً**: {v_details.get('error')}\n"
+                        "يرجى فتح الموقع والتأكد بنفسك فوراً!"
+                    )
+            else:
+                err_detail = res.get("error", res.get("code", "فشل غير معروف"))
+                alerts.append(
+                    f"🚨 **فشل تطبيق التعديل التلقائي على موقع FPL** ❌:\n"
+                    f"• سبب الفشل: {err_detail}\n"
+                    "⚠️ يرجى الدخول للموقع وتعديل التشكيلة يدوياً حالاً!"
+                )
 
         if alerts:
             msg = "🛡️ **تقرير فحص الأمان الآلي قبل الديدلاين (Pure AI Pulse - T-20m)**:\n\n" + "\n\n".join(alerts)
             print("\n" + msg)
             notifier.send_message(msg)
         else:
-            ok_msg = "✅ **فحص الأمان التكتيكي (T-20m)**: التشكيل الأساسي والكابتن جاهزون بنسبة 100% ولا يوجد أي تضارب أو إصابات!"
+            if team_data.get("is_authenticated") and not dry_run:
+                cap_pick = next((p for p in starters if p.get("is_captain")), None)
+                cap_name = all_players[cap_pick["element"]].name if (cap_pick and cap_pick.get("element") in all_players) else "غير محدد"
+                ok_msg = (
+                    f"✅ **فحص الأمان التكتيكي الحي (T-20m)**:\n"
+                    f"• تم فحص التشكيلة الحية مباشرة من سيرفر FPL الرسمي 🌐.\n"
+                    f"• الكابتن الفعلي على الموقع: <b>{cap_name}</b> 👑\n"
+                    f"• التشكيل الأساسي جاهز بنسبة 100% ولا توجد أي إصابات أو تضارب مصالح!"
+                )
+            else:
+                ok_msg = "🧪 **فحص الأمان (وضع المحاكاة - Dry Run)**: التشكيل النظري لا يحتوي على إصابات (لم يتم الاتصال بالحساب الرسمي)."
             print(ok_msg)
             notifier.send_message(ok_msg)
     except Exception as e:
-        print(f"⚠️ Final safety check notice: {e}")
+        err_msg = f"⚠️ خطأ غير متوقع أثناء فحص الأمان T-20m: {e}"
+        print(err_msg)
+        notifier.send_message(err_msg)
+
 
 
 def run_scheduler(hours_before_deadline: float = 2.5, final_check_mins: int = 20, force_live: bool = False, pure_ai: bool = False):

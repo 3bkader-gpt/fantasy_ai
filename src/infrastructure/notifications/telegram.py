@@ -172,9 +172,19 @@ class TelegramNotifier(INotifier):
         transfers: List[Transfer],
         lineup: LineupSelection,
         briefing_text: str,
-        dry_run: bool
+        dry_run: bool,
+        execution_status: Optional[Dict[str, Any]] = None
     ) -> bool:
-        mode_str = "🛡️ [وضع المحاكاة]" if dry_run else "🚀 [تنفيذ رسمي مباشر]"
+        if dry_run:
+            mode_str = "🧪 <b>[وضع المحاكاة التجريبي - لم يتم لمس الحساب الرسمي]</b>"
+        elif execution_status and execution_status.get("success") is True:
+            mode_str = "🚀 <b>[تنفيذ رسمي مباشر - تم الاعتماد والتأكيد على الموقع بنجاح ✅]</b>"
+        elif execution_status and execution_status.get("success") is False:
+            err = execution_status.get("error", "فشل الاتصال أو رفض الـ API")
+            mode_str = f"❌ <b>[فشل التنفيذ على الموقع: {err} - مطلوب تدخلك يدوياً ⚠️]</b>"
+        else:
+            mode_str = "🚀 <b>[تنفيذ رسمي مباشر]</b>"
+
         trans_str = ""
         if transfers:
             for t in transfers:
@@ -191,11 +201,12 @@ class TelegramNotifier(INotifier):
 📐 <b>التشكيل:</b> <code>{lineup.formation}</code>
 👑 <b>الكابتن:</b> <b>{lineup.captain.name}</b> | 🥈 <b>النائب:</b> <b>{lineup.vice_captain.name}</b>
 
-🔄 <b>التنقلات المعتمدة:</b>
+🔄 <b>التنقلات:</b>
 {trans_str}
 ━━━━━━━━━━━━━━━━━━━━
 🧠 <b>الرؤية التكتيكية للمدير الفني:</b>
 {clean_briefing}"""
+
 
         reply_markup = {
             "inline_keyboard": [
