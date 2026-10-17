@@ -299,7 +299,8 @@ async function sendStatus(env, chatId = null, messageId = null) {
     `• <b>موعد الديدلاين:</b> ⏰ <b>${gw.deadlineFormatted}</b>\n` +
     `• <b>الوقت المتبقي:</b> ⏳ <b>${gw.remainingFormatted}</b>\n` +
     `• <b>الحارس السحابي:</b> 🟢 مراقبة نشطة 24/7 على سيرفرات Cloudflare Edge\n` +
-    `• <b>الخطة المعتمدة:</b> 🔄 بيع Stach واستقدام Tavernier (3-5-2)\n` +
+    `• <b>محرك الذكاء الاصطناعي:</b> Two-Tier MILP + Pure AI 24/7\n` +
+    `• <b>المصادقة مع FPL:</b> 🟢 اتصال حي مباشر (OAuth Auto-Renew)\n` +
     `━━━━━━━━━━━━━━━━━━━━\n` +
     `🌐 <b>الداشبورد المباشر:</b> https://fantasy-ai-dashboard.pages.dev/`;
 
@@ -405,10 +406,10 @@ export default {
       const recentRuns = await checkRecentRuns(env);
       const now = Date.now();
 
-      // Find if a run happened in the last 45 minutes
+      // Stage 1 window is T-150m to T-30m. Suppress duplicate tactical runs within 180 minutes.
       const hasRecentRun = recentRuns.some(r => {
         const runTime = new Date(r.created_at).getTime();
-        return (now - runTime) < 45 * 60 * 1000;
+        return (now - runTime) < 180 * 60 * 1000;
       });
 
       // Stage 1: Tactical Window (T-2.5h: between 150m and 30m before deadline)
@@ -444,7 +445,7 @@ export default {
       else if (gw.diffMinutes <= 22 && gw.diffMinutes > 2) {
         const hasRecentSafetyRun = recentRuns.some(r => {
           const runTime = new Date(r.created_at).getTime();
-          return (now - runTime) < 15 * 60 * 1000;
+          return (now - runTime) < 20 * 60 * 1000;
         });
 
         if (!hasRecentSafetyRun) {
