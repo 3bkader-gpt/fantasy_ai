@@ -25,3 +25,23 @@ def test_fpl_client_dry_run_bypasses_network():
     
     t_res = client.make_transfers(12345, [transfer], next_gw=7)
     assert t_res.get("status") == "simulated"
+
+def test_fpl_client_is_token_expired():
+    import base64
+    import json
+    import time
+    
+    # 1. Expired token
+    payload_expired = base64.urlsafe_b64encode(json.dumps({"exp": time.time() - 100}).encode()).decode().rstrip("=")
+    token_expired = f"header.{payload_expired}.sig"
+    assert FPLClient._is_token_expired(token_expired) is True
+
+    # 2. Valid token
+    payload_valid = base64.urlsafe_b64encode(json.dumps({"exp": time.time() + 3600}).encode()).decode().rstrip("=")
+    token_valid = f"header.{payload_valid}.sig"
+    assert FPLClient._is_token_expired(token_valid) is False
+
+    # 3. Empty or malformed token
+    assert FPLClient._is_token_expired("") is True
+    assert FPLClient._is_token_expired("random_gibberish") is False
+

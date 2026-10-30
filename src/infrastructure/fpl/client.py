@@ -42,8 +42,66 @@ class FPLClient(IFPLGateway):
             self.session.headers["x-api-authorization"] = token
             self.is_authenticated = True
 
+    @staticmethod
+    def _is_token_expired(token_str: str, margin_seconds: int = 120) -> bool:
+        """Decodes JWT payload to check if the token is expired or expiring within margin."""
+        import base64
+        import json
+        import time
+        if not token_str or len(token_str.strip()) < 10:
+            return True
+        try:
+            clean_token = token_str.replace("Bearer ", "").strip()
+            parts = clean_token.split(".")
+            if len(parts) >= 2:
+                payload_b64 = parts[1]
+                payload_b64 += "=" * ((4 - len(payload_b64) % 4) % 4)
+                payload_json = base64.urlsafe_b64decode(payload_b64.encode("utf-8")).decode("utf-8")
+                payload = json.loads(payload_json)
+                exp = payload.get("exp")
+                if exp is not None:
+                    return time.time() + margin_seconds >= float(exp)
+        except Exception as e:
+            logger.debug(f"Could not parse token expiration: {e}")
+        return False
+
+    def _persist_tokens(self, new_access_token: str, new_refresh_token: str):
+        """Persists newly rotated tokens to local .env and remote GitHub Secrets."""
+        import subprocess
+        # 1. Update local .env
+        try:
+            env_file = config.base_dir / ".env"
+            if env_file.exists():
+                with open(env_file, "r", encoding="utf-8") as f:
+                    lines = f.readlines()
+                new_lines = []
+                for line in lines:
+                    if line.startswith("FPL_BEARER_TOKEN="):
+                        new_lines.append(f"FPL_BEARER_TOKEN={new_access_token}\n")
+                    elif line.startswith("FPL_REFRESH_TOKEN="):
+                        new_lines.append(f"FPL_REFRESH_TOKEN={new_refresh_token}\n")
+                    else:
+                        new_lines.append(line)
+                with open(env_file, "w", encoding="utf-8") as f:
+                    f.writelines(new_lines)
+                logger.info("Persisted updated FPL tokens to .env.")
+        except Exception as e:
+            logger.debug(f"Could not update local .env with rotated tokens: {e}")
+
+        # 2. Update GitHub Secrets via gh CLI (available in GitHub Actions & dev environment)
+        try:
+            subprocess.run(["gh", "secret", "set", "FPL_BEARER_TOKEN", "--body", new_access_token],
+                           capture_output=True, timeout=10)
+            subprocess.run(["gh", "secret", "set", "FPL_REFRESH_TOKEN", "--body", new_refresh_token],
+                           capture_output=True, timeout=10)
+            logger.info("Persisted updated FPL tokens to GitHub Secrets.")
+        except Exception as e:
+            logger.debug(f"Could not update GitHub secrets: {e}")
+
     def refresh_access_token(self) -> bool:
-        """Exchanges long-lived OAuth refresh token for a fresh short-lived access token."""
+        """Exchanges long-lived OAuth refresh token for a fresh short-lived access token,
+        and saves the rotated refresh token to prevent invalidation.
+        """
         if not self.refresh_token or len(self.refresh_token.strip()) < 10:
             return False
         url = "https://account.premierleague.com/as/token"
@@ -52,40 +110,55 @@ class FPLClient(IFPLGateway):
             "refresh_token": self.refresh_token.strip(),
             "client_id": "bfcbaf69-aade-4c1b-8f00-c1cb8a193030"
         }
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+            "Origin": "https://fantasy.premierleague.com",
+            "Referer": "https://fantasy.premierleague.com/"
+        }
         try:
-            res = requests.post(url, data=payload, timeout=15)
+            res = requests.post(url, data=payload, headers=headers, timeout=15)
             if res.status_code == 200:
                 data = res.json()
                 new_token = data.get("access_token")
+                new_refresh = data.get("refresh_token")
                 if new_token:
                     self.bearer_token = new_token
                     self.session.headers["x-api-authorization"] = f"Bearer {new_token}"
                     self.is_authenticated = True
-                    if "refresh_token" in data:
-                        self.refresh_token = data["refresh_token"]
+                    if new_refresh:
+                        self.refresh_token = new_refresh
+                    self._persist_tokens(new_token, self.refresh_token)
                     logger.info("FPL access token refreshed successfully via OAuth refresh token.")
                     return True
+            else:
+                logger.warning(f"FPL token refresh failed (HTTP {res.status_code}): {res.text[:200]}")
         except Exception as e:
             logger.warning(f"Failed to refresh FPL access token: {e}")
         return False
 
     def login(self) -> bool:
         if self.bearer_token and len(self.bearer_token.strip()) > 10:
-            self.is_authenticated = True
-            logger.info("FPL Bearer token configured and active.")
-            return True
+            if not self._is_token_expired(self.bearer_token):
+                self.is_authenticated = True
+                logger.info("FPL Bearer token configured and active.")
+                return True
+            logger.info("FPL Bearer token is expired. Attempting refresh...")
+
         if self.refresh_token and len(self.refresh_token.strip()) > 10:
             if self.refresh_access_token():
                 return True
+
         if self.email and self.password:
             self.is_authenticated = True
             logger.info("Autonomous FPL Playwright credentials ready.")
             return True
+
         if self.cookie and len(self.cookie.strip()) > 10:
             cookie_val = self.cookie.strip()
             self.session.cookies.set("pl_profile", cookie_val, domain=".premierleague.com")
             self.is_authenticated = True
             return True
+
         return False
 
 
@@ -126,6 +199,11 @@ class FPLClient(IFPLGateway):
             try:
                 url = f"{config.fpl_my_team_url}/{team_id}/"
                 res = self.session.get(url, headers={"Cache-Control": "no-cache"}, timeout=15)
+                if res.status_code == 401 and self.refresh_token:
+                    logger.warning("FPL returned 401 on /my-team/. Attempting token refresh and retry...")
+                    if self.refresh_access_token():
+                        res = self.session.get(url, headers={"Cache-Control": "no-cache"}, timeout=15)
+
                 if res.status_code == 200:
                     data = res.json()
                     transfers_info = data.get("transfers", {})
@@ -208,6 +286,12 @@ class FPLClient(IFPLGateway):
             headers = {"Content-Type": "application/json; charset=UTF-8", "X-Requested-With": "XMLHttpRequest"}
             try:
                 res = self.session.post(f"{config.fpl_my_team_url}/{team_id}/", json=payload, headers=headers, timeout=15)
+                if res.status_code == 401 and self.refresh_token:
+                    logger.warning("FPL returned 401 on lineup update. Attempting token refresh and retry...")
+                    if self.refresh_access_token():
+                        headers["x-api-authorization"] = self.session.headers["x-api-authorization"]
+                        res = self.session.post(f"{config.fpl_my_team_url}/{team_id}/", json=payload, headers=headers, timeout=15)
+
                 if res.status_code in (200, 201):
                     logger.info("Lineup updated successfully via Bearer token API.")
                     return {"status": "success", "success": True, "code": res.status_code}
@@ -254,6 +338,12 @@ class FPLClient(IFPLGateway):
             headers = {"Content-Type": "application/json; charset=UTF-8", "X-Requested-With": "XMLHttpRequest"}
             try:
                 res = self.session.post(config.fpl_transfers_url, json=payload, headers=headers, timeout=15)
+                if res.status_code == 401 and self.refresh_token:
+                    logger.warning("FPL returned 401 on transfers. Attempting token refresh and retry...")
+                    if self.refresh_access_token():
+                        headers["x-api-authorization"] = self.session.headers["x-api-authorization"]
+                        res = self.session.post(config.fpl_transfers_url, json=payload, headers=headers, timeout=15)
+
                 if res.status_code in (200, 201):
                     logger.info("Transfers executed successfully via Bearer token API.")
                     return {"status": "success", "success": True, "code": res.status_code}
@@ -299,6 +389,10 @@ class FPLClient(IFPLGateway):
         try:
             url = f"{config.fpl_my_team_url}/{team_id}/"
             res = self.session.get(url, headers={"Cache-Control": "no-cache"}, timeout=15)
+            if res.status_code == 401 and self.refresh_token:
+                logger.warning("FPL returned 401 on verify_live_squad. Attempting token refresh and retry...")
+                if self.refresh_access_token():
+                    res = self.session.get(url, headers={"Cache-Control": "no-cache"}, timeout=15)
             if res.status_code != 200:
                 return False, {"verified": False, "error": f"HTTP {res.status_code} fetching live /my-team/"}
 

@@ -69,6 +69,7 @@ jobs:
           MAX_ALLOWED_HITS: ${{ secrets.MAX_ALLOWED_HITS || '1' }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
 
         run: |
           MODE="${{ github.event.inputs.execution_mode || 'live' }}"
