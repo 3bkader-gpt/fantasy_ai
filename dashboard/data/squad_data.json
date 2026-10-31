@@ -7,19 +7,19 @@
     "rank": 10618666,
     "total_points": 229,
     "team_value": 101.1,
-    "bank": 6.6,
+    "bank": 7.2,
     "free_transfers": 1,
     "dry_run": false,
-    "last_updated": "2026-10-30T23:57:58.925375Z"
+    "last_updated": "2026-10-31T08:33:09.333954Z"
   },
   "formation": "3-4-3",
-  "total_xp": 58.6,
+  "total_xp": 62.8,
   "captain": {
     "id": 68,
     "name": "Tavernier",
     "team": "BOU",
     "position": "MID",
-    "cost": 6.4,
+    "cost": 6.5,
     "xp": 7.8,
     "horizon_xp": 19.5,
     "fixture": "LEE (H) [FDR 3]",
@@ -154,6 +154,52 @@
       "press_insight": null
     },
     {
+      "id": 31,
+      "name": "Konsa",
+      "team": "ARS",
+      "position": "DEF",
+      "cost": 4.7,
+      "xp": 5.9,
+      "horizon_xp": 16.1,
+      "fixture": "LIV (A) [FDR 4]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 9,
+          "opponent": "LIV",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 10,
+          "opponent": "HUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
       "id": 566,
       "name": "Silva",
       "team": "BOU",
@@ -200,81 +246,35 @@
       "press_insight": null
     },
     {
-      "id": 279,
-      "name": "Ajayi",
-      "team": "HUL",
+      "id": 257,
+      "name": "Bassey",
+      "team": "FUL",
       "position": "DEF",
-      "cost": 4.2,
-      "xp": 3.7,
-      "horizon_xp": 7.7,
-      "fixture": "IPS (H) [FDR 2]",
+      "cost": 4.5,
+      "xp": 4.7,
+      "horizon_xp": 11.9,
+      "fixture": "AVL (A) [FDR 3]",
       "expected_minutes": 88.0,
       "is_captain": false,
       "is_vice_captain": false,
       "fixtures_5gw": [
         {
           "gw": 9,
-          "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
+          "opponent": "AVL",
+          "is_home": false,
+          "fdr": 3
         },
         {
           "gw": 10,
-          "opponent": "ARS",
+          "opponent": "NEW",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "MCI",
           "is_home": false,
           "fdr": 5
-        },
-        {
-          "gw": 11,
-          "opponent": "BHA",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
-      "id": 8,
-      "name": "Calafiori",
-      "team": "ARS",
-      "position": "DEF",
-      "cost": 5.9,
-      "xp": 3.4,
-      "horizon_xp": 10.6,
-      "fixture": "LIV (A) [FDR 4]",
-      "expected_minutes": 70.4,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LIV",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 10,
-          "opponent": "HUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 11,
-          "opponent": "NEW",
-          "is_home": false,
-          "fdr": 3
         },
         {
           "gw": 12,
@@ -296,7 +296,7 @@
       "name": "Tavernier",
       "team": "BOU",
       "position": "MID",
-      "cost": 6.4,
+      "cost": 6.5,
       "xp": 7.8,
       "horizon_xp": 19.5,
       "fixture": "LEE (H) [FDR 3]",
@@ -662,6 +662,52 @@
       "press_insight": null
     },
     {
+      "id": 279,
+      "name": "Ajayi",
+      "team": "HUL",
+      "position": "DEF",
+      "cost": 4.2,
+      "xp": 3.7,
+      "horizon_xp": 7.7,
+      "fixture": "IPS (H) [FDR 2]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 9,
+          "opponent": "IPS",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 10,
+          "opponent": "ARS",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 11,
+          "opponent": "BHA",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
       "id": 229,
       "name": "Tarkowski",
       "team": "EVE",
@@ -752,79 +798,33 @@
         }
       ],
       "press_insight": null
-    },
-    {
-      "id": 173,
-      "name": "Thomas",
-      "team": "COV",
-      "position": "DEF",
-      "cost": 4.0,
-      "xp": 1.5,
-      "horizon_xp": 3.9,
-      "fixture": "SUN (H) [FDR 3]",
-      "expected_minutes": 39.6,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "SUN",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "EVE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "CRY",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
     }
   ],
   "transfers": [
     {
       "player_out": {
-        "name": "B.Fernandes",
-        "team": "MUN",
-        "xp": 2.0
+        "name": "Calafiori",
+        "team": "ARS",
+        "xp": 2.5
       },
       "player_in": {
-        "name": "Mbeumo",
-        "team": "MUN",
-        "cost": 7.9,
-        "xp": 5.1
+        "name": "Konsa",
+        "team": "ARS",
+        "cost": 4.7,
+        "xp": 5.9
       }
     },
     {
       "player_out": {
-        "name": "João Pedro",
-        "team": "CHE",
-        "xp": 0.0
+        "name": "Thomas",
+        "team": "COV",
+        "xp": 0.5
       },
       "player_in": {
-        "name": "Kostoulas",
-        "team": "BHA",
-        "cost": 5.8,
-        "xp": 3.8
+        "name": "Bassey",
+        "team": "FUL",
+        "cost": 4.5,
+        "xp": 4.7
       }
     }
   ],
@@ -1674,7 +1674,7 @@
       "name": "Gabriel",
       "team": "ARS",
       "position": "DEF",
-      "cost": 7.9,
+      "cost": 8.0,
       "xp": 6.2,
       "horizon_xp": 17.8,
       "fixture": "LIV (A) [FDR 4]",
@@ -2090,48 +2090,6 @@
       ]
     },
     {
-      "id": 650,
-      "name": "Affengruber",
-      "team": "FUL",
-      "position": "DEF",
-      "cost": 4.5,
-      "xp": 4.6,
-      "horizon_xp": 11.7,
-      "fixture": "AVL (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "AVL",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "NEW",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
       "id": 502,
       "name": "Robertson",
       "team": "TOT",
@@ -2510,11 +2468,53 @@
       ]
     },
     {
+      "id": 356,
+      "name": "Virgil",
+      "team": "LIV",
+      "position": "DEF",
+      "cost": 6.4,
+      "xp": 4.1,
+      "horizon_xp": 10.5,
+      "fixture": "ARS (H) [FDR 4]",
+      "fixtures_5gw": [
+        {
+          "gw": 9,
+          "opponent": "ARS",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 10,
+          "opponent": "CRY",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "MUN",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 12,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 68,
       "name": "Tavernier",
       "team": "BOU",
       "position": "MID",
-      "cost": 6.4,
+      "cost": 6.5,
       "xp": 7.8,
       "horizon_xp": 19.5,
       "fixture": "LEE (H) [FDR 3]",
@@ -3182,48 +3182,6 @@
       ]
     },
     {
-      "id": 264,
-      "name": "Bobb",
-      "team": "FUL",
-      "position": "MID",
-      "cost": 5.5,
-      "xp": 4.4,
-      "horizon_xp": 11.5,
-      "fixture": "AVL (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "AVL",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "NEW",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
       "id": 405,
       "name": "N.Gonzalez",
       "team": "NEW",
@@ -3270,7 +3228,7 @@
       "name": "Rogers",
       "team": "CHE",
       "position": "MID",
-      "cost": 8.0,
+      "cost": 8.1,
       "xp": 4.3,
       "horizon_xp": 11.1,
       "fixture": "MUN (H) [FDR 4]",
@@ -3334,6 +3292,48 @@
           "opponent": "IPS",
           "is_home": true,
           "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 591,
+      "name": "Enciso",
+      "team": "IPS",
+      "position": "MID",
+      "cost": 5.5,
+      "xp": 4.2,
+      "horizon_xp": 10.8,
+      "fixture": "HUL (A) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 9,
+          "opponent": "HUL",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 10,
+          "opponent": "BOU",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "TOT",
+          "is_home": false,
+          "fdr": 3
         },
         {
           "gw": 12,
@@ -3438,9 +3438,9 @@
       "name": "N.Jackson",
       "team": "AVL",
       "position": "FWD",
-      "cost": 6.8,
-      "xp": 7.8,
-      "horizon_xp": 17.6,
+      "cost": 6.9,
+      "xp": 7.0,
+      "horizon_xp": 15.9,
       "fixture": "FUL (H) [FDR 2]",
       "fixtures_5gw": [
         {
@@ -4152,7 +4152,7 @@
       "name": "Delap",
       "team": "NFO",
       "position": "FWD",
-      "cost": 5.5,
+      "cost": 5.4,
       "xp": 2.0,
       "horizon_xp": 5.2,
       "fixture": "BRE (A) [FDR 3]",
@@ -4190,7 +4190,7 @@
       ]
     }
   ],
-  "briefing": "**التقرير التكتيكي للجولة رقم 9: نحو الانقضاض النمطي وتعظيم النقاط**\n\n1. **التكتيك المعتمد وموقف الترتيب:**\nنتبنى استراتيجية هجومية تعويضية بحتة (AGGRESSIVE) لملاحقة فرق الصدارة وتقليص الفارق من مركزنا الحالي. لا مكان للعواطف أو التردد في بيع الأصول المتراجعة؛ فالنقاط هي العملة الوحيدة التي تعتد بها خوارزمياتنا، وهدفنا المطلق هو قضم الفوارق النقطية عبر قرارات حاسمة ومدروسة رياضياً.\n\n2. **مدى مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance):**\nتتطابق قراراتنا هذه الجولة بشكل مذهل مع محرك القواعد التاريخية (Hindsight Gold Rules Engine)؛ حيث يعوضنا التبديل المخطط بمتوسط مكسب فوري يتجاوز القاعدة الذهبية (+10.8 نقطة)، مع تحمل (-4 Hit) محسوبة بعناية لجلب أصول ذات سقف انفجاري عالٍ. علاوة على ذلك، يتماشى التركيز على خط الوسط كأولوية في الإنفاق مع القاعدة التاريخية التي خصصت 39.8% من ميزانية التشكيل الأساسي للوسط (متوسط 27.9 مليون)، مما يضمن تدفقاً مستداماً للنقاط.\n\n3. **التحليل الرياضي والتكتيكي للتبديلات وجدوى الـ Hit:**\nقمنا ببيع B.Fernandes (المتراجع بـ xP متواضع يبلغ 2.0) وجواو بيدرو المصاب، وجلب الثنائي Mbeumo (xP: 5.1) وKostoulas (xP: 3.8). تكلفة الـ Hit (-4) ممولة رياضياً بالنظر إلى الفارق الهائل في العائد المتوقع الفوري وطويل الأمد على مدى الجولات الثلاث القادمة، حيث يتمتع البدلاء بجدول مباريات أفضل وسقف نقاط أعلى بكثير مقارنة بالأصول المباعة.\n\n4. **مبررات شارة القيادة (C) والنائب (VC) بالاستناد إلى قاعدة الكابتن الذهبية:**\nقع وقع اختيار شارة القيادة (C) على Tavernier (BOU) بسقف متوقع (xP: 7.8)، والنائب (VC) على Isak (LIV) بـ (xP: 6.8). هذا الاختيار ينسجم مع قاعدة الكابتن التاريخية التي تفضل الأصول الممتازة ذات العائد المرتفع والعامل النفسي والأرضي المساعد، متجاوزين القيود التقليدية لاقتناص أعلى عائد محتمل في الجولة.\n\n5. **نصيحة استراتيجية الخواص وحماية ميزانية الفريق:**\nنوصي بالاحتفاظ بكافة الخواص الاستراتيجية (Wildcard, Free Hit, Bench Boost, 3XC) وعدم استخدامها حالياً، تماشياً مع خطة توجيهها نحو أسابيع الجولات المزدوجة (DGW) لتعظيم العائد المضاعف. كما نحذر من مخاطر بعض الأصول الواردة في رادار السوق مثل Calafiori وØdegaard، مع الحفاظ على كفاءة الميزانية عبر استغلال الأصول ذات القيمة السعرية العالية من فئة الميدان.\n\n**الخلاصة التنفيذية:**\nإن هذا التقرير يمثل خارطة طريق صارمة ومجردة من العواطف لجولة رقم 9، حيث تتناغم المؤشرات الرياضية، وقواعد الـ Hit المدروسة، واختيارات الكابتن الجريئة، وإدارة الخواص الذكية، لتضع فريقك في المقدمة وتحقق أقصى كفاءة ممكنة لرأس المال والنقاط.",
+  "briefing": "إليك التقرير التكتيكي الشامل للجولة رقم 9 الصادر عن محرك التحليل الإحصائي والقواعد الذهبية:\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب (AGGRESSIVE Strategy)\nبناءً على الترتيب الحالي (**10,618,666**)، لا مجال للتحفظ أو اللعب الدفاعي التقليدي؛ التكتيك المعتمد هو **الهجومي التعويضي (AGGRESSIVE)** القائم على مبدأ \"نقاط اليوم قبل الغد\". الموقف يتطلب التضحية باللاعبين المتراجعين وتفعيل خيار الخصم السلبي (-4 Hit) باحترافية، لاقتناص فارق النقاط (Upside) وتجاوز المنافسين في سلم الترتيب العام بسرعة وحسم.\n\n---\n\n### 2. مدى مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance)\nأظهرت القرارات التزاماً صارماً ومبرهناً بالقواعد التاريخية المستخرجة من المحرك:\n*   **جدوى الخصم السلبي (-4 Hit):** تتوافق التضحية بـ 4 نقاط تماماً مع قاعدة المحرك التي تؤكد أن أخذ السالب يُعد مثالياً رياضياً للوصول إلى الانفجار المرجو (+10.8 نقطة صافي ربح فوري للتبديلات المثالية). دمج التبديلين يمنحنا قفزة في النقاط المتوقعة المباشرة من (3.0 xP) للاعبين المباعين إلى (10.6 xP) للقادمين، مما يغطي تكلفة التبديل (-4) ويحقق فارقاً إيجابياً فورياً.\n*   **استراتيجية الكابتن:** اختيار **Tavernier** ككابتن يطابق القاعدة الذهبية المثبتة بثقة 80%، والتي تنص على أن الكباتن الأكثر كفاءة يبلغ متوسط سعرهم **£6.5m** (حيث يُختار الكباتن الأغلى من £9.5m في 20% فقط من الجولات المثالية).\n*   **هيكلية خط الوسط والأسعار:** يمتلك الفريق خط وسط متفجراً (Palmer, Mbeumo, Tavernier, Barcola)، وهو ما يتماشى مع قاعدة تخصيص الميزانية التي تمنح الأولوية لوسط الملعب بنسبة 39.8% من الإنفاق الأساسي. كما أن التعاقد مع أغطية دفاعية بسعر أقل من £6.0m يطبق قاعدة كفاءة الأسعار (2.69 نقطة لكل مليون).\n\n---\n\n### 3. التحليل الرياضي والتكتيكي للتبديلات (-4 Hit)\n*   🔴 **بيع Calafiori (xP: 2.5) ──► 🟢 شراء Konsa (xP: 5.9 | £4.7m):** التخلص من Calafiori قرار حتمي نظرًا لتراجع انتاجيته ومخاطر تدويره (Flop). الشراء يمنح الفريق استقرارًا دفاعيًا ومعدل نقاط متوقعة مرتفع جداً يتجاوز ضعف اللاعب المباع.\n*   🔴 **بيع Thomas (xP: 0.5) ──► 🟢 شراء Bassey (xP: 4.7 | £4.5m):** بيع Thomas يعالج عبء اللاعبين غير المنتجين في التشكيلة، بينما Bassey يمثل خيار خياراً دفاعياً أساسياً بتكلفة ممتازة ومعدل xP تصاعدي.\n*   **المحصلة على مدار 3 جولات:** التبديلات لا توفر فقط ربحاً فورياً متوقعاً في هذه الجولة، بل تضمن مساراً أسهل وتدوير خيارات أكثر مرونة وتؤمن خط الدفاع على المدى المتوسط، مما يبرر تكلفة الخصم السلبي (-4) بنجاح.\n\n---\n\n### 4. مبررات شارة القيادة (C) والنائب (VC)\n*   **الكابتن (C): Tavernier (BOU) - xP: 7.8**\n    تم التكبيت بناءً على أعلى سقف نقاط متوقع (xP) في الفريق لهذا الأسبوع، وتطبيقاً لقاعدة الكابتن الذهبية التي تفضل أصحاب السعر المتوسط الأكثر فاعلية مقارنة بالأسماء الرنانة المرهقة للميزانية.\n*   **النائب (VC): Isak (LIV) - xP: 6.8**\n    تم اختيار Isak كنائب قائد ليوفر غطاءً أمنياً متيناً بخيار هجومي ذي سقف عالٍ ومعدل استقرار مرتفع في حال حدوث أي مفاجآت غير متوقعة لمشارك Tavernier.\n\n---\n\n### 5. نصيحة استراتيجية الخواص وحماية ميزانية الفريق\n*   **إدارة الخواص (Chips):** يمتلك الفريق ترسانة كاملة (Wildcard x2, Free Hit x1, Triple Captain x1, Bench Boost x1). التوصية الصارمة هي **الاحتفاظ بالخواص كاملة** واستغلالها حتمياً في الجولات المزدوجة (DGW) والبلانك (BGW) لضمان تحقيق أعلى عائد تراكمي للنقاط.\n*   **إدارة السيولة:** الاحتفاظ برصيد ضخم في البنك قدره **£7.2m** يمنح الفريق مرونة تكتيكية فائقة للتحرك السريع في الجولات القادمة لضم أي نصر مستجد أو استعادة أسماء كبرى دون الحاجة لإجراء عمليات جراحية مكلفة في التشكيلة.\n\n---\n\n### الخلاصة التنفيذية\nالتشكيلة الحالية (3-4-3) بدخول Konsa و Bassey، مع منح شارة القيادة لـ Tavernier، تضع الفريق في أفضل موقع هيكلي ورياضي ممكن لاختراق الترتيب والقفز بقوة. التضحية بنقاط التبديل (-4) تم تعويضها حسابياً في خط الدفاع، وتوفر الميزانية (£7.2m) يمنحنا اليد العليا للجولات المقبلة. اعتمد التشكيل بثقة وانطلق نحو تقليص الفارق.",
   "leagues": [],
   "eo_radar": {
     "threats": [
@@ -4231,10 +4231,18 @@
       {
         "player": "Tavernier",
         "team": "FPL",
-        "cost": 6.4,
+        "cost": 6.5,
         "eo": 8,
         "advantage": "💎 Huge Rank Boost",
         "xp": 7.76
+      },
+      {
+        "player": "Konsa",
+        "team": "FPL",
+        "cost": 4.7,
+        "eo": 8,
+        "advantage": "💎 Huge Rank Boost",
+        "xp": 5.91
       },
       {
         "player": "Mbeumo",
@@ -4261,20 +4269,12 @@
         "xp": 4.88
       },
       {
-        "player": "Marmoush",
+        "player": "Bassey",
         "team": "FPL",
-        "cost": 7.0,
+        "cost": 4.5,
         "eo": 8,
         "advantage": "💎 Huge Rank Boost",
-        "xp": 4.1
-      },
-      {
-        "player": "Kostoulas",
-        "team": "FPL",
-        "cost": 5.8,
-        "eo": 8,
-        "advantage": "💎 Huge Rank Boost",
-        "xp": 3.81
+        "xp": 4.71
       }
     ],
     "leagues": [],
@@ -4282,47 +4282,145 @@
   },
   "press_insights": [
     {
+      "player_id": 148,
+      "player_name": "Hato",
+      "fitness_sentiment": "ruled_out",
+      "minute_multiplier": 0.0,
+      "summary_ar": "تم استبعاده تماماً بسبب الإصابة مع تأكيد غيابه في تقارير الفريق الرسمية وتقدير فرصة لعبه بـ 0%.",
+      "summary_en": "Ruled out through injury with an unknown return date, confirmed at 0% playing chance.",
+      "risk_level": "CRITICAL",
+      "headline_reference": "Chelsea team news on Lacroix, Martinez, Caicedo, Hato and more"
+    },
+    {
+      "player_id": 165,
+      "player_name": "João Pedro",
+      "fitness_sentiment": "ruled_out",
+      "minute_multiplier": 0.0,
+      "summary_ar": "غائب رسميًا ومستبعد بداعي إصابة في الفخذ دون موعد محدد للعودة.",
+      "summary_en": "Officially sidelined with a thigh injury with no confirmed return date.",
+      "risk_level": "CRITICAL",
+      "headline_reference": "FPL Official Injury Update: Thigh injury"
+    },
+    {
       "player_id": 483,
       "player_name": "Ndoye",
       "fitness_sentiment": "major_doubt",
-      "minute_multiplier": 0.5,
-      "summary_ar": "أكد المدرب أوليفر غلاسنر أن دان ندوي يعد شكوكاً للمشاركة في مباراتنا القادمة ضد برينتفورد بسبب الإصابة.",
-      "summary_en": "Manager Oliver Glasner confirmed that Dan Ndoye is a doubt for the upcoming match against Brentford due to injury.",
+      "minute_multiplier": 0.3,
+      "summary_ar": "شكوك كبيرة حول جاهزيته لمواجهة برينتفورد بسبب إصابة في أوتار الركبة كما أكد المدرب أوليفر غلاسنر.",
+      "summary_en": "Major doubt for the trip to Brentford due to a hamstring injury as confirmed by Oliver Glasner.",
       "risk_level": "HIGH",
       "headline_reference": "FOREST PREVIEW | EVERYTHING YOU NEED TO KNOW ABOUT OUR TRIP TO BRENTFORD"
+    },
+    {
+      "player_id": 173,
+      "player_name": "Thomas",
+      "fitness_sentiment": "major_doubt",
+      "minute_multiplier": 0.3,
+      "summary_ar": "لديه شكوك كبيرة حول المشاركة بنسبة 50% بسبب إصابة في ربلة الساق (السمانة).",
+      "summary_en": "Flagged with a 50% chance of playing due to an ongoing calf issue.",
+      "risk_level": "HIGH",
+      "headline_reference": "FPL Official Injury Update: Calf injury"
+    },
+    {
+      "player_id": 650,
+      "player_name": "Affengruber",
+      "fitness_sentiment": "minor_doubt",
+      "minute_multiplier": 0.5,
+      "summary_ar": "غاب عن مواجهة الكأس ضد بالاس وهناك عدم يقين حول مشاركته أساسياً أمام أستون فيلا.",
+      "summary_en": "Remains a doubt after missing the midweek cup match; inclusion against Villa is uncertain.",
+      "risk_level": "MEDIUM",
+      "headline_reference": "Saturday night at Villa Park"
+    },
+    {
+      "player_id": 8,
+      "player_name": "Calafiori",
+      "fitness_sentiment": "minor_doubt",
+      "minute_multiplier": 0.75,
+      "summary_ar": "يعاني من مشكلة بسيطة في الورك ولديه فرصة 75% للمشاركة، قد يبدأ أو تدار دقائقه بحذر.",
+      "summary_en": "Carrying a hip knock with a 75% chance of playing; potential starter but could see managed minutes.",
+      "risk_level": "MEDIUM",
+      "headline_reference": "FPL Official Injury Update: Hip injury"
+    },
+    {
+      "player_id": 13,
+      "player_name": "Rice",
+      "fitness_sentiment": "minor_doubt",
+      "minute_multiplier": 0.8,
+      "summary_ar": "انزعاج طفيف بنسبة جاهزية 75%، ومن المتوقع بشكل كبير أن يبدأ في خط وسط أرسنال.",
+      "summary_en": "Flagged with an unspecified knock at 75% chance, but expected to anchor Arsenal's midfield if cleared.",
+      "risk_level": "MEDIUM",
+      "headline_reference": "FPL Official Injury Update: Unspecified injury"
+    },
+    {
+      "player_id": 113,
+      "player_name": "F.Kadıoğlu",
+      "fitness_sentiment": "minor_doubt",
+      "minute_multiplier": 0.75,
+      "summary_ar": "مدرج بعلامة شك 75% بسبب إصابة في الورك، موقفه البدني قيد التقييم النهائي قبل انطلاق الجولة.",
+      "summary_en": "Under evaluation with a hip complaint (75% flag); starting spot likely subject to late fitness test.",
+      "risk_level": "MEDIUM",
+      "headline_reference": "FPL Official Injury Update: Hip injury"
     },
     {
       "player_id": 469,
       "player_name": "N.Williams",
       "fitness_sentiment": "fit_starter",
       "minute_multiplier": 1.0,
-      "summary_ar": "شارك نيكو ويليامز في التدريبات طوال الأسبوع بعد هبوطه بقوة على مرفقه، وهو جاهز تماماً للمشاركة.",
-      "summary_en": "Neco Williams has trained all week after a heavy landing on his elbow and is fully available for selection.",
+      "summary_ar": "أكد نوتنغهام فورست جاهزيته التامة بعد تعافيه وتدربه طوال الأسبوع عقب إصابة الكوع الأخيرة.",
+      "summary_en": "Cleared and fully fit to start having trained all week following a heavy landing on his elbow.",
       "risk_level": "LOW",
       "headline_reference": "FOREST PREVIEW | EVERYTHING YOU NEED TO KNOW ABOUT OUR TRIP TO BRENTFORD"
     },
     {
-      "player_id": 428,
-      "player_name": "Cunha",
+      "player_id": 254,
+      "player_name": "Robinson",
       "fitness_sentiment": "fit_starter",
       "minute_multiplier": 1.0,
-      "summary_ar": "تم استدعاء جير كونا للمنتخب البرازيلي لشهر نوفمبر، وهو جاهز ومتاح بالكامل لمباراة الفريق المقبلة.",
-      "summary_en": "Jair Cunha has been named in the Brazil squad for November and remains fully fit and available.",
+      "summary_ar": "أساسي مضمون في مركز الظهير الأيسر لفولهام مع استمرار إيقاف رايان سيسينيون.",
+      "summary_en": "Guaranteed starter at left-back for Fulham with Sessegnon serving the final match of his suspension.",
       "risk_level": "LOW",
-      "headline_reference": "JAIR CUNHA NAMED IN BRAZIL SQUAD"
+      "headline_reference": "Saturday night at Villa Park"
     },
     {
       "player_id": 166,
       "player_name": "N.Jackson",
       "fitness_sentiment": "fit_starter",
-      "minute_multiplier": 1.0,
-      "summary_ar": "أشاد أوناي إيمري بالتزام واحترافية نيكولاس جاكسون، وهو جاهز لقيادة هجوم أستون فيلا أمام فولهام.",
-      "summary_en": "Unai Emery praised Nicolas Jackson's professionalism, and he is ready to lead the line against Fulham.",
+      "minute_multiplier": 0.9,
+      "summary_ar": "في حالة تهديفية ممتازة مع إشادة خاصة من أوناي إيمري بالتزامه ومستواه المتصاعد.",
+      "summary_en": "In red-hot form with 4 goals in 4 games and heavily praised by Emery; nailed on to lead Villa's attack.",
       "risk_level": "LOW",
       "headline_reference": "Emery looks ahead to Fulham encounter"
+    },
+    {
+      "player_id": 264,
+      "player_name": "Bobb",
+      "fitness_sentiment": "fit_starter",
+      "minute_multiplier": 0.9,
+      "summary_ar": "أحد أبرز العناصر الهجومية الأساسية لفولهام ويحتل صدارة الإحصائيات الهجومية في لمس الكرة داخل الصندوق.",
+      "summary_en": "Key attacking starter for Fulham, highlighted in tactical analysis for high penalty-box involvement.",
+      "risk_level": "LOW",
+      "headline_reference": "Saturday night at Villa Park"
     }
   ],
   "press_wire": [
+    {
+      "id": 4750878,
+      "title": "Saturday night at Villa Park",
+      "summary": "Fixtures Aston Villa Vs. Fulham - Sat, Oct 31 2026, 20:00 Aston Villa look to return to winning ways on Saturday night, entertaining Fulham at Villa Park. The Villans return to Premier League action on Halloween after exiting the Carabao Cup at the hands of Bournemouth in midweek, having secured consecutive league wins against Newcastle United and Manchester City. Unai Emery’s men will hope to make it three league wins in a row in B6, while extending their unbeaten league streak to five matches. Fulham also bowed out of the League Cup on Wednesday night, falling 1-0 at home to Crystal Palace having secured their first two wins of the Premier League season – over newly-promoted Hull City and Coventry City – in their two prior outings. Álvaro Arbeloa’s side sit 15th in the league table after eight matches, though like Villa, are also going in search of a third successive league triumph. Stats Aston Villa have lost just one of their 18 home Premier League matches against Fulham (W12 D5), a 2-1 defeat in April 2014. Fulham won their last Premier League game against Aston Villa and have registered consecutive wins against them just once before in the competition, winning both games in 2013/14. Villa boss Unai Emery has won eight of his nine Premier League matches against Fulham (L1), a points-per-game of 2.67; of managers to take charge of 5+ games against the Cottagers, only Pep Guardiola (3, won 12/12) and Mauricio Pochettino (3, won 6/6) have a higher ratio. The Villans are looking to win three consecutive Premier League matches for the first time since a run of eight in November and December last season. Fulham won none of their first six Premier League games this season (D2 L4) but have won each of their last two, 1-0 wins over Hull and Coventry. The only two Premier League sides to start with six winless games then win three in a row are Newcastle in 2003/04 and Stoke in 2015/16. Villa have only won two of their last 12 Premier League matches in August and September (D5 L5), compared to eight wins in their last 10 games across October and November (D1 L1). Fulham are looking for three Premier League wins in a row for the first time since December 2025, while they last achieved that without conceding a goal back in April 2019. Nicolas Jackson has scored four goals in his last four Premier League appearances for Villa, as many as he’d managed in his previous 24 games in the competition (4 in 21 for Chelsea, 0 in 3 for Villa). Only Man City duo Erling Haaland (2.92) and Rayan Cherki (2.32) have outperformed their xG more than Jackson this season (2.02). Fulham’s average possession (58%), successful passes per game (505) and passing accuracy (86.7%) in the Premier League this season are all their best totals on record since 2003/04. Two of the four players with the most touches in the opposition box in the Premier League this season are Fulham’s Josh King (52, 1st) and Oscar Bobb (43, 4th). King is having 7.1 per 90 minutes, with only one Fulham player on record (since 2008/09, 500+ mins played) averaging more in a season – Bobby Zamora in 2010/11 (8.6). The Last Meeting Villa fell to defeat in the last meeting between they and the West London outfit in April. With 2025/26 drawing to a close, Unai Emery’s men travelled to Craven Cottage and went down 1-0, as Ryan Sessengnon fired home two minutes before the break to seal three points. The result didn’t stop the Villans from reaching their goals for the season, as they secured Champions League football less than a month later. Team News There could be more changes for Unai Emery’s men, after the Villa boss rotated in midweek for Carabao Cup action. Matteo Ruggeri and Aaron Wan-Bissaka remain sidelined with injury, while Amadou Onana is a long-term absentee. Fulham will be without Ryan Sessegnon, who serves the final game of his three-match suspension, meaning Antonee Robinson should continue at left-back. It remains to be seen whether or not David Affengruber and Emile Smith Rowe will feature, having both missed the Carabao Cup defeat to Palace. Managers' Pre-Match Thoughts “Tomorrow, Fulham, prioritising Premier League clearly, and this is the message, because to keep our consistency, to keep our demands and work every day to get these demands to keep, to get this commitment to keep our consistency like we did the last year, each match is a test.” - Unai Emery “For us, it's a new challenge to beat a team like Aston Villa, and that is important for us to prove that we can beat anyone. So, yes, I think we will go there and we will give our best, thinking we can beat any team.” - Álvaro Arbeloa",
+      "date": "2026-10-31T08:00:00Z",
+      "url": "https://avfc.co.uk/news/2026/october/31/prematch-saturday-night-at-villa-park/",
+      "matched_players": [
+        "raya",
+        "smith",
+        "rayan",
+        "robinson",
+        "bobb",
+        "affengruber",
+        "cherki",
+        "haaland",
+        "hall"
+      ]
+    },
     {
       "id": 4750815,
       "title": "WE NEED TO BE READY FOR A TOUGH GAME: TOM MALLINSON",
@@ -4411,14 +4509,6 @@
       "matched_players": [
         "belloumi"
       ]
-    },
-    {
-      "id": 4750716,
-      "title": "Carvalho out until international break",
-      "summary": "Attacking midfielder Fábio Carvalho will be out through injury until after the November international break, Brentford head coach Keith Andrews has confirmed; Andrews also discusses taking on Nottingham Forest at Gtech Community Stadium in the Premier League on Saturday afternoon (3pm kick-off GMT)",
-      "date": "2026-10-30T14:27:00Z",
-      "url": "https://www.brentfordfc.com/en/news/first-team-brentford-v-nottingham-forest-team-news-fabio-carvalho-injury",
-      "matched_players": []
     }
   ]
 }
