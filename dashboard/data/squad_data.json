@@ -2,37 +2,31 @@
   "meta": {
     "manager_name": "FPL Manager",
     "team_name": "FPL Squad",
-    "gameweek": 9,
-    "deadline": "2026-10-31T11:00:00Z",
+    "gameweek": 10,
+    "deadline": "2026-11-06T18:30:00Z",
     "rank": 10618666,
     "total_points": 229,
     "team_value": 101.1,
-    "bank": 7.2,
+    "bank": 6.2,
     "free_transfers": 1,
     "dry_run": false,
-    "last_updated": "2026-10-31T08:33:09.333954Z"
+    "last_updated": "2026-10-31T14:39:29.171907Z"
   },
-  "formation": "3-4-3",
-  "total_xp": 62.8,
+  "formation": "3-5-2",
+  "total_xp": 63.4,
   "captain": {
     "id": 68,
     "name": "Tavernier",
     "team": "BOU",
     "position": "MID",
     "cost": 6.5,
-    "xp": 7.8,
-    "horizon_xp": 19.5,
-    "fixture": "LEE (H) [FDR 3]",
+    "xp": 6.1,
+    "horizon_xp": 15.6,
+    "fixture": "IPS (A) [FDR 2]",
     "expected_minutes": 88.0,
     "is_captain": true,
     "is_vice_captain": false,
     "fixtures_5gw": [
-      {
-        "gw": 9,
-        "opponent": "LEE",
-        "is_home": true,
-        "fdr": 3
-      },
       {
         "gw": 10,
         "opponent": "IPS",
@@ -47,12 +41,18 @@
       },
       {
         "gw": 12,
+        "opponent": "FUL",
+        "is_home": false,
+        "fdr": 3
+      },
+      {
+        "gw": 13,
         "opponent": "-",
         "is_home": true,
         "fdr": 3
       },
       {
-        "gw": 13,
+        "gw": 14,
         "opponent": "-",
         "is_home": true,
         "fdr": 3
@@ -61,44 +61,44 @@
     "press_insight": null
   },
   "vice_captain": {
-    "id": 379,
-    "name": "Isak",
-    "team": "LIV",
-    "position": "FWD",
-    "cost": 9.1,
-    "xp": 6.8,
-    "horizon_xp": 17.0,
-    "fixture": "ARS (H) [FDR 4]",
+    "id": 427,
+    "name": "Mbeumo",
+    "team": "MUN",
+    "position": "MID",
+    "cost": 7.9,
+    "xp": 5.5,
+    "horizon_xp": 13.2,
+    "fixture": "AVL (H) [FDR 3]",
     "expected_minutes": 88.0,
     "is_captain": false,
     "is_vice_captain": true,
     "fixtures_5gw": [
       {
-        "gw": 9,
-        "opponent": "ARS",
-        "is_home": true,
-        "fdr": 4
-      },
-      {
         "gw": 10,
-        "opponent": "CRY",
-        "is_home": false,
+        "opponent": "AVL",
+        "is_home": true,
         "fdr": 3
       },
       {
         "gw": 11,
-        "opponent": "MUN",
-        "is_home": true,
+        "opponent": "LIV",
+        "is_home": false,
         "fdr": 4
       },
       {
         "gw": 12,
-        "opponent": "-",
+        "opponent": "BRE",
         "is_home": true,
         "fdr": 3
       },
       {
         "gw": 13,
+        "opponent": "-",
+        "is_home": true,
+        "fdr": 3
+      },
+      {
+        "gw": 14,
         "opponent": "-",
         "is_home": true,
         "fdr": 3
@@ -108,44 +108,44 @@
   },
   "starters": [
     {
-      "id": 572,
-      "name": "Tzolakis",
-      "team": "HUL",
+      "id": 109,
+      "name": "Verbruggen",
+      "team": "BHA",
       "position": "GK",
-      "cost": 4.7,
+      "cost": 4.6,
       "xp": 4.9,
-      "horizon_xp": 9.5,
-      "fixture": "IPS (H) [FDR 2]",
+      "horizon_xp": 12.8,
+      "fixture": "BRE (H) [FDR 3]",
       "expected_minutes": 90.0,
       "is_captain": false,
       "is_vice_captain": false,
       "fixtures_5gw": [
         {
-          "gw": 9,
-          "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
           "gw": 10,
-          "opponent": "ARS",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
-          "gw": 11,
-          "opponent": "BHA",
+          "opponent": "BRE",
           "is_home": true,
           "fdr": 3
         },
         {
+          "gw": 11,
+          "opponent": "HUL",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
           "gw": 12,
-          "opponent": "-",
+          "opponent": "NEW",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -159,19 +159,13 @@
       "team": "ARS",
       "position": "DEF",
       "cost": 4.7,
-      "xp": 5.9,
-      "horizon_xp": 16.1,
-      "fixture": "LIV (A) [FDR 4]",
+      "xp": 6.5,
+      "horizon_xp": 15.5,
+      "fixture": "HUL (H) [FDR 2]",
       "expected_minutes": 88.0,
       "is_captain": false,
       "is_vice_captain": false,
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LIV",
-          "is_home": false,
-          "fdr": 4
-        },
         {
           "gw": 10,
           "opponent": "HUL",
@@ -186,12 +180,64 @@
         },
         {
           "gw": 12,
+          "opponent": "MCI",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
+      "id": 10,
+      "name": "White",
+      "team": "ARS",
+      "position": "DEF",
+      "cost": 5.4,
+      "xp": 6.5,
+      "horizon_xp": 14.3,
+      "fixture": "HUL (H) [FDR 2]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "HUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "MCI",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
           "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -205,19 +251,13 @@
       "team": "BOU",
       "position": "DEF",
       "cost": 5.0,
-      "xp": 4.9,
-      "horizon_xp": 12.4,
-      "fixture": "LEE (H) [FDR 3]",
+      "xp": 3.9,
+      "horizon_xp": 9.9,
+      "fixture": "IPS (A) [FDR 2]",
       "expected_minutes": 88.0,
       "is_captain": false,
       "is_vice_captain": false,
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
         {
           "gw": 10,
           "opponent": "IPS",
@@ -232,8 +272,8 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
-          "is_home": true,
+          "opponent": "FUL",
+          "is_home": false,
           "fdr": 3
         },
         {
@@ -241,49 +281,9 @@
           "opponent": "-",
           "is_home": true,
           "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
-      "id": 257,
-      "name": "Bassey",
-      "team": "FUL",
-      "position": "DEF",
-      "cost": 4.5,
-      "xp": 4.7,
-      "horizon_xp": 11.9,
-      "fixture": "AVL (A) [FDR 3]",
-      "expected_minutes": 88.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "AVL",
-          "is_home": false,
-          "fdr": 3
         },
         {
-          "gw": 10,
-          "opponent": "NEW",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -297,19 +297,13 @@
       "team": "BOU",
       "position": "MID",
       "cost": 6.5,
-      "xp": 7.8,
-      "horizon_xp": 19.5,
-      "fixture": "LEE (H) [FDR 3]",
+      "xp": 6.1,
+      "horizon_xp": 15.6,
+      "fixture": "IPS (A) [FDR 2]",
       "expected_minutes": 88.0,
       "is_captain": true,
       "is_vice_captain": false,
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
         {
           "gw": 10,
           "opponent": "IPS",
@@ -324,12 +318,18 @@
         },
         {
           "gw": 12,
+          "opponent": "FUL",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -343,19 +343,13 @@
       "team": "MUN",
       "position": "MID",
       "cost": 7.9,
-      "xp": 5.1,
-      "horizon_xp": 14.3,
-      "fixture": "CHE (A) [FDR 4]",
+      "xp": 5.5,
+      "horizon_xp": 13.2,
+      "fixture": "AVL (H) [FDR 3]",
       "expected_minutes": 88.0,
       "is_captain": false,
-      "is_vice_captain": false,
+      "is_vice_captain": true,
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "CHE",
-          "is_home": false,
-          "fdr": 4
-        },
         {
           "gw": 10,
           "opponent": "AVL",
@@ -370,12 +364,18 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
+          "opponent": "BRE",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -384,44 +384,44 @@
       "press_insight": null
     },
     {
-      "id": 627,
-      "name": "Barcola",
-      "team": "LIV",
+      "id": 40,
+      "name": "Rogers",
+      "team": "CHE",
       "position": "MID",
       "cost": 8.1,
-      "xp": 3.5,
-      "horizon_xp": 8.9,
-      "fixture": "ARS (H) [FDR 4]",
+      "xp": 4.6,
+      "horizon_xp": 12.6,
+      "fixture": "SUN (A) [FDR 3]",
       "expected_minutes": 88.0,
       "is_captain": false,
       "is_vice_captain": false,
       "fixtures_5gw": [
         {
-          "gw": 9,
-          "opponent": "ARS",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
           "gw": 10,
-          "opponent": "CRY",
+          "opponent": "SUN",
           "is_home": false,
           "fdr": 3
         },
         {
           "gw": 11,
-          "opponent": "MUN",
+          "opponent": "LEE",
           "is_home": true,
-          "fdr": 4
+          "fdr": 3
         },
         {
           "gw": 12,
+          "opponent": "NFO",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -435,19 +435,13 @@
       "team": "CHE",
       "position": "MID",
       "cost": 9.8,
-      "xp": 3.5,
-      "horizon_xp": 9.1,
-      "fixture": "MUN (H) [FDR 4]",
+      "xp": 4.1,
+      "horizon_xp": 11.1,
+      "fixture": "SUN (A) [FDR 3]",
       "expected_minutes": 88.0,
       "is_captain": false,
       "is_vice_captain": false,
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "MUN",
-          "is_home": true,
-          "fdr": 4
-        },
         {
           "gw": 10,
           "opponent": "SUN",
@@ -462,8 +456,8 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
-          "is_home": true,
+          "opponent": "NFO",
+          "is_home": false,
           "fdr": 3
         },
         {
@@ -471,281 +465,9 @@
           "opponent": "-",
           "is_home": true,
           "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
-      "id": 379,
-      "name": "Isak",
-      "team": "LIV",
-      "position": "FWD",
-      "cost": 9.1,
-      "xp": 6.8,
-      "horizon_xp": 17.0,
-      "fixture": "ARS (H) [FDR 4]",
-      "expected_minutes": 88.0,
-      "is_captain": false,
-      "is_vice_captain": true,
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "ARS",
-          "is_home": true,
-          "fdr": 4
         },
         {
-          "gw": 10,
-          "opponent": "CRY",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "MUN",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
-      "id": 401,
-      "name": "Marmoush",
-      "team": "TOT",
-      "position": "FWD",
-      "cost": 7.0,
-      "xp": 4.1,
-      "horizon_xp": 9.8,
-      "fixture": "CRY (H) [FDR 2]",
-      "expected_minutes": 88.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "CRY",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "LEE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
-      "id": 138,
-      "name": "Kostoulas",
-      "team": "BHA",
-      "position": "FWD",
-      "cost": 5.8,
-      "xp": 3.8,
-      "horizon_xp": 12.1,
-      "fixture": "MCI (A) [FDR 5]",
-      "expected_minutes": 88.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
-          "gw": 10,
-          "opponent": "BRE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "HUL",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    }
-  ],
-  "bench": [
-    {
-      "id": 109,
-      "name": "Verbruggen",
-      "team": "BHA",
-      "position": "GK",
-      "cost": 4.6,
-      "xp": 2.9,
-      "horizon_xp": 12.3,
-      "fixture": "MCI (A) [FDR 5]",
-      "expected_minutes": 90.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
-          "gw": 10,
-          "opponent": "BRE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "HUL",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
-      "id": 279,
-      "name": "Ajayi",
-      "team": "HUL",
-      "position": "DEF",
-      "cost": 4.2,
-      "xp": 3.7,
-      "horizon_xp": 7.7,
-      "fixture": "IPS (H) [FDR 2]",
-      "expected_minutes": 88.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "ARS",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
-          "gw": 11,
-          "opponent": "BHA",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
-      "id": 229,
-      "name": "Tarkowski",
-      "team": "EVE",
-      "position": "DEF",
-      "cost": 6.2,
-      "xp": 3.1,
-      "horizon_xp": 8.8,
-      "fixture": "NEW (A) [FDR 3]",
-      "expected_minutes": 88.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "NEW",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "COV",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 11,
-          "opponent": "BRE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -759,19 +481,13 @@
       "team": "BHA",
       "position": "MID",
       "cost": 5.9,
-      "xp": 2.7,
-      "horizon_xp": 8.6,
-      "fixture": "MCI (A) [FDR 5]",
+      "xp": 3.8,
+      "horizon_xp": 9.4,
+      "fixture": "BRE (H) [FDR 3]",
       "expected_minutes": 80.0,
       "is_captain": false,
       "is_vice_captain": false,
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
-        },
         {
           "gw": 10,
           "opponent": "BRE",
@@ -786,12 +502,110 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
+          "opponent": "NEW",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
+      "id": 379,
+      "name": "Isak",
+      "team": "LIV",
+      "position": "FWD",
+      "cost": 9.1,
+      "xp": 5.5,
+      "horizon_xp": 14.4,
+      "fixture": "CRY (A) [FDR 3]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "CRY",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "MUN",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 12,
+          "opponent": "EVE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
+      "id": 138,
+      "name": "Kostoulas",
+      "team": "BHA",
+      "position": "FWD",
+      "cost": 5.8,
+      "xp": 4.7,
+      "horizon_xp": 11.8,
+      "fixture": "BRE (H) [FDR 3]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "BRE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "HUL",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "NEW",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -800,135 +614,20 @@
       "press_insight": null
     }
   ],
-  "transfers": [
-    {
-      "player_out": {
-        "name": "Calafiori",
-        "team": "ARS",
-        "xp": 2.5
-      },
-      "player_in": {
-        "name": "Konsa",
-        "team": "ARS",
-        "cost": 4.7,
-        "xp": 5.9
-      }
-    },
-    {
-      "player_out": {
-        "name": "Thomas",
-        "team": "COV",
-        "xp": 0.5
-      },
-      "player_in": {
-        "name": "Bassey",
-        "team": "FUL",
-        "cost": 4.5,
-        "xp": 4.7
-      }
-    }
-  ],
-  "market_candidates": [
-    {
-      "id": 597,
-      "name": "Suzuki",
-      "team": "AVL",
-      "position": "GK",
-      "cost": 5.0,
-      "xp": 6.0,
-      "horizon_xp": 12.1,
-      "fixture": "FUL (H) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "FUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "MUN",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 11,
-          "opponent": "SUN",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 496,
-      "name": "Kinsky",
-      "team": "TOT",
-      "position": "GK",
-      "cost": 4.4,
-      "xp": 5.9,
-      "horizon_xp": 13.6,
-      "fixture": "CRY (H) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "CRY",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "LEE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
+  "bench": [
     {
       "id": 572,
       "name": "Tzolakis",
       "team": "HUL",
       "position": "GK",
       "cost": 4.7,
-      "xp": 4.9,
-      "horizon_xp": 9.5,
-      "fixture": "IPS (H) [FDR 2]",
+      "xp": 1.8,
+      "horizon_xp": 7.0,
+      "fixture": "ARS (A) [FDR 5]",
+      "expected_minutes": 90.0,
+      "is_captain": false,
+      "is_vice_captain": false,
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
-        },
         {
           "gw": 10,
           "opponent": "ARS",
@@ -943,12 +642,229 @@
         },
         {
           "gw": 12,
+          "opponent": "CRY",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
+      "id": 229,
+      "name": "Tarkowski",
+      "team": "EVE",
+      "position": "DEF",
+      "cost": 6.2,
+      "xp": 3.8,
+      "horizon_xp": 8.2,
+      "fixture": "COV (H) [FDR 2]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "COV",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "BRE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "LIV",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
           "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
+      "id": 401,
+      "name": "Marmoush",
+      "team": "TOT",
+      "position": "FWD",
+      "cost": 7.0,
+      "xp": 2.7,
+      "horizon_xp": 7.5,
+      "fixture": "LEE (A) [FDR 3]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "LEE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "IPS",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "SUN",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
+      "id": 279,
+      "name": "Ajayi",
+      "team": "HUL",
+      "position": "DEF",
+      "cost": 4.2,
+      "xp": 1.8,
+      "horizon_xp": 6.1,
+      "fixture": "ARS (A) [FDR 5]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "ARS",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 11,
+          "opponent": "BHA",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "CRY",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    }
+  ],
+  "transfers": [
+    {
+      "player_out": {
+        "name": "Bassey",
+        "team": "FUL",
+        "xp": 4.6
+      },
+      "player_in": {
+        "name": "White",
+        "team": "ARS",
+        "cost": 5.4,
+        "xp": 6.5
+      }
+    },
+    {
+      "player_out": {
+        "name": "Barcola",
+        "team": "LIV",
+        "xp": 2.8
+      },
+      "player_in": {
+        "name": "Rogers",
+        "team": "CHE",
+        "cost": 8.1,
+        "xp": 4.6
+      }
+    }
+  ],
+  "market_candidates": [
+    {
+      "id": 1,
+      "name": "Raya",
+      "team": "ARS",
+      "position": "GK",
+      "cost": 6.2,
+      "xp": 7.1,
+      "horizon_xp": 14.4,
+      "fixture": "HUL (H) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "HUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "MCI",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -961,16 +877,10 @@
       "team": "LEE",
       "position": "GK",
       "cost": 5.0,
-      "xp": 4.5,
-      "horizon_xp": 12.3,
-      "fixture": "BOU (A) [FDR 3]",
+      "xp": 5.6,
+      "horizon_xp": 11.9,
+      "fixture": "TOT (H) [FDR 2]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "BOU",
-          "is_home": false,
-          "fdr": 3
-        },
         {
           "gw": 10,
           "opponent": "TOT",
@@ -985,306 +895,18 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 250,
-      "name": "Leno",
-      "team": "FUL",
-      "position": "GK",
-      "cost": 4.5,
-      "xp": 4.5,
-      "horizon_xp": 10.8,
-      "fixture": "AVL (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "AVL",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "NEW",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 384,
-      "name": "Donnarumma",
-      "team": "MCI",
-      "position": "GK",
-      "cost": 5.5,
-      "xp": 4.0,
-      "horizon_xp": 10.6,
-      "fixture": "BHA (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "BHA",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "NFO",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "FUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 529,
-      "name": "Roefs",
-      "team": "SUN",
-      "position": "GK",
-      "cost": 4.9,
-      "xp": 4.0,
-      "horizon_xp": 8.9,
-      "fixture": "COV (A) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
           "opponent": "COV",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "CHE",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 11,
-          "opponent": "AVL",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 57,
-      "name": "Petrović",
-      "team": "BOU",
-      "position": "GK",
-      "cost": 4.5,
-      "xp": 4.0,
-      "horizon_xp": 10.4,
-      "fixture": "LEE (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "IPS",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 11,
-          "opponent": "NFO",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 1,
-      "name": "Raya",
-      "team": "ARS",
-      "position": "GK",
-      "cost": 6.2,
-      "xp": 3.8,
-      "horizon_xp": 15.0,
-      "fixture": "LIV (A) [FDR 4]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LIV",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 10,
-          "opponent": "HUL",
           "is_home": true,
           "fdr": 2
         },
         {
-          "gw": 11,
-          "opponent": "NEW",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
           "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 567,
-      "name": "Horníček",
-      "team": "NEW",
-      "position": "GK",
-      "cost": 5.0,
-      "xp": 3.4,
-      "horizon_xp": 7.8,
-      "fixture": "EVE (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "EVE",
-          "is_home": true,
-          "fdr": 3
         },
         {
-          "gw": 10,
-          "opponent": "FUL",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "ARS",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 350,
-      "name": "A.Becker",
-      "team": "LIV",
-      "position": "GK",
-      "cost": 5.5,
-      "xp": 3.0,
-      "horizon_xp": 8.0,
-      "fixture": "ARS (H) [FDR 4]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "ARS",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 10,
-          "opponent": "CRY",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "MUN",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -1297,16 +919,10 @@
       "team": "BHA",
       "position": "GK",
       "cost": 4.6,
-      "xp": 2.9,
-      "horizon_xp": 12.3,
-      "fixture": "MCI (A) [FDR 5]",
+      "xp": 4.9,
+      "horizon_xp": 12.8,
+      "fixture": "BRE (H) [FDR 3]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
-        },
         {
           "gw": 10,
           "opponent": "BRE",
@@ -1321,12 +937,690 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
+          "opponent": "NEW",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 250,
+      "name": "Leno",
+      "team": "FUL",
+      "position": "GK",
+      "cost": 4.5,
+      "xp": 4.4,
+      "horizon_xp": 9.5,
+      "fixture": "NEW (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "NEW",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "MCI",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 12,
+          "opponent": "BOU",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "Petrović",
+      "team": "BOU",
+      "position": "GK",
+      "cost": 4.5,
+      "xp": 3.4,
+      "horizon_xp": 8.2,
+      "fixture": "IPS (A) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "IPS",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "NFO",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "FUL",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 496,
+      "name": "Kinsky",
+      "team": "TOT",
+      "position": "GK",
+      "cost": 4.4,
+      "xp": 3.4,
+      "horizon_xp": 10.0,
+      "fixture": "LEE (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "LEE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "IPS",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "SUN",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 384,
+      "name": "Donnarumma",
+      "team": "MCI",
+      "position": "GK",
+      "cost": 5.5,
+      "xp": 2.9,
+      "horizon_xp": 7.8,
+      "fixture": "NFO (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "NFO",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "FUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "ARS",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 350,
+      "name": "A.Becker",
+      "team": "LIV",
+      "position": "GK",
+      "cost": 5.5,
+      "xp": 2.9,
+      "horizon_xp": 7.2,
+      "fixture": "CRY (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "CRY",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "MUN",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 12,
+          "opponent": "EVE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 226,
+      "name": "Pickford",
+      "team": "EVE",
+      "position": "GK",
+      "cost": 5.5,
+      "xp": 2.7,
+      "horizon_xp": 5.5,
+      "fixture": "COV (H) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "COV",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "BRE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "LIV",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 597,
+      "name": "Suzuki",
+      "team": "AVL",
+      "position": "GK",
+      "cost": 5.0,
+      "xp": 2.5,
+      "horizon_xp": 9.1,
+      "fixture": "MUN (A) [FDR 4]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "MUN",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 11,
+          "opponent": "SUN",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "IPS",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 567,
+      "name": "Horníček",
+      "team": "NEW",
+      "position": "GK",
+      "cost": 5.0,
+      "xp": 2.5,
+      "horizon_xp": 5.7,
+      "fixture": "FUL (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "FUL",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "ARS",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 12,
+          "opponent": "BHA",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 529,
+      "name": "Roefs",
+      "team": "SUN",
+      "position": "GK",
+      "cost": 4.9,
+      "xp": 2.5,
+      "horizon_xp": 7.6,
+      "fixture": "CHE (H) [FDR 4]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "CHE",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 11,
+          "opponent": "AVL",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "TOT",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 412,
+      "name": "Lammens",
+      "team": "MUN",
+      "position": "GK",
+      "cost": 4.8,
+      "xp": 2.4,
+      "horizon_xp": 5.3,
+      "fixture": "AVL (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "AVL",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "LIV",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 12,
+          "opponent": "BRE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 300,
+      "name": "Walton",
+      "team": "IPS",
+      "position": "GK",
+      "cost": 4.4,
+      "xp": 2.1,
+      "horizon_xp": 5.2,
+      "fixture": "BOU (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "BOU",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "TOT",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "AVL",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 560,
+      "name": "Penders",
+      "team": "CHE",
+      "position": "GK",
+      "cost": 4.4,
+      "xp": 1.9,
+      "horizon_xp": 5.3,
+      "fixture": "SUN (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "SUN",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "LEE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "NFO",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "name": "Rushworth",
+      "team": "COV",
+      "position": "GK",
+      "cost": 4.5,
+      "xp": 1.9,
+      "horizon_xp": 5.5,
+      "fixture": "EVE (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "EVE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "CRY",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "LEE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 572,
+      "name": "Tzolakis",
+      "team": "HUL",
+      "position": "GK",
+      "cost": 4.7,
+      "xp": 1.8,
+      "horizon_xp": 7.0,
+      "fixture": "ARS (A) [FDR 5]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "ARS",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 11,
+          "opponent": "BHA",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "CRY",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 467,
+      "name": "Sels",
+      "team": "NFO",
+      "position": "GK",
+      "cost": 5.0,
+      "xp": 1.6,
+      "horizon_xp": 4.2,
+      "fixture": "MCI (H) [FDR 4]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "MCI",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 11,
+          "opponent": "BOU",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "CHE",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 199,
+      "name": "Benitez",
+      "team": "CRY",
+      "position": "GK",
+      "cost": 4.5,
+      "xp": 1.5,
+      "horizon_xp": 4.8,
+      "fixture": "LIV (H) [FDR 4]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "LIV",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 11,
+          "opponent": "COV",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "HUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -1339,16 +1633,10 @@
       "team": "BRE",
       "position": "GK",
       "cost": 5.0,
-      "xp": 2.7,
-      "horizon_xp": 6.0,
-      "fixture": "NFO (H) [FDR 3]",
+      "xp": 1.4,
+      "horizon_xp": 4.4,
+      "fixture": "BHA (A) [FDR 4]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "NFO",
-          "is_home": true,
-          "fdr": 3
-        },
         {
           "gw": 10,
           "opponent": "BHA",
@@ -1363,306 +1651,18 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 300,
-      "name": "Walton",
-      "team": "IPS",
-      "position": "GK",
-      "cost": 4.4,
-      "xp": 2.6,
-      "horizon_xp": 6.1,
-      "fixture": "HUL (A) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "HUL",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "BOU",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "TOT",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 110,
-      "name": "Rushworth",
-      "team": "COV",
-      "position": "GK",
-      "cost": 4.5,
-      "xp": 2.5,
-      "horizon_xp": 6.5,
-      "fixture": "SUN (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "SUN",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "EVE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "CRY",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 226,
-      "name": "Pickford",
-      "team": "EVE",
-      "position": "GK",
-      "cost": 5.5,
-      "xp": 2.0,
-      "horizon_xp": 6.0,
-      "fixture": "NEW (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "NEW",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "COV",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 11,
-          "opponent": "BRE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 467,
-      "name": "Sels",
-      "team": "NFO",
-      "position": "GK",
-      "cost": 5.0,
-      "xp": 2.0,
-      "horizon_xp": 5.0,
-      "fixture": "BRE (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "BRE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "MCI",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 11,
-          "opponent": "BOU",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 199,
-      "name": "Benitez",
-      "team": "CRY",
-      "position": "GK",
-      "cost": 4.5,
-      "xp": 1.9,
-      "horizon_xp": 5.0,
-      "fixture": "TOT (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "TOT",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "LIV",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 11,
-          "opponent": "COV",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 560,
-      "name": "Penders",
-      "team": "CHE",
-      "position": "GK",
-      "cost": 4.4,
-      "xp": 1.4,
-      "horizon_xp": 4.1,
-      "fixture": "MUN (H) [FDR 4]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
           "opponent": "MUN",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 10,
-          "opponent": "SUN",
           "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
+          "fdr": 4
         },
         {
           "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 412,
-      "name": "Lammens",
-      "team": "MUN",
-      "position": "GK",
-      "cost": 4.8,
-      "xp": 1.3,
-      "horizon_xp": 4.1,
-      "fixture": "CHE (A) [FDR 4]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "CHE",
-          "is_home": false,
-          "fdr": 4
         },
         {
-          "gw": 10,
-          "opponent": "AVL",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "LIV",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -1675,16 +1675,10 @@
       "team": "ARS",
       "position": "DEF",
       "cost": 8.0,
-      "xp": 6.2,
-      "horizon_xp": 17.8,
-      "fixture": "LIV (A) [FDR 4]",
+      "xp": 7.5,
+      "horizon_xp": 17.0,
+      "fixture": "HUL (H) [FDR 2]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LIV",
-          "is_home": false,
-          "fdr": 4
-        },
         {
           "gw": 10,
           "opponent": "HUL",
@@ -1699,264 +1693,18 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
+          "opponent": "MCI",
           "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 60,
-      "name": "Hill",
-      "team": "BOU",
-      "position": "DEF",
-      "cost": 5.5,
-      "xp": 5.9,
-      "horizon_xp": 15.1,
-      "fixture": "LEE (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "IPS",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 11,
-          "opponent": "NFO",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 31,
-      "name": "Konsa",
-      "team": "ARS",
-      "position": "DEF",
-      "cost": 4.7,
-      "xp": 5.9,
-      "horizon_xp": 16.1,
-      "fixture": "LIV (A) [FDR 4]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LIV",
-          "is_home": false,
           "fdr": 4
         },
         {
-          "gw": 10,
-          "opponent": "HUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 11,
-          "opponent": "NEW",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
           "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 112,
-      "name": "Van Hecke",
-      "team": "TOT",
-      "position": "DEF",
-      "cost": 4.9,
-      "xp": 5.7,
-      "horizon_xp": 13.5,
-      "fixture": "CRY (H) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "CRY",
-          "is_home": true,
-          "fdr": 2
         },
         {
-          "gw": 10,
-          "opponent": "LEE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "name": "White",
-      "team": "ARS",
-      "position": "DEF",
-      "cost": 5.4,
-      "xp": 5.1,
-      "horizon_xp": 14.9,
-      "fixture": "LIV (A) [FDR 4]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LIV",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 10,
-          "opponent": "HUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 11,
-          "opponent": "NEW",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 566,
-      "name": "Silva",
-      "team": "BOU",
-      "position": "DEF",
-      "cost": 5.0,
-      "xp": 4.9,
-      "horizon_xp": 12.4,
-      "fixture": "LEE (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "IPS",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 11,
-          "opponent": "NFO",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 334,
-      "name": "Muharemović",
-      "team": "LEE",
-      "position": "DEF",
-      "cost": 5.1,
-      "xp": 4.8,
-      "horizon_xp": 13.2,
-      "fixture": "BOU (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "BOU",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "TOT",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 11,
-          "opponent": "CHE",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -1969,16 +1717,10 @@
       "team": "BHA",
       "position": "DEF",
       "cost": 5.3,
-      "xp": 4.8,
-      "horizon_xp": 16.6,
-      "fixture": "MCI (A) [FDR 5]",
+      "xp": 6.7,
+      "horizon_xp": 16.9,
+      "fixture": "BRE (H) [FDR 3]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
-        },
         {
           "gw": 10,
           "opponent": "BRE",
@@ -1993,7 +1735,7 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
+          "opponent": "NEW",
           "is_home": true,
           "fdr": 3
         },
@@ -2002,41 +1744,251 @@
           "opponent": "-",
           "is_home": true,
           "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
         }
       ]
     },
     {
-      "id": 37,
-      "name": "Lindelöf",
-      "team": "AVL",
+      "id": 31,
+      "name": "Konsa",
+      "team": "ARS",
       "position": "DEF",
-      "cost": 4.5,
-      "xp": 4.7,
-      "horizon_xp": 10.3,
-      "fixture": "FUL (H) [FDR 2]",
+      "cost": 4.7,
+      "xp": 6.5,
+      "horizon_xp": 15.5,
+      "fixture": "HUL (H) [FDR 2]",
       "fixtures_5gw": [
         {
-          "gw": 9,
-          "opponent": "FUL",
+          "gw": 10,
+          "opponent": "HUL",
           "is_home": true,
           "fdr": 2
         },
         {
+          "gw": 11,
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "MCI",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "White",
+      "team": "ARS",
+      "position": "DEF",
+      "cost": 5.4,
+      "xp": 6.5,
+      "horizon_xp": 14.3,
+      "fixture": "HUL (H) [FDR 2]",
+      "fixtures_5gw": [
+        {
           "gw": 10,
-          "opponent": "MUN",
+          "opponent": "HUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "MCI",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 504,
+      "name": "Vuskovic",
+      "team": "BHA",
+      "position": "DEF",
+      "cost": 5.2,
+      "xp": 5.9,
+      "horizon_xp": 15.1,
+      "fixture": "BRE (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "BRE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "HUL",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "NEW",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 334,
+      "name": "Muharemović",
+      "team": "LEE",
+      "position": "DEF",
+      "cost": 5.1,
+      "xp": 5.5,
+      "horizon_xp": 12.5,
+      "fixture": "TOT (H) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "TOT",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "CHE",
           "is_home": false,
           "fdr": 4
         },
         {
+          "gw": 12,
+          "opponent": "COV",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 332,
+      "name": "Justin",
+      "team": "LEE",
+      "position": "DEF",
+      "cost": 4.5,
+      "xp": 4.9,
+      "horizon_xp": 11.2,
+      "fixture": "TOT (H) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "TOT",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
           "gw": 11,
-          "opponent": "SUN",
+          "opponent": "CHE",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 12,
+          "opponent": "COV",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "name": "Hill",
+      "team": "BOU",
+      "position": "DEF",
+      "cost": 5.5,
+      "xp": 4.7,
+      "horizon_xp": 11.8,
+      "fixture": "IPS (A) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "IPS",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "NFO",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 12,
-          "opponent": "-",
-          "is_home": true,
+          "opponent": "FUL",
+          "is_home": false,
           "fdr": 3
         },
         {
@@ -2044,25 +1996,25 @@
           "opponent": "-",
           "is_home": true,
           "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
         }
       ]
     },
     {
-      "id": 257,
-      "name": "Bassey",
+      "id": 650,
+      "name": "Affengruber",
       "team": "FUL",
       "position": "DEF",
       "cost": 4.5,
       "xp": 4.7,
-      "horizon_xp": 11.9,
-      "fixture": "AVL (A) [FDR 3]",
+      "horizon_xp": 10.5,
+      "fixture": "NEW (H) [FDR 3]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "AVL",
-          "is_home": false,
-          "fdr": 3
-        },
         {
           "gw": 10,
           "opponent": "NEW",
@@ -2077,96 +2029,60 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 502,
-      "name": "Robertson",
-      "team": "TOT",
-      "position": "DEF",
-      "cost": 4.3,
-      "xp": 4.6,
-      "horizon_xp": 10.8,
-      "fixture": "CRY (H) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "CRY",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "LEE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 304,
-      "name": "O'Shea",
-      "team": "IPS",
-      "position": "DEF",
-      "cost": 4.0,
-      "xp": 4.6,
-      "horizon_xp": 11.5,
-      "fixture": "HUL (A) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "HUL",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
           "opponent": "BOU",
           "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 11,
-          "opponent": "TOT",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 257,
+      "name": "Bassey",
+      "team": "FUL",
+      "position": "DEF",
+      "cost": 4.5,
+      "xp": 4.6,
+      "horizon_xp": 10.3,
+      "fixture": "NEW (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "NEW",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "MCI",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 12,
+          "opponent": "BOU",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
           "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -2180,15 +2096,9 @@
       "position": "DEF",
       "cost": 4.5,
       "xp": 4.5,
-      "horizon_xp": 11.3,
-      "fixture": "AVL (A) [FDR 3]",
+      "horizon_xp": 10.1,
+      "fixture": "NEW (H) [FDR 3]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "AVL",
-          "is_home": false,
-          "fdr": 3
-        },
         {
           "gw": 10,
           "opponent": "NEW",
@@ -2203,7 +2113,7 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
+          "opponent": "BOU",
           "is_home": true,
           "fdr": 3
         },
@@ -2212,45 +2122,9 @@
           "opponent": "-",
           "is_home": true,
           "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 61,
-      "name": "Truffert",
-      "team": "BOU",
-      "position": "DEF",
-      "cost": 5.4,
-      "xp": 4.5,
-      "horizon_xp": 11.4,
-      "fixture": "LEE (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
         },
         {
-          "gw": 10,
-          "opponent": "IPS",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 11,
-          "opponent": "NFO",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -2258,21 +2132,15 @@
       ]
     },
     {
-      "id": 332,
-      "name": "Justin",
+      "id": 330,
+      "name": "Bogle",
       "team": "LEE",
       "position": "DEF",
-      "cost": 4.5,
-      "xp": 4.3,
-      "horizon_xp": 12.0,
-      "fixture": "BOU (A) [FDR 3]",
+      "cost": 4.8,
+      "xp": 4.4,
+      "horizon_xp": 10.1,
+      "fixture": "TOT (H) [FDR 2]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "BOU",
-          "is_home": false,
-          "fdr": 3
-        },
         {
           "gw": 10,
           "opponent": "TOT",
@@ -2287,12 +2155,18 @@
         },
         {
           "gw": 12,
+          "opponent": "COV",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -2300,41 +2174,41 @@
       ]
     },
     {
-      "id": 362,
-      "name": "Jacquet",
-      "team": "LIV",
+      "id": 331,
+      "name": "Gudmundsson",
+      "team": "LEE",
       "position": "DEF",
-      "cost": 5.1,
-      "xp": 4.3,
-      "horizon_xp": 11.0,
-      "fixture": "ARS (H) [FDR 4]",
+      "cost": 4.5,
+      "xp": 4.0,
+      "horizon_xp": 9.2,
+      "fixture": "TOT (H) [FDR 2]",
       "fixtures_5gw": [
         {
-          "gw": 9,
-          "opponent": "ARS",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
           "gw": 10,
-          "opponent": "CRY",
-          "is_home": false,
-          "fdr": 3
+          "opponent": "TOT",
+          "is_home": true,
+          "fdr": 2
         },
         {
           "gw": 11,
-          "opponent": "MUN",
-          "is_home": true,
+          "opponent": "CHE",
+          "is_home": false,
           "fdr": 4
         },
         {
           "gw": 12,
+          "opponent": "COV",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -2342,21 +2216,15 @@
       ]
     },
     {
-      "id": 504,
-      "name": "Vuskovic",
+      "id": 114,
+      "name": "Boscagli",
       "team": "BHA",
       "position": "DEF",
-      "cost": 5.2,
-      "xp": 4.3,
-      "horizon_xp": 14.5,
-      "fixture": "MCI (A) [FDR 5]",
+      "cost": 4.5,
+      "xp": 4.0,
+      "horizon_xp": 10.1,
+      "fixture": "BRE (H) [FDR 3]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
-        },
         {
           "gw": 10,
           "opponent": "BRE",
@@ -2371,7 +2239,7 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
+          "opponent": "NEW",
           "is_home": true,
           "fdr": 3
         },
@@ -2380,41 +2248,41 @@
           "opponent": "-",
           "is_home": true,
           "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
         }
       ]
     },
     {
-      "id": 277,
-      "name": "Egan",
-      "team": "HUL",
+      "id": 566,
+      "name": "Silva",
+      "team": "BOU",
       "position": "DEF",
-      "cost": 4.1,
-      "xp": 4.3,
-      "horizon_xp": 9.0,
-      "fixture": "IPS (H) [FDR 2]",
+      "cost": 5.0,
+      "xp": 3.9,
+      "horizon_xp": 9.9,
+      "fixture": "IPS (A) [FDR 2]",
       "fixtures_5gw": [
         {
-          "gw": 9,
+          "gw": 10,
           "opponent": "IPS",
-          "is_home": true,
+          "is_home": false,
           "fdr": 2
         },
         {
-          "gw": 10,
-          "opponent": "ARS",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
           "gw": 11,
-          "opponent": "BHA",
+          "opponent": "NFO",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 12,
-          "opponent": "-",
-          "is_home": true,
+          "opponent": "FUL",
+          "is_home": false,
           "fdr": 3
         },
         {
@@ -2422,25 +2290,25 @@
           "opponent": "-",
           "is_home": true,
           "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
         }
       ]
     },
     {
-      "id": 592,
-      "name": "Ouattara",
+      "id": 304,
+      "name": "O'Shea",
       "team": "IPS",
       "position": "DEF",
       "cost": 4.0,
-      "xp": 4.1,
-      "horizon_xp": 10.4,
-      "fixture": "HUL (A) [FDR 2]",
+      "xp": 3.9,
+      "horizon_xp": 9.5,
+      "fixture": "BOU (H) [FDR 3]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "HUL",
-          "is_home": false,
-          "fdr": 2
-        },
         {
           "gw": 10,
           "opponent": "BOU",
@@ -2455,12 +2323,18 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
+          "opponent": "AVL",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -2468,41 +2342,167 @@
       ]
     },
     {
-      "id": 356,
-      "name": "Virgil",
-      "team": "LIV",
+      "id": 254,
+      "name": "Robinson",
+      "team": "FUL",
       "position": "DEF",
-      "cost": 6.4,
-      "xp": 4.1,
-      "horizon_xp": 10.5,
-      "fixture": "ARS (H) [FDR 4]",
+      "cost": 4.4,
+      "xp": 3.8,
+      "horizon_xp": 8.5,
+      "fixture": "NEW (H) [FDR 3]",
       "fixtures_5gw": [
         {
-          "gw": 9,
-          "opponent": "ARS",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
           "gw": 10,
-          "opponent": "CRY",
-          "is_home": false,
+          "opponent": "NEW",
+          "is_home": true,
           "fdr": 3
         },
         {
           "gw": 11,
-          "opponent": "MUN",
-          "is_home": true,
-          "fdr": 4
+          "opponent": "MCI",
+          "is_home": false,
+          "fdr": 5
         },
         {
           "gw": 12,
-          "opponent": "-",
+          "opponent": "BOU",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 229,
+      "name": "Tarkowski",
+      "team": "EVE",
+      "position": "DEF",
+      "cost": 6.2,
+      "xp": 3.8,
+      "horizon_xp": 8.2,
+      "fixture": "COV (H) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "COV",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "BRE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "LIV",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 151,
+      "name": "Acheampong",
+      "team": "CHE",
+      "position": "DEF",
+      "cost": 4.5,
+      "xp": 3.7,
+      "horizon_xp": 10.0,
+      "fixture": "SUN (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "SUN",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "LEE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "NFO",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "name": "Van Hecke",
+      "team": "TOT",
+      "position": "DEF",
+      "cost": 4.9,
+      "xp": 3.6,
+      "horizon_xp": 10.3,
+      "fixture": "LEE (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "LEE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "IPS",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "SUN",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -2515,372 +2515,36 @@
       "team": "BOU",
       "position": "MID",
       "cost": 6.5,
-      "xp": 7.8,
-      "horizon_xp": 19.5,
-      "fixture": "LEE (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "IPS",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 11,
-          "opponent": "NFO",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 53,
-      "name": "Manzambi",
-      "team": "AVL",
-      "position": "MID",
-      "cost": 6.1,
-      "xp": 7.0,
-      "horizon_xp": 15.8,
-      "fixture": "FUL (H) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "FUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "MUN",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 11,
-          "opponent": "SUN",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 156,
-      "name": "Neto",
-      "team": "CHE",
-      "position": "MID",
-      "cost": 6.6,
-      "xp": 6.2,
-      "horizon_xp": 16.1,
-      "fixture": "MUN (H) [FDR 4]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "MUN",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 10,
-          "opponent": "SUN",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 400,
-      "name": "Doku",
-      "team": "MCI",
-      "position": "MID",
-      "cost": 7.5,
-      "xp": 6.2,
+      "xp": 6.1,
       "horizon_xp": 15.6,
-      "fixture": "BHA (H) [FDR 3]",
+      "fixture": "IPS (A) [FDR 2]",
       "fixtures_5gw": [
         {
-          "gw": 9,
-          "opponent": "BHA",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
           "gw": 10,
-          "opponent": "NFO",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "FUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 45,
-      "name": "McGinn",
-      "team": "AVL",
-      "position": "MID",
-      "cost": 5.4,
-      "xp": 5.9,
-      "horizon_xp": 13.3,
-      "fixture": "FUL (H) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "FUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "MUN",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 11,
-          "opponent": "SUN",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 101,
-      "name": "Henderson",
-      "team": "CHE",
-      "position": "MID",
-      "cost": 4.9,
-      "xp": 5.8,
-      "horizon_xp": 14.9,
-      "fixture": "MUN (H) [FDR 4]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "MUN",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 10,
-          "opponent": "SUN",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 455,
-      "name": "Tonali",
-      "team": "TOT",
-      "position": "MID",
-      "cost": 5.3,
-      "xp": 5.4,
-      "horizon_xp": 12.9,
-      "fixture": "CRY (H) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "CRY",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "LEE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
           "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 286,
-      "name": "Belloumi",
-      "team": "HUL",
-      "position": "MID",
-      "cost": 5.2,
-      "xp": 5.2,
-      "horizon_xp": 11.6,
-      "fixture": "IPS (H) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "ARS",
           "is_home": false,
-          "fdr": 5
+          "fdr": 2
         },
         {
           "gw": 11,
-          "opponent": "BHA",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 399,
-      "name": "Cherki",
-      "team": "MCI",
-      "position": "MID",
-      "cost": 8.0,
-      "xp": 5.1,
-      "horizon_xp": 12.9,
-      "fixture": "BHA (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "BHA",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
           "opponent": "NFO",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "FUL",
           "is_home": false,
           "fdr": 3
         },
         {
-          "gw": 11,
-          "opponent": "FUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -2893,16 +2557,10 @@
       "team": "MUN",
       "position": "MID",
       "cost": 7.9,
-      "xp": 5.1,
-      "horizon_xp": 14.3,
-      "fixture": "CHE (A) [FDR 4]",
+      "xp": 5.5,
+      "horizon_xp": 13.2,
+      "fixture": "AVL (H) [FDR 3]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "CHE",
-          "is_home": false,
-          "fdr": 4
-        },
         {
           "gw": 10,
           "opponent": "AVL",
@@ -2917,12 +2575,18 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
+          "opponent": "BRE",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -2930,41 +2594,41 @@
       ]
     },
     {
-      "id": 183,
-      "name": "Rudoni",
-      "team": "COV",
+      "id": 156,
+      "name": "Neto",
+      "team": "CHE",
       "position": "MID",
-      "cost": 4.9,
-      "xp": 5.0,
-      "horizon_xp": 12.6,
-      "fixture": "SUN (H) [FDR 3]",
+      "cost": 6.6,
+      "xp": 5.1,
+      "horizon_xp": 13.8,
+      "fixture": "SUN (A) [FDR 3]",
       "fixtures_5gw": [
         {
-          "gw": 9,
-          "opponent": "SUN",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
           "gw": 10,
-          "opponent": "EVE",
+          "opponent": "SUN",
           "is_home": false,
           "fdr": 3
         },
         {
           "gw": 11,
-          "opponent": "CRY",
+          "opponent": "LEE",
           "is_home": true,
-          "fdr": 2
+          "fdr": 3
         },
         {
           "gw": 12,
+          "opponent": "NFO",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -2977,16 +2641,10 @@
       "team": "EVE",
       "position": "MID",
       "cost": 6.6,
-      "xp": 4.7,
-      "horizon_xp": 13.3,
-      "fixture": "NEW (A) [FDR 3]",
+      "xp": 5.0,
+      "horizon_xp": 11.4,
+      "fixture": "COV (H) [FDR 2]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "NEW",
-          "is_home": false,
-          "fdr": 3
-        },
         {
           "gw": 10,
           "opponent": "COV",
@@ -3001,12 +2659,18 @@
         },
         {
           "gw": 12,
+          "opponent": "LIV",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -3014,41 +2678,41 @@
       ]
     },
     {
-      "id": 261,
-      "name": "Iwobi",
-      "team": "FUL",
+      "id": 129,
+      "name": "Ayari",
+      "team": "BHA",
       "position": "MID",
       "cost": 5.4,
-      "xp": 4.7,
-      "horizon_xp": 12.1,
-      "fixture": "AVL (A) [FDR 3]",
+      "xp": 4.8,
+      "horizon_xp": 12.2,
+      "fixture": "BRE (H) [FDR 3]",
       "fixtures_5gw": [
         {
-          "gw": 9,
-          "opponent": "AVL",
-          "is_home": false,
+          "gw": 10,
+          "opponent": "BRE",
+          "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 10,
+          "gw": 11,
+          "opponent": "HUL",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
           "opponent": "NEW",
           "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 11,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
-          "gw": 12,
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -3056,125 +2720,41 @@
       ]
     },
     {
-      "id": 453,
-      "name": "Barnes",
-      "team": "NEW",
+      "id": 124,
+      "name": "Groß",
+      "team": "BHA",
       "position": "MID",
-      "cost": 6.1,
-      "xp": 4.7,
-      "horizon_xp": 11.1,
-      "fixture": "EVE (H) [FDR 3]",
+      "cost": 6.2,
+      "xp": 4.8,
+      "horizon_xp": 12.1,
+      "fixture": "BRE (H) [FDR 3]",
       "fixtures_5gw": [
         {
-          "gw": 9,
-          "opponent": "EVE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
           "gw": 10,
-          "opponent": "FUL",
-          "is_home": false,
+          "opponent": "BRE",
+          "is_home": true,
           "fdr": 3
         },
         {
           "gw": 11,
-          "opponent": "ARS",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 86,
-      "name": "Lewis-Potter",
-      "team": "BRE",
-      "position": "MID",
-      "cost": 5.5,
-      "xp": 4.6,
-      "horizon_xp": 10.9,
-      "fixture": "NFO (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "NFO",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "BHA",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 11,
-          "opponent": "EVE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 67,
-      "name": "Rayan",
-      "team": "BOU",
-      "position": "MID",
-      "cost": 6.3,
-      "xp": 4.5,
-      "horizon_xp": 11.2,
-      "fixture": "LEE (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "IPS",
+          "opponent": "HUL",
           "is_home": false,
           "fdr": 2
         },
         {
-          "gw": 11,
-          "opponent": "NFO",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
           "gw": 12,
-          "opponent": "-",
+          "opponent": "NEW",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -3182,41 +2762,41 @@
       ]
     },
     {
-      "id": 405,
-      "name": "N.Gonzalez",
-      "team": "NEW",
+      "id": 400,
+      "name": "Doku",
+      "team": "MCI",
       "position": "MID",
-      "cost": 5.5,
-      "xp": 4.3,
-      "horizon_xp": 10.3,
-      "fixture": "EVE (H) [FDR 3]",
+      "cost": 7.5,
+      "xp": 4.7,
+      "horizon_xp": 12.6,
+      "fixture": "NFO (A) [FDR 3]",
       "fixtures_5gw": [
         {
-          "gw": 9,
-          "opponent": "EVE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
           "gw": 10,
-          "opponent": "FUL",
+          "opponent": "NFO",
           "is_home": false,
           "fdr": 3
         },
         {
           "gw": 11,
-          "opponent": "ARS",
+          "opponent": "FUL",
           "is_home": true,
-          "fdr": 4
+          "fdr": 2
         },
         {
           "gw": 12,
+          "opponent": "ARS",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -3229,16 +2809,10 @@
       "team": "CHE",
       "position": "MID",
       "cost": 8.1,
-      "xp": 4.3,
-      "horizon_xp": 11.1,
-      "fixture": "MUN (H) [FDR 4]",
+      "xp": 4.6,
+      "horizon_xp": 12.6,
+      "fixture": "SUN (A) [FDR 3]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "MUN",
-          "is_home": true,
-          "fdr": 4
-        },
         {
           "gw": 10,
           "opponent": "SUN",
@@ -3253,12 +2827,18 @@
         },
         {
           "gw": 12,
+          "opponent": "NFO",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -3266,41 +2846,377 @@
       ]
     },
     {
-      "id": 514,
-      "name": "Tel",
-      "team": "TOT",
+      "id": 261,
+      "name": "Iwobi",
+      "team": "FUL",
       "position": "MID",
-      "cost": 5.6,
-      "xp": 4.3,
-      "horizon_xp": 10.2,
-      "fixture": "CRY (H) [FDR 2]",
+      "cost": 5.4,
+      "xp": 4.5,
+      "horizon_xp": 10.5,
+      "fixture": "NEW (H) [FDR 3]",
       "fixtures_5gw": [
         {
-          "gw": 9,
-          "opponent": "CRY",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
           "gw": 10,
-          "opponent": "LEE",
-          "is_home": false,
+          "opponent": "NEW",
+          "is_home": true,
           "fdr": 3
         },
         {
           "gw": 11,
-          "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
+          "opponent": "MCI",
+          "is_home": false,
+          "fdr": 5
         },
         {
           "gw": 12,
-          "opponent": "-",
+          "opponent": "BOU",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "name": "Gomez",
+      "team": "BHA",
+      "position": "MID",
+      "cost": 5.0,
+      "xp": 4.5,
+      "horizon_xp": 11.2,
+      "fixture": "BRE (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "BRE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "HUL",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "NEW",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Manzambi",
+      "team": "AVL",
+      "position": "MID",
+      "cost": 6.1,
+      "xp": 4.3,
+      "horizon_xp": 12.6,
+      "fixture": "MUN (A) [FDR 4]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "MUN",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 11,
+          "opponent": "SUN",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "IPS",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 264,
+      "name": "Bobb",
+      "team": "FUL",
+      "position": "MID",
+      "cost": 5.5,
+      "xp": 4.3,
+      "horizon_xp": 9.9,
+      "fixture": "NEW (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "NEW",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "MCI",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 12,
+          "opponent": "BOU",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 428,
+      "name": "Cunha",
+      "team": "MUN",
+      "position": "MID",
+      "cost": 7.8,
+      "xp": 4.1,
+      "horizon_xp": 9.7,
+      "fixture": "AVL (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "AVL",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "LIV",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 12,
+          "opponent": "BRE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "name": "Palmer",
+      "team": "CHE",
+      "position": "MID",
+      "cost": 9.8,
+      "xp": 4.1,
+      "horizon_xp": 11.1,
+      "fixture": "SUN (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "SUN",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "LEE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "NFO",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 399,
+      "name": "Cherki",
+      "team": "MCI",
+      "position": "MID",
+      "cost": 8.0,
+      "xp": 3.9,
+      "horizon_xp": 10.5,
+      "fixture": "NFO (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "NFO",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "FUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "ARS",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Rice",
+      "team": "ARS",
+      "position": "MID",
+      "cost": 7.4,
+      "xp": 3.8,
+      "horizon_xp": 8.6,
+      "fixture": "HUL (H) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "HUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "MCI",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "name": "Hinshelwood",
+      "team": "BHA",
+      "position": "MID",
+      "cost": 5.9,
+      "xp": 3.8,
+      "horizon_xp": 9.4,
+      "fixture": "BRE (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "BRE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "HUL",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "NEW",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -3313,16 +3229,10 @@
       "team": "IPS",
       "position": "MID",
       "cost": 5.5,
-      "xp": 4.2,
-      "horizon_xp": 10.8,
-      "fixture": "HUL (A) [FDR 2]",
+      "xp": 3.7,
+      "horizon_xp": 9.2,
+      "fixture": "BOU (H) [FDR 3]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "HUL",
-          "is_home": false,
-          "fdr": 2
-        },
         {
           "gw": 10,
           "opponent": "BOU",
@@ -3337,12 +3247,102 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
+          "opponent": "AVL",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 452,
+      "name": "Bruno G.",
+      "team": "ARS",
+      "position": "MID",
+      "cost": 6.7,
+      "xp": 3.7,
+      "horizon_xp": 8.5,
+      "fixture": "HUL (H) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "HUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "MCI",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 183,
+      "name": "Rudoni",
+      "team": "COV",
+      "position": "MID",
+      "cost": 4.9,
+      "xp": 3.6,
+      "horizon_xp": 10.1,
+      "fixture": "EVE (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "EVE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "CRY",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "LEE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -3355,16 +3355,10 @@
       "team": "MCI",
       "position": "FWD",
       "cost": 15.8,
-      "xp": 9.9,
-      "horizon_xp": 24.9,
-      "fixture": "BHA (H) [FDR 3]",
+      "xp": 7.2,
+      "horizon_xp": 19.2,
+      "fixture": "NFO (A) [FDR 3]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "BHA",
-          "is_home": true,
-          "fdr": 3
-        },
         {
           "gw": 10,
           "opponent": "NFO",
@@ -3379,12 +3373,18 @@
         },
         {
           "gw": 12,
+          "opponent": "ARS",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -3397,16 +3397,10 @@
       "team": "BOU",
       "position": "FWD",
       "cost": 6.3,
-      "xp": 8.1,
-      "horizon_xp": 20.4,
-      "fixture": "LEE (H) [FDR 3]",
+      "xp": 6.2,
+      "horizon_xp": 16.1,
+      "fixture": "IPS (A) [FDR 2]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
         {
           "gw": 10,
           "opponent": "IPS",
@@ -3421,54 +3415,18 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 166,
-      "name": "N.Jackson",
-      "team": "AVL",
-      "position": "FWD",
-      "cost": 6.9,
-      "xp": 7.0,
-      "horizon_xp": 15.9,
-      "fixture": "FUL (H) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
           "opponent": "FUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "MUN",
           "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 11,
-          "opponent": "SUN",
-          "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 12,
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -3481,16 +3439,10 @@
       "team": "LIV",
       "position": "FWD",
       "cost": 9.1,
-      "xp": 6.8,
-      "horizon_xp": 17.0,
-      "fixture": "ARS (H) [FDR 4]",
+      "xp": 5.5,
+      "horizon_xp": 14.4,
+      "fixture": "CRY (A) [FDR 3]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "ARS",
-          "is_home": true,
-          "fdr": 4
-        },
         {
           "gw": 10,
           "opponent": "CRY",
@@ -3505,12 +3457,312 @@
         },
         {
           "gw": 12,
+          "opponent": "EVE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "name": "Kostoulas",
+      "team": "BHA",
+      "position": "FWD",
+      "cost": 5.8,
+      "xp": 4.7,
+      "horizon_xp": 11.8,
+      "fixture": "BRE (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "BRE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "HUL",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "NEW",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
           "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 166,
+      "name": "N.Jackson",
+      "team": "AVL",
+      "position": "FWD",
+      "cost": 6.9,
+      "xp": 4.5,
+      "horizon_xp": 13.5,
+      "fixture": "MUN (A) [FDR 4]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "MUN",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 11,
+          "opponent": "SUN",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "IPS",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 346,
+      "name": "Calvert-Lewin",
+      "team": "LEE",
+      "position": "FWD",
+      "cost": 6.1,
+      "xp": 4.2,
+      "horizon_xp": 9.9,
+      "fixture": "TOT (H) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "TOT",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "CHE",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 12,
+          "opponent": "COV",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 249,
+      "name": "Barry",
+      "team": "EVE",
+      "position": "FWD",
+      "cost": 5.6,
+      "xp": 3.8,
+      "horizon_xp": 8.5,
+      "fixture": "COV (H) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "COV",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "BRE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "LIV",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Gyökeres",
+      "team": "ARS",
+      "position": "FWD",
+      "cost": 7.0,
+      "xp": 3.3,
+      "horizon_xp": 7.5,
+      "fixture": "HUL (H) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "HUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "MCI",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 599,
+      "name": "Cherif",
+      "team": "COV",
+      "position": "FWD",
+      "cost": 5.0,
+      "xp": 2.8,
+      "horizon_xp": 7.9,
+      "fixture": "EVE (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "EVE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "CRY",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "LEE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 640,
+      "name": "Flemming",
+      "team": "IPS",
+      "position": "FWD",
+      "cost": 5.5,
+      "xp": 2.8,
+      "horizon_xp": 6.8,
+      "fixture": "BOU (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "BOU",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "TOT",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "AVL",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -3523,16 +3775,10 @@
       "team": "BRE",
       "position": "FWD",
       "cost": 7.8,
-      "xp": 4.3,
-      "horizon_xp": 10.2,
-      "fixture": "NFO (H) [FDR 3]",
+      "xp": 2.7,
+      "horizon_xp": 7.7,
+      "fixture": "BHA (A) [FDR 4]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "NFO",
-          "is_home": true,
-          "fdr": 3
-        },
         {
           "gw": 10,
           "opponent": "BHA",
@@ -3547,54 +3793,18 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 599,
-      "name": "Cherif",
-      "team": "COV",
-      "position": "FWD",
-      "cost": 5.0,
-      "xp": 4.1,
-      "horizon_xp": 10.4,
-      "fixture": "SUN (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "SUN",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "EVE",
+          "opponent": "MUN",
           "is_home": false,
-          "fdr": 3
+          "fdr": 4
         },
         {
-          "gw": 11,
-          "opponent": "CRY",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -3607,16 +3817,10 @@
       "team": "TOT",
       "position": "FWD",
       "cost": 7.0,
-      "xp": 4.1,
-      "horizon_xp": 9.8,
-      "fixture": "CRY (H) [FDR 2]",
+      "xp": 2.7,
+      "horizon_xp": 7.5,
+      "fixture": "LEE (A) [FDR 3]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "CRY",
-          "is_home": true,
-          "fdr": 2
-        },
         {
           "gw": 10,
           "opponent": "LEE",
@@ -3631,12 +3835,312 @@
         },
         {
           "gw": 12,
+          "opponent": "SUN",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
         },
         {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "name": "Georginio",
+      "team": "BHA",
+      "position": "FWD",
+      "cost": 5.3,
+      "xp": 2.6,
+      "horizon_xp": 6.5,
+      "fixture": "BRE (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "BRE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "HUL",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "NEW",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
           "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 194,
+      "name": "Thomas-Asante",
+      "team": "COV",
+      "position": "FWD",
+      "cost": 5.0,
+      "xp": 2.5,
+      "horizon_xp": 7.2,
+      "fixture": "EVE (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "EVE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "CRY",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "LEE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 526,
+      "name": "Solanke",
+      "team": "TOT",
+      "position": "FWD",
+      "cost": 5.8,
+      "xp": 2.5,
+      "horizon_xp": 7.0,
+      "fixture": "LEE (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "LEE",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "IPS",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "SUN",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 223,
+      "name": "Mateta",
+      "team": "CRY",
+      "position": "FWD",
+      "cost": 6.3,
+      "xp": 2.4,
+      "horizon_xp": 6.6,
+      "fixture": "LIV (H) [FDR 4]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "LIV",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 11,
+          "opponent": "COV",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "HUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 316,
+      "name": "Emersonn",
+      "team": "IPS",
+      "position": "FWD",
+      "cost": 5.5,
+      "xp": 2.4,
+      "horizon_xp": 5.9,
+      "fixture": "BOU (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "BOU",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "TOT",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "AVL",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Havertz",
+      "team": "ARS",
+      "position": "FWD",
+      "cost": 7.4,
+      "xp": 2.2,
+      "horizon_xp": 5.0,
+      "fixture": "HUL (H) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "HUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "MCI",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 569,
+      "name": "Gonzalo",
+      "team": "FUL",
+      "position": "FWD",
+      "cost": 6.0,
+      "xp": 2.2,
+      "horizon_xp": 5.0,
+      "fixture": "NEW (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "NEW",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "MCI",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 12,
+          "opponent": "BOU",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -3649,16 +4153,10 @@
       "team": "HUL",
       "position": "FWD",
       "cost": 5.5,
-      "xp": 3.9,
-      "horizon_xp": 8.7,
-      "fixture": "IPS (H) [FDR 2]",
+      "xp": 2.1,
+      "horizon_xp": 6.6,
+      "fixture": "ARS (A) [FDR 5]",
       "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
-        },
         {
           "gw": 10,
           "opponent": "ARS",
@@ -3673,92 +4171,8 @@
         },
         {
           "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 346,
-      "name": "Calvert-Lewin",
-      "team": "LEE",
-      "position": "FWD",
-      "cost": 6.1,
-      "xp": 3.9,
-      "horizon_xp": 10.7,
-      "fixture": "BOU (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "BOU",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "TOT",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 11,
-          "opponent": "CHE",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 526,
-      "name": "Solanke",
-      "team": "TOT",
-      "position": "FWD",
-      "cost": 5.8,
-      "xp": 3.9,
-      "horizon_xp": 9.2,
-      "fixture": "CRY (H) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
           "opponent": "CRY",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "LEE",
           "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
           "fdr": 3
         },
         {
@@ -3766,423 +4180,9 @@
           "opponent": "-",
           "is_home": true,
           "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 138,
-      "name": "Kostoulas",
-      "team": "BHA",
-      "position": "FWD",
-      "cost": 5.8,
-      "xp": 3.8,
-      "horizon_xp": 12.1,
-      "fixture": "MCI (A) [FDR 5]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
         },
         {
-          "gw": 10,
-          "opponent": "BRE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "HUL",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 194,
-      "name": "Thomas-Asante",
-      "team": "COV",
-      "position": "FWD",
-      "cost": 5.0,
-      "xp": 3.6,
-      "horizon_xp": 9.1,
-      "fixture": "SUN (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "SUN",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "EVE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "CRY",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 249,
-      "name": "Barry",
-      "team": "EVE",
-      "position": "FWD",
-      "cost": 5.6,
-      "xp": 3.4,
-      "horizon_xp": 9.6,
-      "fixture": "NEW (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "NEW",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "COV",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 11,
-          "opponent": "BRE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 640,
-      "name": "Flemming",
-      "team": "IPS",
-      "position": "FWD",
-      "cost": 5.5,
-      "xp": 2.7,
-      "horizon_xp": 6.9,
-      "fixture": "HUL (A) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "HUL",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "BOU",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "TOT",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 316,
-      "name": "Emersonn",
-      "team": "IPS",
-      "position": "FWD",
-      "cost": 5.5,
-      "xp": 2.5,
-      "horizon_xp": 6.5,
-      "fixture": "HUL (A) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "HUL",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "BOU",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "TOT",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 25,
-      "name": "Gyökeres",
-      "team": "ARS",
-      "position": "FWD",
-      "cost": 7.0,
-      "xp": 2.5,
-      "horizon_xp": 7.3,
-      "fixture": "LIV (A) [FDR 4]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "LIV",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 10,
-          "opponent": "HUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 11,
-          "opponent": "NEW",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 223,
-      "name": "Mateta",
-      "team": "CRY",
-      "position": "FWD",
-      "cost": 6.3,
-      "xp": 2.3,
-      "horizon_xp": 6.3,
-      "fixture": "TOT (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "TOT",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "LIV",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 11,
-          "opponent": "COV",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 552,
-      "name": "Brobbey",
-      "team": "SUN",
-      "position": "FWD",
-      "cost": 5.7,
-      "xp": 2.3,
-      "horizon_xp": 5.7,
-      "fixture": "COV (A) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "COV",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 10,
-          "opponent": "CHE",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 11,
-          "opponent": "AVL",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 569,
-      "name": "Gonzalo",
-      "team": "FUL",
-      "position": "FWD",
-      "cost": 6.0,
-      "xp": 2.1,
-      "horizon_xp": 5.5,
-      "fixture": "AVL (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "AVL",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "NEW",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 167,
-      "name": "Delap",
-      "team": "NFO",
-      "position": "FWD",
-      "cost": 5.4,
-      "xp": 2.0,
-      "horizon_xp": 5.2,
-      "fixture": "BRE (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 9,
-          "opponent": "BRE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 10,
-          "opponent": "MCI",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 11,
-          "opponent": "BOU",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
+          "gw": 14,
           "opponent": "-",
           "is_home": true,
           "fdr": 3
@@ -4190,7 +4190,7 @@
       ]
     }
   ],
-  "briefing": "إليك التقرير التكتيكي الشامل للجولة رقم 9 الصادر عن محرك التحليل الإحصائي والقواعد الذهبية:\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب (AGGRESSIVE Strategy)\nبناءً على الترتيب الحالي (**10,618,666**)، لا مجال للتحفظ أو اللعب الدفاعي التقليدي؛ التكتيك المعتمد هو **الهجومي التعويضي (AGGRESSIVE)** القائم على مبدأ \"نقاط اليوم قبل الغد\". الموقف يتطلب التضحية باللاعبين المتراجعين وتفعيل خيار الخصم السلبي (-4 Hit) باحترافية، لاقتناص فارق النقاط (Upside) وتجاوز المنافسين في سلم الترتيب العام بسرعة وحسم.\n\n---\n\n### 2. مدى مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance)\nأظهرت القرارات التزاماً صارماً ومبرهناً بالقواعد التاريخية المستخرجة من المحرك:\n*   **جدوى الخصم السلبي (-4 Hit):** تتوافق التضحية بـ 4 نقاط تماماً مع قاعدة المحرك التي تؤكد أن أخذ السالب يُعد مثالياً رياضياً للوصول إلى الانفجار المرجو (+10.8 نقطة صافي ربح فوري للتبديلات المثالية). دمج التبديلين يمنحنا قفزة في النقاط المتوقعة المباشرة من (3.0 xP) للاعبين المباعين إلى (10.6 xP) للقادمين، مما يغطي تكلفة التبديل (-4) ويحقق فارقاً إيجابياً فورياً.\n*   **استراتيجية الكابتن:** اختيار **Tavernier** ككابتن يطابق القاعدة الذهبية المثبتة بثقة 80%، والتي تنص على أن الكباتن الأكثر كفاءة يبلغ متوسط سعرهم **£6.5m** (حيث يُختار الكباتن الأغلى من £9.5m في 20% فقط من الجولات المثالية).\n*   **هيكلية خط الوسط والأسعار:** يمتلك الفريق خط وسط متفجراً (Palmer, Mbeumo, Tavernier, Barcola)، وهو ما يتماشى مع قاعدة تخصيص الميزانية التي تمنح الأولوية لوسط الملعب بنسبة 39.8% من الإنفاق الأساسي. كما أن التعاقد مع أغطية دفاعية بسعر أقل من £6.0m يطبق قاعدة كفاءة الأسعار (2.69 نقطة لكل مليون).\n\n---\n\n### 3. التحليل الرياضي والتكتيكي للتبديلات (-4 Hit)\n*   🔴 **بيع Calafiori (xP: 2.5) ──► 🟢 شراء Konsa (xP: 5.9 | £4.7m):** التخلص من Calafiori قرار حتمي نظرًا لتراجع انتاجيته ومخاطر تدويره (Flop). الشراء يمنح الفريق استقرارًا دفاعيًا ومعدل نقاط متوقعة مرتفع جداً يتجاوز ضعف اللاعب المباع.\n*   🔴 **بيع Thomas (xP: 0.5) ──► 🟢 شراء Bassey (xP: 4.7 | £4.5m):** بيع Thomas يعالج عبء اللاعبين غير المنتجين في التشكيلة، بينما Bassey يمثل خيار خياراً دفاعياً أساسياً بتكلفة ممتازة ومعدل xP تصاعدي.\n*   **المحصلة على مدار 3 جولات:** التبديلات لا توفر فقط ربحاً فورياً متوقعاً في هذه الجولة، بل تضمن مساراً أسهل وتدوير خيارات أكثر مرونة وتؤمن خط الدفاع على المدى المتوسط، مما يبرر تكلفة الخصم السلبي (-4) بنجاح.\n\n---\n\n### 4. مبررات شارة القيادة (C) والنائب (VC)\n*   **الكابتن (C): Tavernier (BOU) - xP: 7.8**\n    تم التكبيت بناءً على أعلى سقف نقاط متوقع (xP) في الفريق لهذا الأسبوع، وتطبيقاً لقاعدة الكابتن الذهبية التي تفضل أصحاب السعر المتوسط الأكثر فاعلية مقارنة بالأسماء الرنانة المرهقة للميزانية.\n*   **النائب (VC): Isak (LIV) - xP: 6.8**\n    تم اختيار Isak كنائب قائد ليوفر غطاءً أمنياً متيناً بخيار هجومي ذي سقف عالٍ ومعدل استقرار مرتفع في حال حدوث أي مفاجآت غير متوقعة لمشارك Tavernier.\n\n---\n\n### 5. نصيحة استراتيجية الخواص وحماية ميزانية الفريق\n*   **إدارة الخواص (Chips):** يمتلك الفريق ترسانة كاملة (Wildcard x2, Free Hit x1, Triple Captain x1, Bench Boost x1). التوصية الصارمة هي **الاحتفاظ بالخواص كاملة** واستغلالها حتمياً في الجولات المزدوجة (DGW) والبلانك (BGW) لضمان تحقيق أعلى عائد تراكمي للنقاط.\n*   **إدارة السيولة:** الاحتفاظ برصيد ضخم في البنك قدره **£7.2m** يمنح الفريق مرونة تكتيكية فائقة للتحرك السريع في الجولات القادمة لضم أي نصر مستجد أو استعادة أسماء كبرى دون الحاجة لإجراء عمليات جراحية مكلفة في التشكيلة.\n\n---\n\n### الخلاصة التنفيذية\nالتشكيلة الحالية (3-4-3) بدخول Konsa و Bassey، مع منح شارة القيادة لـ Tavernier، تضع الفريق في أفضل موقع هيكلي ورياضي ممكن لاختراق الترتيب والقفز بقوة. التضحية بنقاط التبديل (-4) تم تعويضها حسابياً في خط الدفاع، وتوفر الميزانية (£7.2m) يمنحنا اليد العليا للجولات المقبلة. اعتمد التشكيل بثقة وانطلق نحو تقليص الفارق.",
+  "briefing": "إليك التقرير التكتيكي الشامل والجريء للجولة رقم 10، المصمم وفق أقصى معايير البرمجة الرياضية ومحرك القواعد الذهبية التاريخية (Hindsight Gold Rules):\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب (Aggressive Rank Recovery)\n* **الموقف الحالي:** الترتيب العام (10,618,666) يتطلب تفعيل استراتيجية **\"الهجوم التعويضي المكثف\" (AGGRESSIVE)**. الالتزام بالحلول التقليدية لن يقفز بالفريق في الترتيب؛ الهدف الآن هو اقتناص النقاط غير المباشرة (Differentials) واستغلال القيمة المرتفعة للبنك.\n* **التشكيل المعتمد (3-5-2):** اعتمدنا تشكيل 3-5-2 كونه يمنح الفريق الكثافة التهديفية الأكبر في خط الوسط، وهو التشكيل الأنسب تكتيكياً لإحداث الفارق وحصد نقاط الأهداف والتمريرات الحاسمة بأعلى نسبة متوقعة.\n\n---\n\n### 2. مدى مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance)\nأظهرت قراراتنا توافقاً تاماً مع القواعد التاريخية المثبتة للنظام:\n* **توزيع الميزانية (Position Allocation):** تنص القاعدة الذهبية على ضرورة منح خط الوسط الأولوية المباشرة بحصة تصل إلى **39.8%** من ميزانية التشكيل الأساسي. بتواجد خماسي قوي (Palmer, Rogers, Tavernier, Mbeumo, Hinshelwood)، نلتزم حرفياً بتعظيم العائد الرقمي من المراكز الأكثر إنتاجية.\n* **شرعنة الخصم (-4 Hit):** أثبت المحرك التاريخي أن أخذ السوالب (+20 Hits عبر الموسم) كان الخيار الرياضي الأمثل لتحقيق قفزات انفجارية. التبديل لا يُقاس بالجولة الحالية فقط، بل بصافي الربح التراكمي.\n* **استراتيجية الكابتن:** توافق اختيار الكابتن بنسبة **80%** مع قاعدة اختيار لاعبين بسعر متوسط (متوسط £6.5m)، حيث أثبتت البيانات التاريخية أن الكباتن غير الخارقين (Non-Premiums) يحققون فارقاً نقطياً هائلاً في جولات محددة مقارنة بسعرهم.\n\n---\n\n### 3. التحليل الرياضي والتكتيكي للتبديلات وتبرير الـ Hit (-4)\n* **🔴 بيع Bassey ──► 🟢 شراء White (£5.4m | ARS):** \n  * *السبب التكتيكي:* بيع مدافع بسقف نقاط محدود لحساب مدافع يمتلك أعلى معدل نقاط متوقعة (xP: 6.5) في الجولة أمام HUL على ملعبه. مباراة أرسنال تقدم فرصة نموذجية للخروج بنظافة شباك (Clean Sheet) مسجلة FDR [2].\n* **🔴 بيع Barcola ──► 🟢 شراء Rogers (£8.1m | CHE):** \n  * *السبب التكتيكي:* التخلص من Barcola (xP: 2.8) واستبداله بـ Rogers (xP: 4.6) الذي يدخل جدول مباريات سهلاً متتالياً (SUN, LEE, NFO).\n* **جدوى الخصم (-4 Hit) على مدار 3 جولات:**\n  * الجولة 10 تقدم فارق نقاط متوقعاً إيجابياً مباشر الصنع، وعلى مدار الجولات الثلاث القادمة، يتوقع أن يحصد التنائي (White + Rogers) ما يتجاوز **+14.5 نقطة** مقارنة بالثنائي المباع. هذا الفارق يتجاوز تكلفة السلب (-4) بمراحل ويحقق صافي مكسب تكتيكي مؤكد (+10.5 نقطة صافية).\n\n---\n\n### 4. مبررات شارة القيادة (C) والنائب (VC)\n* **الكابتن (C): Tavernier (BOU) [xP: 6.1]**\n  * يأتي الاختيار تطبيقاً للقاعدة الذهبية للقيادة؛ لاعب بسعر مثالي (£6.5m) يمتلك جدولاً ممتازاً ومساهمات هجومية عالية وركلات ثابتة. استهدافه ككابتن يوفر ميزة تفاضلية هائلة (Differential Captain) للقفز في الترتيب.\n* **النائب (VC): Mbeumo (MUN) [xP: 5.5]**\n  * تم اختياره كنائب كابتن لتوفير الأمان الرقمي في حال حدوث أي غياب مفاجئ، نظراً لثبات مشاركته وسقفه التهديفي العالي.\n\n---\n\n### 5. استراتيجية الخواص وحماية ميزانية الفريق\n* **السيولة المالية (£6.2m):** إبقاء هذا المبلغ الضخم في البنك ليس هَدراً، بل هو قوة مالية مرنة تتيح لنا مناورة سريعة في الجولات القادمة لجلب أي لاعب سوبر (Premium) بنقرة واحدة دون الحاجة لإعادة هيكلة الفريق.\n* **إدارة الخواص (Chips):** الاحتفاظ بكافة الخواص (Wildcard x2, Free Hit, 3xC, Bench Boost) هو القرار الرياضي الصائب بنسبة 100%. القيمة القصوى لهذه الخواص تتضاعف رياضياً خلال جولات الحرمان والجولات المزدوجة (DGWs / BGWs) في النصف الثاني من الموسم.\n\n---\n\n### الخلاصة التنفيذية\nإن التشكيل الأساسي للجولة 10 يعكس فلسفة إدارة مخابراتية حاسمة: لا مكان للعواطف (\"Points are Points\"). التضحية بـ 4 نقاط خصم هي استثمار مدروس بعناية لتحسين معدل Points Per Million وتغطية خط الدفاع بالكامل بأقوى منظومة دفاعية (أرسنال)، مع تكثيف القدرة الهجومية في خط الوسط. نحن نلعب الآن باستراتيجية المخاطرة المحسوبة لاقتحام الترتيب العام بثبات وقوة.",
   "leagues": [],
   "eo_radar": {
     "threats": [
@@ -4229,20 +4229,28 @@
     ],
     "differentials": [
       {
-        "player": "Tavernier",
-        "team": "FPL",
-        "cost": 6.5,
-        "eo": 8,
-        "advantage": "💎 Huge Rank Boost",
-        "xp": 7.76
-      },
-      {
         "player": "Konsa",
         "team": "FPL",
         "cost": 4.7,
         "eo": 8,
         "advantage": "💎 Huge Rank Boost",
-        "xp": 5.91
+        "xp": 6.5
+      },
+      {
+        "player": "White",
+        "team": "FPL",
+        "cost": 5.4,
+        "eo": 8,
+        "advantage": "💎 Huge Rank Boost",
+        "xp": 6.5
+      },
+      {
+        "player": "Tavernier",
+        "team": "FPL",
+        "cost": 6.5,
+        "eo": 8,
+        "advantage": "💎 Huge Rank Boost",
+        "xp": 6.06
       },
       {
         "player": "Mbeumo",
@@ -4250,31 +4258,23 @@
         "cost": 7.9,
         "eo": 8,
         "advantage": "💎 Huge Rank Boost",
-        "xp": 5.09
+        "xp": 5.52
       },
       {
-        "player": "Tzolakis",
+        "player": "Verbruggen",
         "team": "FPL",
-        "cost": 4.7,
-        "eo": 3,
-        "advantage": "💎 Huge Rank Boost",
-        "xp": 4.92
-      },
-      {
-        "player": "Silva",
-        "team": "FPL",
-        "cost": 5.0,
+        "cost": 4.6,
         "eo": 8,
         "advantage": "💎 Huge Rank Boost",
         "xp": 4.88
       },
       {
-        "player": "Bassey",
+        "player": "Kostoulas",
         "team": "FPL",
-        "cost": 4.5,
+        "cost": 5.8,
         "eo": 8,
         "advantage": "💎 Huge Rank Boost",
-        "xp": 4.71
+        "xp": 4.69
       }
     ],
     "leagues": [],
@@ -4282,232 +4282,168 @@
   },
   "press_insights": [
     {
-      "player_id": 148,
-      "player_name": "Hato",
-      "fitness_sentiment": "ruled_out",
-      "minute_multiplier": 0.0,
-      "summary_ar": "تم استبعاده تماماً بسبب الإصابة مع تأكيد غيابه في تقارير الفريق الرسمية وتقدير فرصة لعبه بـ 0%.",
-      "summary_en": "Ruled out through injury with an unknown return date, confirmed at 0% playing chance.",
-      "risk_level": "CRITICAL",
-      "headline_reference": "Chelsea team news on Lacroix, Martinez, Caicedo, Hato and more"
-    },
-    {
-      "player_id": 165,
-      "player_name": "João Pedro",
-      "fitness_sentiment": "ruled_out",
-      "minute_multiplier": 0.0,
-      "summary_ar": "غائب رسميًا ومستبعد بداعي إصابة في الفخذ دون موعد محدد للعودة.",
-      "summary_en": "Officially sidelined with a thigh injury with no confirmed return date.",
-      "risk_level": "CRITICAL",
-      "headline_reference": "FPL Official Injury Update: Thigh injury"
-    },
-    {
-      "player_id": 483,
-      "player_name": "Ndoye",
-      "fitness_sentiment": "major_doubt",
-      "minute_multiplier": 0.3,
-      "summary_ar": "شكوك كبيرة حول جاهزيته لمواجهة برينتفورد بسبب إصابة في أوتار الركبة كما أكد المدرب أوليفر غلاسنر.",
-      "summary_en": "Major doubt for the trip to Brentford due to a hamstring injury as confirmed by Oliver Glasner.",
-      "risk_level": "HIGH",
-      "headline_reference": "FOREST PREVIEW | EVERYTHING YOU NEED TO KNOW ABOUT OUR TRIP TO BRENTFORD"
-    },
-    {
-      "player_id": 173,
-      "player_name": "Thomas",
-      "fitness_sentiment": "major_doubt",
-      "minute_multiplier": 0.3,
-      "summary_ar": "لديه شكوك كبيرة حول المشاركة بنسبة 50% بسبب إصابة في ربلة الساق (السمانة).",
-      "summary_en": "Flagged with a 50% chance of playing due to an ongoing calf issue.",
-      "risk_level": "HIGH",
-      "headline_reference": "FPL Official Injury Update: Calf injury"
-    },
-    {
-      "player_id": 650,
-      "player_name": "Affengruber",
-      "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.5,
-      "summary_ar": "غاب عن مواجهة الكأس ضد بالاس وهناك عدم يقين حول مشاركته أساسياً أمام أستون فيلا.",
-      "summary_en": "Remains a doubt after missing the midweek cup match; inclusion against Villa is uncertain.",
-      "risk_level": "MEDIUM",
-      "headline_reference": "Saturday night at Villa Park"
-    },
-    {
       "player_id": 8,
       "player_name": "Calafiori",
       "fitness_sentiment": "minor_doubt",
       "minute_multiplier": 0.75,
-      "summary_ar": "يعاني من مشكلة بسيطة في الورك ولديه فرصة 75% للمشاركة، قد يبدأ أو تدار دقائقه بحذر.",
-      "summary_en": "Carrying a hip knock with a 75% chance of playing; potential starter but could see managed minutes.",
+      "summary_ar": "يعاني من إصابة طفيفة في الورك وحظوظ مشاركته تقدر بنسبة 75%.",
+      "summary_en": "Carrying a hip injury with a 75% chance of playing according to official updates.",
       "risk_level": "MEDIUM",
-      "headline_reference": "FPL Official Injury Update: Hip injury"
+      "headline_reference": "FPL Status Flag: Hip injury - 75% chance of playing"
     },
     {
       "player_id": 13,
       "player_name": "Rice",
       "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.8,
-      "summary_ar": "انزعاج طفيف بنسبة جاهزية 75%، ومن المتوقع بشكل كبير أن يبدأ في خط وسط أرسنال.",
-      "summary_en": "Flagged with an unspecified knock at 75% chance, but expected to anchor Arsenal's midfield if cleared.",
+      "minute_multiplier": 0.85,
+      "summary_ar": "شكوك خفيفة بسبب إصابة غير محددة، ولكن نسبة مشاركته تبدو مرتفعة (75%).",
+      "summary_en": "Minor doubt due to an unspecified injury, but listed with a 75% chance of playing.",
       "risk_level": "MEDIUM",
-      "headline_reference": "FPL Official Injury Update: Unspecified injury"
+      "headline_reference": "FPL Status Flag: Unspecified injury - 75% chance of playing"
+    },
+    {
+      "player_id": 101,
+      "player_name": "Henderson",
+      "fitness_sentiment": "major_doubt",
+      "minute_multiplier": 0.5,
+      "summary_ar": "تعرض لوعكة صحية وتناول المدرب ألونسو سبب غيابه، مشاركته كأساسي محل شك.",
+      "summary_en": "Missed matches due to illness with Alonso commenting on his absence; starting status is uncertain.",
+      "risk_level": "HIGH",
+      "headline_reference": "Alonso explains Henderson absence against Man Utd"
     },
     {
       "player_id": 113,
       "player_name": "F.Kadıoğlu",
       "fitness_sentiment": "minor_doubt",
       "minute_multiplier": 0.75,
-      "summary_ar": "مدرج بعلامة شك 75% بسبب إصابة في الورك، موقفه البدني قيد التقييم النهائي قبل انطلاق الجولة.",
-      "summary_en": "Under evaluation with a hip complaint (75% flag); starting spot likely subject to late fitness test.",
+      "summary_ar": "إصابة في الورك تجعل مشاركته تحت التقييم بنسبة 75%.",
+      "summary_en": "Managing a hip injury; rated at a 75% chance of feature.",
       "risk_level": "MEDIUM",
-      "headline_reference": "FPL Official Injury Update: Hip injury"
+      "headline_reference": "FPL Status Flag: Hip injury - 75% chance of playing"
     },
     {
-      "player_id": 469,
-      "player_name": "N.Williams",
-      "fitness_sentiment": "fit_starter",
-      "minute_multiplier": 1.0,
-      "summary_ar": "أكد نوتنغهام فورست جاهزيته التامة بعد تعافيه وتدربه طوال الأسبوع عقب إصابة الكوع الأخيرة.",
-      "summary_en": "Cleared and fully fit to start having trained all week following a heavy landing on his elbow.",
-      "risk_level": "LOW",
-      "headline_reference": "FOREST PREVIEW | EVERYTHING YOU NEED TO KNOW ABOUT OUR TRIP TO BRENTFORD"
+      "player_id": 148,
+      "player_name": "Hato",
+      "fitness_sentiment": "ruled_out",
+      "minute_multiplier": 0.0,
+      "summary_ar": "مستبعد تماماً من المباراة بسبب إصابة مع عدم تحديد موعد العودة.",
+      "summary_en": "Ruled out with an unspecified injury and no confirmed return date.",
+      "risk_level": "CRITICAL",
+      "headline_reference": "FPL Status Flag: Unspecified injury - Unknown return date"
     },
     {
-      "player_id": 254,
-      "player_name": "Robinson",
-      "fitness_sentiment": "fit_starter",
-      "minute_multiplier": 1.0,
-      "summary_ar": "أساسي مضمون في مركز الظهير الأيسر لفولهام مع استمرار إيقاف رايان سيسينيون.",
-      "summary_en": "Guaranteed starter at left-back for Fulham with Sessegnon serving the final match of his suspension.",
-      "risk_level": "LOW",
-      "headline_reference": "Saturday night at Villa Park"
+      "player_id": 165,
+      "player_name": "João Pedro",
+      "fitness_sentiment": "ruled_out",
+      "minute_multiplier": 0.0,
+      "summary_ar": "مستبعد رسمياً بسبب إصابة في الفخذ بدون تحديد تاريخ للعودة.",
+      "summary_en": "Unavailable due to a thigh injury with an unknown timeline for recovery.",
+      "risk_level": "CRITICAL",
+      "headline_reference": "FPL Status Flag: Thigh injury - Unknown return date"
     },
     {
       "player_id": 166,
       "player_name": "N.Jackson",
       "fitness_sentiment": "fit_starter",
-      "minute_multiplier": 0.9,
-      "summary_ar": "في حالة تهديفية ممتازة مع إشادة خاصة من أوناي إيمري بالتزامه ومستواه المتصاعد.",
-      "summary_en": "In red-hot form with 4 goals in 4 games and heavily praised by Emery; nailed on to lead Villa's attack.",
+      "minute_multiplier": 1.0,
+      "summary_ar": "جاهز تماماً ويعيش فترة تألق هجومية ممتازة متطلعاً لمواصلة التسجيل أمام فولام.",
+      "summary_en": "Fully fit and in fine form, ready to lead the line against Fulham.",
       "risk_level": "LOW",
-      "headline_reference": "Emery looks ahead to Fulham encounter"
-    },
-    {
-      "player_id": 264,
-      "player_name": "Bobb",
-      "fitness_sentiment": "fit_starter",
-      "minute_multiplier": 0.9,
-      "summary_ar": "أحد أبرز العناصر الهجومية الأساسية لفولهام ويحتل صدارة الإحصائيات الهجومية في لمس الكرة داخل الصندوق.",
-      "summary_en": "Key attacking starter for Fulham, highlighted in tactical analysis for high penalty-box involvement.",
-      "risk_level": "LOW",
-      "headline_reference": "Saturday night at Villa Park"
+      "headline_reference": "Jackson aiming for more versus Fulham"
     }
   ],
   "press_wire": [
     {
-      "id": 4750878,
-      "title": "Saturday night at Villa Park",
-      "summary": "Fixtures Aston Villa Vs. Fulham - Sat, Oct 31 2026, 20:00 Aston Villa look to return to winning ways on Saturday night, entertaining Fulham at Villa Park. The Villans return to Premier League action on Halloween after exiting the Carabao Cup at the hands of Bournemouth in midweek, having secured consecutive league wins against Newcastle United and Manchester City. Unai Emery’s men will hope to make it three league wins in a row in B6, while extending their unbeaten league streak to five matches. Fulham also bowed out of the League Cup on Wednesday night, falling 1-0 at home to Crystal Palace having secured their first two wins of the Premier League season – over newly-promoted Hull City and Coventry City – in their two prior outings. Álvaro Arbeloa’s side sit 15th in the league table after eight matches, though like Villa, are also going in search of a third successive league triumph. Stats Aston Villa have lost just one of their 18 home Premier League matches against Fulham (W12 D5), a 2-1 defeat in April 2014. Fulham won their last Premier League game against Aston Villa and have registered consecutive wins against them just once before in the competition, winning both games in 2013/14. Villa boss Unai Emery has won eight of his nine Premier League matches against Fulham (L1), a points-per-game of 2.67; of managers to take charge of 5+ games against the Cottagers, only Pep Guardiola (3, won 12/12) and Mauricio Pochettino (3, won 6/6) have a higher ratio. The Villans are looking to win three consecutive Premier League matches for the first time since a run of eight in November and December last season. Fulham won none of their first six Premier League games this season (D2 L4) but have won each of their last two, 1-0 wins over Hull and Coventry. The only two Premier League sides to start with six winless games then win three in a row are Newcastle in 2003/04 and Stoke in 2015/16. Villa have only won two of their last 12 Premier League matches in August and September (D5 L5), compared to eight wins in their last 10 games across October and November (D1 L1). Fulham are looking for three Premier League wins in a row for the first time since December 2025, while they last achieved that without conceding a goal back in April 2019. Nicolas Jackson has scored four goals in his last four Premier League appearances for Villa, as many as he’d managed in his previous 24 games in the competition (4 in 21 for Chelsea, 0 in 3 for Villa). Only Man City duo Erling Haaland (2.92) and Rayan Cherki (2.32) have outperformed their xG more than Jackson this season (2.02). Fulham’s average possession (58%), successful passes per game (505) and passing accuracy (86.7%) in the Premier League this season are all their best totals on record since 2003/04. Two of the four players with the most touches in the opposition box in the Premier League this season are Fulham’s Josh King (52, 1st) and Oscar Bobb (43, 4th). King is having 7.1 per 90 minutes, with only one Fulham player on record (since 2008/09, 500+ mins played) averaging more in a season – Bobby Zamora in 2010/11 (8.6). The Last Meeting Villa fell to defeat in the last meeting between they and the West London outfit in April. With 2025/26 drawing to a close, Unai Emery’s men travelled to Craven Cottage and went down 1-0, as Ryan Sessengnon fired home two minutes before the break to seal three points. The result didn’t stop the Villans from reaching their goals for the season, as they secured Champions League football less than a month later. Team News There could be more changes for Unai Emery’s men, after the Villa boss rotated in midweek for Carabao Cup action. Matteo Ruggeri and Aaron Wan-Bissaka remain sidelined with injury, while Amadou Onana is a long-term absentee. Fulham will be without Ryan Sessegnon, who serves the final game of his three-match suspension, meaning Antonee Robinson should continue at left-back. It remains to be seen whether or not David Affengruber and Emile Smith Rowe will feature, having both missed the Carabao Cup defeat to Palace. Managers' Pre-Match Thoughts “Tomorrow, Fulham, prioritising Premier League clearly, and this is the message, because to keep our consistency, to keep our demands and work every day to get these demands to keep, to get this commitment to keep our consistency like we did the last year, each match is a test.” - Unai Emery “For us, it's a new challenge to beat a team like Aston Villa, and that is important for us to prove that we can beat anyone. So, yes, I think we will go there and we will give our best, thinking we can beat any team.” - Álvaro Arbeloa",
-      "date": "2026-10-31T08:00:00Z",
-      "url": "https://avfc.co.uk/news/2026/october/31/prematch-saturday-night-at-villa-park/",
+      "id": 4751678,
+      "title": "Andrews makes one change to Brentford's starting XI",
+      "summary": "",
+      "date": "2026-10-31T14:12:00Z",
+      "url": "https://www.brentfordfc.com/en/news/first-team-confirmed-brentford-v-nottingham-forest-premier-league-team-news-vitaly-janelt",
+      "matched_players": []
+    },
+    {
+      "id": 4751604,
+      "title": "TEAM NEWS | AINA STARTS AGAINST BRENTFORD",
+      "summary": "One change to starting XI Aina returns Listen to the action live on Forest TV Ola Aina returns to the Nottingham Forest starting XI for the fixture against Brentford in the only change from the side that picked up a point against Ipswich Town last time out in the Premier League. The defender takes the place of Daniel Muñoz, who drops to the substitutes’ bench at the Gtech Community Stadium. Dan Ndoye is fit enough to start in west London after Oliver Glasner confirmed the attacker was a doubt for the fixture. However, Nicolás Domínguez misses out on the matchday squad after missing our last Premier League game. Matz Sels keeps up his record of starting every Forest fixture this season behind a back three of Jair Cunha, Nikola Milenković and Murillo. Aina comes into the team at right wing-back, while Neco Williams starts on the left after recovering from injury against the Tractor Boys. Xaver Schlager and James McAtee continue their partnership in the middle of the park, with Ndoye starting alongside the Forest captain, Morgan Gibbs-White, in support of the attack. Liam Delap leads the line. Muñoz is on the Forest bench against the Bees. Supporters can listen to the action live on Forest TV, courtesy of BBC Radio Nottingham’s Colin Fray, from around 2pm GMT. Team news Forest Sels; Jair Cunha, Milenković, Murillo, Aina, Schlager, McAtee, Williams, Ndoye, Gibbs-White (C), Delap. Substitutes: John Victor; Diomande, Sangaré, Hudson-Odoi, Wood, Kalimuendo, Yates, Netz, Muñoz.",
+      "date": "2026-10-31T13:45:00Z",
+      "url": "https://www.nottinghamforest.co.uk/news/2026/october/31/team-news---aina-starts-against-brentford/",
       "matched_players": [
-        "raya",
-        "smith",
-        "rayan",
-        "robinson",
-        "bobb",
-        "affengruber",
-        "cherki",
-        "haaland",
+        "white"
+      ]
+    },
+    {
+      "id": 4751494,
+      "title": "Confirmed Brentford v Nottingham Forest team news: Andrews makes one change",
+      "summary": "Brentford head coach Keith Andrews makes one change from last Premier League starting XI for Nottingham Forest clash at Gtech Community Stadium",
+      "date": "2026-10-31T13:45:00Z",
+      "url": "https://www.brentfordfc.com/en/news/first-team-confirmed-brentford-v-nottingham-forest-premier-league-team-news-vitaly-janelt",
+      "matched_players": []
+    },
+    {
+      "id": 4751065,
+      "title": "Alonso explains Henderson absence against Man Utd",
+      "summary": "",
+      "date": "2026-10-31T12:14:00Z",
+      "url": "https://link.chelseafc.com/1WUW/nk7jlc9h",
+      "matched_players": [
+        "henderson"
+      ]
+    },
+    {
+      "id": 4751049,
+      "title": "Jackson aiming for more versus Fulham",
+      "summary": "Fixtures Aston Villa Vs. Fulham - Sat, Oct 31 2026, 20:00 Nicolas Jackson’s goals have been crucial for Aston Villa in recent weeks, and the striker is determined to keep his fine form going when Fulham come to town. The Senegalese bagged a brace via some clinical finishing against Manchester City last weekend, firing his side to a 2-1 victory in the Premier League. Jackson has scored seven times in 11 games since his summer move from Chelsea, and he wants more for himself and the team going forward. “Hopefully, there’s more to come and I’ll score more goals,” he said. “I’m just trying to play in my best level, helping the team defend and to score as well. “The most important thing is that the team win – that’s the biggest thing for me.” Jackson added: “It was a difficult start to the season. “We had a lot of new players and everything else. We’re just trying to build and to work together, keeping focused game-by-game. “That’s what we’re doing, so that’s the most important thing for us. Hopefully we can win more games.” The 25-year-old has been a great fit for Unai Emery’s team, leading the line with pace and skill, while also displaying a ruthless streak in front of goal. Jackson has settled quickly at Bodymoor Heath and is enjoying every aspect of life as a Villan. “It’s been amazing,” he reflected. “Amazing coach, the place, the players, the dressing room, the team – everything has been fantastic for me. “I’m very happy, and hopefully we can do amazing things together and win a lot of games and trophies.” Fulham are the visitors on Saturday as Villa aim to enjoy another fruitful day on home turf. It’s an opportunity for Jackson and co to continue their climb up the Premier League table, but he knows three points will not come easily against an improving opponent. “It’s a very important game,” he said. “They’re good opponents, a good team. Every game is important to us, so we’ll see how it goes against Fulham. “We’re trying to win every game, respecting the opponent and working hard to win as many games as we are doing.”",
+      "date": "2026-10-31T12:00:00Z",
+      "url": "https://avfc.co.uk/news/2026/october/31/prematch-nicolas-jackson-fulham/",
+      "matched_players": []
+    },
+    {
+      "id": 4750922,
+      "title": "Does Fernandes start? See Man Utd's line-up",
+      "summary": "",
+      "date": "2026-10-31T11:11:00Z",
+      "url": "https://www.manutd.com/en/news/united-side-to-face-chelsea-announced-31-oct-2026",
+      "matched_players": []
+    },
+    {
+      "id": 4750700,
+      "title": "You can still pick an FPL Challenge team for GW9 - CLICK HERE!",
+      "summary": "",
+      "date": "2026-10-30T13:34:00Z",
+      "url": "https://fplchallenge.premierleague.com/en/",
+      "matched_players": [
         "hall"
       ]
     },
     {
-      "id": 4750815,
-      "title": "WE NEED TO BE READY FOR A TOUGH GAME: TOM MALLINSON",
-      "summary": "Mallinson previews Subway Players Cup clash with Burnley Forest looking to build on positives from Newcastle Looking for more of the same in second meeting with the Clarets this season Tom Mallinson has said his side need to be ready for a tough game when Nottingham Forest face off against Burnley in the Subway Players Cup at the City Ground on Sunday; the second meeting between the sides at the World-Famous this season after last month's league meeting, in which the Reds came out on top. “Getting the home fans behind us is always a nice thing and they definitely had that opportunity at the weekend against Newcastle and 2,200 people was outstanding! It’s now for us to keep being exciting in what we do out on the pitch and how we prepare ourselves for that is to be ready for Burnley and if we do that and we can produce a really good performance, then we can definitely give the fans something to cheer about. We need to be ready for a tough game because Burnley won’t be happy to have lost the game to us in the league and in the cup we need to win a game and we haven’t been successful with that in the Villa game and the Sheffield United game. We want to make sure we’re more threatening in the final third. We had lots of chances against Burnley in the league. I think they will have definitely learnt from that game, as we have about how we can be better and I think that’s what we’ll take out for the rest of the week, it’s more what do we affect. We’re never too worried about what oppositions do, it’s about how we play and how we are, our style, both with and without the ball and how we conduct ourselves. That’s what our focus is and hopefully at the weekend we will put together a performance that gets us a win but that also puts a real stamp on about who we are as a team.\"",
-      "date": "2026-10-30T17:00:00Z",
-      "url": "https://www.nottinghamforest.co.uk/news/2026/october/30/we-need-to-be-ready-for-a-tough-game--tom-mallinson/",
-      "matched_players": [
-        "tel"
-      ]
-    },
-    {
-      "id": 4750813,
-      "title": "Villans prepare for Cottagers clash",
-      "summary": "Fixtures Aston Villa Vs. Fulham - Sat, Oct 31 2026, 20:00 Aston Villa finalised their preparations for Saturday’s visit of Fulham at Bodymoor Heath. Unai Emery’s men look to bounce back from exiting the Carabao Cup at Bournemouth on Wednesday when welcoming the Cottagers to Villa Park. Victory would see the Villans stretch their winning run in the Premier League to three matches. View a gallery of training images below…",
-      "date": "2026-10-30T16:45:00Z",
-      "url": "https://avfc.co.uk/news/2026/october/30/prematch-gallery-aston-villa-prepare-for-cottagers-clash/",
-      "matched_players": []
-    },
-    {
-      "id": 4750814,
-      "title": "Bournemouth tickets",
-      "summary": "Tickets for Fulham's fixture against AFC Bournemouth will go on sale next week! Join us in SW6 as we welcome The Cherries for Premier League action on Sunday 29th November, kick-off 2:05pm. Tickets for this fixture will go on sale to 2026/27 Members* from 9:30am on Tuesday 3rd November (one ticket per person). 2026/27 Season Ticket Holders will be able to purchase additional seats from 9:30am on Thursday 5th November (four tickets per person), before going on sale to Supporters with a Previous Booking History** from 9:30am on Monday 9th November (four tickets per person). Any remaining tickets will go on General Sale*** from 9:30am on Wednesday 11th November (four tickets per person). Tickets can be secured from Tuesday online at fulhamfc.com/tickets, from the Fulham FC Ticket Office in person (Mon-Fri, 9:30am-4:30pm) or by calling 0203 871 0810 (Mon-Fri, 9:30am-5pm). More information regarding on sale dates and pricing can be found here. BUY TICKETS FROM TUESDAY Important Information The 2026/27 season will see new Premier League requirements implemented for assigning tickets to supporters, with every seat sold being assigned to the individual who intends on attending the related match. Each attendee's name and contact details must be registered with the club. This means if a supporter purchases four tickets for a fixture, each ticket will need to be assigned to a unique client reference number. In the instance of a Season Ticket Holder purchasing additional tickets during their priority window, each ticket that they are purchasing will need to be assigned to each individual who intends on attending the related match. We therefore encourage all supporters planning on attending fixtures at Craven Cottage to keep their friends and family network updated to ensure they can easily assign tickets at the point of purchase. Supporters can follow our step-by-step guide on how to do this here. *2026/27 Membership must have been purchased prior to 5pm on Thursday 29th October in order to be eligible to purchase tickets during the Members' priority window. **To qualify for Booking History status, supporters must have purchased a Fulham FC Men's First Team match ticket since the 2021/22 Season. Booking History status is not valid if supporters have only previously purchased tickets against the same opposition, in this case AFC Bournemouth. You must have Booking History status prior to 5pm on Thursday 29th October in order to be eligible to purchase tickets during this window. ***Subject to postcode restrictions - Fulham FC will be monitoring bookings and any tickets purchased by supporters who live in the vicinity of Bournemouth (and local areas) who do not have a previous booking history with us, will be terminated.",
-      "date": "2026-10-30T16:38:11Z",
-      "url": "https://fulhamfc.co.uk/news/2026/october/30/bournemouth-tickets/",
-      "matched_players": []
-    },
-    {
-      "id": 4750789,
-      "title": "JAIR CUNHA NAMED IN BRAZIL SQUAD",
-      "summary": "Jair receives second Brazil call Defender named in November squad Brazil face Japan and Singapore in double-header Jair Cunha has received his second senior call-up to the Brazil squad. The Nottingham Forest defender received his first senior call-up before the last international period, making his senior international debut against Australia following an outstanding start to the Premier League season with the Reds. The defender earned three caps for Canarinho during the international period. Brazil travel to Japan and Singapore in November’s international period for two friendlies. Jair has made seven appearances in total for the Reds in 2026/27, taking his total to 22 in the Garibaldi in all competitions.",
-      "date": "2026-10-30T15:59:46Z",
-      "url": "https://www.nottinghamforest.co.uk/news/2026/october/30/jair-cunha-named-in-brazil-squad/",
-      "matched_players": [
-        "cunha"
-      ]
-    },
-    {
-      "id": 4750787,
-      "title": "In HD: Behind The Scenes As Everton Eliminate Newcastle",
-      "summary": "Everton reached the quarter-finals of the Carabao Cup with a satisfying 3-1 win over Newcastle United under the lights. Watch exclusive footage with the latest episode of In HD, presented by Hill Dickinson, via the player below – or click here to be redirected to YouTube.",
-      "date": "2026-10-30T15:45:00Z",
-      "url": "https://www.evertonfc.com/news/2026/october/30/in-hd--behind-the-scenes-as-everton-eliminate-newcastle/",
+      "id": 4750889,
+      "title": "Garner On Everton Goal Threat & 'Real Chance' Cup Verdict",
+      "summary": "James Garner believes Everton have a “real chance” of making their mark in the Carabao Cup this season after Thursday night’s excellent 3-1 victory over Newcastle United. Garner was on the scoresheet at Hill Dickinson Stadium, chipping in for his first goal of the season. With the Blues facing League Two’s Fleetwood Town in the quarter-finals of the competition in the next round, he believes the Blues should hold genuine belief they can go all the way in the competition. “It was important for us to get the win and to go into the next round,” Garner told evertontv. “I think if we would have heard at the start of the competition that we’d be in the quarter-finals and facing Fleetwood, we would have taken it. \"So, it's a real chance for us to actually do something with this cup. “It would be amazing for us as players, as a team, as a club, and for the fans as well, to hopefully go and bring some silverware back here.” Among the goalscorers on Thursday, Garner hopes to continue building confidence and fitness after overcoming a groin injury at the start of the campaign. “It’s always a good feeling when you score a goal,” he added. “Unfortunately, I don't score enough, which I need to start doing, but to score a goal and to put the team on the front foot is a good feeling. “Good performances and even something small – like a goal – does boost your confidence. I just need to stay positive. “I know I came back really early with my injury – probably a bit too early – but that just shows the type of person I am. “I want to be there for the lads, and that's what I have done. “I'm pushing every single day to be 100 per cent, and I hope everyone can see that.”",
+      "date": "2026-10-31T10:00:00Z",
+      "url": "https://www.evertonfc.com/news/2026/october/31/Garner-On-Everton-Goal----Real-Chance--Cup-Verdict/",
       "matched_players": [
         "hill"
       ]
     },
     {
-      "id": 4750790,
-      "title": "FOREST PREVIEW | EVERYTHING YOU NEED TO KNOW ABOUT OUR TRIP TO BRENTFORD",
-      "summary": "Forest face Brentford Reds searching for third successive win in west London Both sides are on 16 wins against each other going into the clash Nottingham Forest head to Brentford in search of a third successive win at the Gtech Community Stadium on Saturday 31 October. The Reds have won each of our last two trips to the stadium 2-0; goals from Ola Aina and Anthony Elanga secured the win in 2024/25, while Igor Jesus and Taiwo Awoniyi were on the scoresheet last season in west London. Forest also claimed maximum points in the first meeting between the clubs last season with a 3-1 win at the City Ground in what was Keith Andrews’ first game in charge of the Bees. Last time out, the Reds went ahead on the road against Ipswich Town through Neco Williams, only for Julio Enciso to level before half-time, meaning the spoils were shared in Suffolk. Brentford, meanwhile, are without a win since mid-September, when the Bees emphatically saw off Chelsea on home soil 3-0. In total, the sides have met 43 times, with both clubs winning 16 of those games. The remaining 11 have ended all square. Our opponents After finishing Keith Andrews’ maiden campaign as Brentford’s head coach in ninth place in the Premier League, the Bees currently occupy sixth in the early-season table, having lost just one of their opening eight league matches. That loss came in their last home outing, when Liverpool claimed a 2-1 win, a result arguably influenced by Yehor Yarmolyuk’s sending-off on the stroke of half-time. The wins have come against Tottenham Hotspur and Chelsea on home soil, with both games ending 3-0 in the Bees’ favour. The remaining matches have all ended in draws. Brentford exited the Carabao Cup in midweek, losing 3-2 away at Sunderland despite a late fightback after finding themselves 3-0 down at the Stadium of Light. The key OPTA stats and facts Brentford were unbeaten in each of their first four Premier League games against Nottingham Forest (W2 D2) but have now lost three of their last four (W1). Nottingham Forest have won their last two league games against Brentford, only once registering three in a row, doing so in the Championship between February 2019 and January 2020. Nottingham Forest have lost their last five league matches played on Halloween, a run stretching back to the first Premier League season in 1992-93 when they lost 1-0 to Ipswich. Brentford are one of two teams (along with Man City) to have scored in all eight of their Premier League games so far this season. Their 1-1 draw with Hull last time out was the only time they’ve not scored first. Brentford have lost just one of their last nine Premier League home games (W3 D5), though it was their last one against Liverpool. They’ve not lost consecutive league matches at the Gtech Community Stadium since January/February 2025, the first of which was against Liverpool. Nottingham Forest have won just five of their last 23 Premier League games (D10 L8), the joint fewest of any ever-present side since the start of February, along with Tottenham. No side has scored fewer Premier League goals so far in 2026-27 than Nottingham Forest (6). Forest have an xG of 13.5 so far this term, giving them the biggest xG underperformance (-7.5). Nottingham Forest have scored 36 Premier League goals in 2026, with 28 of them coming away from home (78%). It’s the highest percentage of goals scored in away games by any top-flight team in a year, of sides who featured in the top division for the full calendar year. Brentford’s Jaidon Anthony has scored three goals in four Premier League appearances against Nottingham Forest, including in both home games against them for Bournemouth in 2022/23 and Burnley in 2025/26, both in 1-1 draws. Morgan Gibbs-White is one of three players with 20+ chances created in the Premier League this season (20), with no player creating more big chances than the Nottingham Forest captain (7). Team news Oliver Glasner says Dan Ndoye and Nicolás Domínguez are doubts for the trip to Brentford, as discussed in his pre-match press conference. However, the Reds are boosted by the return of Neco Williams, who trained all week after a heavy landing on his elbow against Ipswich. Brentford will be without Rico Henry and Fábio Carvalho at the Gtech Community Stadium while Yehor Yarmolyuk is suspended after being sent off against Liverpool. Kaye Furo is also likely to be on the sidelines while Antoni Milambo and Josh Dasilva are still recovering from injury. What they're saying “I’m expecting the toughest game we’ve had in the last seven to eight days. “They’ve played very well in games and have some magnificent players who can hurt you if given the opportunity. “If you look at the table, you would get a false sense of where they’re at with their performances. If they continue performing the way they are, they will be in a very different position.” Oliver Glasner's pre-match press conference Kit confirmations Our adidas away kit will make its second appearance of the season against the Bees, but with a slightly altered look. Our starting goalkeeper will wear the blue kit, as seen on Trentside this season. Brentford will sport their traditional red and white stripes, with accompanying black shorts and socks. Last five against Brentford 25/01/2026 – Brentford 0-2 Forest 17/08/2025 – Forest 3-1 Brentford 01/05/2025 – Forest 0-2 Brentford 21/12/2024 – Brentford 0-2 Forest 20/01/2024 – Brentford 3-2 Forest Previous meeting In the middle Darren England will officiate our trip to Brentford on Saturday 31 October. Scott Ledger and Mat Wilkes are the assistant referees. Farai Hallam is the fourth official, while Andrew Kitchen and Tom Nield are the VAR and assistant VAR, respectively.",
-      "date": "2026-10-30T15:00:00Z",
-      "url": "https://www.nottinghamforest.co.uk/news/2026/october/30/forest-preview---everything-you-need-to-know-about-our-trip-to-brentford/",
+      "id": 4750890,
+      "title": "Last Chance To Save 20% On Enchanted Lights at Hill Dickinson Stadium",
+      "summary": "Anyone looking to enjoy a magical festive experience at Hill Dickinson Stadium is being reminded that they have until Sunday 1 November to take advantage of a special 20% Early Bird discount on Enchanted Lights tickets. The brand-new festive experience will transform Everton's waterfront home into a spectacular Christmas destination from Friday 11 December to Wednesday 23 December, with dazzling lights, festive entertainment and activities for visitors of all ages. Visitors will begin their journey on Everton Way, following an illuminated trail filled with festive displays and photo opportunities before entering the stadium through the West Stand Players' Entrance. Following in the footsteps of Everton's stars, guests will make their way through the Players' Tunnel and into the stadium, where they will take their seats pitchside for a Christmas light show. The festive experience continues at 'Christmas in The Yard', a specially created Christmas village offering seasonal food, drinks and live entertainment. Families can also add a visit to Santa's Grotto, giving younger visitors the opportunity to meet Father Christmas. CLICK HERE SAVE 20% - EARLY BIRD OFFER ENDS SUNDAY! Supporters and visitors booking by Sunday 1 November can enjoy 20% off adult and junior tickets by entering the promotional code HDSLIGHTS at checkout. With the discount applied, tickets cost: Adults: £16 (normally £20) Juniors (aged 3–16): £10 (normally £12.50) Infants (under 3): Free Visits to Santa's Grotto can be added for £10 per child with discount applied if booked prior to Sunday. Free parking at Nelson Dock is also available for guests with valid event tickets, while flexible booking allows visitors to change their booking up to 36 hours before their selected time. Don't miss the opportunity to make magical Christmas memories at Hill Dickinson Stadium and save on tickets before the Early Bird offer ends. CLICK HERE TO BOOK ENCHANTED LIGHTS AND SAVE 20% Enchanted Lights is just one part of The Magic of Christmas at Hill Dickinson Stadium this December, with visitors also able to enjoy Breakfast with Santa, Après-Ski Christmas Party Nights and a special Christmas Bottomless Brunch at Domingo’s Bar & Grill. CLICK HERE TO EXPLORE THE FULL MAGIC OF CHRISTMAS PROGRAMME",
+      "date": "2026-10-31T09:00:00Z",
+      "url": "https://www.evertonfc.com/news/2026/october/31/last-chance-to-save-20--on-enchanted-lights-at-hill-dickinson-stadium/",
+      "matched_players": [
+        "hill"
+      ]
+    },
+    {
+      "id": 4750892,
+      "title": "B TEAM CLAIM WIN OVER LUTON IN PREMIER LEAGUE CUP",
+      "summary": "Nottingham Forest B Team claimed a third Premier League Cup group-stage victory over Luton Town after late heroics from Fuad Smith. Forest found themselves two to the good with 15 minutes to go after goals from Archie Whitehall and Smith, but a late fightback from Luton saw them level the scoring in stoppage time. Up stepped Smith in the 93rd minute, however, to steal the three points back and make it 3-2. It was an open and entertaining affair early on, with both sides creating opportunities. Sonny Nolan was inches away from putting the young Reds ahead after a sweeping counter-attack, seeing his first-time effort dribble just wide. Alvin Isufi came close to punishing the missed chance moments later down the other end when he fired wide from range. A flurry of chances came before the break, with Forest pushing to take the lead. Jayden Powell’s clever run was rewarded when he knocked the ball round the goalkeeper but could only find the side netting from a tight angle. Chinaza Nwosu and Blaine McClure also had chances but were unable to really trouble the Luton 'keeper. Just three minutes into the second period, Archie Whitehall got himself on the scoresheet to put Forest ahead. The young Reds looked dangerous on the counter all night and capitalised in the 71st minute, when Fuad Smith raced through on goal before a composed finish just moments after coming off the bench to double his side’s lead. Luton fought back from two down as Dempsey Crace headed home in the 76th minute before finding the equaliser in the 90th minute after a clinical Dawid Gawel finish. Super-sub Smith stole the glory just three minutes later, snatching the three points in the most dramatic fashion, taking advantage of an error at the back and slotting home coolly. The young Reds return to Premier League Cup action next month, where they will welcome Newcastle United on 18 November.",
+      "date": "2026-10-31T08:02:40Z",
+      "url": "https://www.nottinghamforest.co.uk/news/2026/october/31/b-team-claim-win-over-luton-in-premier-league-cup/",
       "matched_players": [
         "white",
-        "silva",
-        "enciso",
-        "hall",
-        "ndoye"
-      ]
-    },
-    {
-      "id": 4750786,
-      "title": "Emery looks ahead to Fulham encounter",
-      "summary": "Fixtures Aston Villa Vs. Fulham - Sat, Oct 31 2026, 20:00 Unai Emery met with the media on Friday afternoon, to look ahead to Aston Villa’s Premier League meeting with Fulham. The Villans take on the Cottagers at Villa Park on Saturday (ko 8pm), looking to secure a third successive league win. And the Villa boss sat down for his pre-match media briefing at Bodymoor Heath, discussing his side’s Halloween opponents, squad depth, Nicolas Jackson’s form and more. Here are the key lines from Friday’s press conference. On Fulham... “They are playing really well. They are competing fantastic (in) the last matches, even losing against Crystal Palace in the Carabao Cup. In the league, they are really fantastic. “Of course, (Álvaro) Arbeloa, he has experience in England. He played here, he has experience in football for a long time. He had very good coaches. “Now, how they are playing, is really like a coach with experience and a coach managing tactically a lot of things.” On Nicolas Jackson... “He’s showing us, and I knew him like that, being very, very professional, focusing football as a priority in his life. “He has this commitment with football himself, to try to get his responsibility as high as possible, to try to get his best with the team here, with Aston Villa. “I am happy, but as well, I know he has a lot of work to do as well, to try to get better, to try to be consistent. “He needed some adaptation at the beginning, but he’s still needing some adaptation to do with us, and keep going forward.” On squad depth and handling a busy period... “The only focus is tomorrow, the match tomorrow. But, of course, how we are doing our way at the beginning of the season, even in the pre-season, everything has a plan, and the plan is try to play focusing each match, each competition, with the players (who) are ready and available to play, with the objective to have as well, some players (who) need confidence, time, adapting us, time to get fit, time after some injuries. “So, how we are building the team is a process, and the process is going, but each match is the objective. “If I am thinking, if we are thinking, after the match tomorrow against Fulham, we are making a mistake, and we are wrong, completely wrong. “So, tomorrow, Fulham, prioritising Premier League clearly, and this is the message, because to keep our consistency, to keep our demands and work every day to get these demands to keep, to get this commitment to keep our consistency like we did the last year, each match is a test. “In Premier League, we are (in a) lack of points. Of course, we are progressing, we are getting better, but if we want to be consistent like the last year and (in) the top positions, we must focus tomorrow (on) the match, prioritising 100% and focusing, respecting them, preparing the game, playing so, so focused and intense the match requires, and respecting them.” On Leon Goretzka... “He started being available two weeks ago, and progressively playing minutes, understanding our tactical idea, adapting of us, and we are adapting as well to him, because his quality is clear. “His capacity to help us with his experience, we’ll see it, but we believe. He played in the starting 11 on Wednesday, one step forward for him to get better, to understand us better, and being ready and better for the next matches.” On whether Villa can challenge the 'Big 6'... “It depends. We showed it the last years we were, but this year, until now, not. “Of course, other teams, they are not being consistent, they are not being in front of us yet, like Tottenham and Manchester United. “So, we must focus our own way, and of course, our objective is clear: try to be in front of those contenders still to be in the top six, and adding as well there, Newcastle. “But there are other teams every year, not as a surprise, because every year they are as well performing very well, like Brighton, like Bournemouth, like Nottingham Forest – not exactly this year, but they were being fantastic as well – Brentford. “I think the Premier League is very, very difficult because there are a lot of teams, not in the contender positions at the beginning of the season to be in the top positions, but every year, they are always fighting with the teams who should be there. “We are one of the teams, and last year, we achieved it. So, this is the target. This is, as well, the process. We want to try to get consistency, but each year is a test. “And now, in the day nine, we are going to play tomorrow. Our test is Fulham, because they have 8 points, we have 11 points. “Fulham as well, the last year, they were being consistent in the in the table, in the medium positions, but always fighting to be close with the top seven, top six teams.” On Taylor Harwood-Bellis... “Very good. Taylor is a fantastic guy, very professional. He knows how he has to progress with us, understanding everything every day, practising, then playing matches like he’s playing – friendly matches, or two matches in Carabao Cup, Coventry and on Wednesday against Bournemouth, he played a good match. “I like how he is focusing his progression and practising every day, because he knows now, he has to prioritise practising every day to show his progress, and he is doing it.” Click below now to watch Emery's full pre-match press conference via VillaTV...",
-      "date": "2026-10-30T14:40:00Z",
-      "url": "https://avfc.co.uk/news/2026/october/30/prematch-emery-looks-ahead-to-fulham-encounter/",
-      "matched_players": [
-        "hall",
-        "tel"
-      ]
-    },
-    {
-      "id": 4750729,
-      "title": "Iraola on whether Szoboszlai and Munoz are available against Arsenal",
-      "summary": "",
-      "date": "2026-10-30T14:29:00Z",
-      "url": "https://www.liverpoolfc.com/news/andoni-iraola-press-conference-every-word-liverpool-arsenal-injuries-analysis",
-      "matched_players": []
-    },
-    {
-      "id": 4750723,
-      "title": "Mohamed Belloumi Giveaway - Terms and Conditions",
-      "summary": "",
-      "date": "2026-09-14T09:37:00Z",
-      "url": "https://www.premierleague.com/en/news/4750723",
-      "matched_players": [
-        "belloumi"
+        "hall"
       ]
     }
   ]
