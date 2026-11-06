@@ -7,13 +7,13 @@
     "rank": 10658225,
     "total_points": 259,
     "team_value": 101.1,
-    "bank": 6.1,
+    "bank": 8.7,
     "free_transfers": 1,
     "dry_run": false,
-    "last_updated": "2026-11-06T16:03:17.394064Z"
+    "last_updated": "2026-11-06T16:39:37.289659Z"
   },
-  "formation": "4-4-2",
-  "total_xp": 71.5,
+  "formation": "5-3-2",
+  "total_xp": 73.8,
   "captain": {
     "id": 68,
     "name": "Tavernier",
@@ -160,9 +160,9 @@
       "position": "DEF",
       "cost": 4.8,
       "xp": 6.5,
-      "horizon_xp": 16.1,
+      "horizon_xp": 16.7,
       "fixture": "HUL (H) [FDR 2]",
-      "expected_minutes": 74.8,
+      "expected_minutes": 88.0,
       "is_captain": false,
       "is_vice_captain": false,
       "fixtures_5gw": [
@@ -200,10 +200,10 @@
       "press_insight": {
         "player_id": 31,
         "player_name": "Konsa",
-        "fitness_sentiment": "managed_minutes",
-        "minute_multiplier": 0.85,
-        "summary_ar": "تم التطرق لحالته البدنية في المؤتمر الصحفي للمدرب، مع توقع مشاركته بانتظام تحت إدارة الدقائق.",
-        "summary_en": "Mentioned in the pre-match press conference update; expected to be available with potentially managed minutes.",
+        "fitness_sentiment": "fit_starter",
+        "minute_multiplier": 1.0,
+        "summary_ar": "تم التطرق لحالته في المؤتمر الصحفي للمدرب وتأكدت جاهزيته للبدء.",
+        "summary_en": "Addressed in press conference updates; cleared and expected to maintain full starting minutes.",
         "risk_level": "LOW",
         "headline_reference": "Arteta's update on Konsa, Saka and Saliba"
       }
@@ -347,6 +347,52 @@
       "press_insight": null
     },
     {
+      "id": 334,
+      "name": "Muharemović",
+      "team": "LEE",
+      "position": "DEF",
+      "cost": 5.1,
+      "xp": 5.2,
+      "horizon_xp": 12.7,
+      "fixture": "TOT (H) [FDR 3]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "TOT",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "CHE",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 12,
+          "opponent": "COV",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
       "id": 68,
       "name": "Tavernier",
       "team": "BOU",
@@ -393,6 +439,52 @@
       "press_insight": null
     },
     {
+      "id": 53,
+      "name": "Manzambi",
+      "team": "AVL",
+      "position": "MID",
+      "cost": 6.2,
+      "xp": 6.0,
+      "horizon_xp": 17.1,
+      "fixture": "MUN (A) [FDR 3]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "MUN",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "SUN",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "IPS",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
       "id": 427,
       "name": "Mbeumo",
       "team": "MUN",
@@ -422,107 +514,6 @@
           "opponent": "BRE",
           "is_home": true,
           "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 14,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
-      "id": 40,
-      "name": "Rogers",
-      "team": "CHE",
-      "position": "MID",
-      "cost": 8.2,
-      "xp": 4.8,
-      "horizon_xp": 13.4,
-      "fixture": "SUN (A) [FDR 3]",
-      "expected_minutes": 88.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 10,
-          "opponent": "SUN",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "NFO",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 14,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": {
-        "player_id": 40,
-        "player_name": "Rogers",
-        "fitness_sentiment": "fit_starter",
-        "minute_multiplier": 1.0,
-        "summary_ar": "جاهز تمامًا وتم استدعاؤه لتمثيل المنتخب الوطني، في حالة بدنية وفنية ممتازة.",
-        "summary_en": "Fully fit and rewarded with a national team call-up; fully expected to feature prominently.",
-        "risk_level": "LOW",
-        "headline_reference": "Chelsea attacker called up by England"
-      }
-    },
-    {
-      "id": 154,
-      "name": "Palmer",
-      "team": "CHE",
-      "position": "MID",
-      "cost": 9.8,
-      "xp": 4.1,
-      "horizon_xp": 11.3,
-      "fixture": "SUN (A) [FDR 3]",
-      "expected_minutes": 88.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 10,
-          "opponent": "SUN",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "NFO",
-          "is_home": false,
-          "fdr": 2
         },
         {
           "gw": 13,
@@ -680,6 +671,52 @@
       "press_insight": null
     },
     {
+      "id": 40,
+      "name": "Rogers",
+      "team": "CHE",
+      "position": "MID",
+      "cost": 8.2,
+      "xp": 4.8,
+      "horizon_xp": 13.4,
+      "fixture": "SUN (A) [FDR 3]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "SUN",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "LEE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "NFO",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
       "id": 123,
       "name": "Hinshelwood",
       "team": "BHA",
@@ -770,79 +807,33 @@
         }
       ],
       "press_insight": null
-    },
-    {
-      "id": 279,
-      "name": "Ajayi",
-      "team": "HUL",
-      "position": "DEF",
-      "cost": 4.2,
-      "xp": 1.9,
-      "horizon_xp": 6.3,
-      "fixture": "ARS (A) [FDR 5]",
-      "expected_minutes": 88.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 10,
-          "opponent": "ARS",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
-          "gw": 11,
-          "opponent": "BHA",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 12,
-          "opponent": "CRY",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 14,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
     }
   ],
   "transfers": [
     {
       "player_out": {
-        "name": "Kostoulas",
-        "team": "BHA",
-        "xp": 4.8
+        "name": "Palmer",
+        "team": "CHE",
+        "xp": 4.1
       },
       "player_in": {
-        "name": "N.Jackson",
+        "name": "Manzambi",
         "team": "AVL",
-        "cost": 7.0,
-        "xp": 6.4
+        "cost": 6.2,
+        "xp": 6.0
       }
     },
     {
       "player_out": {
-        "name": "Tarkowski",
-        "team": "EVE",
-        "xp": 4.9
+        "name": "Ajayi",
+        "team": "HUL",
+        "xp": 1.9
       },
       "player_in": {
-        "name": "Van Hecke",
-        "team": "TOT",
-        "cost": 5.0,
-        "xp": 6.0
+        "name": "Muharemović",
+        "team": "LEE",
+        "cost": 5.1,
+        "xp": 5.2
       }
     }
   ],
@@ -1814,6 +1805,48 @@
       ]
     },
     {
+      "id": 31,
+      "name": "Konsa",
+      "team": "ARS",
+      "position": "DEF",
+      "cost": 4.8,
+      "xp": 6.5,
+      "horizon_xp": 16.7,
+      "fixture": "HUL (H) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "HUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 11,
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "MCI",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 504,
       "name": "Vuskovic",
       "team": "BHA",
@@ -1840,48 +1873,6 @@
           "opponent": "NEW",
           "is_home": true,
           "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 14,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 31,
-      "name": "Konsa",
-      "team": "ARS",
-      "position": "DEF",
-      "cost": 4.8,
-      "xp": 6.5,
-      "horizon_xp": 16.1,
-      "fixture": "HUL (H) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 10,
-          "opponent": "HUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 11,
-          "opponent": "NEW",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "MCI",
-          "is_home": true,
-          "fdr": 4
         },
         {
           "gw": 13,
@@ -3914,48 +3905,6 @@
       ]
     },
     {
-      "id": 346,
-      "name": "Calvert-Lewin",
-      "team": "LEE",
-      "position": "FWD",
-      "cost": 6.1,
-      "xp": 2.8,
-      "horizon_xp": 6.9,
-      "fixture": "TOT (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 10,
-          "opponent": "TOT",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 11,
-          "opponent": "CHE",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 12,
-          "opponent": "COV",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 13,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 14,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
       "id": 640,
       "name": "Flemming",
       "team": "IPS",
@@ -4166,6 +4115,48 @@
       ]
     },
     {
+      "id": 346,
+      "name": "Calvert-Lewin",
+      "team": "LEE",
+      "position": "FWD",
+      "cost": 6.1,
+      "xp": 2.5,
+      "horizon_xp": 6.1,
+      "fixture": "TOT (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 10,
+          "opponent": "TOT",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 11,
+          "opponent": "CHE",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 12,
+          "opponent": "COV",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 569,
       "name": "Gonzalo",
       "team": "FUL",
@@ -4208,7 +4199,7 @@
       ]
     }
   ],
-  "briefing": "إليك التقرير التكتيكي الشامل والجريء للجولة رقم 10، المُعد بناءً على المحرك الإحصائي ونموذج البرمجة الرياضية ومحرك القواعد الذهبية التاريخية:\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب (Tactical Plan & Rank Strategy)\n* **الوضع الحالي:** الترتيب (10,658,225) يتطلب تفعيل استراتيجية **AGGRESSIVE (الهجوم التعويضي)** دون تردد. البقاء في المناطق الخالية من المخاطرة لن يقفز بك في الترتيب العام.\n* **الفلسفة التكتيكية:** الاعتماد على تشكيل (4-4-2) مرن يجمع بين قوة الهجوم ومعدل النقاط المتوقع العالي (xP)، مع الاحتفاظ برصيد بنكي ضخم (£6.1m) يمنحنا مرونة مطلقة للجولات القادمة. مبدأنا الثابت: *\"النقاط هي النقاط\"* (Points are Points)، ولا مكان للعاطفة مع لاعبين يسجلون معدلات متدنية.\n\n---\n\n### 2. مدى مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance)\nأظهر تحليل محرك الـ Hindsight التاريخي توافقاً عالياً لقراراتنا التكتيكية لهذه الجولة:\n* **شارة القيادة (Captaincy Rule):** تمت مطابقة القاعدة الذهبية بثقة 80%؛ حيث تشير البيانات إلى أن متوسط سعر الكابتن المثالي تاريخياً هو £6.5m، وأن الأصول الباهظة (≥£9.5m) لا تكون الخيار الأفضل سوى في 20% من الجولات. منحه لترافينير (Tavernier) يتماشى تماماً مع هذا النمط.\n* **جدوى السالب (-4 Hit):** تتوافق مع قاعدة التبديلات المثالية بثقة 80%؛ فالبيانات التاريخية تثبت أن خصم النقاط الهجومي (-4 أو أكثر) يكون أمثلاً رياضياً إذا كان يتصيد قمم انفجارية (Explosive Upside)، حيث تحقق التبديلات الناجحة متوسط 13.4 نقطة مقابل 2.6 نقطة للمبيعين.\n* **كفاءة أسعار الدفاع (Price Efficiency):** شراء فان هيكي (£5.0m) يطبق قاعدة الكفاءة المالية بثقة 80%، حيث تحقق الفئة السعرية أقل من £6.0m أعلى عائد نقاط مقابل كل مليون (2.69 pts/£m).\n\n---\n\n### 3. التحليل الرياضي والتكتيكي للتبديلات وتبرير الـ Hit\nالتبديلات المنفذة (-4 نقاط) ليست مجرد خيار للجولة الحالية، بل هي استثمار ممتد لـ 3 جولات على الأقل:\n\n* **بيع Kostoulas (BHA) ──► شراء N.Jackson (AVL) [£7.0m]:**\n  * **التبرير:** التخلص من مهاجم ذي سقف محدود (xP: 4.8) والتعاقد مع مهاجم أستون فيلا الجاهز لمسار مواجهات ممتاز (MUN خارج الأرض [3]، ثم مواجهتان سهلتان SUN على أرضه [2] وIPS خارج أرضه [2]). يعزز جاكسون الهجوم بمعدل نقاط متوقع (6.4 xP).\n* **بيع Tarkowski (EVE) ──► شراء Van Hecke (TOT) [£5.0m]:**\n  * **التبرير:** بيع تاركوفسكي لتراجع العوائد الدفاعية، والانتقال إلى فان هيكي (xP: 6.0) للاستفادة من جدول مواجهات متوازن تصاعدياً (LEE خارج الأرض [3]، ثم مواجهة إيبسويتش السهلة IPS على أرضه [2]).\n* **جدوى الـ Hit (-4):** التبديلات ترفع معدل النقاط المتوقع المباشر (xP) بـ +2.7 نقطة للجولة الحالية فقط، وتضمن صافي عائد متوقع يتجاوز (+6.8 نقطة) عبر الجولات الثلاث القادمة، مما يجعل المخاطرة بأخذ -4 قراراً رياضياً رابحاً ومحسوباً.\n\n---\n\n### 4. مبررات شارة القيادة (C) والنائب (VC)\n* **الكابتن الأساسي (C): Tavernier (BOU) - [xP: 6.4]**\n  * خيار هجومي بتكلفة متوسطة ينطبق عليه الشرط الذهبي (متوسط سعر £6.5m). يمتلك ترافينير الأدوار الهجومية الأساسية والقدرة على التسجيل والصناعة، وهو ما يمنحه سقفاً انفجارياً (High Ceiling) في هذه الجولة.\n* **نائب الكابتن (VC): N.Jackson (AVL) - [xP: 6.4]**\n  * اختيار جاكسون كنائب كابتن يوفر تغطية هجومية ممتازة في خط الهجوم، ليضمن للفريق الاستفادة القصوى من أي تعثر قد يطرأ قبل بداية الديدلاين.\n\n---\n\n### 5. استراتيجية الخواص وحماية ميزانية الفريق\n* **إدارة الخواص:** الاحتفاظ الكامل بالخواص المتاحة (Wildcard x2, Free Hit x1, Triple Captain x1, Bench Boost x1) هو القرار الاستراتيجي الصحيح حالياً. يكمن العائد الأقصى لهذه الخواص في الجولات المزدوجة والمقاطعة (DGW / BGW) في النصف الثاني من الموسم.\n* **إدارة السيولة المالية:** يمتلك الفريق فائضاً مالياً قدره **£6.1m في البنك**. هذه السيولة تمنحنا قوة هجومية فائقة في الجولات القادمة لتمويل أي قفزة سريعة نحو لاعبين سوبر-بريميوم دون الحاجة لإعادة هيكلة الفريق بالكامل.\n\n---\n\n### الخلاصة التنفيذية\nتم بناء تشكيلة الجولة 10 باستراتيجية هجومية تعويضية جشعة تستهدف القفز في الترتيب؛ حيث يغطي التعديل الدفاعي والهجومي الفارق المالي والرياضي المباشر، وتعتمد القيادة على الأصول المتوسطة ذات السقف العالي وفق القواعد التاريخية المثبتة، مع التحفظ الكامل على الخواص للجولات المزدوجة لضمان أقصى كفاءة للموسم.",
+  "briefing": "إليك التقرير التكتيكي الشامل للجولة رقم 10 والصادر عن المحرك التحليلي القائم على البيانات والقواعد الذهبية:\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب (Aggressive Rank Recovery)\nنحن نخوض هذه الجولة باستراتيجية **هجومية تعويضية حاسمة (Aggressive Strategy)** بهدف اختراق حاجز الترتيب الحالي (10,658,225). في هذا الترتيب، اللعب التحفظي أو اتباع الآراء السائدة (Template) لن يحقق القفزة المطلوبة. يعتمد التكتيك على استغلال الفوارق التنافسية (Differentials) المستهدفة مثل Manzambi وWhite وTavernier، مع تشكيل خماسي دفاعي مرن (5-3-2) يستغل المواجهات المباشرة المرتفعة النقاط المتوقعة (xP)، مع الاحتفاظ بسيولة مالية ضخمة تمنحنا التفوق التكتيكي الكامل في الجولات القادمة.\n\n---\n\n### 2. مدى مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance)\nأظهر التحليل الإحصائي توافقاً مثالياً بين قراراتنا الفنية والقواعد الذهبية المستخرجة من المحرك التاريخي:\n\n*   **جدوى السالب (-4 Hit):** تتوافق التضحية بـ -4 نقاط مع القاعدة الذهبية (ثقة 80%) والتي تؤكد أن أخذ خصومات النقاط لاقتناص معدلات الارتفاع التهديفي (Explosive Upside) يعتبر خياراً رياضياً مثالياً. صافي النقاط المتوقعة المباشر يغطي التكلفة ويحقق فوزاً إيجابياً.\n*   **استراتيجية شارة القيادة (Captain Rule):** القواعد الذهبية تشير إلى أن الكباتن الذين تتراوح أسعارهم حول £6.5m يحققون الفعالية القصوى، وأن الأصول الباهظة (≥£9.5m) تُكبتن فقط في 20% من الحالات المثالية. منح الشارة لـ Tavernier (£6.4m xP) يعكس هذا المعيار التاريخي بدقة (ثقة 80%).\n*   **كفاءة أسعار اللاعبين (Price Efficiency):** تظهر القاعدة الذهبية أن أصول الميزانية (<£6.0m) تقدم أعلى معدل نقاط مقابل السعر (2.69 pts/£m). التعاقد مع Muharemović (£5.1m) وManzambi (£6.2m) يجسد هذه القاعدة ويوفر سيولة عالية بالبنك.\n\n---\n\n### 3. التحليل الرياضي والتكتيكي للتبديلات (3-GW Horizon)\n*   **بيع Palmer (xP: 4.1) وAjayi (xP: 1.9):** التخلي عن كول بالمر يأتي استناداً لمبدأ \"بيع المتراجعين بلا عواطف\" مقارنة بسعره المرتفع، بينما Ajayi يمثل عبئاً دفاعياً بنقاط متوقعة منخفضة جداً.\n*   **شراء Manzambi (xP: 6.0) وMuharemović (xP: 5.2):**\n    *   **Manzambi (AVL):** يقدم عائدًا فورياً بـ xP 6.0 في هذه الجولة، وينتظره جدول مواجهات متميز على مدى الجولات الثلاث القادمة [MUN (A), SUN (H), IPS (A)] بمعدل صعوبة منخفض (FDR 2-3).\n    *   **Muharemović (LEE):** يدعم خط الدفاع بـ xP 5.2 ومواجهة مريحة نسبياً في الجولة 12 [COV (H)].\n*   **جدوى الـ Hit على مدى 3 جولات:**\n    *   النقاط المتوقعة للاعبين الخارجين (GW10): 6.0 نقاط.\n    *   النقاط المتوقعة للاعبين القادمين (GW10): 11.2 نقطة.\n    *   الربح الفوري الصافي: 11.2 - 6.0 - 4 (Hit) = **+1.2 نقطة** في الجولة الأولى فقط، مع توقع صافي زيادة تراكمية تتجاوز **+7.8 نقطة** خلال الجولات الثلاث القادمة.\n\n---\n\n### 4. مبررات شارة القيادة (C) والنائب (VC)\n*   **الكابتن (C): Tavernier (BOU) - xP: 6.4**\n    ينطبق عليه شرط \"الكابتن الفعال غير المكلف\" طبقاً للقواعد الذهبية؛ حيث يمتلك أعلى معدل نقاط متوقعة في الفريق للجولة الحالية مع أدوار هجومية محورية ومباشرة على المرمى.\n*   **النائب (VC): N.Jackson (AVL) - xP: 6.4**\n    يمثل صمام أمان هجومي ممتاز بنفس معدل النقاط المتوقعة (xP 6.4)، مما يضمن للفريق عدم ضياع نقاط القيادة في حال حدوث أي غياب طارئ.\n\n---\n\n### 5. استراتيجية الخواص وحماية ميزانية الفريق\n*   **إدارة الخواص (Chips):** يُوصى بالإبقاء على جميع الخواص المتاحة (Wildcard 2, Free Hit 1, Triple Captain 1, Bench Boost 1) وتأجيل تفعيلها للجولات المزدوجة (DGWs) والشديدة الصعوبة (BGWs) قادماً، حيث تتضاعف القيمة الرياضية لاستخدامها.\n*   **حماية الميزانية (£8.7m في البنك):** الاحتفاظ برصيد ضخم يبلغ 8.7 مليون باوند يمنح الفريق مرونة تكتيكية فائقة لإجراء أي تعديل مستقبلي والتعاقد مع أي نجم سوبر (Premium) فور استعادته للفورمة وبدون الحاجة لإجراء تبديلات مجانية متكررة أو أخذ -4 إضافية.\n\n---\n\n### الخلاصة التنفيذية\nإن التشكيل الحالي (5-3-2) والتبديلات المجراة بخصم 4 نقاط تم حسابها بدقة رياضية عالية لاختراق الترتيب والقفز للمراكز الأمامية. التوازن قائم بين خط دفاع قوي وعناصر وسط وهجوم ذات xP مرتفع وسعر اقتصادي. الرصيد المالي المتبقي يضعنا في موقع القوة المطلقة للجولات القادمة، واختيار الكابتن متوافق تماماً مع محرك القواعد الذهبية التاريخي لضمان السقف الأعلى من النقاط.",
   "leagues": [],
   "eo_radar": {
     "threats": [
@@ -4235,6 +4226,14 @@
         "eo": 62,
         "threat_level": "MODERATE",
         "impact": "Goal/Assist drops your rank by ~6.2%"
+      },
+      {
+        "player": "Palmer",
+        "team": "CHE",
+        "cost": 10.6,
+        "eo": 58,
+        "threat_level": "MODERATE",
+        "impact": "Goal/Assist drops your rank by ~5.8%"
       },
       {
         "player": "Alexander-Arnold",
@@ -4304,8 +4303,8 @@
       "player_name": "Hato",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "تأكد غيابه عن المواجهة القادمة بسبب إصابة غير معلنة وفقًا لتحديث المدرب وتحديثات الفانتسي الرسمية.",
-      "summary_en": "Ruled out for the upcoming match due to an unspecified injury as confirmed in team news and FPL flag.",
+      "summary_ar": "تأكد غيابه عن مواجهة سندرلاند بسبب الإصابة ولن يشارك في الجولة القادمة.",
+      "summary_en": "Ruled out for the upcoming match against Sunderland following official team news update.",
       "risk_level": "CRITICAL",
       "headline_reference": "Xabi Alonso confirms Chelsea team news for Sunderland"
     },
@@ -4314,63 +4313,87 @@
       "player_name": "João Pedro",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "مستبعد من المباراة القادمة بسبب إصابة في الفخذ مع عدم تحديد موعد لعودته.",
-      "summary_en": "Unavailable due to a thigh injury with no set return date.",
+      "summary_ar": "مستبعد تماماً بسبب إصابة في الفخذ ولا يوجد موعد محدد لعودته حتى الآن.",
+      "summary_en": "Ruled out due to a thigh injury with no set return date confirmed by the manager.",
       "risk_level": "CRITICAL",
-      "headline_reference": "Xabi Alonso confirms Chelsea team news for Sunderland"
+      "headline_reference": "Alonso's update on Joao Pedro, Martinez, Caicedo and more"
     },
     {
       "player_id": 113,
       "player_name": "F.Kadıoğlu",
       "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.85,
-      "summary_ar": "شكوك خفيفة حول مشاركته الأساسية بسبب إصابة في الورك، ونسبة جاهزيته 75%.",
-      "summary_en": "Minor doubt with a hip injury; currently flagged at 75% chance of playing.",
+      "minute_multiplier": 0.75,
+      "summary_ar": "شكوك طفيفة حول مشاركته بسبب إصابة في الورك، مع نسبة جاهزية 75%.",
+      "summary_en": "Carrying a minor hip injury with a 75% chance of playing, potential risk of limited minutes.",
       "risk_level": "MEDIUM",
-      "headline_reference": "Hip injury - 75% chance of playing"
+      "headline_reference": "FPL Official Status Flag"
     },
     {
       "player_id": 101,
       "player_name": "Henderson",
       "fitness_sentiment": "minor_doubt",
       "minute_multiplier": 0.85,
-      "summary_ar": "يعاني من مرض بسيط بنسبة جاهزية 75%، ومن المتوقع تواجده في القائمة إذا تعافى كليًا.",
-      "summary_en": "Slight doubt due to illness with a 75% chance of playing.",
+      "summary_ar": "يعاني من وعكة صحية طفيفة مع احتمالية عالية للمشاركة بنسبة 75%.",
+      "summary_en": "Slight doubt due to illness, but retains a 75% chance of availability for selection.",
       "risk_level": "MEDIUM",
-      "headline_reference": "Illness - 75% chance of playing"
+      "headline_reference": "FPL Official Status Flag"
     },
     {
       "player_id": 346,
       "player_name": "Calvert-Lewin",
       "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.85,
-      "summary_ar": "شكوك بسيطة بسبب إصابة القدم بنسبة جاهزية 75%، يحتاج لتقييم نهائي قبل المباراة.",
-      "summary_en": "Minor doubt with a foot injury, listed at 75% chance of playing pending final assessment.",
+      "minute_multiplier": 0.75,
+      "summary_ar": "يعاني من إصابة في القدم ونسبة مشاركته 75%، يرجح دخوله كبديل أو تبديله مبكراً.",
+      "summary_en": "Flagged with a foot injury (75% chance). Minutes may be managed if he features.",
       "risk_level": "MEDIUM",
-      "headline_reference": "Foot injury - 75% chance of playing"
+      "headline_reference": "FPL Official Status Flag"
     },
     {
       "player_id": 31,
       "player_name": "Konsa",
-      "fitness_sentiment": "managed_minutes",
-      "minute_multiplier": 0.85,
-      "summary_ar": "تم التطرق لحالته البدنية في المؤتمر الصحفي للمدرب، مع توقع مشاركته بانتظام تحت إدارة الدقائق.",
-      "summary_en": "Mentioned in the pre-match press conference update; expected to be available with potentially managed minutes.",
-      "risk_level": "LOW",
-      "headline_reference": "Arteta's update on Konsa, Saka and Saliba"
-    },
-    {
-      "player_id": 40,
-      "player_name": "Rogers",
       "fitness_sentiment": "fit_starter",
       "minute_multiplier": 1.0,
-      "summary_ar": "جاهز تمامًا وتم استدعاؤه لتمثيل المنتخب الوطني، في حالة بدنية وفنية ممتازة.",
-      "summary_en": "Fully fit and rewarded with a national team call-up; fully expected to feature prominently.",
+      "summary_ar": "تم التطرق لحالته في المؤتمر الصحفي للمدرب وتأكدت جاهزيته للبدء.",
+      "summary_en": "Addressed in press conference updates; cleared and expected to maintain full starting minutes.",
       "risk_level": "LOW",
-      "headline_reference": "Chelsea attacker called up by England"
+      "headline_reference": "Arteta's update on Konsa, Saka and Saliba"
     }
   ],
   "press_wire": [
+    {
+      "id": 4757134,
+      "title": "Jaissle's team news update: Joelinton and Fernandez-Pardo latest",
+      "summary": "",
+      "date": "2026-11-06T16:32:00Z",
+      "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-joelinton-and-fernandez-pardo-latest-ahead-of-fulham-clash",
+      "matched_players": []
+    },
+    {
+      "id": 4757127,
+      "title": "Igor Jesus back in training, Nicolas Dominguez ruled out",
+      "summary": "",
+      "date": "2026-11-06T16:23:00Z",
+      "url": "https://www.nottinghamforest.co.uk/news/2026/november/05/team-news--jesus-returns-but-nico-set-for-spell-on-the-sidelines/",
+      "matched_players": []
+    },
+    {
+      "id": 4757124,
+      "title": "Sage on Strand's fitness and when Sarr will return",
+      "summary": "Pierre Sage says Jørgen Strand Larsen and Eddie Nketiah are ready to step into the side following Jean-Philippe Mateta’s suspension – with the Manager also giving an update on Ismaïla Sarr.",
+      "date": "2026-11-06T16:16:00Z",
+      "url": "https://www.cpfc.co.uk/news/first-team/sage-on-sarr-strand-larsen-fitness-and-facing-liverpool/",
+      "matched_players": []
+    },
+    {
+      "id": 4757103,
+      "title": "Crystal Palace ticket details",
+      "summary": "Fixtures Aston Villa Vs. Crystal Palace - Sat, Dec 05 2026, 15:00 Aston Villa can confirm ticket details for our Premier League match at home to Crystal Palace. The Eagles visit B6 on Saturday, December 5 (ko 3pm) in the second of two home outings in quick succession to begin the final month of the year. Prices, on-sale dates and full ticketing information for the fixture at Villa Park can be found below... ON SALE NOVEMBER 9 Ticket Prices Category Zone 1 Zone 2 Zone 3 Zone 4 Adult £62 £56 £51.50 £49.50 Armed Forces £49.50 £44.50 £41 £40 Over 66 £41 £37 £34 £33 Under 21 £38 £34.50 £31.50 £30.50 Under 18 £38 £26.50 £25 £23.50 Under 14 £38 £16.50 £15 £14.50 On-Sale Dates ONLINE AND PHONE FROM 9.30AM: ON SALE TO: Monday, November 9 Adult and Junior Members Monday, November 23 General Sale *Please note, online and phone sales both commence at 9.30am on the specified dates. The club anticipates that tickets will sell out to members. Should further sales windows be required, these will be communicated in due course ON SALE NOVEMBER 9 Additional Information Ticket Limitations One ticket per eligible Fan ID will be issued Ticket Ballot The ‘First Timer Ballot’ allows for up to 250 match tickets that will only be open to members who are yet to attend Villa Park for a match in 2026/27 but have attended at least one match in either of the past two seasons. This offer will be valid for Premier League and UEFA Champions League league phase matches only. Members will only be able to purchase through this ballot once during the season. The ‘Loyalty Ballot’ is designed to allow access to a limited number of match tickets to those members who have over 120 Season Ticket Waiting List points. Members who are currently on the Season Ticket Waiting List will be notified of their points total before the first game is on sale. The number of loyalty points will change throughout the season as members attend games, and therefore more members will become eligible for the Loyalty Ballot eTickets All tickets are digital and collections are not available. Tickets will appear in the Aston Villa App and will be available to download to Apple or Google Wallets Refund Deadline Tickets are non-refundable, however for the 2026/27 season, if members are unable to attend matches they have purchased tickets for, they are eligible to list their ticket for resale and if the ticket resells they will receive a refund post-match FAQs All tickets are sold subject to availability Tickets are sold on the basis they are for home fans only. Supporters purchasing for away fans or those who do not adhere to AVFC ground regulations WILL lose the right to purchase tickets for future matches Supporters are reminded to assign tickets to other attending supporters to build up booking history. This should be completed at the point of purchase as tickets CANNOT be reassigned once the match has been played. Should you experience problems while trying to assign tickets online, please contact the Ticket Office prior to the match taking place Our ticket touting policy can be found here GA+ and Hospitality Our GA+ and Hospitality options offer more choices than ever before, giving you access to a host of exclusive experiences and upgrades that will make your matchday truly unforgettable. From The Terrace View and The Lower Grounds to The Aston and 82 Champions Club – there’s options to suit everyone. GA+ To explore our GA+ options, click here Hospitality To explore our hospitality options, click here Memberships Adult and Junior Memberships provide the best opportunity to secure general admission home tickets, giving access to buy when the best seats are available. Our Memberships are crafted to bring you closer to the club you love with enhanced benefits, exclusive access and unforgettable experiences. Wherever you follow from, there’s a Membership made for you. Browse our options via the link below... Aston Villa Memberships Browse Here Heart of our Club: Round Up your Ticket Purchase When purchasing tickets online, supporters have the option to either donate or round up their purchase to the nearest pound, with 100% of proceeds donated to the Aston Villa Foundation. Funds raised have had significant impact on our disability programmes, providing essential equipment, kits and coaching staff, ensuring more young people with additional needs can access inclusive football opportunities. Recently, Villa fan Jude Aston was invited to Bodymoor Heath to see the impact of the Foundation’s Ability Counts programme first hand, during a 'Play on the Pitch’ experience. With thanks to those who have supported the initiative since its inception in 2021, over £100,000 has been raised.",
+      "date": "2026-11-06T16:00:00Z",
+      "url": "https://avfc.co.uk/news/2026/november/06/ticketing-crystal-palace-home-ticket-details-26-27/",
+      "matched_players": [
+        "rice"
+      ]
+    },
     {
       "id": 4757100,
       "title": "Lampard's update on Bobby Thomas fitness and other injury concerns",
@@ -4380,6 +4403,22 @@
       "matched_players": [
         "bobb"
       ]
+    },
+    {
+      "id": 4757108,
+      "title": "Pre-Newcastle Press Conference",
+      "summary": "Following on from Fulham’s point at Villa Park last week, Álvaro Arbeloa is keen to see his side back up that performance at the Cottage against Newcastle United. \"We believe in ourselves, we believe in the way we're playing. We like to keep the ball, create chances. I think we need to keep improving, we have very good supporters and at home we need to win games. \"I have a very good squad with very good players. I know we are just starting, but we want to keep improving. We know how difficult it will be to beat Newcastle tomorrow, they are a very good team.\" The big news on Friday morning, however, was the inclusion of Josh King in Thomas Tuchel’s England squad to face Croatia and Spain. The Fulham manager was full of praise for the 19-year-old, recognising the magnitude of the achievement for both the player and the club. \"I think it's a special moment for him, our club and our supporters,” said Arbeloa. “Josh is the pride of our club and our supporters. He's been here since he was 8 years old. I am very happy for him, he's a humble kid. It's a special day for all of us. \"It's important for our academy as well. This is one of the reasons I became a coach, I want to help players reach their levels. Tomorrow, we will celebrate if we win.\" The midfielder has been thriving in the manager’s system, starting every Premier League game this season and directly contributing to three goals. \"He gave a small speech before the game the other day, it was amazing. I am so happy to coach him, develop him and reach his level. He needs to stay humble like he is, he needs to continue improving, scoring goals, making numbers. \"You cannot forget he is only 19 years old. He can become one of the best players in the world. I saw him this morning, he is very happy. I said 'it's the first step, next you need to win the World Cup!’” Finally, the manager confirmed that Tom Cairney will be sidelined for the weekend, sharing that “he has some issues in his knee,” and with the skipper playing an important role in recent weeks, he “doesn't want to take risks with him”.",
+      "date": "2026-11-06T15:46:31Z",
+      "url": "https://fulhamfc.co.uk/news/2026/november/06/pre-newcastle-press-conference/",
+      "matched_players": []
+    },
+    {
+      "id": 4737643,
+      "title": "WATCH NOW: Get your FPL questions answered on live stream",
+      "summary": "Two Fantasy experts discuss the key decisions on YouTube ahead of the 18:30 GMT deadline for GW10",
+      "date": "2026-10-31T08:00:00Z",
+      "url": "https://www.youtube.com/watch?v=qTWKZnnaQ-s",
+      "matched_players": []
     },
     {
       "id": 4757065,
@@ -4400,62 +4439,15 @@
       ]
     },
     {
-      "id": 4757056,
-      "title": "Alonso's update on Joao Pedro, Martinez, Caicedo and more",
-      "summary": "",
-      "date": "2026-11-06T14:45:00Z",
-      "url": "https://link.chelseafc.com/1WUW/r1h9mhlv",
-      "matched_players": []
-    },
-    {
-      "id": 4757080,
-      "title": "Carrick: Consistency is key",
-      "summary": "Michael Carrick reinforced the importance of building consistency from Manchester United's win against Roma earlier this week, in his press conference ahead of Sunday's Premier League meeting with Aston Villa.",
-      "date": "2026-11-06T14:40:00Z",
-      "url": "https://www.manutd.com/en/news/michael-carrick-press-conference-consistency-is-key",
-      "matched_players": []
-    },
-    {
-      "id": 4757058,
-      "title": "Xabi Alonso confirms Chelsea team news for Sunderland",
-      "summary": "Xabi Alonso says a decision on Emi Martinez's availability to face Sunderland will be taken tomorrow (Saturday), with the Blues manager also updating on the fitness of Moises Caicedo, Jorrel Hato, Maxence Lacroix and Joao Pedro.",
-      "date": "2026-11-06T14:30:00Z",
-      "url": "https://www.chelseafc.com/en/news/article/xabi-alonso-confirms-chelsea-team-news-for-sunderland",
+      "id": 4757104,
+      "title": "Emery previews Man Utd meeting",
+      "summary": "Fixtures Manchester United Vs. Aston Villa - Sun, Nov 08 2026, 16:30 Unai Emery met with the media at Bodymoor Heath on Friday afternoon, to look ahead to Sunday’s trip to Manchester United. The Villans take to the field for the final time ahead of the November international break at Old Trafford, looking to bounce back from a midweek defeat at Barcelona in the UEFA Champions League. And the Villa boss spoke with local and national outlets at his side’s training base ahead of the game, discussing the Red Devils, Villa's record at Old Trafford and his vision for the future of the club. Read the key lines from his pre-match press conference below. On vision for the future… “My vision is to keep our consistency, and how we are improving, how we are building a lot of things positively – be strong, keeping consistency in our process. “So, it’s a huge challenge, but the club is involving in it. They decided, of course, speaking with us last year, to build a new stand. Adding more supporters in Villa Park is one step forward, clearly, to get better. “How we are, as well, increasing our budget each year, increasing our revenue as well, of course through our performance playing in Europe, improving players, selling players, then buying young talented players, this is the process and the vision we should keep in our future.” On United... “It’s Manchester United, and we have very clear examples. We didn’t win one match there. Four years I am here, travelling to Manchester to play against them, we have lost. Even in the first match we played, Carabao Cup, we lost 3-2, four years ago. “So, it means, for us, it’s very difficult. Manchester United is a fantastic club. They are performing very good last year, achieving to play Champions League. “This year, as well, they are Champions League, playing well. In the league, they started a little bit not being consistent, but should recover their consistency in the Premier League, hopefully not on Sunday against us. So, it’s a very, very difficult match.” On integrating new players... “I am positively worried about how we are doing the process with the players we joined this summer, and building the structure as strong as possible. “I am positive, because I think we should do it getting better each match, and worried because we are [in a] lack of some points in the league, we are lacking of some moments not performing enough to win matches, and working hard, analysing deeply every match we are playing, analysing deeply each player how they are progressing. “Sometimes, the progress is being forward, clear. Sometimes, we are doing one step back in some situations – for example, last week, against Fulham at home when we drew. “We started fantastic in the Champions League, but we lost in Barcelona 3-0. We performed more or less in good ways like we planned, but it was not enough, because the level we were facing, this is the highest level for Premier League and for the Champions League matches. “Of course, everything matters. How we are tactically trying to set our structure, defensively, offensively. The players, how they understanding everything, how we are individually giving them confidence, to feel confident, comfortable in the structure. “How we can as well set some players in the combinations we need on the field with them, understanding it’s better to play right side, left side, it’s better to play lower, higher, how we can get [the] best ways in our build up. “So, we have a lot of work to do, and we must compete at the same time.” On working with Nassef Sawiris... “He’s very ambitious. He is, as well, a hard worker, and his commitment with the club is a huge commitment with everything. “So, for me, it’s easy to have meetings with him because we are on the same page.” On record at Old Trafford... “Old Trafford is a huge challenge – for me, for the players, for our trajectory here together, because we are not winning there. “Even we had some defeats hard, like two years ago when we were close on the last match, the day 38, to be in the Champions League, and we lost. We lost it. “So, it’s always very, very difficult there. We must play in our best – in our best individual and collective way.” Watch Emery's full pre-match press conference now via VillaTV, by clicking below...",
+      "date": "2026-11-06T14:50:00Z",
+      "url": "https://avfc.co.uk/news/2026/november/06/prematch-emery-previews-man-utd-meeting/",
       "matched_players": [
-        "hato"
+        "trafford",
+        "hall"
       ]
-    },
-    {
-      "id": 4757048,
-      "title": "Le Bris confirms major injury boost for Sunderland",
-      "summary": "",
-      "date": "2026-11-06T14:29:00Z",
-      "url": "https://www.safc.com/news/2026/november/06/le-bris-gives-team-news-update-ahead-of-chelsea-clash/",
-      "matched_players": []
-    },
-    {
-      "id": 4757037,
-      "title": "De Zerbi’s latest team news including key return",
-      "summary": "",
-      "date": "2026-11-06T14:20:00Z",
-      "url": "https://www.tottenhamhotspur.com/match/2645291/leeds-united-tottenham-hotspur?tab=liveblog",
-      "matched_players": []
-    },
-    {
-      "id": 4757027,
-      "title": "Gravenberch a doubt for Liverpool’s trip to Palace",
-      "summary": "",
-      "date": "2026-11-06T13:57:00Z",
-      "url": "https://www.premierleague.com/en/match/2645287/crystal-palace-vs-liverpool/overview",
-      "matched_players": []
-    },
-    {
-      "id": 4757026,
-      "title": "Carrick on how long Baleba could be out with hamstring injury",
-      "summary": "",
-      "date": "2026-11-06T13:53:00Z",
-      "url": "https://www.manutd.com/en/news/injury-update-carlos-baleba-roma-aston-villa",
-      "matched_players": []
     }
   ]
 }
