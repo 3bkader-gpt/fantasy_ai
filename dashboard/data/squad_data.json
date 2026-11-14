@@ -7,13 +7,13 @@
     "rank": 10686053,
     "total_points": 301,
     "team_value": 101.2,
-    "bank": 14.9,
+    "bank": 18.7,
     "free_transfers": 1,
     "dry_run": false,
-    "last_updated": "2026-11-13T17:01:30.029083Z"
+    "last_updated": "2026-11-14T15:16:25.706044Z"
   },
-  "formation": "5-3-2",
-  "total_xp": 82.4,
+  "formation": "3-5-2",
+  "total_xp": 83.3,
   "captain": {
     "id": 166,
     "name": "N.Jackson",
@@ -246,52 +246,6 @@
       "press_insight": null
     },
     {
-      "id": 115,
-      "name": "De Cuyper",
-      "team": "BHA",
-      "position": "DEF",
-      "cost": 5.5,
-      "xp": 6.5,
-      "horizon_xp": 15.6,
-      "fixture": "HUL (A) [FDR 2]",
-      "expected_minutes": 88.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 11,
-          "opponent": "HUL",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "NEW",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "BOU",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 14,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 15,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
       "id": 566,
       "name": "Silva",
       "team": "BOU",
@@ -338,52 +292,6 @@
       "press_insight": null
     },
     {
-      "id": 334,
-      "name": "Muharemović",
-      "team": "LEE",
-      "position": "DEF",
-      "cost": 5.1,
-      "xp": 4.9,
-      "horizon_xp": 13.4,
-      "fixture": "CHE (A) [FDR 4]",
-      "expected_minutes": 88.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 11,
-          "opponent": "CHE",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 12,
-          "opponent": "COV",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 13,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
-          "gw": 14,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 15,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
       "id": 68,
       "name": "Tavernier",
       "team": "BOU",
@@ -412,6 +320,52 @@
           "gw": 13,
           "opponent": "BHA",
           "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 15,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
+      "id": 542,
+      "name": "E.Le Fée",
+      "team": "SUN",
+      "position": "MID",
+      "cost": 5.7,
+      "xp": 5.6,
+      "horizon_xp": 14.8,
+      "fixture": "AVL (A) [FDR 3]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 11,
+          "opponent": "AVL",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "TOT",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "LIV",
+          "is_home": false,
           "fdr": 4
         },
         {
@@ -505,6 +459,52 @@
           "opponent": "IPS",
           "is_home": true,
           "fdr": 2
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 15,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
+      "id": 52,
+      "name": "Alysson",
+      "team": "AVL",
+      "position": "MID",
+      "cost": 4.9,
+      "xp": 4.6,
+      "horizon_xp": 11.0,
+      "fixture": "SUN (H) [FDR 2]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 11,
+          "opponent": "SUN",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 12,
+          "opponent": "IPS",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "EVE",
+          "is_home": true,
+          "fdr": 3
         },
         {
           "gw": 14,
@@ -662,35 +662,81 @@
       "press_insight": null
     },
     {
-      "id": 40,
-      "name": "Rogers",
-      "team": "CHE",
-      "position": "MID",
-      "cost": 8.2,
-      "xp": 4.4,
-      "horizon_xp": 11.4,
-      "fixture": "LEE (H) [FDR 3]",
+      "id": 115,
+      "name": "De Cuyper",
+      "team": "BHA",
+      "position": "DEF",
+      "cost": 5.5,
+      "xp": 6.5,
+      "horizon_xp": 15.6,
+      "fixture": "HUL (A) [FDR 2]",
       "expected_minutes": 88.0,
       "is_captain": false,
       "is_vice_captain": false,
       "fixtures_5gw": [
         {
           "gw": 11,
-          "opponent": "LEE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 12,
-          "opponent": "NFO",
+          "opponent": "HUL",
           "is_home": false,
           "fdr": 2
         },
         {
+          "gw": 12,
+          "opponent": "NEW",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
           "gw": 13,
-          "opponent": "CRY",
+          "opponent": "BOU",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 15,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
+      "id": 334,
+      "name": "Muharemović",
+      "team": "LEE",
+      "position": "DEF",
+      "cost": 5.1,
+      "xp": 4.9,
+      "horizon_xp": 13.4,
+      "fixture": "CHE (A) [FDR 4]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 11,
+          "opponent": "CHE",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 12,
+          "opponent": "COV",
           "is_home": true,
           "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "MCI",
+          "is_home": false,
+          "fdr": 5
         },
         {
           "gw": 14,
@@ -752,88 +798,33 @@
         }
       ],
       "press_insight": null
-    },
-    {
-      "id": 53,
-      "name": "Manzambi",
-      "team": "AVL",
-      "position": "MID",
-      "cost": 6.2,
-      "xp": 3.7,
-      "horizon_xp": 8.9,
-      "fixture": "SUN (H) [FDR 2]",
-      "expected_minutes": 52.8,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 11,
-          "opponent": "SUN",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "IPS",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 13,
-          "opponent": "EVE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 14,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 15,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": {
-        "player_id": 53,
-        "player_name": "Manzambi",
-        "fitness_sentiment": "minor_doubt",
-        "minute_multiplier": 0.75,
-        "summary_ar": "شكوك خفيفة بسبب إصابة في الساق (نسبة الجاهزية 75%). قد يحصل على دقائق محدودة أو يتم تقييم جاهزيته قبل المباراة.",
-        "summary_en": "Minor doubt due to a calf injury (75% chance of playing). Minutes may be managed or assessed prior to kick-off.",
-        "risk_level": "MEDIUM",
-        "headline_reference": "FPL Status Update: Calf injury - 75% chance of playing"
-      }
     }
   ],
   "transfers": [
     {
       "player_out": {
-        "name": "Hinshelwood",
-        "team": "BHA",
-        "xp": 3.2
+        "name": "Rogers",
+        "team": "CHE",
+        "xp": 4.4
       },
       "player_in": {
-        "name": "Gomez",
-        "team": "BHA",
-        "cost": 5.0,
-        "xp": 5.2
+        "name": "E.Le Fée",
+        "team": "SUN",
+        "cost": 5.7,
+        "xp": 5.6
       }
     },
     {
       "player_out": {
-        "name": "White",
-        "team": "ARS",
-        "xp": 4.3
+        "name": "Manzambi",
+        "team": "AVL",
+        "xp": 2.5
       },
       "player_in": {
-        "name": "De Cuyper",
-        "team": "BHA",
-        "cost": 5.5,
-        "xp": 6.5
+        "name": "Alysson",
+        "team": "AVL",
+        "cost": 4.9,
+        "xp": 4.6
       }
     }
   ],
@@ -1095,7 +1086,7 @@
       "name": "Roefs",
       "team": "SUN",
       "position": "GK",
-      "cost": 4.9,
+      "cost": 4.8,
       "xp": 4.1,
       "horizon_xp": 10.2,
       "fixture": "AVL (A) [FDR 3]",
@@ -4199,7 +4190,7 @@
       ]
     }
   ],
-  "briefing": "**تقرير الإدارة الفنية والتحليل التكتيكي — الجولة رقم 11**\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب (Tactical Framework & Rank Strategy)\nنخوض هذه الجولة باستراتيجية **هجومية تعويضية حاسمة (AGGRESSIVE)**، تهدف إلى تخطي حواجز الترتيب الحالي (10,686,053) عبر تقليص الفوارق بنقاط مضاعفة. بناءً على محرك التحليل، اعتمدنا تشكيل **5-3-2** يركز على صلابة الخط الخلفي الممتدة إلى المساهمات الهجومية، مع استغلال السيولة المالية الكبيرة المتاحة (£14.9m) لضمان مرونة مطلقّة. التكتيك يرتكز على ضرب الخصوم عبر لاعبين أصحاب نسب ملكية منخفضة ولكن بسقف نقاط متوقع مرتفع (High xP Differentials)، مما يضمن لنا صعوداً عمودياً حاداً في جدول الترتيب العام.\n\n---\n\n### 2. مدى مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance)\nجاءت القرارات التكتيكية متطابقة بشكل مباشر مع مخرجات محرك القواعد الذهبية التاريخي وفق المعايير التالية:\n\n*   **جدوى خصم النقاط (-4 Hit) والتبديلات:** نصت القاعدة الذهبية (بنسبة ثقة 80%) على أن أخذ سالب (-80 نقطة على مدار الموسم) هو الخيار الرياضي الأمثل لاقتناص الانفجارات التهديفية. عملية الإحلال الحالية ستحقق قفزة فورية في النقاط المتوقعة (من 7.5 xP للمبيعين إلى 11.7 xP للمشتريين)، مما يلغي تكلفة الـ Hit فوراً في الجولة الحالية ويضمن صافي أرباح تراكمية متوقعة (+6.8 نقطة) خلال الجولات الثلاث القادمة.\n*   **كفاءة أسعار اللاعبين (Price Efficiency):** أثبتت القاعدة التاريخية (ثقة 80%) أن الفئة الاقتصادية (<£6.0m) تحقق أعلى معدل نقاط مقابل السعر (2.69 pts/£m). شراء **Gomez (£5.0m)** و **De Cuyper (£5.5m)** يجسد الالتزام التام بهذه القاعدة.\n*   **اختيار الكابتن وسهل المواجهات (FDR Context):** تتماشى التشكيلة وشارة القيادة مع قاعدة استغلال المواجهات السهلة (FDR <= 2) واستهدفنا خياراً هجومياً يمتاز بسقف مرتفع (xP: 9.6) ينطبق عليه معيار الانفجار التهديفي التكتيكي.\n\n---\n\n### 3. التحليل الرياضي والتكتيكي للتبديلات (-4 Hit & 3-GW Swing)\n\n*   **🔴 بيع: Hinshelwood (MID - BHA) [xP: 3.2] & White (DEF - ARS) [xP: 4.3]**\n    *   **التبرير:** استغناء لا عاطفة فيه عن عناصر ذات سقف محدود أو عائد انخفاض متوقع. Ben White يعاني من تراجع المردود الهجومي بالنسبة لسعره العالي مقارنة ببدائله، بينما Hinshelwood يمتلك معدل دقائق ونقاط متوقعة ضعيفاً (3.2 xP).\n*   **🟢 شراء: Gomez (MID - BHA) [xP: 5.2] & De Cuyper (DEF - BHA) [xP: 6.5]**\n    *   **التبرير:** استهداف مباشر لجدول مواجهات برايتون الممتاز بدءاً من الجولة القادمة ضد HUL بخواص هجومية وسهولة مواجهة (FDR: 2). De Cuyper يقدم عوائد دفاعية وهجومية مرتقبة (xP: 6.5) تجعله خياراً مثالياً لخط الدفاع، بينما يضمن Gomez نقطة انطلاق قوية بسعر مجدٍ جداً (£5.0m).\n*   **الجدوى المالية والفنية:** الفارق المباشر بين المبيعين والمشتريين يقفز بـ **+4.2 xP** في هذه الجولة فقط، مما يغطي سالب الـ (-4) فوراً، ليبدأ جني الأرباح الصافية ابتداءً من الدقيقة الأولى في المباراة.\n\n---\n\n### 4. مبررات شارة القيادة (C) والنائب (VC)\n\n*   **الكابتن (C): N.Jackson (AVL) — xP: 9.6**\n    *   يمتلك أعلى معدل نقاط متوقعة في الفريق على الإطلاق (9.6 xP). استناداً إلى قاعدة القيادة التي ترجح كفة اللاعبين الأقل كلفة أحياناً والأعلى فاعلية، فإن اختيار جاكسون يمنحنا التفوق الهجومي الصريح والسقف الأعلى المأمول لجولة هجومية تعويضية.\n*   **النائب (VC): Evanilson (BOU) — xP: 8.9**\n    *   يأتي كبديل استراتيجي فائق الجودة بمعدل xP مرتفع جداً (8.9)، مما يضمن للفريق أماناً كاملاً في حال حدوث أي غياب مفاجئ لجاكسون، واستغلال الجاهزية التهديفية الحالية لإيفانيلسون.\n\n---\n\n### 5. استراتيجية الخواص وحماية ميزانية الفريق\n\n*   **تفعيل خاصية Bench Boost (BB):** التوصية متوافقة تماماً مع بيانات التشكيلة؛ قوة دكة البدلاء استثنائية بمجموع نقاط متوقعة يصل إلى **15.2 نقطة**. هذا هو التوقيت المثالي لاقتناص هذه النقاط الفائضة ودفع الترتيب للأمام دون تضييع الفرصة.\n*   **إدارة الميزانية:** الاحتفاظ برصيد **£14.9m** يمنحنا قوة مالية ضاربة ورأس مال تكتيكي يسمح بإجراء أي تعديل مستقبلي كبيك (Double/Blank GWs) دون الحاجة لإجراء عمليات تضحية مؤلمة في التشكيلة الأساسية.\n\n---\n\n### 💡 الخلاصة التنفيذية\n\n1. **الهدف:** تفعيل استراتيجية الهجوم التعويضي لكسر حاجز الترتيب عبر تشكيل 5-3-2 وتفعيل خاصية **Bench Boost**.\n2. **التبديلات:** التضحية بـ Hinshelwood و White لجلب **De Cuyper** و **Gomez** بسالب (-4) مبرر رياضياً ومسترد القيمة فوراً (+4.2 xP net gain).\n3. **القيادة:** منح الشارة بثقة لـ **N.Jackson (C)** لامتلاكه السقف التهديفي الأعلى (9.6 xP)، و **Evanilson (VC)** نائباً.\n4. **الميزانية:** الحفاظ على قوة مالية فائقة (£14.9m) تضمن السيولة المطلوبة للجولات القادمة.",
+  "briefing": "إليك التقرير التكتيكي الشامل للجولة رقم 11، المصمم بأعلى درجات الدقة الإحصائية والنمذجة الرياضية لدفع فريقك نحو صعود صاروخي في الترتيب:\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب (Strategy & Rank Stance)\nنحن نخوض هذه الجولة باستراتيجية **هجومية تعويضية حاسمة (AGGRESSIVE)** من مركزنا الحالي (10,686,053). التواجد في هذا الترتيب يفرض علينا التخلي التام عن النهج المحافظ واعتماد قرارات قائمة على \"السقف العالي\" (High Upside) لاقتناص النقاط الفوارة. \nالتشكيل المعتمد هو **(3-5-2)**، وهو الهيكل المثالي لتكثيف النقاط عبر خط الوسط، مع الاحتفاظ بـ **رصيد مالي ضخم يُقدر بـ £18.7m** يمنحنا مرونة مطلقة للتحرك المباشر في الجولات القادمة دون الحاجة لإعادة هيكلة بطيئة.\n\n---\n\n### 2. مدى مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance)\nتمت فلترة قرارات هذه الجولة عبر محرك القواعد التاريخية (Hindsight Engine) بنسبة تطابق استثنائية:\n* **قاعدة الكابتن (Captain Sweet Spot):** أثبتت البيانات التاريخية (بثقة 80%) أن الكباتن بسعر متوسط (حوالي £6.5m) يحققون كفاءة أعلى من الأصول الباهظة (التي اختيرت كباتن بنسبة 20% فقط). اختيارنا لـ **N.Jackson** يحقق هذه القاعدة بامتياز نظراً لمتوسط سفره التهديفي العالي ورخص سعره مقارنة بسقفه المرتفع (xP: 9.6).\n* **قاعدة تفعيل السالب (-4 Hit):** تؤكد القاعدة (بثقة 80%) أن أخذ السالب مقبولة رياضياً إذا كانت الزيادة التراكمية متوقعة. البدلاء القادمون يحققون صافي زيادة متوقعة (+3.13 نقطة) بعد خصم تكلفة التبديل، مما يجعل الـ Hit مكسباً صافياً.\n* **قاعدة كفاءة الأسعار وخط الوسط (Budget PPM & MID Allocation):** تطابق القرارات القاعدة الذهبية (بثقة 80%) التي تنص على أن أصول خط الوسط والاقتصاديين (<£6.0m) هم الأعلى إنتاجاً للنقاط مقابل السعر (2.69 pts/£m). ضخ **E.Le Fée** و **Alysson** يدعم تشكيلة الخمسة بالوسط ويُبقي الفريق في ذروة الكفاءة المالية.\n\n---\n\n### 3. التحليل الرياضي والتكتيكي للتبديلات وتبرير الـ Hit (-4)\nالتبديلات المجراة تستهدف القضاء على الأصول الخاملة وتفعيل القوة الضاربة:\n* **التضحية بـ:** Rogers (xP: 4.4) و Manzambi (xP: 2.5) بمجموع نقاط متوقعة للجولة (6.9 نقاط).\n* **الاستقدام:** E.Le Fée (xP: 5.6) و Alysson (xP: 4.6) بمجموع نقاط متوقعة (10.2 نقاط).\n* **جدوى التبديل والـ Hit على مدى 3 جولات:**\n  1. **Alysson (AVL - £4.9m):** يدخل جدول مواجهات أخضر استثنائي (SUN على أرضه [2]، IPS خارج أرضه [2]، EVE على أرضه [3]). هذا المسار يضمن عائدات هجومية مستمرة ونسب مشاركة مرتفعة.\n  2. **E.Le Fée (SUN - £5.7m):** يمنحنا ثباتاً في المشاركة ونقاط بناء اللعب والهجمات المرتدة.\n  الزيادة المتوقعة لا تقتصر على الجولة الحالية فقط (+3.13 net xP)، بل توفر عائداً تراكمياً يتجاوز **+12 نقطة** على مدار 3 جولات، مما يغطي تكلفة السالب (-4) ويصنع فارقاً نقطياً كبيراً ضد المنافسين.\n\n---\n\n### 4. مبررات شارة القيادة (C) والنائب (VC)\n* **الكابتن الأساسي (C): N.Jackson (AVL) - [xP: 9.6]**\n  يتصدر جدول النقاط المتوقعة للجولة بلا منازع. يملك معدل تحويل فرص ممتازا ومواجهة تكتيكية تسمح له باختراق الدفاعات. ينطبق عليه شرط القواعد الذهبية من حيث القيمة مقابل العائد وسقف النقاط المنفجر (Explosive Upside).\n* **نائب الكابتن (VC): Evanilson (BOU) - [xP: 8.9]**\n  يمر بلياقة بدنية وحس تهديفي ممتازين كخيار آمن تماماً وبديل استثنائي بمتوقع نقاط مرتفع جداً.\n\n---\n\n### 5. استراتيجية الخواص وحماية ميزانية الفريق\n* **توصية الخاصية (Bench Boost):** تشير التحليلات المتقدمة إلى أن قوة البدلاء في هذه الجولة تسجل مجتمعة (18.5 نقطة متوقعة)، وهي درجة عالية جداً (HIGH confidence). **نوصي بتفعيل خاصية Bench Boost فوراً** لتحويل نقاط الدكة إلى نقاط فعلية في جولة تتميز بجاهزية جميع أفراد الفريق وغياب الإصابات.\n* **إدارة الميزانية (£18.7m in Bank):** السيولة العالية المتبقية ليست خمولاً مالياً، بل هي سلاح استراتيجي محمي يُتيح لنا قفزات خاطفة نحو أي لاعب سوبر (Premium) يمر بفترة تألق دون الحاجة لإهدار تبديلات إضافية.\n\n---\n\n### الخلاصة التنفيذية (Executive Summary)\nنحن نطبق في الجولة 11 خطة هندسية دقيقة: تفعيل خاصية **Bench Boost** للاستفادة من 18.5 نقطة متوقعة على الدكة، اعتماد **N.Jackson** ككابتن بمتوقع (9.6 نقاط)، وتحديث خط الوسط بـ **Alysson و E.Le Fée** عبر سالب (-4) مبرر إحصائياً لتحقيق تسارع فوري في الترتيب العام. الخطة كاملة الجاهزية ومصممة لاقتناص أقصى عائد ممكن.",
   "leagues": [],
   "eo_radar": {
     "threats": [
@@ -4309,185 +4300,166 @@
     {
       "player_id": 53,
       "player_name": "Manzambi",
-      "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "شكوك خفيفة بسبب إصابة في الساق (نسبة الجاهزية 75%). قد يحصل على دقائق محدودة أو يتم تقييم جاهزيته قبل المباراة.",
-      "summary_en": "Minor doubt due to a calf injury (75% chance of playing). Minutes may be managed or assessed prior to kick-off.",
-      "risk_level": "MEDIUM",
-      "headline_reference": "FPL Status Update: Calf injury - 75% chance of playing"
+      "fitness_sentiment": "major_doubt",
+      "minute_multiplier": 0.5,
+      "summary_ar": "انسحب من قائمة منتخب سويسرا بسبب إصابة في العضلة الخلفية، وهناك شكوك حول جاهزيته للمباراة القادمة.",
+      "summary_en": "Withdrew from the Switzerland national squad due to a calf injury; availability for the upcoming match is in doubt.",
+      "risk_level": "HIGH",
+      "headline_reference": "BBC Sport: Manzambi withdraws from Switzerland squad with injury"
+    },
+    {
+      "player_id": 45,
+      "player_name": "McGinn",
+      "fitness_sentiment": "fit_starter",
+      "minute_multiplier": 1.0,
+      "summary_ar": "في حالة بدنية ممتازة بعد تسجيله هدفين مع منتخب إسكوتلندا خلال فترة التوقف الدولي.",
+      "summary_en": "In excellent condition after scoring a brace for Scotland during the international break.",
+      "risk_level": "LOW",
+      "headline_reference": "McGinn nets brace for Scotland"
     },
     {
       "player_id": 106,
       "player_name": "Thiago",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "مستبعد تماماً بسبب الإيقاف حتى 5 ديسمبر.",
-      "summary_en": "Completely ruled out due to suspension until 5 Dec.",
+      "summary_ar": "موقوف رسمياً ومستبعد حتى 5 ديسمبر.",
+      "summary_en": "Officially suspended and unavailable until December 5.",
       "risk_level": "CRITICAL",
-      "headline_reference": "FPL Status Update: Suspended until 5 Dec"
+      "headline_reference": "FPL Official Flag: Suspended until 5 Dec"
     },
     {
       "player_id": 148,
       "player_name": "Hato",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "مستبعد بسبب إصابة غير معلنة مع عدم تحديد موعد للعودة.",
-      "summary_en": "Ruled out with an unspecified injury and an unknown return date.",
+      "summary_ar": "مستبعد بسبب إصابة غير محددة مع عدم وجود تاريخ محدد لعودته.",
+      "summary_en": "Ruled out with an unspecified injury with no set return date.",
       "risk_level": "CRITICAL",
-      "headline_reference": "FPL Status Update: Unspecified injury - Unknown return date"
+      "headline_reference": "FPL Official Flag: Unspecified injury"
     },
     {
       "player_id": 151,
       "player_name": "Acheampong",
       "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "شكوك خفيفة بسبب إصابة غير معلنة (نسبة الجاهزية 75%).",
-      "summary_en": "Minor doubt with an unspecified injury (75% chance of playing).",
+      "minute_multiplier": 0.5,
+      "summary_ar": "يعاني من إصابة غير محددة ونسبة مشاركته 75% حسب التحديثات الرسمية.",
+      "summary_en": "Carrying an unspecified injury with a 75% chance of playing according to official updates.",
       "risk_level": "MEDIUM",
-      "headline_reference": "FPL Status Update: Unspecified injury - 75% chance of playing"
+      "headline_reference": "FPL Official Flag: Unspecified injury - 75% chance of playing"
     },
     {
       "player_id": 165,
       "player_name": "João Pedro",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "مستبعد بسبب إصابة في الفخذ مع عدم تحديد موعد للعودة.",
-      "summary_en": "Ruled out with a thigh injury and an unknown return date.",
+      "summary_ar": "مستبعد من المشاركة بسبب إصابة في الفخذ دون تحديد موعد للعودة.",
+      "summary_en": "Ruled out due to a thigh injury with an unknown return date.",
       "risk_level": "CRITICAL",
-      "headline_reference": "FPL Status Update: Thigh injury - Unknown return date"
+      "headline_reference": "FPL Official Flag: Thigh injury"
     },
     {
       "player_id": 356,
       "player_name": "Virgil",
       "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "شكوك خفيفة بسبب إصابة غير معلنة (نسبة الجاهزية 75%). قد يبدأ ولكن تجب متابعة الأخبار.",
-      "summary_en": "Minor doubt owing to an unspecified injury (75% chance of playing). Monitor latest fitness reports.",
+      "minute_multiplier": 0.7,
+      "summary_ar": "شكوك خفيفة حول جاهزيته مع نسبة 75% للمشاركة نتيجة انزعاج عضلات غير محدد.",
+      "summary_en": "Minor doubt with a 75% chance of playing due to an unspecified issue.",
       "risk_level": "MEDIUM",
-      "headline_reference": "FPL Status Update: Unspecified injury - 75% chance of playing"
+      "headline_reference": "FPL Official Flag: Unspecified injury - 75% chance of playing"
     },
     {
       "player_id": 391,
       "player_name": "Gvardiol",
       "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "شُكوك خفيفة بسبب إصابة غير معلنة (نسبة الجاهزية 75%). قد يحتاج لتخفيف الأحمال.",
-      "summary_en": "Minor doubt due to an unspecified injury (75% chance of playing). Potential managed workload.",
+      "minute_multiplier": 0.7,
+      "summary_ar": "يحمل إصابة خفيفة غير محددة ونسبة مشاركته تقدر بـ 75%.",
+      "summary_en": "Carrying a minor unspecified injury, currently listed with a 75% chance of playing.",
       "risk_level": "MEDIUM",
-      "headline_reference": "FPL Status Update: Unspecified injury - 75% chance of playing"
+      "headline_reference": "FPL Official Flag: Unspecified injury - 75% chance of playing"
     },
     {
       "player_id": 514,
       "player_name": "Tel",
       "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "شكوك خفيفة بسبب إصابة في الكاحل (نسبة الجاهزية 75%).",
-      "summary_en": "Minor doubt with an ankle injury (75% chance of playing).",
+      "minute_multiplier": 0.5,
+      "summary_ar": "يعاني من إصابة في الكاحل ونسبة مشاركته 75% في الجولة القادمة.",
+      "summary_en": "Dealing with an ankle injury with a 75% chance of playing in the upcoming match.",
       "risk_level": "MEDIUM",
-      "headline_reference": "FPL Status Update: Ankle injury - 75% chance of playing"
+      "headline_reference": "FPL Official Flag: Ankle injury - 75% chance of playing"
     }
   ],
   "press_wire": [
     {
-      "id": 4763668,
-      "title": "Paris Saint-Germain ticket details",
-      "summary": "Fixtures Aston Villa Vs. Paris Saint-Germain - Tue, Dec 08 2026, 20:00 Aston Villa can confirm ticket details for our UEFA Champions League fixture at home to Paris Saint-Germain. The reigning champions visit Villa Park on Tuesday, December 8, with action in B6 getting underway at 8pm. Prices, on-sale dates and full ticketing information for the fixture can be found below... BUY TICKETS Ticket Prices Category 2 (STH price in brackets) Zone 1 Zone 2 Zone 3 Zone 4 Wheelchair Bays Adult £99 (£83) £99 (£83) £89.50 (£73.50) £89.50 (£73.50) £89.50 (£73.50) Over 66 / Under 21 £88 (£77.50) £88 (£77.50) £79 (£68.50) £79 (£68.50) £79 (£68.50) Armed Forces £89.50 (£79) £89.50 (£79) £82 (£71.50) £82 (£71.50) £82 (£71.50) Under 18 £88 (£77.50) £31.50 (£21) £31.50 (£21) £31.50 (£21) £31.50 (£21) Under 14 £88 (£77.50) £31.50 (£21) £31.50 (£21) £31.50 (£21) £31.50 (£21) On-Sale Dates ON SALE ON PHONE AND ONLINE TIME ON SALE TO: Monday, November 16 9.30am 2026/27 Season Ticket Holders. Season Ticket Holders have until Wednesday, November 18 at 5pm to claim their seat. Thursday, November 19 2pm Adult and Junior Members who attended six or more home UEFA Europa League matches during the 2025/26 season. Friday, November 20 9.30am Adult and Junior Members who attended three or more home UEFA Europa League matches during the 2025/26 season. Friday, November 20 2pm Adult and Junior Members. Season Ticket holders have until Wednesday, November 18 at 5pm to purchase their own seats. Supporters whose usual seats are unavailable due to competition regulations will have until Thursday, November 19 at 2pm to select alternative seats. BUY TICKETS Additional Information Ticket Limitations One ticket per eligible Fan ID will be issued. Ticket Ballot A 'First Timer Ballot' will be available to supporters with an active Adult or Junior Membership who have not attended a home Champions League League Phase match in the 2026/27 season. Resale Resale will be available to supporters with an active Adult or Junior Membership (subject to resale being activated) and GA Season Ticket holders. eTickets All tickets are digital and collections are not available. Tickets will appear in the Aston Villa App and will be available to download to Apple or Google Wallets. Areas Season Ticket Holders who sit in the front two rows in B4 and B5 and a small number of supporters in A4 and A5 will be relocated due to UEFA allocation requirements. Refund Deadline Tickets are non-refundable, however for 2026/27 home Champions League matches, resale will be available if a supporter can no longer attend a game. FAQs All tickets are sold subject to availability. Tickets are sold on the basis they are for home fans only. Supporters purchasing for away fans or those who do not adhere to AVFC ground regulations WILL lose the right to purchase tickets for future matches. Supporters are reminded to assign tickets to other attending supporters to build up booking history. This should be completed at the point of purchase as tickets CANNOT be reassigned once the match has been played. Should you experience problems while trying to assign tickets online, please contact the Ticket Office prior to the match taking place. Attendance at this fixture may be included in future sales criteria required for further UEFA Champions League fixtures. Supporters are advised that booking history from UEFA Europa League Final or Super Cup matches are not included in the booking history for this match. Our ticket touting policy can be found here. GA+ and Hospitality Our GA+ and hospitality options offer more choices than ever before, giving you access to a host of exclusive experiences and upgrades that will make your matchday truly unforgettable. From The Terrace View and The Lower Grounds to The Aston and 82 Champions Club – there’s options to suit everyone. GA+ To explore our GA+ options, click here Hospitality To explore our hospitality options, click here Memberships Adult and Junior Memberships provide the best opportunity to secure general admission home tickets, giving access to buy when the best seats are available. Our Memberships are crafted to bring you closer to the club you love with enhanced benefits, exclusive access and unforgettable experiences. Wherever you follow from, there’s a Membership made for you. Browse our options via the link below... Aston Villa Memberships Browse here Heart of our Club: Round Up your Ticket Purchase When purchasing tickets online, supporters have the option to either donate or round up their purchase to the nearest pound, with 100% of proceeds donated to the Aston Villa Foundation. Funds raised have had significant impact on our disability programmes, providing essential equipment, kits and coaching staff, ensuring more young people with additional needs can access inclusive football opportunities. Recently, Villa fan Jude Aston was invited to Bodymoor Heath to see the impact of the Foundation’s Ability Counts programme first hand, during a 'Play on the Pitch’ experience. With thanks to those who have supported the initiative since its inception in 2021, over £100,000 has been raised.",
-      "date": "2026-11-13T14:26:31Z",
-      "url": "https://avfc.co.uk/news/2026/november/13/ticketing-psg-ticket-details-2627-ucl/",
-      "matched_players": [
-        "rice"
-      ]
-    },
-    {
-      "id": 4763640,
-      "title": "Our Christmas Bear’s name is revealed",
-      "summary": "This festive period, we are excited to introduce the latest Villan - our exclusive Christmas Bear. We asked supporters to help name our newest friend and we received an overwhelming number of responses from Villans across the globe. The club has received over 7,500 submissions from over 50 countries and we would like to express our gratitude to everyone who took the time to submit their suggestions. The most popular name voted for by supporters received a total of 152 votes – 18 votes more than the name ranked in second place. One lucky supporter who submitted the winning name will be selected at random and contacted directly by the club to redeem their prize. Honourable Mentions We really enjoyed reviewing all your suggestions and wanted to highlight a handful of creative honourable mentions: Manzambear Istanbear Unai Beary Paw Torres Paw McGrath Holtey Bear Marco Bearzot Lindefluff Emi Bearndia Ginny the Pooh Top 20 Submissions The club is delighted to publish the top 20 most popular names as voted for by Villans from across the world: 20 - Meatball 19 - Manzambear 18 - Jackson 17 - Witton 16 - Doug 15 - Claret Claus 14 - Ginny 13 - Clarence 12 - Pongo 11 - Victor 10 - Holtey 9 - William 8 - Trinity 7 - Claret 6 - McGregor 5 - Unai 4 - Holte 3 - Emery 2 - Ozzy 1 - ......... Without any further ado we are delighted to announce the latest addition to our pride… Welcome to Aston the Christmas Bear!",
-      "date": "2026-11-13T14:00:00Z",
-      "url": "https://avfc.co.uk/news/2026/november/13/news-our-christmas-bear-s-name-is-revealed/",
-      "matched_players": []
-    },
-    {
-      "id": 4763494,
-      "title": "Sanction agreements reached with Manchester City over kick-off/re-start delays and PL2 breach",
+      "id": 4763768,
+      "title": "BBC Sport: Manzambi withdraws from Switzerland squad with injury",
       "summary": "",
-      "date": "2026-11-12T16:56:00Z",
-      "url": "https://www.premierleague.com/en/news/4763494",
-      "matched_players": []
-    },
-    {
-      "id": 4763642,
-      "title": "Watch The Carabao Cup Quarter-Final At Hill Dickinson Stadium",
-      "summary": "Evertonians unable to make the trip to Fleetwood Town for the Club’s Carabao Cup quarter-final can still be part of the occasion, with a special live screening at Hill Dickinson Stadium. The Blues travel to Highbury Stadium on Thursday 17 December (8pm GMT kick-off), with a place in the Carabao Cup semi-finals at stake. For supporters not attending the fixture, the Club will open Kendall’s Social, located on Village Street at Hill Dickinson Stadium, offering Evertonians the opportunity to come together and get behind David Moyes’ side on a potentially memorable night. The match will be shown live on big screens, creating a matchday atmosphere at the Club’s waterfront home as the Blues look to further progress in the competition. Whether meeting friends and family, enjoying the pre-match build-up or cheering on every moment of the action, supporters can share the excitement of a cup occasion alongside fellow Evertonians. Tickets for both adults and kids are priced at just £10 per person, including entry to Kendall’s Social and one complimentary drink token, redeemable at the bar. Secure your place at Kendall’s Social and get behind the Blues! CLICK HERE TO BOOK YOUR TICKET Event details Fixture: Fleetwood Town v Everton - Carabao Cup Quarter-Final Screening Date: Thursday 17 December 2026 Doors: 7pm Kick-off: 8pm Venue: Kendall’s Social, Village Street, Hill Dickinson Stadium Tickets: £10 per person, including one drink token Parking: Free parking available on Nelson Dock",
-      "date": "2026-11-13T13:59:00Z",
-      "url": "https://www.evertonfc.com/news/2026/november/13/watch-the-carabao-cup-/",
+      "date": "2026-11-14T13:23:00Z",
+      "url": "https://www.bbc.co.uk/sport/articles/c9rkgdxnjr5yo",
       "matched_players": [
-        "rice",
-        "hill"
+        "manzambi"
       ]
     },
     {
-      "id": 4763641,
-      "title": "Fleetwood v Everton Cup Quarter-Final Ticket News",
-      "summary": "Everton can confirm ticketing arrangements for the Club’s Carabao Cup quarter-final against Fleetwood Town at Highbury Stadium on Thursday 17 December (8pm GMT kick-off). The Club has received an allocation of 718 tickets, including six pairs of wheelchair spaces, for the eagerly-anticipated cup tie. Following Fleetwood Town’s recent sell-out fixture against Arsenal, the League Two club has reviewed its stadium safety arrangements to accommodate operational requirements and maximise ticket availability for home supporters. These adjustments have resulted in a slightly reduced away allocation compared to the previous round but still accounts for just under 15 per cent of Highbury’s capacity. With the allocation significantly smaller than those received for most Everton Premier League away fixtures, and demand expected to considerably exceed availability, tickets will be distributed through a ballot process. The Club has previously consulted its fan groups on the fairest approach to allocating tickets for fixtures where demand exceeds availability, including occasions when the number of eligible supporters with maximum away credits is greater than the number of tickets available. The Club has extended the away credits qualifying period to recognise supporters’ attendance over a longer period, reviewing ticketing data dating back to the 2021/22 season. However, even with an extended period of accumulated away credits, the number of eligible supporters still exceeds the available allocation. For this reason, a ballot process is therefore required. Ballot eligibility The ballot will be open to 2026/27 Season Ticket Members who have accumulated 126 away credits across the 2021/22 to 2026/27 seasons, up to and including the Club’s recent away Premier League fixture against Newcastle United. Supporters can check their qualifying away credit history by clicking here. Further information on the fixtures included within the qualifying period can be found here. Official Supporters’ Clubs will also be required to submit applications through the ballot process, with eligible members included in the same ballot as other qualifying supporters. Supporters’ Club members will only be eligible if they meet the required credit criteria. Ticket prices The Club’s allocation includes seating in the Parkside Stand and standing tickets in the Percy Ronson Stand. Category Seating Standing Adult £35 £33 Over-65 £30 £28 Under-16 £19 £18 The Supporter Number of every eligible entrant must be provided when submitting a ballot application.  How to apply The ballot application window will open at 10am on Thursday 19 November, closing at 4pm on the same day. Eligible supporters can apply: Online via the Club’s official ticketing platform. By telephone on 0151 556 1878. In person at Hill Dickinson Stadium's South Stand Box Office. Box Office opening times can be found HERE. Supporters may apply individually or as part of a group of up to six family and friends, provided every member of the group meets the qualifying criteria. Each supporter or Membership number can only be entered into the ballot once. Supporters included within a group application cannot submit a separate individual application or be included in another group. All applicants will be notified of the outcome of their ballot application by 4pm on Friday 20 November. In recognition of the exceptionally limited allocation, and to ensure supporters are not disadvantaged in future away ticket applications, all successful and unsuccessful ballot applicants will still receive an away credit for the fixture. This will be applied to their account once the match has been played. Accessibility / wheelchair spaces The Club has received six pairs of wheelchair spaces, which are included within the overall allocation of 718 tickets. Supporters who require wheelchair accommodation must submit their applications in writing directly to Everton’s Accessibility Team during the Ballot opening timeline (Thursday 19 November between 10am and 4pm). Tickets will be issued to supporters who meet the qualifying criteria based on previous away credit history. Official coach travel Coach travel costs £35 and will depart from Goodison Park at 4:30pm. Supporters must be Travel Club members to purchase coach tickets. The Travel Club Membership costs just £5. Premium hospitality packages Everton has also been able to secure a limited number of hospitality packages for this fixture, offering supporters an alternative way to experience the quarter-final at Highbury. Supporters interested in securing a hospitality package can register their interest by CLICKING HERE. No unauthorised resale Supporters are reminded that it is an offence under Section 166 of the Criminal Justice and Public Order Act 1994 for any unauthorised person to resell football tickets. Further information on the Club’s position regarding ticket touting can be found here. Watch the quarter-final at Hill Dickinson Stadium For Evertonians unable to attend the fixture at Highbury Stadium, the Club will host a special live screening of the quarter-final at Kendall’s Social at Hill Dickinson Stadium. Supporters will have the opportunity to come together with fellow Blues at the Club’s waterfront home to watch the action and get behind the team as Everton look to secure a place in the Carabao Cup semi-finals. For more information on the screening and how to attend, please CLICK HERE.",
-      "date": "2026-11-13T13:59:00Z",
-      "url": "https://www.evertonfc.com/news/2026/november/13/fleetwood-v-everton-cup-quarter-final-ticket-news/",
+      "id": 4763757,
+      "title": "My Story: O’Brien's Diabetes Diagnosis & Journey Into Football",
+      "summary": "To mark World Diabetes Day, we revisiting a chat with Everton defender Jake O’Brien, who sat down to discuss his experiences with the condition. A Republic of Ireland international, O'Brien also covered a wide range of topics including his journey into professional football and an impressive sporting background. O’Brien was diagnosed with type one diabetes aged 16 – and recalling that time, he explained: “There were a few weeks when I was ill. I was losing a lot of weight and was very tired. I was drinking eight or nine litres of water a day. “I realised something wasn’t right. I went to the doctor’s and they sent me up to hospital and diagnosed me with it. My pancreas, basically, doesn’t work; it doesn’t produce insulin. \"It’s a genetic thing, I suppose, but in that sense, no one in my family has ever had it.\" Watch the full feature below, or click here to be redirected to YouTube.",
+      "date": "2026-11-14T09:00:00Z",
+      "url": "https://www.evertonfc.com/news/2026/november/14/my-story--o-brien-s-diabetes-diagnosis---journey-into-football/",
+      "matched_players": []
+    },
+    {
+      "id": 4763756,
+      "title": "Foundation Deliver First Impact Showcase",
+      "summary": "More than 60 guests consisting of fans, stakeholders, collaborators and supporters joined the Aston Villa Foundation at Villa Park for the charity’s first Impact Showcase, hearing firsthand about the community work carried out across Birmingham during the 2025/2026 football season. Foundation Ambassador Katharine Merry welcomed guests, followed by a speech from President of Business Operations Francesco Calvo about the people behind the numbers, highlighting how football can open up opportunities, build confidence and bring communities together, and the part that each staff member, partner, funder and participant plays in that work. Guests then heard case studies from our three delivery threads and learned what comes next for our work in communities around Villa Park, concluding with a speech delivered by The Right Worshipful, The Lord Mayor of Birmingham, Councillor Zaker Choudhry and the launch of our 2025/26 Community Impact Report. Foundation staff were on hand to answer questions, and demonstrate some of the innovative ways of implementing our values and work in our projects and programmes, including our work with the West Midlands Police Violence Reduction Unit, and our work with National Grid on STEM and Coding. Our Community Impact Report tells the story of our season off the pitch, showcasing individuals from all ages and backgrounds in their efforts, big or small, to make a change in their lives and for others in their communities. Having supported over 34,000 individuals across 40 impactful programmes and projects, we are committed to being a force for good at the heart of the club. We would like to thank all our participants, supporters, collaborators, Community Partners, and you, Villans, for your continued support. The full report can be read below... Aston Villa Foundation Community Report Read Here",
+      "date": "2026-11-14T09:00:00Z",
+      "url": "https://avfc.co.uk/news/2026/november/14/foundation-deliver-first-impact-showcase/",
       "matched_players": [
-        "rice",
-        "hill",
         "tel"
       ]
     },
     {
-      "id": 4763471,
-      "title": "Penders wins Coca-Cola Save of the Month award",
-      "summary": "Chelsea goalkeeper claims October's prize after incredible save to deny Mbeumo",
-      "date": "2026-11-13T14:00:00Z",
-      "url": "https://www.premierleague.com/en/news/4763471",
-      "matched_players": [
-        "mbeumo"
-      ]
-    },
-    {
-      "id": 4763465,
-      "title": "Gomez wins Guinness Goal of the Month award",
-      "summary": "Paraguayan's halfway-line strike against Crystal Palace makes it back-to-back goal awards for Brighton",
-      "date": "2026-11-13T13:00:00Z",
-      "url": "https://www.premierleague.com/en/news/4763465",
-      "matched_players": [
-        "gomez"
-      ]
-    },
-    {
-      "id": 4763643,
-      "title": "Jake O’Brien Inspires Young People Living With Type 1 Diabetes",
-      "summary": "Everton defender Jake O’Brien joined schoolchildren living with Type 1 diabetes at Finch Farm for a workshop delivered by Everton in the Community (EitC), sharing his own experiences of the condition after being diagnosed at the age of 16. Ahead of World Diabetes Day on Saturday 14 November, the Republic of Ireland international met pupils and teachers from local primary schools as part of the charity’s ongoing work to improve awareness and understanding of Type 1 diabetes and create more supportive environments for children living with the condition in schools. Pupils from five of EitC’s Premier League Primary Stars and Steve Morgan Foundation partner schools – Hatton Hill Primary School, Dovedale Primary School, St Margaret Mary’s, Northcote Primary School and Rice Lane Primary School – took part. As the official charitable arm of Everton Football Club, EitC is currently working closely with the NHS to deliver Type 1 diabetes awareness training to staff across its Primary Education partner schools. Led by Paediatric Diabetes Specialist Nurse Helen Day and Diabetes Educator Michelle Quinn from Mersey and West Lancashire Teaching Hospitals NHS Ormskirk Paediatric Diabetes Team, the sessions aim to help teachers better understand the condition, challenge misconceptions, support pupils living with diabetes and share their knowledge with the wider school community. Jake joined pupils and staff in a range of interactive activities designed to improve their understanding of the condition. These included exploring a visual body board to learn how the body processes glucose and the role insulin play in regulating blood glucose levels. Using Virtuali-Tee interactive T-shirts from EitC’s Digital Skills Lab, Jake also engaged with pupils to explore the ‘inside’ of the human body and learn more about the role of the pancreas in producing insulin. A relaxed Q&A session then gave the 25-year-old footballer the opportunity to share his own experiences of living with Type 1 diabetes, while hearing directly from pupils about how they manage the condition. Speaking about living with Type 1 diabetes, O’Brien said: “I was diagnosed at the age of 16. I’d been drinking a lot of water, feeling more tired than usual and losing a lot of weight, despite trying hard to gain it. “My parents took me to the doctors as a precaution, but my blood sugar levels were so high that I was then sent to the hospital and quickly diagnosed there. “I didn’t know much about the condition and was looking up who else had been diagnosed. I think it’s really important for these young kids to know they can do anything they set their minds to.” By the end of the 2026/27 season, Everton in the Community aims to have supported the delivery of diabetes awareness and education sessions to staff across all its Primary and Secondary Education partner schools, as well as rolling out children’s awareness sessions to help pupils support their classmates living with Type 1 diabetes. Primary Stars Senior Coordinator, Elena Barton, added: “Many of our young people living with Type 1 diabetes look up to Jake, so it was really special for them to have the opportunity to meet him, share their experiences and hear about his own journey. One even refers to Jake as his ‘diabetes brother’. “Our Primary Education team is working closely with teachers across our partner schools to bring diabetes awareness learning to life, providing continuing professional development (CPD) opportunities to help educators better understand how to support pupils living with the condition. “This is particularly important during physical education lessons, when children's blood glucose levels can fluctuate. We’ve had the training ourselves and now want to share it across our partner school network and beyond.” To find out more information about Everton in the Community’s diabetes training sessions or get involved with future events, contact Elena at elena.barton@evertonfc.com.",
-      "date": "2026-11-13T12:25:23Z",
-      "url": "https://www.evertonfc.com/news/2026/november/13/jake-o-brien-s-/",
-      "matched_players": [
-        "rice",
-        "hill",
-        "hall"
-      ]
-    },
-    {
-      "id": 4763586,
-      "title": "Analysis: How will Man Utd look under Pochettino?",
-      "summary": "We look at the Argentinian's Premier League history and assess the changes he could make at Old Trafford",
-      "date": "2026-11-13T10:00:00Z",
-      "url": "https://www.premierleague.com/en/news/4763586",
+      "id": 4763750,
+      "title": "How to own a piece of the Old Trafford pitch",
+      "summary": "As fans, the Old Trafford pitch has a special place in our hearts.",
+      "date": "2026-11-14T07:00:00Z",
+      "url": "https://www.manutd.com/en/news/how-to-own-a-piece-of-the-old-trafford-pitch",
       "matched_players": [
         "trafford"
       ]
     },
     {
-      "id": 4763644,
-      "title": "Premier League Inspires: Fulham trio visit Raynes Park",
-      "summary": "Fulham FC’s Jorge Cuenca, Alex Borto and Jonah Kusi-Asare joined pupils at Raynes Park High School for a Premier League Inspires session exploring teamwork. Bringing players and pupils together, the visit combined a practical challenge with a discussion about the importance of a strong team environment, both on and off the pitch. The session began with players and pupils teaming up to complete a challenge set by Fulham FC Foundation staff. Clear communication and problem-solving were central to the activity, giving the group an opportunity to put teamwork into practice rather than simply talk about it. Working alongside the players, pupils successfully completed the task. The challenge provided a practical starting point for the wider conversation, highlighting how sharing ideas and supporting one another can help a group work towards a common goal. Following the activity, the discussion turned to football and the role teamwork plays in success on the pitch. The session explored the importance of fostering a strong team environment, connecting the group’s experience of working together on the challenge with the demands of a team sport. Reflecting on the visit, Jorge Cuenca said: \"It was great to meet the students and put teamwork into practice through a fun activity. I really enjoyed seeing everyone working together, supporting each other and sharing ideas.\" Reflecting on how the visit built on the pupils’ learning, Lauren Binfield, Youth Engagement Officer at Fulham FC Foundation said: \"Over the first few weeks at Raynes Park, we have focused on building positive relationships through the King’s Trust qualification, starting with teamwork. The player appearance gave pupils the chance to engage with positive role models and see those values in action. Hearing the players share their experiences and take part in the team challenges brought teamwork, resilience, and support to life. Seeing the smiles on the pupils’ faces as they got to take photos with the players was a fantastic way to end an experience they will remember for a long time.\" Become a Supporter of the Foundation",
-      "date": "2026-11-13T12:06:19Z",
-      "url": "https://fulhamfc.co.uk/news/2026/november/13/premier-league-inspires-fulham-trio-visit-raynes-park/",
+      "id": 4450606,
+      "title": "Premier League injury news: Latest updates for all clubs",
+      "summary": "Get the latest Premier League injury news, with club-by-club updates on injured players, their injuries and the latest information on their fitness and availability",
+      "date": "2026-11-09T01:00:00Z",
+      "url": "https://www.premierleague.com/en/news/4450606",
+      "matched_players": []
+    },
+    {
+      "id": 4763698,
+      "title": "Internationals: Bouaddi impresses in Morocco win",
+      "summary": "Ayyoub Bouaddi impressed as Morocco recorded a 5-1 win over Niger in the Africa Cup of Nations Qualification clash in Casablanca.",
+      "date": "2026-11-13T22:15:12Z",
+      "url": "https://www.mancity.com/news/mens/internationals-13-november-63930205",
+      "matched_players": []
+    },
+    {
+      "id": 4763699,
+      "title": "McGinn nets brace for Scotland",
+      "summary": "John McGinn scored twice to fire Scotland to a 2-1 victory over North Macedonia in the UEFA Nations League on Friday night. The Aston Villa captain broke into the area and converted with a right-footed finish from 14 yards to open the scoring after 54 minutes at Hampden Park. The visitors quickly equalised before McGinn fired Scotland ahead from the penalty spot in the 74th minute to secure all three points. It was McGinn’s 24th international goal for the Tartan Army, moving him joint-third on Scotland’s all-time list of scorers – six behind Kenny Dalglish and Denis Law. Victory leaves Scotland third in League B Group 1, one point behind second-placed Slovenia with one match remaining against table-topping Switzerland on Monday. Ian Maatsen earned just his second cap for the Netherlands in an emphatic 7-0 victory over Greece in Amsterdam. The Villa left-back, having this week signed a new contract, appeared as a 74th-minute substitute as Xavi’s side went a long way towards securing top spot in League A Group 2. The Netherlands currently lead both Greece and Germany by three points and goal difference, ahead of Monday’s final match against the latter in Berlin.",
+      "date": "2026-11-13T22:10:00Z",
+      "url": "https://avfc.co.uk/news/2026/november/13/internationals-mcginn-nets-brace-for-scotland/",
       "matched_players": [
-        "hall"
+        "mcginn"
       ]
+    },
+    {
+      "id": 4763697,
+      "title": "George & Armstrong Start In England Under-21s Friendly",
+      "summary": "Harrison Armstrong and Tyrique George both played an hour of England Under-21s’ 1-0 defeat to Portugal at Ashton Gate Stadium. The Young Lions went behind to an Afonso Moreira goal in the 28th minute and were unable to find a way past keeper João Carvalho from there. This was Armstrong’s first start for the Under-21s after making his debut as a substitute against Ireland in the previous international window, while George was making his 10th appearance at this level. Lee Carsley’s side had already secured qualification for next summer’s UEFA U21 Euro finals in October, and are using these friendlies in preparation for the tournament in Albania and Serbia. Armstrong and George return to action in Bristol on Monday 16 November, taking on France (7.30pm kick-off).",
+      "date": "2026-11-13T21:36:54Z",
+      "url": "https://www.evertonfc.com/news/2026/november/13/armstrong---george-start-in-england-under-21s-friendly/",
+      "matched_players": []
     }
   ]
 }
