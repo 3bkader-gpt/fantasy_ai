@@ -7,13 +7,13 @@
     "rank": 10686053,
     "total_points": 301,
     "team_value": 101.2,
-    "bank": 15.9,
+    "bank": 15.5,
     "free_transfers": 1,
     "dry_run": false,
-    "last_updated": "2026-11-20T17:44:28.120843Z"
+    "last_updated": "2026-11-21T08:34:45.885747Z"
   },
-  "formation": "3-5-2",
-  "total_xp": 86.9,
+  "formation": "4-4-2",
+  "total_xp": 88.2,
   "captain": {
     "id": 166,
     "name": "N.Jackson",
@@ -292,11 +292,57 @@
       "press_insight": null
     },
     {
+      "id": 60,
+      "name": "Hill",
+      "team": "BOU",
+      "position": "DEF",
+      "cost": 5.6,
+      "xp": 6.2,
+      "horizon_xp": 14.6,
+      "fixture": "NFO (H) [FDR 3]",
+      "expected_minutes": 88.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 11,
+          "opponent": "NFO",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 12,
+          "opponent": "FUL",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "BHA",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 14,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 15,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
       "id": 366,
       "name": "Wirtz",
       "team": "LIV",
       "position": "MID",
-      "cost": 7.2,
+      "cost": 7.3,
       "xp": 6.4,
       "horizon_xp": 16.0,
       "fixture": "MUN (H) [FDR 3]",
@@ -430,81 +476,35 @@
       "press_insight": null
     },
     {
-      "id": 127,
-      "name": "Gomez",
-      "team": "BHA",
-      "position": "MID",
-      "cost": 5.1,
-      "xp": 4.8,
-      "horizon_xp": 12.0,
-      "fixture": "HUL (A) [FDR 2]",
-      "expected_minutes": 88.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 11,
-          "opponent": "HUL",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 12,
-          "opponent": "NEW",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "BOU",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 14,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 15,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
-      "id": 183,
-      "name": "Rudoni",
-      "team": "COV",
+      "id": 52,
+      "name": "Alysson",
+      "team": "AVL",
       "position": "MID",
       "cost": 4.9,
-      "xp": 4.8,
-      "horizon_xp": 11.4,
-      "fixture": "CRY (H) [FDR 2]",
+      "xp": 5.5,
+      "horizon_xp": 13.2,
+      "fixture": "SUN (H) [FDR 2]",
       "expected_minutes": 88.0,
       "is_captain": false,
       "is_vice_captain": false,
       "fixtures_5gw": [
         {
           "gw": 11,
-          "opponent": "CRY",
+          "opponent": "SUN",
           "is_home": true,
           "fdr": 2
         },
         {
           "gw": 12,
-          "opponent": "LEE",
+          "opponent": "IPS",
           "is_home": false,
-          "fdr": 3
+          "fdr": 2
         },
         {
           "gw": 13,
-          "opponent": "IPS",
+          "opponent": "EVE",
           "is_home": true,
-          "fdr": 2
+          "fdr": 3
         },
         {
           "gw": 14,
@@ -708,35 +708,35 @@
       "press_insight": null
     },
     {
-      "id": 334,
-      "name": "Muharemović",
-      "team": "LEE",
-      "position": "DEF",
-      "cost": 5.1,
-      "xp": 5.1,
-      "horizon_xp": 13.7,
-      "fixture": "CHE (A) [FDR 4]",
+      "id": 183,
+      "name": "Rudoni",
+      "team": "COV",
+      "position": "MID",
+      "cost": 4.9,
+      "xp": 4.8,
+      "horizon_xp": 11.4,
+      "fixture": "CRY (H) [FDR 2]",
       "expected_minutes": 88.0,
       "is_captain": false,
       "is_vice_captain": false,
       "fixtures_5gw": [
         {
           "gw": 11,
-          "opponent": "CHE",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 12,
-          "opponent": "COV",
+          "opponent": "CRY",
           "is_home": true,
           "fdr": 2
         },
         {
-          "gw": 13,
-          "opponent": "MCI",
+          "gw": 12,
+          "opponent": "LEE",
           "is_home": false,
-          "fdr": 5
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "IPS",
+          "is_home": true,
+          "fdr": 2
         },
         {
           "gw": 14,
@@ -803,28 +803,28 @@
   "transfers": [
     {
       "player_out": {
-        "name": "Alysson",
-        "team": "AVL",
-        "xp": 5.5
+        "name": "Muharemović",
+        "team": "LEE",
+        "xp": 5.1
       },
       "player_in": {
-        "name": "Wirtz",
-        "team": "LIV",
-        "cost": 7.2,
-        "xp": 6.4
+        "name": "Hill",
+        "team": "BOU",
+        "cost": 5.6,
+        "xp": 6.2
       }
     },
     {
       "player_out": {
-        "name": "Silva",
-        "team": "BOU",
-        "xp": 5.7
+        "name": "Gomez",
+        "team": "BHA",
+        "xp": 4.8
       },
       "player_in": {
-        "name": "Araujo",
-        "team": "LIV",
-        "cost": 5.5,
-        "xp": 6.3
+        "name": "Alysson",
+        "team": "AVL",
+        "cost": 4.9,
+        "xp": 5.5
       }
     }
   ],
@@ -918,7 +918,7 @@
       "name": "Raya",
       "team": "ARS",
       "position": "GK",
-      "cost": 6.2,
+      "cost": 6.3,
       "xp": 5.5,
       "horizon_xp": 12.0,
       "fixture": "NEW (A) [FDR 3]",
@@ -2514,7 +2514,7 @@
       "name": "Wirtz",
       "team": "LIV",
       "position": "MID",
-      "cost": 7.2,
+      "cost": 7.3,
       "xp": 6.4,
       "horizon_xp": 16.0,
       "fixture": "MUN (H) [FDR 3]",
@@ -4190,7 +4190,7 @@
       ]
     }
   ],
-  "briefing": "إليك التقرير التكتيكي الشامل للجولة رقم 11، المُصمَم بأعلى درجات الدقة الإحصائية والامتثال للقواعد الذهبية التاريخية للعبة الفانتازي:\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب (Tactical Framework & Rank Strategy)\nنخوض هذه الجولة باستراتيجية **الهجوم التعويضي الصارم (AGGRESSIVE)**، بهدف تقليص الفجوة وتجاوز حاجز الترتيب الحالي (10,686,053). تم اعتماد تشكيل **(3-5-2)** لتعظيم الاستفادة من قوة خط الوسط، الذي يُعد المحرك الأساسي لحصد النقاط في المحاكاة التاريخية. الموقف المالي ممتاز بوجود رصيد متبقٍ يبلغ **£15.9m**، مما يعطينا مرونة مطلقة للتحركات المستقبلية دون فرض قيود على الخيارات الكبرى.\n\n---\n\n### 2. مدى مطابقة القرارات للقواعد الذهبية (Gold Rules Compliance)\nأثبتت المراجعة الرياضية توافق قرارات هذه الجولة تماماً مع القواعد الذهبية التاريخية:\n* **شرعنة خصم النقاط (-4 Hit):** تدعم القاعدة الذهبية اتخاذ المخاطرات المحسوبة (حتى -80 نقطة تاريخياً) لاقتناص الانفجار التهديفي. القادمون الجدد يحققون معدل 13.4 نقطة في الظهور الأول مقابل 2.6 للمبيعين، وهو ما يجعل السالب (-4) استثماراً رابحاً ومبرراً إحصائياً لتحقيق زيادة صافية متوقعة.\n* **تركيز الميزانية على خط الوسط (MID Priority):** تتوافق إضافة \"Wirtz\" مع القاعدة التي تنص على توجيه 39.8% من ميزانية التشكيل الأساسي لخط الوسط لضمان أعلى معدل نقاط مجمع.\n* **كفاءة السعر للبدلاء (Price Efficiency):** شراء المدافع \"Araujo\" بسعر (£5.5m) يتماشى مع القاعدة الذهبية لتفضيل الخيارات الاقتصادية (أقل من £6.0m)، والتي تحقق أعلى عائد نقاط مقابل السعر (2.69 نقطة لكل مليون).\n\n---\n\n### 3. التحليل الرياضي والتكتيكي للتبديلات وجدوى الـ Hit\n* **اللاعبون المغادرون:**\n  * 🔴 **Alysson (AVL):** خروج منطقي رغم xP 5.5 لتفريغ خانة الوسط لصالح خيار أكثر استقراراً وسقفاً.\n  * 🔴 **Silva (BOU):** بيع مستحق (xP 5.7) للتخلص من المخاطر الدفاعية وإتاحة الفرصة لمضاعفة دفاع/وسط ليفربول.\n* **اللاعبون القادمون:**\n  * 🟢 **Wirtz (LIV) [£7.2m | xP: 6.4]:** تعزيز هجومي لخط الوسط بجدول مباريات ممتاز على المدى القريب: مانشستر يونايتد (H)، إيفرتون (A)، وسندرلاند (H).\n  * 🟢 **Araujo (LIV) [£5.5m | xP: 6.3]:** مدافع اقتصادي يمنح الفريق فرصة الخروج بشباك نظيفة (Clean Sheet) ومساهمات هجومية متوقعة خلال الجولات الثلاث القادمة.\n* **جدوى الـ Hit:** رغم تكلفة (-4)، فإن الصافي المتوقع ينعكس إيجابياً خلال الجولة الحالية والجولتين القادمتين نتيجة السلسلة المسهلة للمباريات (FDR 3-3-2)، مما يتجاوز عتبة التعادل المالية والرياضية للتبديل.\n\n---\n\n### 4. مبررات شارة القيادة (C) والنائب (VC)\n* **الكابتن الأساسي (C): N.Jackson (AVL) - [xP: 11.2]**\n  تم منح الشارة لجاكسون بناءً على معدل النقاط المتوقعة الخارق (11.2 xP). يتوافق هذا الاختيار مع قاعدة السقف العالي للاهاجمين، حيث يمتلك اللاعب فرصة انفجارية لتعويض الترتيب في هذه الجولة.\n* **نائب الكابتن (VC): Evanilson (BOU) - [xP: 8.3]**\n  خيار أمان عالي الجودة بمعدل نقاط متوقعة ممتاز في حال حدوث أي غياب مفاجئ للكابتن الأساسي.\n\n---\n\n### 5. استراتيجية الخواص وحماية ميزانية الفريق\n* **تفعيل الخواص:** \n  * **خاصية Bench Boost (BB):** تُعد الخيار الأكثر إغراءً لهذه الجولة؛ حيث يسجل بدلاء الفريق مجموع نقاط متوقعة استثنائياً يبلغ **17.4 نقطة**، وهي فرصة مثالية لتفعيل الخاصية واقتناص قفزة ضخمة في الترتيب العام.\n  * **خاصية Triple Captain (3XC):** خيار مطروح بقوة على N.Jackson لتجاوزه عتبة 11.0 xP، إلا أن تفعيل BB يمتلك أولوية أعلى من حيث صافي الربح المباشر.\n* **إدارة الميزانية:** السيولة المتبقية (£15.9m) تمنح الفريق حصانة كاملة ضد تغيرات الأسعار وتوفر مرونة قصوى لإجراء صفقات سوبر في الجولات القادمة.\n\n---\n\n### الخلاصة التنفيذية\nتمت الصياغة التكتيكية لهذه الجولة بأقصى درجات الهجومية والصرامة الرياضية؛ حيث نعتمد خطة (3-5-2) بوجود خط وسط ناري، ونستثمر سالب (-4) في مزدوج ليفربول (Wirtz & Araujo) لاستغلال الجدول السهل، مع منح شارة القيادة لـ N.Jackson صاحب أعلى معدل xP في الجولة (11.2)، واستغلال قوة الدكة بتفعيل خاصية Bench Boost لتحقيق أقصى قفزة ممكنة في سلم الترتيب العام.",
+  "briefing": "أه",
   "leagues": [],
   "eo_radar": {
     "threats": [
@@ -4287,7 +4287,7 @@
       {
         "player": "Wirtz",
         "team": "FPL",
-        "cost": 7.2,
+        "cost": 7.3,
         "eo": 8,
         "advantage": "💎 Huge Rank Boost",
         "xp": 6.38
@@ -4296,139 +4296,101 @@
     "leagues": [],
     "overall_threat_score": 68
   },
-  "press_insights": [
-    {
-      "player_id": 106,
-      "player_name": "Thiago",
-      "fitness_sentiment": "ruled_out",
-      "minute_multiplier": 0.0,
-      "summary_ar": "موقوف حالياً ولن يشارك حتى 5 ديسمبر.",
-      "summary_en": "Currently suspended and unavailable until December 5th.",
-      "risk_level": "CRITICAL",
-      "headline_reference": "Official FPL Status Flag"
-    },
-    {
-      "player_id": 165,
-      "player_name": "João Pedro",
-      "fitness_sentiment": "ruled_out",
-      "minute_multiplier": 0.0,
-      "summary_ar": "مستبعد من المباراة بسبب إصابة في الفخذ ولم يحدد موعد عودته بعد.",
-      "summary_en": "Ruled out with a thigh injury with an unknown return date.",
-      "risk_level": "CRITICAL",
-      "headline_reference": "Official FPL Status Flag"
-    },
-    {
-      "player_id": 558,
-      "player_name": "Schlager",
-      "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "يعاني من إصابة طفيفة في الفخذ ونسبة مشاركته تقدر بـ 75%.",
-      "summary_en": "Carrying a minor thigh injury with a 75% chance of playing.",
-      "risk_level": "MEDIUM",
-      "headline_reference": "Official FPL Status Flag"
-    },
-    {
-      "player_id": 514,
-      "player_name": "Tel",
-      "fitness_sentiment": "ruled_out",
-      "minute_multiplier": 0.0,
-      "summary_ar": "مستبعد بسبب إصابة في الكاحل ومن المتوقع عودته في 6 ديسمبر.",
-      "summary_en": "Ruled out due to an ankle injury with expected return on December 6th.",
-      "risk_level": "CRITICAL",
-      "headline_reference": "Official FPL Status Flag"
-    },
-    {
-      "player_id": 426,
-      "player_name": "B.Fernandes",
-      "fitness_sentiment": "fit_starter",
-      "minute_multiplier": 1.0,
-      "summary_ar": "أكد المدرب بوكيتينو استمراره كقائد للفريق وجاهزيته الكاملة للمشاركة الأساسية.",
-      "summary_en": "Confirmed to remain team captain under Mauricio Pochettino and fully expected to start.",
-      "risk_level": "LOW",
-      "headline_reference": "Pochettino addresses Bruno captaincy question"
-    }
-  ],
+  "press_insights": [],
   "press_wire": [
     {
-      "id": 4765079,
-      "title": "Cunha proving a popular pick in FPL",
-      "summary": "Manchester United have teamed up with Fantasy Football Scout to help bring you hints, tips and advice during the 2026/27 Fantasy Premier League (FPL) season.",
-      "date": "2026-11-20T17:00:00Z",
-      "url": "https://www.manutd.com/en/news/matheus-cunha-popular-in-fantasy-premier-league",
+      "id": 4765180,
+      "title": "Peixoto | 'It's about finding the right players for the game'",
+      "summary": "Cesar Peixoto has welcomed the return to fitness of several of his Wolves squad ahead of Saturday’s Championship clash with Charlton Athletic at Molineux.",
+      "date": "2026-11-21T08:05:00Z",
+      "url": "https://www.wolves.co.uk/news/mens-first-team/20261120-peixoto-its-about-finding-the-right-players-for-the-game/",
       "matched_players": []
     },
     {
-      "id": 4765050,
-      "title": "Everton v Albion | Ruiz pre-match press conference",
-      "summary": "",
-      "date": "2026-11-20T16:55:00Z",
-      "url": "https://www.brightonandhovealbion.com/media-video/everton-v-albion-or-ruiz-pre-match-press-conference",
-      "matched_players": []
-    },
-    {
-      "id": 4765075,
-      "title": "WATCH: Pochettino's first press conference as Man Utd boss",
-      "summary": "",
-      "date": "2026-11-20T16:54:00Z",
-      "url": "https://www.manutd.com/en/mutv/videos/detail/pochettinos-first-press-conference-as-man-utd-head-coach",
-      "matched_players": []
-    },
-    {
-      "id": 4765073,
-      "title": "Dorgu and Maguire return to training ahead of Liverpool clash",
-      "summary": "",
-      "date": "2026-11-20T16:43:00Z",
-      "url": "https://www.manutd.com/en/news/team-news-for-liverpool-v-manchester-united-22-november",
-      "matched_players": []
-    },
-    {
-      "id": 4765051,
-      "title": "Team news for United's clash at Liverpool",
-      "summary": "Mauricio Pochettino has delivered a brief first team news bulletin as Manchester United head coach.",
-      "date": "2026-11-20T16:00:00Z",
-      "url": "https://www.manutd.com/en/news/team-news-for-liverpool-v-manchester-united-22-november",
-      "matched_players": []
-    },
-    {
-      "id": 4765047,
-      "title": "Wolves Express | Previewing Charlton and facing a darts legend",
-      "summary": "Wolves’ home clash with Charlton Athletic this weekend and darts legend Michael van Gerwen's visit to Compton feature on Friday’s Wolves Express podcast.",
-      "date": "2026-11-20T16:00:00Z",
-      "url": "https://www.wolves.co.uk/news/club/20261120-wolves-express-previewing-charlton-and-facing-a-darts-legend/",
-      "matched_players": []
-    },
-    {
-      "id": 4765038,
-      "title": "Fans name Jackson POTM for October",
-      "summary": "Aston Villa supporters have named Nicolas Jackson as their Player of the Month for October. The striker was in red-hot form throughout the month, finding the net six times across the Premier League and UEFA Champions League. It makes it an October awards treble for Jackson, who was named the top flight's standout performer for the month last week as well as the PFA Select Car Leasing Premier League Fans’ Player of the Month. The Senegalese bagged braces against Fenerbahçe and Manchester City, while also netting versus Fulham and Brentford. The top three players in our official POTM poll were... Nicolas Jackson Alysson Zion Suzuki Thank you to everyone who voted. Congratulations, Nicolas!",
-      "date": "2026-11-20T16:00:00Z",
-      "url": "https://avfc.co.uk/news/2026/november/20/news-fans-name-jackson-potm-for-october/",
+      "id": 4765176,
+      "title": "Returning to Premier League affairs at Villa Park",
+      "summary": "Fixtures Aston Villa Vs. Sunderland - Sat, Nov 21 2026, 15:00 Aston Villa look to make it a successful return to Premier League matters on Saturday afternoon, when welcoming Sunderland to Villa Park (ko 3pm). The clash marks the resumption of club affairs after the November international break, with Unai Emery’s men hoping to go one better than the point they were made to settle for at Old Trafford two weeks ago, in a thrilling 4-4 draw. The Villans are unbeaten in their last six Premier League outings, though have drawn their last two, and are winless in four in all competitions. It has been a tricky start to the season for Régis Le Bris’ Black Cats, who sit second bottom of the league table after 10 outings. Sunderland did, however, win their last match at home to Chelsea before pausing for international duty, and are still competing in both the Carabao Cup and UEFA Europa League this season. Stats Aston Villa have lost just one of their last 12 Premier League games against Sunderland (W5 D6), going down 3-1 at the Stadium of Light in January 2016. Sunderland are winless in their last seven away league games against Aston Villa (D4 L3), since a 1-0 win in January 2011 under Steve Bruce. Aston Villa are unbeaten in their last six league games (W3 D3), though those three draws saw the Villans drop six points from winning positions – it’s the joint-most of any Premier League side since the start of October, along with Hull City. Sunderland are looking to win successive Premier League games for the first time this season, having previously done so in their final two matches of 2025/26; the Black Cats, however, have lost each of their last three league games on the road, last losing four in a row in the top-flight in April 2017. Among Premier League sides this season during a winning game state, Aston Villa have the lowest differential between xG and xGA (-4.2 – 3.8 xG, 8.0 xGA) and second lowest per 90 (-1.2), behind Hull City (-1.7). In the Premier League last season, they ranked 16th for overall xG difference when ahead (-1.9). Including penalties, five of Sunderland’s eight Premier League goals this season have come from set pieces (63%) – the highest proportion in the league, while also leading the competition for set piece xG (7.6, inc. penalties). Unai Emery is set to take charge of his 150th Premier League game for Aston Villa (W76 D33 L40), becoming the second manager to do so for them in the competition, after Martin O’Neill (P152 W61 D53 L38). Of the 42 instances in the Premier League of a manager having at least 149 games at a club, Emery at Villa ranks 10th for both win rate (51.0%) and points per game (1.75). Only Erling Haaland (9) and Alexander Isak (7) have scored more Premier League goals this season than Aston Villa’s Nicolas Jackson (6), netting in each of his last three games – across his 132 games in Europe’s big-five leagues, only in April/May 2023 for Villarreal has he scored in four in a row. Only Tyrick Mitchell (259) has made more high-intensity pressures in his own defensive third in the Premier League this season than Aston Villa’s Boubacar Kamara (238), while only two players have more tackles (28) and won more fouls (24) than the Frenchman. Among players with at least 450 minutes in the Premier League this season, Sunderland’s Brian Brobbey is one of three players to have both won (2.0) and conceded (1.9) more than 1.8 fouls per 90, along with Abdul Fatawu Issahaku and Boubacar Kamara. The Last Meeting The Villans secured a crucial three points in a seven-goal thriller the last time these two sides met, back in April. Ollie Watkins broke the deadlock inside two minutes, restoring Villa’s advantage before half-time after Chris Rigg had equalised. Morgan Rogers put Villa 3-1 ahead two minutes into the second period, before late goals from Trai Hume and Wilson Isidor threatened to split the spoils. But deep into added time, Emi Martínez saved from Habib Diarra and sent the Villans up the other end on the counter, with Tammy Abraham glancing home Lucas Digne’s cross to steal all three points in a pulsating encounter, sending Unai Emery’s men on their way to another top-four finish. Team News Unai Emery confirmed Matty Cash would be unavailable having suffered a concussion while on international duty. He joins Matteo Ruggeri and Amadou Onana on the sidelines. There is better news, however, on Johan Manzambi, who is fit after missing the international break with a calf injury picked up against Manchester United. Aaron Wan-Bissaka should also return, having missed the last six matches. Régis Le Bris will be without both Granit Xhaka and Brian Brobbey, who were withdrawn during the win over Chelsea before the international break. The pair join Dan Ballard, Romaine Mundle and Habib Diarra on the sidelines, who remain injured. Managers' Pre-Match Thoughts \"(Sunderland) have less points than they deserve. So, respecting them tomorrow, because we are tight. Even they are being with eight points, and we have 13. Tomorrow, three points are very, very important for them and for us.\" - Unai Emery \"We feel fresh and excited because this is the football we want to play. It's demanding and challenging but when you see how we played against Chelsea you can only be confident.\" - Régis Le Bris",
+      "date": "2026-11-21T08:00:00Z",
+      "url": "https://avfc.co.uk/news/2026/november/21/prematch-returning-to-premier-league-affairs-at-villa-park/",
       "matched_players": [
-        "alysson"
+        "rogers",
+        "trafford",
+        "isak",
+        "haaland",
+        "hall",
+        "hume"
       ]
     },
     {
-      "id": 4765019,
-      "title": "BALLOT INFO | BRIGHTON (A)",
-      "summary": "Fixtures Brighton and Hove Albion Vs. Ipswich Town - Sun, Dec 20th 2026, 14:00 The ballot for tickets for Town’s upcoming Premier League clash away to Brighton & Hove Albion will open from 12pm on Tuesday, 24 November. To enter the ballot, you must have a 2026/27 membership and must have between 5 and 14 away priority points. The ballot will close for entries at 12pm on Wednesday, 25 November. Town visit the American Express Stadium on Sunday, 20 December, with the game kicking off at 2pm. As per last season, if an away game sells out on priority sales stage, the club will have held back 2% of tickets for a ballot. Those who already have a ticket for this fixture will not be able to enter the ballot. Successful applicants will be informed via email by 5pm on Thursday, 26 November. Sales for successful ballot applicants will commence at 10am on Friday, 27 November through until 12pm on Friday, 27 November. Any tickets not taken from the ballot/any ongoing returns will go back on sale at 12pm on Friday, 27 November to 2026/27 Members with 5+ Away Priority Points who have not already purchased a ticket for this match. Supporters are reminded that the club reserve the right to work with other clubs to check entry scan data to ensure supporters who purchase are in attendance. Should a supporter be found to not have attended, the club reserve the right to remove the away priority point where appropriate. Entry into the ballot will operate in the same way as it does for the home ballot. Details regarding the ballot system for home fixtures can be found below. Supporters are reminded to enter the ballot in their desired eligible groups, rather than individually to ensure they are successful or unsuccessful together. A reminder of the friends and family guidance can also be found below.",
-      "date": "2026-11-20T15:05:27Z",
-      "url": "https://www.itfc.co.uk/news/2026/november/20/ballot-info---brighton--a-/",
+      "id": 4765163,
+      "title": "WSL team news: No fresh injury concerns ahead of trip to Everton",
+      "summary": "Arturo Ruiz's side will be looking to build on their midweek cup win when they head to Goodison Park on Sunday.",
+      "date": "2026-11-21T04:00:00Z",
+      "url": "https://www.brightonandhovealbion.com/media-article/wsl-team-news-no-fresh-injury-concerns-ahead-of-trip-to-everton",
       "matched_players": []
     },
     {
-      "id": 4765009,
-      "title": "O'Neil delivers positive team news ahead of Spurs match",
-      "summary": "",
-      "date": "2026-11-20T14:50:00Z",
-      "url": "https://www.itfc.co.uk/news/2026/november/20/Early-Ipswich-Town-team-news-for-Tottenham-fixture/",
+      "id": 4765119,
+      "title": "Latest update on James and Lacroix returns from Alonso",
+      "summary": "Xabi Alonso discussed the chances of Reece James and Maxence Lacroix getting back on the pitch before the end of the year, as the pair continue their recovery from injury.",
+      "date": "2026-11-20T22:30:00Z",
+      "url": "https://www.chelseafc.com/en/news/article/latest-update-on-james-and-lacroix-returns-from-alonso",
       "matched_players": []
     },
     {
-      "id": 4765006,
-      "title": "Peixoto | 'It's about finding the right players for the game'",
-      "summary": "Cesar Peixoto has welcomed the return to fitness of several of his Wolves squad ahead of Saturday’s Championship clash with Charlton Athletic at Molineux.",
-      "date": "2026-11-20T14:43:30Z",
-      "url": "https://www.wolves.co.uk/news/mens-first-team/20261120-peixoto-its-about-finding-the-right-players-for-the-game/",
+      "id": 4765117,
+      "title": "Fulham U21 1-2 Sporting CP",
+      "summary": "Fulham Under-21s were narrowly defeated by Sporting CP B in the Premier League International Cup. Sporting have been the standout team in our group, and that was clear to see as goals from Miguel Almeida and Chris Grombahi saw the visitors race into a two-goal lead. But we had plenty of chances ourselves on the night, but the goal didn’t arrive until the 88th minute as Macaulay Zepa halved the deficit via a deflection. Sporting, with a 100 per cent record in this competition, went close early on. Sebastian Osorio had time to take a touch in the box after being found by Zaid Bafdili, but he shot well over Alex Borto’s crossbar. A swift counter-attack, involving Jose Sani and Zepa, almost led to our opening goal, but Zepa’s final pass was just slightly too heavy for the striker. An end-to-end couple of minutes unravelled midway through the first period. Chibby Nwoko appeared to be fouled on the edge of the Sporting box, but referee Liam Potter penalised the midfielder for what he perceived to be a dive. Borto made a big save with an outstretched right arm, palming away Almeida’s fierce effort, before Macaulay Zepa broke down the other end and dragged a shot narrowly past the post with his right foot. We continued to threaten as Alfie White’s cutback found the man in form, Terrell Works, and he may have made it five goals in three games had it not been for a slight deflection taking his shot wide. While the opening goal felt harsh on Charlie Daniels’ side, it was well worked from the visitors point of view. Bafdili’s sliding pass was latched onto by Osorio, who had the awareness to square for Almeida to tap home. They very quickly doubled their advantage. It was piece of individual brilliance from Grombahi. Receiving the ball on the right touchline, he had that extra burst of pace to get beyond Bradley Slade, and his left-footed finish beyond Borto was calm and composed. Grombahi was proving a tricky customer down the right side, and as he embarked on another balletic run into the box, Borto had to stand strong at his near post to keep out a rasping effort. Only a couple of pieces of heroic defending at the start of the second half stopped it from becoming three. Firstly, a perfectly-timed White challenge prevented a certain goal, before Logan Cooke threw himself in the way of Osorio’s goalbound effort. There was a chance to cut the deficit, but Nwoko’s pass caught Sani off guard, as his loose touch gave him too much to do as he tried to prod the ball beyond Guilherme Pires. That sparked a spell of Fulham pressure. Zepa got a shot off on his weaker right foot, but Pires got down well, producing a strong right hand to deny the winger. We then had three huge chances in quick succession. Zepa’s delivery to the edge of the box was met with aplomb by Casey, who forced a low save from Pires, before the goalkeeper then stopped Sani from point blank range. Eddy Nsasi then saw his shot blocked. The goal did arrive with two minutes to play. Zepa nutmegged Osorio, drove into the box and saw his deflected shot fly past Pires. But it was too little too late for our youngsters, who host Nottingham Forest next Friday, 7pm kick-off at Motspur Park.",
+      "date": "2026-11-20T21:43:52Z",
+      "url": "https://www.fulhamfc.com/news/2026/november/20/fulham-u21-1-2-sporting-cp/",
+      "matched_players": [
+        "hall"
+      ]
+    },
+    {
+      "id": 4765108,
+      "title": "U21 | TOWN 2 FC PORTO 1",
+      "summary": "Town U21s secured their first win in the Premier League International Cup following a 2-1 victory against FC Porto at Portman Road. The first chance of the game fell to the visitors when Joao Teixeira won the ball high up the pitch from Jacob Mazionis, but his powerful shot while one-on-one with the goalkeeper hit the far post. Jack Taylor then had Town’s first attempt in what was an even opening period, with the midfielder latching on to a soft defensive header before striking a half volley over the crossbar from just outside the box. Porto continued to put pressure onto the Blues' defence and won the ball back in the 19th minute, which allowed Kaue Pessanha to thread a pass across to Joao Abreu, who curled his first-time shot narrowly past the top right corner. The visitors had another chance on 25 minutes as Teixeira played the ball forward to Anha Cande who showed good footwork to open up a shooting opportunity before firing just wide of the post. After withstanding a couple of chances from Porto, Town opened the scoring in the 37th minute when Anis Mehmeti did well to work his way into the area, before his deflected shot fell to Steven Turner who finished high into the net. Porto almost found a response in the 41st minute when Dinis Rodrigues' angled free-kick was saved by David Button, with Walker Shabazz-Edwards throwing himself in front of the rebound from close range. The visitors drew level from the resulting corner though, with Teixeira playing it to Rodrigues who came into the left side of the box before firing it in off the far post via a slight deflection. John McGreal’s side made a great start to the second half and almost retook the lead when Mehmeti managed to recycle a cross and lay it back to Jack Taylor on the edge who was denied by a flying save from Goncalo Ribeiro to his left. Luca Fletcher then created another chance for Town a few minutes later when he got down the left and sent in a low cross for Tommy Taylor, whose effort was deflected narrowly over the bar. The young Blues continued to create and a second goal arrived in the 69th minute when Turner’s corner caused chaos in the area, leaving Fletcher to fire the loose ball home. Town came so close to adding a third in the 85th minute when Sid Eldred’s cross from the right was palmed out by the goalkeeper to Frankie Runham, whose header hit the inside of the post. The pressure kept coming from the home side, with Eldred helping on Josh Lewis’ cross from the left towards Shakil Nicolaou who was denied by a diving save from Ribeiro in the Porto goal. The visitors threw players forwards late on in search of a leveller but the Blues stood firm to claim all three points. Town U21: Button, Mthunzi, Lewis, Mazionis, Shabazz-Edwards, Turner, McAteer (Nicolaou 79’), J. Taylor (Doherty 79’), T. Taylor (C) (Eldred 76’), Mehmeti (Runham 79’), Fletcher (Wood 90+2’). Subs (not used): Noonan, Wilkinson.",
+      "date": "2026-11-20T20:54:00Z",
+      "url": "https://www.itfc.co.uk/news/2026/november/20/u21---town-2-fc-porto-1/",
+      "matched_players": []
+    },
+    {
+      "id": 4765116,
+      "title": "Winners on century duty in club golf day",
+      "summary": "The combined team of Bespoke4Business and Town and Country Communications emerged triumphant to clinch victory at AFC Bournemouth’s Corporate Charity Golf Day at Ferndown Golf Club earlier this month. The event, which was kindly sponsored by UPN and Rhino Construction and supported the Cherries Community Fund, attracted more than 80 players. It was played on one of the south west’s most prestigious heathland courses and in reasonable weather conditions for the main part. Players enjoyed a coffee and bacon roll on arrival and a fantastic two-course meal afterwards. With the best two scores to count on each hole, Bespoke4Business and Town and Country Communications (pictured) scored 100 Stableford points. Wessex Cooling B led the chasing pack with 94 points. The Charity Challenge winners for the combined four scores on all par threes were Westmade Limited with a total score of 35 points. AFC Bournemouth would like to thank all businesses that entered a team and sponsored a hole, along with our event sponsors UPN and Rhino Construction. The club’s thanks must also go to Ferndown Golf Club for making the day possible and providing great hospitality for our guests.",
+      "date": "2026-11-20T20:41:54Z",
+      "url": "https://www.afcb.co.uk/news/2026/november/20/winners-on-century-duty-in-club-golf-day/",
+      "matched_players": [
+        "hall"
+      ]
+    },
+    {
+      "id": 4765102,
+      "title": "BOYE-HLORKAH EARNS GHANA CALL-UP",
+      "summary": "Chantelle Boye-Hlorkah has been named in Ghana's squad for their World Cup qualifiers for the upcoming international break. The Forest number eight represented the Black Queens most recently in October, starting both games in a double header against Mauritius. Congratulations, Chaney!",
+      "date": "2026-11-20T18:00:19Z",
+      "url": "https://www.nottinghamforest.co.uk/news/2026/november/20/boye-hlorkah-earns-ghana-call-up/",
+      "matched_players": [
+        "tel"
+      ]
+    },
+    {
+      "id": 4765091,
+      "title": "Final preparations for Sunderland showdown",
+      "summary": "Fixtures Aston Villa Vs. Sunderland - Sat, Nov 21 2026, 15:00 Aston Villa finalised preparations for Saturday’s clash with Sunderland at Bodymoor Heath this week. Thursday saw Unai Emery’s international players return to Bodymoor having represented their respective nations throughout the November window. And the Villans immediately got back to work on the training field ahead of this weekend’s visit of the Black Cats at Villa Park (ko 3pm). Scroll through a gallery of training images below…",
+      "date": "2026-11-20T17:30:00Z",
+      "url": "https://avfc.co.uk/news/2026/november/20/prematch-gallery-final-preparations-for-sunderland-showdown/",
+      "matched_players": [
+        "tel"
+      ]
+    },
+    {
+      "id": 4765092,
+      "title": "Black Friday | Huge savings available in-store",
+      "summary": "Our in-store exclusive Black Friday offers have landed and supporters can take advantage of huge savings across apparel, footwear and accessories - exclusively at Villa Park and the Bullring. Starting from Saturday, November 21, fans visiting the Villa Park Store can take home a 2025/26 replica shirt for only £10 and authentic jersey for £20. In addition, selected lines from the 2025/26 training wear collections will start at £5! Further information on our in-store exclusive offers including savings on 2026/27 season ranges, AVFC x adidas footwear and own-branded ranges can be found below. All in-store exclusive offers are available while stocks lasts and supporters are encouraged to visit Villa Stores early to avoid disappointment. The Villa Park Store is open to all supporters from 9am until 5.30pm and will remain open during our clash against Sunderland (ko 3pm). The club would like to remind supporters you do not require a matchday ticket to visit the Villa Park Store and are welcome to take advantage of the offers throughout the day. The Bullring Store will open its doors from 9am-8pm. 40% off Everyman Collection Save 40% this Black Friday on the in-store exclusive Everyman collection. The custom range comprises of club branded t-shirts, polos and sweatshirts designed for their versatility. Perfect for the everyday and for every Villan. Available in a range of sizes, while stocks last! Up to 40% off selected 26/27 Training Wear Collections Get kitted out in the latest training wear ahead of the winter months with our limited edition savings. Our curated collections with adidas are packed with the perfect winter essentials from layers, coats and bottoms. Whether you’re looking to refresh your matchday wardrobe or searching for the perfect gift, we have you covered! Save up to 40% off Global Training Wear and Tiro Travel Wear - as worn by Unai Emery’s team this season. Up to 65% off AVFC x adidas Footwear Save 65% across the 2025/26 AVFC x adidas footwear line exclusively in Villa Stores. There has never been a better time to pick up a pair of club branded Sambas, Barredas or the first edition of our AVFC Spezials. In addition, supporters can save up to 35% off our most recent collaboration – the Handball Spezials. The newest addition to the AVFC x adidas footwear family, sees the classic Spezials reinvented in the club’s iconic colour palette. Score a pair of the limited edition trainers for only £65 in-store this weekend. Big Savings on Winter Accessories & Gifting Villans can also stock up on winter essentials and a range of premium gifts starting from only £2! Check out our offers below: Hats & Gloves - £2 Accessories & Scarves - £3 Footballs - £5 AVFC Branded Luggage - £5 Glassware - £12 Don’t forget Villans, these savings are available while stocks last!",
+      "date": "2026-11-20T17:01:00Z",
+      "url": "https://avfc.co.uk/news/2026/november/20/retail-black-friday-huge-savings-available-in-store/",
       "matched_players": []
     }
   ]
