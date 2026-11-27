@@ -1,0 +1,12 @@
+{
+  "gameweek": 6,
+  "sample_size_60m": 11,
+  "mae": 3.374,
+  "rmse": 3.682,
+  "spearman_rho": -0.2151,
+  "predicted_xi_xp": 67.38,
+  "actual_xi_with_cap": 20,
+  "captain_name": "Player_15",
+  "captain_actual_pts": 1,
+  "gk_actual_pts": 0
+}

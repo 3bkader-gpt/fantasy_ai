@@ -9,19 +9,19 @@
     "team_value": 101.6,
     "bank": 18.1,
     "free_transfers": 0,
-    "dry_run": true,
-    "last_updated": "2026-11-27T12:47:11.028556Z"
+    "dry_run": false,
+    "last_updated": "2026-11-27T16:03:33.246105Z"
   },
   "formation": "4-4-2",
-  "total_xp": 63.4,
+  "total_xp": 63.3,
   "captain": {
     "id": 166,
     "name": "N.Jackson",
     "team": "AVL",
     "position": "FWD",
     "cost": 7.3,
-    "xp": 5.7,
-    "horizon_xp": 14.3,
+    "xp": 5.6,
+    "horizon_xp": 14.2,
     "fixture": "IPS (A) [FDR 2]",
     "expected_minutes": 90.0,
     "is_captain": true,
@@ -200,52 +200,6 @@
       "press_insight": null
     },
     {
-      "id": 332,
-      "name": "Justin",
-      "team": "LEE",
-      "position": "DEF",
-      "cost": 4.5,
-      "xp": 5.2,
-      "horizon_xp": 11.8,
-      "fixture": "COV (H) [FDR 2]",
-      "expected_minutes": 90.0,
-      "is_captain": false,
-      "is_vice_captain": false,
-      "fixtures_5gw": [
-        {
-          "gw": 12,
-          "opponent": "COV",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 13,
-          "opponent": "MCI",
-          "is_home": false,
-          "fdr": 5
-        },
-        {
-          "gw": 14,
-          "opponent": "IPS",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 15,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 16,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ],
-      "press_insight": null
-    },
-    {
       "id": 60,
       "name": "Hill",
       "team": "BOU",
@@ -273,6 +227,52 @@
         {
           "gw": 14,
           "opponent": "HUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 15,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 16,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ],
+      "press_insight": null
+    },
+    {
+      "id": 332,
+      "name": "Justin",
+      "team": "LEE",
+      "position": "DEF",
+      "cost": 4.5,
+      "xp": 5.1,
+      "horizon_xp": 11.8,
+      "fixture": "COV (H) [FDR 2]",
+      "expected_minutes": 90.0,
+      "is_captain": false,
+      "is_vice_captain": false,
+      "fixtures_5gw": [
+        {
+          "gw": 12,
+          "opponent": "COV",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "MCI",
+          "is_home": false,
+          "fdr": 5
+        },
+        {
+          "gw": 14,
+          "opponent": "IPS",
           "is_home": true,
           "fdr": 2
         },
@@ -344,7 +344,7 @@
       "position": "MID",
       "cost": 7.5,
       "xp": 5.5,
-      "horizon_xp": 14.6,
+      "horizon_xp": 14.7,
       "fixture": "EVE (A) [FDR 3]",
       "expected_minutes": 90.0,
       "is_captain": false,
@@ -482,7 +482,7 @@
       "position": "MID",
       "cost": 5.7,
       "xp": 5.0,
-      "horizon_xp": 14.3,
+      "horizon_xp": 14.2,
       "fixture": "TOT (H) [FDR 3]",
       "expected_minutes": 90.0,
       "is_captain": false,
@@ -527,8 +527,8 @@
       "team": "AVL",
       "position": "FWD",
       "cost": 7.3,
-      "xp": 5.7,
-      "horizon_xp": 14.3,
+      "xp": 5.6,
+      "horizon_xp": 14.2,
       "fixture": "IPS (A) [FDR 2]",
       "expected_minutes": 90.0,
       "is_captain": true,
@@ -667,7 +667,7 @@
       "team": "ARS",
       "position": "DEF",
       "cost": 4.9,
-      "xp": 4.3,
+      "xp": 4.4,
       "horizon_xp": 11.1,
       "fixture": "MCI (H) [FDR 4]",
       "expected_minutes": 90.0,
@@ -714,7 +714,7 @@
       "position": "FWD",
       "cost": 5.3,
       "xp": 4.1,
-      "horizon_xp": 10.2,
+      "horizon_xp": 10.3,
       "fixture": "CHE (H) [FDR 4]",
       "expected_minutes": 90.0,
       "is_captain": false,
@@ -977,7 +977,7 @@
       "position": "GK",
       "cost": 4.8,
       "xp": 3.7,
-      "horizon_xp": 9.1,
+      "horizon_xp": 9.0,
       "fixture": "TOT (H) [FDR 3]",
       "fixtures_5gw": [
         {
@@ -1816,7 +1816,7 @@
       "team": "LEE",
       "position": "DEF",
       "cost": 4.5,
-      "xp": 5.2,
+      "xp": 5.1,
       "horizon_xp": 11.8,
       "fixture": "COV (H) [FDR 2]",
       "fixtures_5gw": [
@@ -1984,7 +1984,7 @@
       "team": "SUN",
       "position": "DEF",
       "cost": 5.3,
-      "xp": 4.9,
+      "xp": 5.0,
       "horizon_xp": 12.2,
       "fixture": "TOT (H) [FDR 3]",
       "fixtures_5gw": [
@@ -2068,7 +2068,7 @@
       "team": "BRE",
       "position": "DEF",
       "cost": 4.4,
-      "xp": 4.8,
+      "xp": 4.9,
       "horizon_xp": 12.9,
       "fixture": "MUN (A) [FDR 3]",
       "fixtures_5gw": [
@@ -2147,6 +2147,48 @@
       ]
     },
     {
+      "id": 499,
+      "name": "Pedro Porro",
+      "team": "TOT",
+      "position": "DEF",
+      "cost": 5.3,
+      "xp": 4.6,
+      "horizon_xp": 12.0,
+      "fixture": "SUN (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 12,
+          "opponent": "SUN",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "FUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 14,
+          "opponent": "ARS",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 15,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 16,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 329,
       "name": "Rodon",
       "team": "LEE",
@@ -2173,48 +2215,6 @@
           "opponent": "IPS",
           "is_home": true,
           "fdr": 2
-        },
-        {
-          "gw": 15,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 16,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 499,
-      "name": "Pedro Porro",
-      "team": "TOT",
-      "position": "DEF",
-      "cost": 5.3,
-      "xp": 4.5,
-      "horizon_xp": 11.9,
-      "fixture": "SUN (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 12,
-          "opponent": "SUN",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "FUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 14,
-          "opponent": "ARS",
-          "is_home": true,
-          "fdr": 4
         },
         {
           "gw": 15,
@@ -2441,32 +2441,32 @@
       ]
     },
     {
-      "id": 230,
-      "name": "Branthwaite",
-      "team": "EVE",
+      "id": 31,
+      "name": "Konsa",
+      "team": "ARS",
       "position": "DEF",
-      "cost": 5.5,
-      "xp": 4.3,
-      "horizon_xp": 11.2,
-      "fixture": "LIV (H) [FDR 4]",
+      "cost": 4.9,
+      "xp": 4.4,
+      "horizon_xp": 11.1,
+      "fixture": "MCI (H) [FDR 4]",
       "fixtures_5gw": [
         {
           "gw": 12,
-          "opponent": "LIV",
+          "opponent": "MCI",
           "is_home": true,
           "fdr": 4
         },
         {
           "gw": 13,
-          "opponent": "AVL",
+          "opponent": "BRE",
           "is_home": false,
-          "fdr": 3
+          "fdr": 4
         },
         {
           "gw": 14,
-          "opponent": "FUL",
-          "is_home": true,
-          "fdr": 2
+          "opponent": "TOT",
+          "is_home": false,
+          "fdr": 3
         },
         {
           "gw": 15,
@@ -2573,7 +2573,7 @@
       "position": "MID",
       "cost": 7.5,
       "xp": 5.5,
-      "horizon_xp": 14.6,
+      "horizon_xp": 14.7,
       "fixture": "EVE (A) [FDR 3]",
       "fixtures_5gw": [
         {
@@ -2591,48 +2591,6 @@
         {
           "gw": 14,
           "opponent": "CHE",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 15,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 16,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 286,
-      "name": "Belloumi",
-      "team": "HUL",
-      "position": "MID",
-      "cost": 5.2,
-      "xp": 5.5,
-      "horizon_xp": 12.8,
-      "fixture": "CRY (A) [FDR 2]",
-      "fixtures_5gw": [
-        {
-          "gw": 12,
-          "opponent": "CRY",
-          "is_home": false,
-          "fdr": 2
-        },
-        {
-          "gw": 13,
-          "opponent": "NFO",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 14,
-          "opponent": "BOU",
           "is_home": false,
           "fdr": 4
         },
@@ -2693,6 +2651,48 @@
       ]
     },
     {
+      "id": 286,
+      "name": "Belloumi",
+      "team": "HUL",
+      "position": "MID",
+      "cost": 5.2,
+      "xp": 5.5,
+      "horizon_xp": 12.8,
+      "fixture": "CRY (A) [FDR 2]",
+      "fixtures_5gw": [
+        {
+          "gw": 12,
+          "opponent": "CRY",
+          "is_home": false,
+          "fdr": 2
+        },
+        {
+          "gw": 13,
+          "opponent": "NFO",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "BOU",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 15,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 16,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 123,
       "name": "Hinshelwood",
       "team": "BHA",
@@ -2735,32 +2735,74 @@
       ]
     },
     {
-      "id": 415,
-      "name": "Dorgu",
-      "team": "MUN",
+      "id": 368,
+      "name": "Szoboszlai",
+      "team": "LIV",
       "position": "MID",
-      "cost": 5.7,
+      "cost": 6.7,
       "xp": 5.3,
-      "horizon_xp": 13.6,
-      "fixture": "BRE (H) [FDR 3]",
+      "horizon_xp": 15.4,
+      "fixture": "EVE (A) [FDR 3]",
       "fixtures_5gw": [
         {
           "gw": 12,
-          "opponent": "BRE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "NEW",
+          "opponent": "EVE",
           "is_home": false,
           "fdr": 3
         },
         {
-          "gw": 14,
-          "opponent": "COV",
+          "gw": 13,
+          "opponent": "SUN",
           "is_home": true,
           "fdr": 2
+        },
+        {
+          "gw": 14,
+          "opponent": "CHE",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 15,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 16,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "name": "O.Dango",
+      "team": "BRE",
+      "position": "MID",
+      "cost": 6.2,
+      "xp": 5.3,
+      "horizon_xp": 13.0,
+      "fixture": "MUN (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 12,
+          "opponent": "MUN",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "ARS",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 14,
+          "opponent": "MCI",
+          "is_home": true,
+          "fdr": 4
         },
         {
           "gw": 15,
@@ -2819,74 +2861,32 @@
       ]
     },
     {
-      "id": 95,
-      "name": "O.Dango",
-      "team": "BRE",
+      "id": 415,
+      "name": "Dorgu",
+      "team": "MUN",
       "position": "MID",
-      "cost": 6.2,
+      "cost": 5.7,
       "xp": 5.3,
-      "horizon_xp": 12.9,
-      "fixture": "MUN (A) [FDR 3]",
+      "horizon_xp": 13.6,
+      "fixture": "BRE (H) [FDR 3]",
       "fixtures_5gw": [
         {
           "gw": 12,
-          "opponent": "MUN",
-          "is_home": false,
+          "opponent": "BRE",
+          "is_home": true,
           "fdr": 3
         },
         {
           "gw": 13,
-          "opponent": "ARS",
-          "is_home": true,
-          "fdr": 4
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
         },
         {
           "gw": 14,
-          "opponent": "MCI",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 15,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 16,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 368,
-      "name": "Szoboszlai",
-      "team": "LIV",
-      "position": "MID",
-      "cost": 6.7,
-      "xp": 5.2,
-      "horizon_xp": 15.3,
-      "fixture": "EVE (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 12,
-          "opponent": "EVE",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "SUN",
+          "opponent": "COV",
           "is_home": true,
           "fdr": 2
-        },
-        {
-          "gw": 14,
-          "opponent": "CHE",
-          "is_home": false,
-          "fdr": 4
         },
         {
           "gw": 15,
@@ -3029,74 +3029,32 @@
       ]
     },
     {
-      "id": 427,
-      "name": "Mbeumo",
-      "team": "MUN",
+      "id": 369,
+      "name": "Ngumoha",
+      "team": "LIV",
       "position": "MID",
-      "cost": 7.8,
+      "cost": 5.7,
       "xp": 5.0,
-      "horizon_xp": 13.5,
-      "fixture": "BRE (H) [FDR 3]",
+      "horizon_xp": 13.4,
+      "fixture": "EVE (A) [FDR 3]",
       "fixtures_5gw": [
         {
           "gw": 12,
-          "opponent": "BRE",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "NEW",
+          "opponent": "EVE",
           "is_home": false,
           "fdr": 3
         },
         {
-          "gw": 14,
-          "opponent": "COV",
+          "gw": 13,
+          "opponent": "SUN",
           "is_home": true,
           "fdr": 2
         },
         {
-          "gw": 15,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 16,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
-      "id": 542,
-      "name": "E.Le Fée",
-      "team": "SUN",
-      "position": "MID",
-      "cost": 5.7,
-      "xp": 5.0,
-      "horizon_xp": 14.3,
-      "fixture": "TOT (H) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 12,
-          "opponent": "TOT",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "LIV",
+          "gw": 14,
+          "opponent": "CHE",
           "is_home": false,
           "fdr": 4
-        },
-        {
-          "gw": 14,
-          "opponent": "NEW",
-          "is_home": false,
-          "fdr": 3
         },
         {
           "gw": 15,
@@ -3137,6 +3095,90 @@
         {
           "gw": 14,
           "opponent": "CRY",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 15,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 16,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 542,
+      "name": "E.Le Fée",
+      "team": "SUN",
+      "position": "MID",
+      "cost": 5.7,
+      "xp": 5.0,
+      "horizon_xp": 14.2,
+      "fixture": "TOT (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 12,
+          "opponent": "TOT",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "LIV",
+          "is_home": false,
+          "fdr": 4
+        },
+        {
+          "gw": 14,
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 15,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 16,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 427,
+      "name": "Mbeumo",
+      "team": "MUN",
+      "position": "MID",
+      "cost": 7.8,
+      "xp": 5.0,
+      "horizon_xp": 13.5,
+      "fixture": "BRE (H) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 12,
+          "opponent": "BRE",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "NEW",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "COV",
           "is_home": true,
           "fdr": 2
         },
@@ -3197,31 +3239,31 @@
       ]
     },
     {
-      "id": 369,
-      "name": "Ngumoha",
-      "team": "LIV",
+      "id": 86,
+      "name": "Lewis-Potter",
+      "team": "BRE",
       "position": "MID",
-      "cost": 5.7,
-      "xp": 5.0,
-      "horizon_xp": 13.3,
-      "fixture": "EVE (A) [FDR 3]",
+      "cost": 5.5,
+      "xp": 4.9,
+      "horizon_xp": 12.4,
+      "fixture": "MUN (A) [FDR 3]",
       "fixtures_5gw": [
         {
           "gw": 12,
-          "opponent": "EVE",
+          "opponent": "MUN",
           "is_home": false,
           "fdr": 3
         },
         {
           "gw": 13,
-          "opponent": "SUN",
+          "opponent": "ARS",
           "is_home": true,
-          "fdr": 2
+          "fdr": 4
         },
         {
           "gw": 14,
-          "opponent": "CHE",
-          "is_home": false,
+          "opponent": "MCI",
+          "is_home": true,
           "fdr": 4
         },
         {
@@ -3281,55 +3323,13 @@
       ]
     },
     {
-      "id": 86,
-      "name": "Lewis-Potter",
-      "team": "BRE",
-      "position": "MID",
-      "cost": 5.5,
-      "xp": 4.9,
-      "horizon_xp": 12.4,
-      "fixture": "MUN (A) [FDR 3]",
-      "fixtures_5gw": [
-        {
-          "gw": 12,
-          "opponent": "MUN",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 13,
-          "opponent": "ARS",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 14,
-          "opponent": "MCI",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 15,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 16,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
       "id": 166,
       "name": "N.Jackson",
       "team": "AVL",
       "position": "FWD",
       "cost": 7.3,
-      "xp": 5.7,
-      "horizon_xp": 14.3,
+      "xp": 5.6,
+      "horizon_xp": 14.2,
       "fixture": "IPS (A) [FDR 2]",
       "fixtures_5gw": [
         {
@@ -3365,55 +3365,13 @@
       ]
     },
     {
-      "id": 249,
-      "name": "Barry",
-      "team": "EVE",
-      "position": "FWD",
-      "cost": 5.7,
-      "xp": 5.4,
-      "horizon_xp": 15.7,
-      "fixture": "LIV (H) [FDR 4]",
-      "fixtures_5gw": [
-        {
-          "gw": 12,
-          "opponent": "LIV",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 13,
-          "opponent": "AVL",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 14,
-          "opponent": "FUL",
-          "is_home": true,
-          "fdr": 2
-        },
-        {
-          "gw": 15,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 16,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
       "id": 379,
       "name": "Isak",
       "team": "LIV",
       "position": "FWD",
       "cost": 9.4,
       "xp": 5.4,
-      "horizon_xp": 14.9,
+      "horizon_xp": 15.0,
       "fixture": "EVE (A) [FDR 3]",
       "fixtures_5gw": [
         {
@@ -3433,6 +3391,48 @@
           "opponent": "CHE",
           "is_home": false,
           "fdr": 4
+        },
+        {
+          "gw": 15,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 16,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "id": 249,
+      "name": "Barry",
+      "team": "EVE",
+      "position": "FWD",
+      "cost": 5.7,
+      "xp": 5.4,
+      "horizon_xp": 15.6,
+      "fixture": "LIV (H) [FDR 4]",
+      "fixtures_5gw": [
+        {
+          "gw": 12,
+          "opponent": "LIV",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 13,
+          "opponent": "AVL",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 14,
+          "opponent": "FUL",
+          "is_home": true,
+          "fdr": 2
         },
         {
           "gw": 15,
@@ -3538,7 +3538,7 @@
       "team": "CRY",
       "position": "FWD",
       "cost": 5.4,
-      "xp": 4.9,
+      "xp": 5.0,
       "horizon_xp": 11.9,
       "fixture": "HUL (H) [FDR 2]",
       "fixtures_5gw": [
@@ -3707,7 +3707,7 @@
       "position": "FWD",
       "cost": 5.7,
       "xp": 4.3,
-      "horizon_xp": 9.7,
+      "horizon_xp": 9.8,
       "fixture": "NEW (H) [FDR 3]",
       "fixtures_5gw": [
         {
@@ -3827,6 +3827,48 @@
       ]
     },
     {
+      "id": 526,
+      "name": "Solanke",
+      "team": "TOT",
+      "position": "FWD",
+      "cost": 5.8,
+      "xp": 4.2,
+      "horizon_xp": 12.0,
+      "fixture": "SUN (A) [FDR 3]",
+      "fixtures_5gw": [
+        {
+          "gw": 12,
+          "opponent": "SUN",
+          "is_home": false,
+          "fdr": 3
+        },
+        {
+          "gw": 13,
+          "opponent": "FUL",
+          "is_home": true,
+          "fdr": 2
+        },
+        {
+          "gw": 14,
+          "opponent": "ARS",
+          "is_home": true,
+          "fdr": 4
+        },
+        {
+          "gw": 15,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        },
+        {
+          "gw": 16,
+          "opponent": "-",
+          "is_home": true,
+          "fdr": 3
+        }
+      ]
+    },
+    {
       "id": 271,
       "name": "Muniz",
       "team": "FUL",
@@ -3869,32 +3911,32 @@
       ]
     },
     {
-      "id": 526,
-      "name": "Solanke",
-      "team": "TOT",
+      "id": 26,
+      "name": "Havertz",
+      "team": "ARS",
       "position": "FWD",
-      "cost": 5.8,
+      "cost": 7.4,
       "xp": 4.2,
-      "horizon_xp": 11.9,
-      "fixture": "SUN (A) [FDR 3]",
+      "horizon_xp": 9.9,
+      "fixture": "MCI (H) [FDR 4]",
       "fixtures_5gw": [
         {
           "gw": 12,
-          "opponent": "SUN",
-          "is_home": false,
-          "fdr": 3
+          "opponent": "MCI",
+          "is_home": true,
+          "fdr": 4
         },
         {
           "gw": 13,
-          "opponent": "FUL",
-          "is_home": true,
-          "fdr": 2
+          "opponent": "BRE",
+          "is_home": false,
+          "fdr": 4
         },
         {
           "gw": 14,
-          "opponent": "ARS",
-          "is_home": true,
-          "fdr": 4
+          "opponent": "TOT",
+          "is_home": false,
+          "fdr": 3
         },
         {
           "gw": 15,
@@ -3953,55 +3995,13 @@
       ]
     },
     {
-      "id": 26,
-      "name": "Havertz",
-      "team": "ARS",
-      "position": "FWD",
-      "cost": 7.4,
-      "xp": 4.1,
-      "horizon_xp": 9.9,
-      "fixture": "MCI (H) [FDR 4]",
-      "fixtures_5gw": [
-        {
-          "gw": 12,
-          "opponent": "MCI",
-          "is_home": true,
-          "fdr": 4
-        },
-        {
-          "gw": 13,
-          "opponent": "BRE",
-          "is_home": false,
-          "fdr": 4
-        },
-        {
-          "gw": 14,
-          "opponent": "TOT",
-          "is_home": false,
-          "fdr": 3
-        },
-        {
-          "gw": 15,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        },
-        {
-          "gw": 16,
-          "opponent": "-",
-          "is_home": true,
-          "fdr": 3
-        }
-      ]
-    },
-    {
       "id": 167,
       "name": "Delap",
       "team": "NFO",
       "position": "FWD",
       "cost": 5.3,
       "xp": 4.1,
-      "horizon_xp": 10.2,
+      "horizon_xp": 10.3,
       "fixture": "CHE (H) [FDR 4]",
       "fixtures_5gw": [
         {
@@ -4042,8 +4042,8 @@
       "team": "NFO",
       "position": "FWD",
       "cost": 5.6,
-      "xp": 3.9,
-      "horizon_xp": 9.9,
+      "xp": 4.0,
+      "horizon_xp": 10.0,
       "fixture": "CHE (H) [FDR 4]",
       "fixtures_5gw": [
         {
@@ -4121,30 +4121,30 @@
       ]
     },
     {
-      "id": 553,
-      "name": "Isidor",
-      "team": "SUN",
+      "id": 316,
+      "name": "Emersonn",
+      "team": "IPS",
       "position": "FWD",
       "cost": 5.4,
       "xp": 3.7,
-      "horizon_xp": 9.7,
-      "fixture": "TOT (H) [FDR 3]",
+      "horizon_xp": 9.1,
+      "fixture": "AVL (H) [FDR 3]",
       "fixtures_5gw": [
         {
           "gw": 12,
-          "opponent": "TOT",
+          "opponent": "AVL",
           "is_home": true,
           "fdr": 3
         },
         {
           "gw": 13,
-          "opponent": "LIV",
+          "opponent": "COV",
           "is_home": false,
-          "fdr": 4
+          "fdr": 2
         },
         {
           "gw": 14,
-          "opponent": "NEW",
+          "opponent": "LEE",
           "is_home": false,
           "fdr": 3
         },
@@ -4163,7 +4163,7 @@
       ]
     }
   ],
-  "briefing": "تقرير تكتيكي شامل للجولة رقم 12؛ مصمم وفق نموذج التحديد الرياضي (MILP) والنقاط المتوقعة (xP).\n\n---\n\n### 1. التكتيك المعتمد وموقف الترتيب\n* **الاستراتيجية:** هجومي تعويضي (AGGRESSIVE) للارتقاء بالترتيب الحالي (**10,684,950**).\n* **التشكيل الأساسي:** **4-4-2** (وهي المنظومة التي حققت المثالية الرياضية في 27.3% من الجولات وفق محرك الـ Hindsight).\n* **الموقف المالي:** ميزانية غير مستغلة قدرها **£18.1m** في البنك، مما يوفر قدرة هائلة على إعادة تشكيل الفريق لاحقاً.\n\n---\n\n### 2. التحليل الرياضي والتكتيكي للتبديلات\n* **قرار التبديل:** **عدم إجراء أي تبديل (ترحيل التبديل المجاني).**\n* **التكلفة:** **0 نقطة** | **صافي الزيادة المتوقعة:** **+0.00 نقطة**.\n* **التبرير:** \n  1. لا توجد إصابات مقلقة في القائمة الأساسية.\n  2. التزاماً ببروتوكول الانضباط صارم، يُمحَق إجراء التبديلات العرضية أو تكبد نقاط سالبة (-4) طالما لا توجد زيادات استثنائية مؤكدة في الـ xP على أفق 3 جولات.\n  3. ترحيل التبديل يمنحنا مرونة مزدوجة للجولة 13 لضخ الميزانية الضخمة (£18.1m) بحرية تامة دون نزيف نقاط.\n\n---\n\n### 3. مبررات شارة القيادة (C) والنائب (VC)\n* **الكابتن (C): N.Jackson (AVL)**\n  * **النقاط المتوقعة (xP):** **5.7** (الأعلى في التشكيلة).\n  * **سياق المواجهة:** يلعب خارج ملعبه ضد IPS بمعامل صعوبة سهل (**FDR 2**).\n  * **المبرر:** يتوافق اختيار Jackson كلياً مع القواعد الذهبية التاريخية التي تمنح الأولوية للمهاجمين أصحاب المواجهات السهلة (FDR <= 2).\n\n* **النائب (VC): Evanilson (BOU)**\n  * **النقاط المتوقعة (xP):** **5.3**.\n  * **سياق المواجهة:** يلعب خارج ملعبه ضد FUL بمعامل صعوبة (**FDR 3**).\n  * **المبرر:** خيار مساند هجومي مستقر في حال غياب الكابتن الأساسي.\n\n---\n\n### 4. استراتيجية الخواص وإدارة الميزانية\n* **تفعيل خاصية تعزيز الدكة (Bench Boost):** \n  * **التوصية:** **تفعيل الخواص (HIGH).**\n  * **التبرير:** القوة المتوقعة لدكة البدلاء تصل إلى **16.6 xP** مع سلامة كافة اللاعبين، مما يجعلها فرصة مثالية لاقتناص نقاط إضافية دون الحاجة لإعادة هيكلة التشكيلة بالكامل.\n* **إدارة الميزانية والخواص طويلة المدى:**\n  * يتبقى لدينا خواص: **Wildcard (2), Freehit (1), Triple Captain (1)**.\n  * الانتباه لشرط (Use-It-Or-Lose-It) لخاصية النصف الأول قبل الجولة 19. الرصيد المالي المتاح (£18.1m) يجهز الفريق لعملية بناء استباقية ممتازة عند تفعيل الوايلد كارد المستقبلي.\n\n---\n\n### الخلاصة التنفيذية\nنخوض الجولة 12 بتشكيلة **4-4-2** متوازنة ودون مجازفة بالسوالب، مع ترحيل التبديل المجاني للتحكم في الميزانية الضخمة (£18.1m) بالجولة القادمة. يوصى بتفعيل **Bench Boost** للاستفادة من الجاهزية العالية للدكة (16.6 xP)، بينما تذهب شارة القيادة بثقة إلى **N.Jackson (AVL)** أمام IPS (FDR 2) لتحقيق أعلى عائد ممكن من النقاط المتوقعة.",
+  "briefing": "**التقرير التكتيكي لجولة 12 - FPL Elite Manager**\n\n### 1. التكتيك المعتمد وموقف الترتيب\n* **الاستراتيجية:** هجومي تعويضي (AGGRESSIVE) بهدف تقليص الفارق والتقدم في الترتيب العام (10,684,950)، مع الالتزام بالدقة الحسابية ونماذج النقاط المتوقعة (Multi-Horizon xP).\n* **الموقف الحالي:** رصيد ماليات قوي (£18.1m) وتكلفة تبديلات صفرية (-0 نقطة)، مع الاستفادة القصوى من استقرار التشكيلة.\n\n---\n\n### 2. التحليل الرياضي والتكتيكي للتبديلات\n* **قرار التبديل:** لا توجد تبديلات مقترحة لهذه الجولة، وتم ترحيل التبديل المجاني للحفاظ على مرونة التشكيلة للأفق القريب.\n* **الانضباط وتجنب السوالب (-4):** التزاماً بقواعد الصرامة الرياضية، تم رفض أي تبديل عشوائي لعدم وجود إصابات طارئة أو مكسب رياضي يبرر نزيف النقاط، خصوصاً مع تفوق الأساسيين في مؤشرات الأداء المتوقع (xP) وتفادي مخاطر الهبوط في الأداء مثل حالة João Pedro (رادار Flop).\n\n---\n\n### 3. مبررات شارة القيادة (C) والنائب (VC)\n* **الكابتن (C):** **N.Jackson** (فريق AVL ضد **IPS** [خارج الأرض A - FDR 2]) بـ xP متوقع يبلغ **5.6**. الاختيار مستند إلى مواجهة ذات صعوبة منخفضة (FDR 2) وفقاً لقواعد البيانات التي تفضل استغلال المهاجمين أصحاب أعلى معدلات xGI.\n* **النائب (VC):** **Evanilson** (فريق BOU ضد **FUL** [خارج الأرض A - FDR 3]) بـ xP متوقع يبلغ **5.3**، لضمان تغطية هجومية عالية في حال تعطل الكابتن الأساسي.\n\n---\n\n### 4. نصيحة استراتيجية الخواص وإدارة الميزانية\n* **إدارة الخواص:** نظراً لاقتراب موعد حرق خواص النصف الأول (نهاية الجولة GW19)، وملاحظة القوة الاستثنائية لدكة البدلاء (16.6 xP)، فإن تفعيل خاصية **Bench Boost** مطروح كفرصة ذهبية، مع ضرورة مراقبة الجولات القادمة لتفعيلها بالتنسيق مع تدوير الميزانية (£18.1m).\n* **الكفاءة السعرية:** التركيز على الفئات الاقتصادية (<£6.0m) لتحقيق أعلى عائد نقاط مقابل المليون (Points-per-Million) وفقاً لمؤشرات الأداء التاريخية.\n\n---\n\n### الخلاصة التنفيذية\nيدخل الفريق جولة 12 بتشكيلة مستقرة، انضباط تام في التبديلات لتجنب السوالب، واختيار دقيق لشارة القيادة مع **N.Jackson** أمام **IPS (A)**. استمرار ترحيل التبديلات والجاهزية لاستغلال الخواص (مثل Bench Boost قبل GW19) يضمنان تعظيم العائد الرياضي والتقدم التصاعدي في الترتيب العام بأمان تام.",
   "leagues": [],
   "eo_radar": {
     "threats": [
@@ -4223,7 +4223,7 @@
         "cost": 5.6,
         "eo": 8,
         "advantage": "💎 Huge Rank Boost",
-        "xp": 5.87
+        "xp": 5.88
       },
       {
         "player": "N.Jackson",
@@ -4231,7 +4231,7 @@
         "cost": 7.3,
         "eo": 8,
         "advantage": "💎 Huge Rank Boost",
-        "xp": 5.71
+        "xp": 5.61
       },
       {
         "player": "Wirtz",
@@ -4239,7 +4239,7 @@
         "cost": 7.5,
         "eo": 8,
         "advantage": "💎 Huge Rank Boost",
-        "xp": 5.49
+        "xp": 5.55
       },
       {
         "player": "Tavernier",
@@ -4258,9 +4258,9 @@
         "xp": 5.32
       },
       {
-        "player": "Justin",
+        "player": "Hill",
         "team": "FPL",
-        "cost": 4.5,
+        "cost": 5.7,
         "eo": 8,
         "advantage": "💎 Huge Rank Boost",
         "xp": 5.15
@@ -4273,186 +4273,185 @@
     {
       "player_id": 1,
       "player_name": "Raya",
-      "fitness_sentiment": "major_doubt",
-      "minute_multiplier": 0.5,
-      "summary_ar": "يعاني من إصابة في الكتف، وهناك شكوك بنسبة 50% حول جاهزيته للمشاركة.",
-      "summary_en": "Dealing with a shoulder injury with a 50% chance of playing.",
-      "risk_level": "HIGH",
-      "headline_reference": "Premier League injury news: Latest updates for all clubs"
-    },
-    {
-      "player_id": 449,
-      "player_name": "Hall",
       "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "لديه إصابة غير مشخصة بنسبة جاهزية 75%، وهو تحت المراقبة الطبية.",
-      "summary_en": "Carrying an unspecified injury with a 75% chance of playing.",
+      "minute_multiplier": 0.85,
+      "summary_ar": "شكوك خفيفة بسبب إصابة في الكتف بنسبة جاهزية 75٪ قبل مواجهة مانشستر سيتي.",
+      "summary_en": "Minor doubt with a shoulder injury; rated at 75% chance to feature against Man City.",
       "risk_level": "MEDIUM",
-      "headline_reference": "Premier League injury news: Latest updates for all clubs"
+      "headline_reference": "Arteta provides latest on Raya's chances of facing Man City"
     },
     {
       "player_id": 114,
       "player_name": "Boscagli",
       "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "يعاني من وعكة صحية، مع فرصة مشاركة تقدر بنسبة 75%.",
-      "summary_en": "Suffering from an illness with a 75% chance of playing.",
+      "minute_multiplier": 0.85,
+      "summary_ar": "يعاني من مرض بسيط مع فرضية لحاقه بالمباراة القادمة بنسبة 75٪.",
+      "summary_en": "Slight doubt due to illness with a 75% chance of playing.",
       "risk_level": "MEDIUM",
-      "headline_reference": "Premier League injury news: Latest updates for all clubs"
+      "headline_reference": "FPL Status Update: Illness"
     },
     {
       "player_id": 119,
       "player_name": "Costinha",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "موقوف رسمياً حتى الثاني من ديسمبر ولن يشارك.",
-      "summary_en": "Suspended until December 2nd and unavailable.",
+      "summary_ar": "مستبعد تماماً بسبب الإيقاف حتى 2 ديسمبر.",
+      "summary_en": "Ruled out due to suspension until 2 December.",
       "risk_level": "CRITICAL",
-      "headline_reference": "Premier League injury news: Latest updates for all clubs"
+      "headline_reference": "FPL Status Update: Suspended until 2 Dec"
     },
     {
       "player_id": 165,
       "player_name": "João Pedro",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "يعاني من إصابة في الفخذ ولا يوجد موعد محدد لعودته.",
-      "summary_en": "Out with a thigh injury and an unknown return date.",
+      "summary_ar": "غائب بسبب إصابة في الفخذ وموعد العودة غير محدد.",
+      "summary_en": "Unavailable due to a thigh injury with an unknown return date.",
       "risk_level": "CRITICAL",
-      "headline_reference": "Premier League injury news: Latest updates for all clubs"
-    },
-    {
-      "player_id": 492,
-      "player_name": "Awoniyi",
-      "fitness_sentiment": "ruled_out",
-      "minute_multiplier": 0.0,
-      "summary_ar": "يغيب بسبب إصابة في الكاحل وبدون موعد عودة دقيق.",
-      "summary_en": "Unavailable due to an ankle injury with an unknown return date.",
-      "risk_level": "CRITICAL",
-      "headline_reference": "Premier League injury news: Latest updates for all clubs"
+      "headline_reference": "FPL Status Update: Thigh injury"
     },
     {
       "player_id": 211,
       "player_name": "Yeremy",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "موقوف حتى الثاني من ديسمبر.",
-      "summary_en": "Suspended until December 2nd.",
+      "summary_ar": "موقوف ولن يشارك في الجولة القادمة حتى 2 ديسمبر.",
+      "summary_en": "Suspended and unavailable until 2 December.",
       "risk_level": "CRITICAL",
-      "headline_reference": "Premier League injury news: Latest updates for all clubs"
+      "headline_reference": "FPL Status Update: Suspended until 2 Dec"
     },
     {
       "player_id": 229,
       "player_name": "Tarkowski",
       "fitness_sentiment": "ruled_out",
       "minute_multiplier": 0.0,
-      "summary_ar": "موقوف حتى الثالث عشر من ديسمبر.",
-      "summary_en": "Suspended until December 13th.",
+      "summary_ar": "مستبعد رسمياً لبداية عقوبة الإيقاف لمدة 3 مباريات بعد البطاقة الحمراء.",
+      "summary_en": "Confirmed out serving the first game of a three-match suspension.",
       "risk_level": "CRITICAL",
-      "headline_reference": "Premier League injury news: Latest updates for all clubs"
+      "headline_reference": "Moyes Discusses Everton Team News For Merseyside Derby"
     },
     {
       "player_id": 426,
       "player_name": "B.Fernandes",
       "fitness_sentiment": "minor_doubt",
-      "minute_multiplier": 0.75,
-      "summary_ar": "غاب عن تدريبات مانشستر يونايتد الأخيرة، وهناك شكوك حول جاهزيته الكاملة.",
-      "summary_en": "Missed Manchester United training, casting mild doubts on his availability.",
+      "minute_multiplier": 0.85,
+      "summary_ar": "شكوك بسيطة بسبب المرض لكن يملك احتمال 75٪ للمشاركة.",
+      "summary_en": "Minor doubt due to illness, rated at 75% chance to play.",
       "risk_level": "MEDIUM",
-      "headline_reference": "Fernandes misses Man Utd training - all the details"
+      "headline_reference": "FPL Status Update: Illness"
+    },
+    {
+      "player_id": 449,
+      "player_name": "Hall",
+      "fitness_sentiment": "minor_doubt",
+      "minute_multiplier": 0.75,
+      "summary_ar": "يعاني من إصابة غير محدده ونسبة مشاركته 75٪.",
+      "summary_en": "Carrying an unspecified injury with a 75% chance of playing.",
+      "risk_level": "MEDIUM",
+      "headline_reference": "FPL Status Update: Unspecified injury"
+    },
+    {
+      "player_id": 492,
+      "player_name": "Awoniyi",
+      "fitness_sentiment": "ruled_out",
+      "minute_multiplier": 0.0,
+      "summary_ar": "مستبعد بسبب إصابة الكاحل ولا يوجد موعد عودة محدد.",
+      "summary_en": "Out with an ankle injury and unknown return timeline.",
+      "risk_level": "CRITICAL",
+      "headline_reference": "FPL Status Update: Ankle injury"
     }
   ],
   "press_wire": [
     {
-      "id": 4771704,
-      "title": "Defend like Virgil van Dijk ⛔️",
-      "summary": "In episode 2 of Play Like a Pro, Conor Coady puts Freda and LDN Movements teams to the test in a series of defending challenges. Who will come out on top?",
-      "date": "2026-11-27T12:00:00Z",
-      "url": "https://www.youtube.com/watch?v=Gc1KpzWZ6zI",
+      "id": 4771779,
+      "title": "U21 TICKET DETAILS | PSG (H)",
+      "summary": "Fixtures Ipswich Town U21 Vs. PSG U21 - Wed, Jan 20th 2027, 19:00 Tickets for Town U21s’ next Premier League International Cup fixture are now on sale. The young Blues take on PSG U21s at Portman Road on Wednesday, 20 January, with the game kicking off at 7pm. Prices are as follows: Adult - £3 U19 - £1 Season ticket holders can gain free entry (one per season ticket holder). A complimentary ticket must be 'purchased', and not by presenting a season ticket at a turnstile on the day of the game. Members are also entitled to one complimentary ticket but as per season tickets above, this can only be granted with a valid complimentary match ticket obtained in advance. null null TICKET INFO A valid print at home or NFC ticket which can be scanned from a mobile device or printed on A4 paper will be required to gain free entry. Season ticket holders/members will be able to claim a complimentary ticket by adding a ticket to their basket. The system will automatically discount this ticket. Should season ticket holders/members be purchasing for others who are entitled to a complimentary ticket, they will need to ensure they have assigned the ticket to them for the discount to apply. Multiple season ticket/members tickets can be obtained in a single basket following the above instruction and reassigning those tickets to the relevant eligible supporters. STAND INFO The Cobbold Stand will be open for this fixture with supporters located in Blocks, C and VU3. Wheelchair/ambulant users can purchase in Block VA of the Cobbold Stand. PAY ON THE DAY Advance sales online will cease at kick off for both games. Any ticket sales on the day will be available via card only turnstiles. Disabled Supporters needing to be seated in Block VA can purchase in person on the day via the collection point on Portman Road. This will open from 6.15pm and sales will be card only. Sales will be available as normal online here or in Planet Blue. EXTRA INFO No U14s will be permitted to the stadium without a parent/guardian (18+). Disabled supporters and their carers/personal assistants can now purchase tickets through the club's website, with more information available here. For any further disability needs, please speak to our Disability Liaison Officer, Lee Smith, on 01473 400 566 or lee.smith@itfc.co.uk.",
+      "date": "2026-11-27T15:05:21Z",
+      "url": "https://www.itfc.co.uk/news/2026/november/27/u21-ticket-details---psg--h-/",
       "matched_players": [
-        "hall"
+        "rice",
+        "smith"
       ]
     },
     {
-      "id": 4771697,
-      "title": "Training update ahead of Brentford",
-      "summary": "Manchester United have trained in front of the cameras in the Carrington rain on Friday morning.",
-      "date": "2026-11-27T11:45:00Z",
-      "url": "https://www.manutd.com/en/news/bruno-fernandes-misses-pre-brentford-training-update",
+      "id": 4689959,
+      "title": "LIVE: Follow all the news ahead of the weekend's matches",
+      "summary": "Get team news, insight and FPL advice ahead ahead of Matchweek 12 in the Premier League",
+      "date": "2026-11-22T12:00:00Z",
+      "url": "https://www.premierleague.com/en/matchweek/2026_12/blog",
       "matched_players": []
     },
     {
-      "id": 4771684,
-      "title": "Rose praises squad mentality ahead of Fulham clash",
-      "summary": "Marco Rose insists AFC Bournemouth will take nothing for granted as they look to extend their club-record winning run against Fulham at Craven Cottage on Sunday. The Cherries head to the capital in fine form, with Rose particularly impressed by the way his squad has handled the demands of competing across multiple competitions. With three Premier League fixtures in the space of a week against Fulham, Brighton & Hove Albion and Hull City, the head coach stressed the importance of maintaining the standards which have brought about such an impressive run of results. “I'm really impressed,” Rose said. “The lads, everyone here at the club, is doing it really well at a high level. “Everyone is focused. We take our time in between the games, we use the time for recovering, to prepare for the next game or to make a review. “Of course, it feels good because we have a run like we have and we should continue like this. Even if we get a setback, I'm quite sure that we are strong enough to continue and to get back on a run.” Rose reserved special praise for midfielder Tyler Adams, whose leadership and understanding of the game have been instrumental in the Cherries’ recent success. The United States international has been a consistent presence in Rose’s side, with the head coach highlighting his influence on those around him. “His capability to organise a team, to make a team aware about situations, to lead the team in his role as a six, defensively, out of possession and in possession, is quite impressive,” Rose continued. “He is a very important part for us and a really good leader. “He understands the game and he understands how to win games, what's necessary in particular situations, in particular games with different demands. It's good to have a player like this.” The Cherries’ defensive improvements have also pleased Rose, who believes the collective responsibility taken by his players has been central to their success. “We worked on it on the pitch, we worked on some patterns, we showed situations in videos and we spoke about situations. “Everyone takes responsibility to defend our goal and that's the most important part. “We understood that we win and lose games in both boxes. We arrive better offensively and we defend much better in our own box.” Attention now turns to Álvaro Arbeloa’s Fulham, a side Rose has been impressed by under their new manager this season. The head coach is also wary of the threat posed by Rodrigo Muniz, who has scored in successive games for the Cottagers. “The games I've watched so far, they were really good,” he said. “They are good in possession, they are good and intense out of possession and, like always in the Premier League, it's going to be a tough challenge for us. “He’s (Muniz) a physical striker but technical at a good level, so hard to defend. It seems that he's getting on a run – like our number nine!” Asked whether Cherries supporters should allow themselves to dream following their remarkable run of victories, Rose was happy for fans to enjoy the moment. “Fans are always allowed to dream and, for us, it's about the next game. This is for me quite clear. “After a tough start, we are now in a good situation, in a good spot. We feel good, but we take nothing for granted and everything is hard work. “If we step back or drop in just one area, it's going to get difficult in every competition we play.”",
-      "date": "2026-11-27T11:39:15Z",
-      "url": "https://www.afcb.co.uk/news/2026/november/27/rose-praises-squad-mentality-ahead-of-fulham-clash/",
-      "matched_players": [
-        "muniz",
-        "hall"
-      ]
-    },
-    {
-      "id": 4771688,
-      "title": "Pre-Bournemouth Press Conference",
-      "summary": "Fulham come up against one of the most in-form sides in Europe this weekend. AFC Bournemouth’s Europa League victory over Celta Vigo on Thursday – despite being a goal and a man down from the 23rd minute – marked a 10th consecutive win across all competitions. “They are playing amazing, with that confidence,” Arbeloa said. “Even yesterday against a very good team, and with 10 men for 60 or 70 minutes, they won the game. “To win one game is difficult, win two games in a row is very, very difficult. Imagine winning 10 games in a row, even when they are playing with midweek games. “So, it's something incredible and amazing, and yes, congrats to Bournemouth because they are playing so, so well. They didn't start well the season, and you can look at them now. “It will be so difficult for us, because they have this confidence, this confidence that even when they are losing and they are with one less player, they still feel that they can win the game, so it will be hard for us.” Fulham are on a solid unbeaten run of our own, taking positive results from each of our last five Premier League outings. The most recent three have each ended 1-1, though, with Arbeloa targeting maximum points from Sunday’s encounter, regardless of the opposition’s form. “I said to my players, I think right now we feel that we can compete against anyone, staying true to our idea, playing with our personality, and now we have to go out there thinking that we are going to win the game. “We are performing well, maybe we deserve to win some of the games that we drew, but our target has to be to win the game, win the game, win the game. Obviously, it's never easy, but I think we are on the right track.”",
-      "date": "2026-11-27T11:35:29Z",
-      "url": "https://www.fulhamfc.com/news/2026/november/27/pre-bournemouth-press-conference/",
-      "matched_players": []
-    },
-    {
-      "id": 4771685,
-      "title": "Amine Adli praises Cherries' team spirit after Celta Vigo comeback",
-      "summary": "Amine Adli believes AFC Bournemouth’s remarkable comeback victory over Celta Vigo typified the togetherness and fighting spirit within the Cherries dressing room. A goal and a man down midway through the first half at Estadio Abanca Balaídos, Marco Rose’s side fought back to claim a memorable 2-1 victory and extend their club-record winning run to ten matches in all competitions. Adli provided the assist for Álvaro Rodríguez’s equaliser shortly after the interval, before Rayan struck 12 minutes from time to maintain the Cherries’ perfect start to their debut UEFA Europa League campaign. And for Adli, the victory was particularly significant given the circumstances surrounding Bafodé Diakité’s first-half dismissal. The pair came through the academy together at Toulouse and Adli revealed how the entire squad rallied around the defender, determined to return to England with all three points. “I think what happened with the result shows how we also did it for him,” Adli said in the mixed zone after the match. “Because when you take a red card and the team loses, for sure you will feel the impact, you will feel like it's a bit of your fault. “But this is the way the team believes. “We won the game, and it's also nice for him because now everybody is going to forget the red card. “It didn't impact us. So this is how the team is. From the start, when he took the red card, everybody was with him.” Despite facing an uphill battle against the Spanish side, Adli revealed there was a genuine belief among the players at half-time that they could still leave Vigo with a victory. That belief was evident throughout the second half, with every player working tirelessly for one another as the Cherries became the first English club to win each of their first five matches in major European competition. “After wins like this, you feel more emotion because you suffer a lot,” he continued. “We were 1-0 down, then we get the red card, but we show how strong we are, how brave we are, how everybody runs and how we keep believing. “What shocked me is that at half-time everybody was still believing that we could turn the game in our way, and this is what happened. “So, yeah, the locker room was very nice after the game.” Adli’s contribution to the comeback came courtesy of a superb delivery towards the back post, where Rodríguez rose to head home and draw the Cherries level. “I asked for the ball from Brooksy,” explained the Moroccan international. “I know that in this type of situation it's very nice to put balls in at the second post. “I saw Álvaro there. Everybody knows his ability with his head. He's very tall, can jump very high. “And then I just tried to give a dangerous ball in the good area. Obviously it was a very nice ball, and Álvaro just flicked it very well. It was a nice goal.” Five wins from five in Europe and ten consecutive victories in all competitions make for remarkable reading, but it was the manner of the performance in Vigo that made Thursday evening particularly special. For Adli, it was another example of a group of players willing to fight for one another. “The team shows that we support him, and this is how we did it: by winning the game.”",
-      "date": "2026-11-27T11:31:19Z",
-      "url": "https://www.afcb.co.uk/news/2026/november/27/amine-adli-praises-cherries--team-spirit-after-celta-vigo-comeback/",
-      "matched_players": [
-        "raya",
-        "hill"
-      ]
-    },
-    {
-      "id": 4771658,
-      "title": "TICKET DETAILS | ARSENAL (A)",
-      "summary": "Fixtures Arsenal Vs. Ipswich Town - Sat, Jan 2nd 2027, 15:00 Tickets for the upcoming Premier League trip to Arsenal on Saturday, 2 January will go on sale at 10am on Wednesday, 2 December. The fixture, that kicks off at 3pm, will be all-ticket and no sales will be available on the day, and we have received a final allocation of 3,003 tickets. Tickets for this fixture will be NFC digital tickets which can be downloaded to your Apple/Google wallet. Please ensure you download your ticket prior to matchday and that your phone has suitable charge. For guidance on how to download your digital ticket, please click HERE. Digital NFC Links will follow around one working day after the return deadline, which is on Tuesday, 29 December at 5pm. Links will be sent out by email to each individual ticket owner. It is important to ensure your email is up to date prior to the links being sent. Following the introduction of single sign-on across all club digital outlets, supporters should note that it is strongly recommended that you ensure you can login to your account prior to sales commencing. To read more on single sign-on please click here. null null PRICES Adult: £30 66+: £12.75 U25: £22.75 U17: £11.50 Adult-Disabled: £15 SALES DATES 2026/27 members with 35+ away priority points – Wednesday, 2 December at 10am. 2026/27 members with 30+ away priority points – Wednesday, 2 December at 3pm. 2026/27 members with 25+ away priority points – Thursday, 3 December at 10am. 2026/27 members with 20+ away priority points – Thursday, 3 December at 3pm. 2026/27 members with 15+ away priority points – Friday, 4 December at 10am. 2026/27 members with 10+ away priority points – Friday, 4 December at 3pm. 2026/27 members with 5+ away priority points – Monday, 7 December at 12pm. 2026/27 season ticket holders – Monday, 7 December at 2pm. All sales windows will only allow one ticket per owner. Supporters who have purchased and are no longer able to attend the fixture, will be able to claim a full refund by calling the ticket office on 03330 05 05 03 up until 5pm on Tuesday, 29 December. Any cancellation requests after this time will be declined. Should any ticket be available these will remain on sale until 5pm on Wednesday, 30 December, for supporters to purchase any returns. Supporters are reminded that the only official platform to purchase tickets for Town matches is tickets.itfc.co.uk or in person at our Planet Blue Superstore. Supporters should not under any circumstances purchase tickets from any unauthorised sale or resale platforms. Anyone who purchases from third parties does so at their own risk. BALLOT INFORMATION A total of 2% of tickets will be held back for a ballot should this fixture sell out during an away priority points (APP) sale stage. Further information will be provided should this fixture reach the ballot stage. ADDITIONAL INFORMATION & SPOT CHECKS Prior to sales commencing, supporters will need to be aware of the processes relating to how they purchase their tickets. Sales will cease at 6am the following day after sales commence (including weekends) before sales resume at the next level of priority (where applicable). Where a priority changes over at 3pm, sales will cease at 2pm prior to the change of priority. Supporters should note that if they have already been eligible to purchase, and have not, they will continue to be able to buy throughout the remaining priority windows when each window opens. This will be the process ahead of and during each window. In line with our ticket touting policy, all ticket purchases must be purchased in the name of those attending. With this, we will now be restricting all ticket purchases to only be able to purchase the relevant price type applicable to your age. For example, if you are 30-years-old, you will only be able to purchase an adult ticket and not an U23 ticket. To purchase a ticket of a different price type, you would need to ensure this was assigned to the individual eligible of that price type. Sales will also be limited to one ticket per owner, with that owner needing to purchase the correct price type. If you wish to purchase any more tickets, you will be required to assign those tickets to those in attendance via the ‘Friends and Family’ feature on the website. In line with this, any supporter looking to collect a ticket or duplicate from the away club will be asked to provide proof of their confirmation email to collect their order. Failure to do so will result in their collection being denied. Those who have been selected and notified of a random spot check, will need to provide photographic ID evidence to collect their tickets. These supporters will be made aware of this requirement in advance of the fixture. Again, failure to do so will result in their collection being denied. TICKET TOUTING POLICY With tickets expected to be in high demand, supporters are reminded of the club’s ticket touting policy. Tickets should only be bought via official channels at tickets.itfc.co.uk or in Planet Blue and should not be advertised for secondary sale, with eligible supporters advised to only purchase if they intend to attend the game. Any supporters seeing tickets for sale outside of official channels are asked to contact touting@itfc.co.uk for us to investigate further, while supporters are also reminded that random spot checks of photographic ID are in operation for away fixtures. Full details regarding the policy, including procedures regarding the cancellation and transfer of tickets, as well as potential sanctions, can be found here. COACH TRAVEL Coach travel will also go on sale in line with the priority ticket sale windows with prices as below: Adult: £33 65+/U23: £31 U19: £29 Coaches will depart from behind the Sir Bobby Robson Stand at 10.45am & will be picking up at Marks Tey only. Please note we will no longer be issuing physical tickets for coach travel. The confirmation email will act as your proof of purchase and the stewards on the day will be issued a register for those attending to verify your confirmation email and ability to access the coach. SAFE SEATING The first row across all blocks will be “seated” only. We would like to remind fans that these seats will include older fans, families, those unable to stand for long periods of time and ambulant disabled fans. We therefore require fans in the seated areas to stay seated and be respectful of their fellow supporters as we want everyone to enjoy the day safely. ACCESSIBILITY TICKETS Disabled supporters and their carers/personal assistants can now purchase tickets through the club's website, with more information available here. SINGLE SIGN-ON To purchase online, supporters should navigate to tickets.itfc.co.uk and sign in to their digital account. Accessing your digital account If you are registering a digital account, please ensure that the details you enter match your ticketing account – specifically, first name, surname and email address. If there are any differences between the two accounts, they will fail to link. Names must match. For example: Samuel and samuel will link (not case sensitive); ‘Sam’ or just using the initial ‘S’ will not. If your ticketing account has failed to link successfully to your digital account, please contact the ticket office to resolve. As usual, once successfully signed in, supporters will be able to assign tickets to anyone linked as friend/family.",
-      "date": "2026-11-27T11:28:50Z",
-      "url": "https://www.itfc.co.uk/news/2026/november/27/ticket-details---arsenal--a-/",
-      "matched_players": [
-        "rice"
-      ]
-    },
-    {
-      "id": 4771643,
-      "title": "Le Bris provides Alderete update",
+      "id": 4767978,
+      "title": "De Zerbi discusses latest on Savio's injury",
       "summary": "",
-      "date": "2026-11-27T11:01:00Z",
-      "url": "https://www.safc.com/news/2026/november/26/le-bris-provides-alderete-update/",
+      "date": "2026-11-27T10:30:00Z",
+      "url": "https://www.tottenhamhotspur.com/match/2645314/sunderland-tottenham-hotspur?tab=liveblog",
       "matched_players": []
     },
     {
-      "id": 4771690,
-      "title": "Supporters groups meet ahead of Bournemouth fixture",
-      "summary": "On Sunday 29th November, Fulham FC and Fulham FC Foundation will host supporters groups, including the FAB and FST, at All Saints Church Hall from 11am to 1pm. This is an opportunity for all Fulham fans to engage with and support these groups that represent the fanbase. This will happen alongside Fulham FC Foundation’s Food Bank Donation Drop, where supporters are encouraged to participate and donate, supporting CityHarvest and the Borough of Hammersmith & Fulham. All those who attend the event and donating to the Food Bank will also be entered into a draw to win some exciting Fulham FC related prizes via a short feedback survey.",
-      "date": "2026-11-27T11:00:00Z",
-      "url": "https://www.fulhamfc.com/news/2026/november/27/supporters-groups-meet-ahead-of-bournemouth-fixture/",
+      "id": 4771635,
+      "title": "Arteta provides latest on Raya's chances of facing Man City",
+      "summary": "",
+      "date": "2026-11-27T10:32:00Z",
+      "url": "https://www.arsenal.com/news/arteta-on-whether-raya-or-saka-will-be-fit-to-face-man-city-aeVRG0h6htqQ",
       "matched_players": [
-        "smith",
+        "raya"
+      ]
+    },
+    {
+      "id": 4771754,
+      "title": "Peixoto | 'We have to be ready to fight for the three points'",
+      "summary": "Cesar Peixoto believes Wolves have got a ‘different’ challenge on their hands when it comes to facing Lincoln City on Saturday, compared to their last two home games.",
+      "date": "2026-11-27T14:18:12Z",
+      "url": "https://www.wolves.co.uk/news/mens-first-team/20261127-peixoto-we-have-to-be-ready-to-fight-for-the-three-points/",
+      "matched_players": [
         "hall"
       ]
     },
     {
-      "id": 4771382,
-      "title": "Scout Selection: Best Fantasy team for Gameweek 12",
-      "summary": "See the dream FPL line-up for this weekend's matches, featuring three double-ups",
-      "date": "2026-11-26T12:00:00Z",
-      "url": "https://www.premierleague.com/en/news/4771382",
+      "id": 4771790,
+      "title": "Watch: Maresca's press conference ahead of Arsenal",
+      "summary": "Watch as Enzo Maresca speaks to the media at the City Football Academy on Friday afternoon ahead of our trip to Arsenal.",
+      "date": "2026-11-27T14:00:00Z",
+      "url": "https://www.mancity.com/citytv/mens/enzo-maresca-arsenal-press-conference-63931378",
       "matched_players": []
     },
     {
-      "id": 4770153,
-      "title": "Everything you need for Gameweek 12 of FPL with the latest tips and advice",
-      "summary": "The Scout provides everything you need to know ahead of Friday's 18:30 GMT deadline",
-      "date": "2026-11-26T10:00:00Z",
-      "url": "https://www.premierleague.com/en/news/4770153",
+      "id": 4771739,
+      "title": "Arrive early: Roadworks & early bird info",
+      "summary": "After some congestion on the roads at our last home game, fans are advised to get to Craven Cottage in good time for this Sunday’s match against AFC Bournemouth. There are planned carriageway/footway works scheduled on Fulham Palace Road across the weekend, with lane closures and delays likely, while ongoing works continue in the wider Hammersmith & Fulham area – including Coniger Road, Hammersmith Bridge, and Hammersmith Bridge Road. Why not get to the ground nice and early, and take advantage of our special early bird offers until 1.05pm, with £3 beers and wines, and £1.50 soft drinks?",
+      "date": "2026-11-27T13:57:44Z",
+      "url": "https://www.fulhamfc.com/news/2026/november/27/afc-bournemouth-arrive-early/",
+      "matched_players": [
+        "smith"
+      ]
+    },
+    {
+      "id": 4771744,
+      "title": "Latest news on Baleba and Rashford",
+      "summary": "Mauricio Pochettino has provided an update on Carlos Baleba and Marcus Rashford ahead of Saturday’s Premier League match against Brentford.",
+      "date": "2026-11-27T13:55:00Z",
+      "url": "https://www.manutd.com/en/news/pochettino-latest-news-on-baleba-and-rashford",
+      "matched_players": []
+    },
+    {
+      "id": 4771738,
+      "title": "Moyes Discusses Everton Team News For Merseyside Derby",
+      "summary": "David Moyes remained tight-lipped on his team news ahead of the 249th Merseyside derby, explaining Everton have \"bits and pieces\" going on when it comes to his squad's fitness. The Blues host Liverpool at Hill Dickinson Stadium on Sunday (12pm GMT kick-off). James Tarkowski definitely misses out, with the Everton captain serving the first of a three-match suspension after being shown a red card during the defeat at Brentford on Monday night. When asked about other issues facing his side during Friday's pre-match press conference at Finch Farm, Moyes said: \"We've got bits and pieces going on, which I'm sure every other team has as well.\" On the absence of Tarkowski, Moyes added: \"Tarky will be a miss because of his leadership and a lot of things he brings to the side, so we'll miss him, but, look, it's one position where we have got some cover so we're not short there. \"Michael Keane has been great form – any time he plays for us, he's played really well. He and Jake [O'Brien] are very much part of [the thinking]. We've got pretty good competition at centre-back and there'll be opportunities for one or both of those players in different games.\" The Opposition Liverpool boss Andoni Iraola will be without Conor Bradley, Hugo Ekitike and Giovanni Leoni for Sunday's game, while Cody Gakpo is also expected to miss out. Victor Munoz and Ryan Gravenberch face late fitness tests.",
+      "date": "2026-11-27T13:50:00Z",
+      "url": "https://www.evertonfc.com/news/2026/november/27/everton-team-news-revealed-for-merseyside-derby/",
+      "matched_players": [
+        "hill",
+        "tarkowski"
+      ]
+    },
+    {
+      "id": 4771731,
+      "title": "Team news for United v Brentford",
+      "summary": "Mauricio Pochettino is looking forward to his first home game as Manchester United head coach.",
+      "date": "2026-11-27T13:35:00Z",
+      "url": "https://www.manutd.com/en/news/team-news-for-united-v-brentford-on-28-nov",
       "matched_players": []
     }
   ]
