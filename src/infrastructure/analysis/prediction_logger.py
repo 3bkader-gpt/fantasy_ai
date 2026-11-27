@@ -128,3 +128,46 @@ class PredictionLogger:
         eval_file = self.output_dir / f"gw_{gw}_calibration.json"
         eval_file.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
         return report
+
+    def auto_calibrate_finished_gws(
+        self,
+        finished_gws: List[int],
+        notifier: Optional[Any] = None,
+    ) -> List[Dict[str, Any]]:
+        """Automatically calibrates any logged pre-deadline GW that has now finished
+        and dispatches a concise Arabic calibration summary to Telegram — zero manual commands needed.
+        """
+        import requests
+        reports: List[Dict[str, Any]] = []
+        if not self.output_dir.exists():
+            return reports
+
+        for gw in sorted(set(finished_gws)):
+            pred_file = self.output_dir / f"gw_{gw}_predictions.json"
+            eval_file = self.output_dir / f"gw_{gw}_calibration.json"
+            if not pred_file.exists() or eval_file.exists():
+                continue
+            try:
+                res = requests.get(f"{config.fpl_base_url}/event/{gw}/live/", timeout=15)
+                if res.status_code != 200:
+                    continue
+                live_elements = {el["id"]: el["stats"] for el in res.json().get("elements", [])}
+                rep = self.evaluate_gameweek(gw=gw, live_elements=live_elements)
+                reports.append(rep)
+                logger.info(
+                    f"Auto-calibrated GW{gw}: MAE={rep['mae']}, RMSE={rep['rmse']}, "
+                    f"Spearman={rep['spearman_rho']}, XI={rep['actual_xi_with_cap']} vs pred {rep['predicted_xi_xp']}"
+                )
+                if notifier:
+                    msg = (
+                        f"🧪 <b>تقرير المعايرة التلقائية (Out-of-Sample) — GW{gw}</b>\n"
+                        f"━━━━━━━━━━━━━━━━━━━━\n"
+                        f"• <b>نقاط التشكيلة الفعلية:</b> {rep['actual_xi_with_cap']} (المتوقع: {rep['predicted_xi_xp']:.1f} xP)\n"
+                        f"• <b>الكابتن ({rep['captain_name']}):</b> {rep['captain_actual_pts']} نقطة أساس\n"
+                        f"• <b>الحارس الأساسي:</b> {rep['gk_actual_pts']} نقطة\n"
+                        f"• <b>دقة النموذج (N={rep['sample_size_60m']}):</b> MAE={rep['mae']} | RMSE={rep['rmse']} | ρ={rep['spearman_rho']}"
+                    )
+                    notifier.send_message(msg)
+            except Exception as e:
+                logger.debug(f"Auto-calibration skipped for GW{gw}: {e}")
+        return reports

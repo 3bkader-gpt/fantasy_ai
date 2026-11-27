@@ -67,10 +67,19 @@ class OptimizeGameweekUseCase:
         # 1. Login if possible
         self.gateway.login()
 
-        # 2. Get Gameweek schedule
+        # 2. Get Gameweek schedule & auto-calibrate any finished logged GWs (100% Pure AI)
         current_gw, next_gw, deadline = self.repository.get_current_and_next_gw()
         if next_gw is None:
             next_gw = (current_gw or 1) + 1
+
+        try:
+            bs_events = self.repository.get_bootstrap().get("events", [])
+            finished_gws = [e["id"] for e in bs_events if e.get("finished")]
+            if finished_gws:
+                from ...infrastructure.analysis.prediction_logger import PredictionLogger
+                PredictionLogger().auto_calibrate_finished_gws(finished_gws=finished_gws, notifier=self.notifier)
+        except Exception as e:
+            logger.debug(f"Auto-calibration check skipped: {e}")
 
         # 3. Get team status and picks
         team_status = self.gateway.get_my_team(team_id)
@@ -183,6 +192,69 @@ class OptimizeGameweekUseCase:
             next_gw=next_gw
         )
 
+        # 5a. Pure AI Autonomous Wildcard Execution when recommended (HIGH) & no bboost/3xc active
+        transfer_chip: Optional[str] = None
+        chip_rec = plan.chip_recommendation or {}
+        if (
+            chip_rec.get("recommended_chip") == "wildcard"
+            and not chip_rec.get("auto_activate_chip")
+            and chips_available.get("wildcard", 0) > 0
+            and transfers_made == 0
+        ):
+            try:
+                from ...infrastructure.optimization.initial_squad_builder import InitialSquadBuilder
+                from ...infrastructure.optimization.lineup_solver import LineupSolver
+                from ...domain.models.transfer import Transfer
+
+                wc_budget = round(
+                    sum((p.selling_price or p.now_cost) for p in current_squad) / 10.0 + bank,
+                    1,
+                )
+                wc_fixtures = self.repository.get_team_fixtures(next_gw, weeks_ahead=5)
+                wc_candidates = self.xp_engine.enrich_players_with_horizon_xp(
+                    players=[p.clone() for p in all_players],
+                    team_fixtures=wc_fixtures,
+                    next_gw=next_gw,
+                    weeks_ahead=5,
+                    decay=horizon_decay,
+                    nlp_insights=nlp_insights,
+                )
+                wc_res = InitialSquadBuilder().build_squad(
+                    players=wc_candidates,
+                    budget=wc_budget,
+                    min_starter_chance=75,
+                )
+                wc_squad = wc_res.get("squad_15", [])
+                if len(wc_squad) == 15:
+                    curr_by_id = {p.id: p for p in current_squad}
+                    wc_by_id = {p.id: p for p in wc_squad}
+                    out_list = [p for p in current_squad if p.id not in wc_by_id]
+                    in_list = [p for p in wc_squad if p.id not in curr_by_id]
+
+                    # Pair outgoing & incoming strictly by position for FPL /api/transfers/
+                    wc_transfers: List[Transfer] = []
+                    for pos in ("GK", "DEF", "MID", "FWD"):
+                        outs_p = [p for p in out_list if p.position == pos]
+                        ins_p = [p for p in in_list if p.position == pos]
+                        for po, pi in zip(outs_p, ins_p):
+                            wc_transfers.append(Transfer(player_out=po, player_in=pi))
+
+                    if wc_transfers and len(wc_transfers) == len(out_list):
+                        wc_lineup = LineupSolver(gold_rule_config=self.gold_rule_config).solve(wc_squad)
+                        plan.transfers = wc_transfers
+                        plan.hits = 0
+                        plan.hits_cost = 0
+                        plan.new_players = wc_squad
+                        plan.final_lineup = wc_lineup
+                        plan.new_bank = round(wc_budget - sum(p.cost for p in wc_squad), 1)
+                        transfer_chip = "wildcard"
+                        logger.info(
+                            f"Pure AI Wildcard activated for GW{next_gw}: {len(wc_transfers)} transfers, "
+                            f"budget £{wc_budget:.1f}m, new bank £{plan.new_bank:.1f}m."
+                        )
+            except Exception as e:
+                logger.warning(f"Autonomous Wildcard builder skipped: {e}")
+
         # 5b. Log pre-deadline Out-of-Sample prediction snapshot for post-GW calibration
         try:
             from ...infrastructure.analysis.prediction_logger import PredictionLogger
@@ -244,8 +316,19 @@ class OptimizeGameweekUseCase:
 
             execution_status["success"] = True
             if plan.transfers and not skip_live_transfers:
-                trans_res = self.gateway.make_transfers(team_id=team_id, transfers=plan.transfers, next_gw=next_gw)
+                trans_res = self.gateway.make_transfers(
+                    team_id=team_id,
+                    transfers=plan.transfers,
+                    next_gw=next_gw,
+                    chip=transfer_chip
+                )
                 execution_status["transfers"] = trans_res
+                if transfer_chip == "wildcard" and (trans_res.get("status") == "success" or trans_res.get("success")):
+                    self.notifier.send_message(
+                        f"🃏 <b>[Pure AI] تم تفعيل خاصية Wildcard تلقائياً للجولة {next_gw}!</b> ✅\n"
+                        f"• عدد التبديلات: {len(plan.transfers)} لاعب (تكلفة 0 سوالب)\n"
+                        f"• الرصيد المتبقي بعد إعادة البناء: £{plan.new_bank:.1f}m"
+                    )
                 if trans_res.get("status") != "success" and not trans_res.get("success"):
                     execution_status["success"] = False
                     execution_status["error"] = trans_res.get("error", "فشل تنفيذ التبديل على موقع FPL")
@@ -255,9 +338,9 @@ class OptimizeGameweekUseCase:
                         f"⚠️ يرجى الدخول لموقع الفانتازي وعمل التبديلات يدوياً فوراً!"
                     )
 
-            # Determine safe auto-activated chip (bboost / 3xc only, and only within 24h of deadline)
+            # Determine safe auto-activated chip (bboost / 3xc only, and never alongside wildcard)
             active_chip = None
-            if not skip_live_transfers and plan.chip_recommendation:
+            if not skip_live_transfers and not transfer_chip and plan.chip_recommendation:
                 cand_chip = plan.chip_recommendation.get("auto_activate_chip")
                 if cand_chip in ("bboost", "3xc"):
                     active_chip = cand_chip
