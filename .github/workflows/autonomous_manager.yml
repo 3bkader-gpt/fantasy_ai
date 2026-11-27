@@ -109,7 +109,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add dashboard/data/squad_data.json || true
+          git add dashboard/data/squad_data.json output/predictions/ || true
           if git diff --staged --quiet; then
             echo "No changes in telemetry data to commit."
           else

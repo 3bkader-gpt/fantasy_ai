@@ -12,7 +12,8 @@ class ChipEvaluator:
         squad_15: List[Player],
         lineup: LineupSelection,
         chips_available: Dict[str, int],
-        next_gw: int = 1
+        next_gw: int = 1,
+        bank: float = 0.0
     ) -> Dict[str, Any]:
         recs: List[Dict[str, Any]] = []
         bench_xp = sum(p.xp for p in lineup.bench)
@@ -74,16 +75,23 @@ class ChipEvaluator:
                 "auto_safe": False
             })
 
-        if chips_available.get("wildcard", 0) > 0 and (unfit_count >= 4 or (urgent and gws_remaining <= 2)):
+        idle_bank_trigger = bank >= 10.0 and not any(r.get("chip") == ChipType.BENCH_BOOST.value for r in recs)
+        if chips_available.get("wildcard", 0) > 0 and (unfit_count >= 4 or idle_bank_trigger or (urgent and gws_remaining <= 2)):
+            if idle_bank_trigger and unfit_count < 4:
+                wc_reason = (
+                    f"لديك £{bank:.1f}m مركونة في البنك لا تشارك في الملعب! تفعيل Wildcard الآن (قبل انتهائها في GW{half_end_gw}) "
+                    f"يسمح بضخ كامل الميزانية في نجوم البريميرليج مجاناً بدون أي سوالب."
+                )
+            elif urgent and unfit_count < 4:
+                wc_reason = f"تبقى {gws_remaining} جولات فقط على انتهاء Wildcard النصف الأول (GW{half_end_gw}) — يُنصح بتفعيلها لإعادة هيكلة التشكيلة مجاناً."
+            else:
+                wc_reason = f"الفريق يعاني من {unfit_count} إصابات وغيابات حرجة. تفعيل Wildcard لإعادة بناء التشكيلة مجاناً هو الإجراء الأمثل."
+
             recs.append({
                 "chip": ChipType.WILDCARD.value,
-                "reason": (
-                    f"تبقى {gws_remaining} جولات فقط على انتهاء Wildcard النصف الأول (GW{half_end_gw}) — يُنصح بتفعيلها لإعادة هيكلة التشكيلة مجاناً."
-                    if urgent and unfit_count < 4
-                    else f"الفريق يعاني من {unfit_count} إصابات وغيابات حرجة. تفعيل Wildcard لإعادة بناء التشكيلة مجاناً هو الإجراء الأمثل."
-                ),
+                "reason": wc_reason,
                 "confidence": "HIGH",
-                "urgent": urgent,
+                "urgent": urgent or idle_bank_trigger,
                 "auto_safe": False
             })
 

@@ -183,6 +183,18 @@ class OptimizeGameweekUseCase:
             next_gw=next_gw
         )
 
+        # 5b. Log pre-deadline Out-of-Sample prediction snapshot for post-GW calibration
+        try:
+            from ...infrastructure.analysis.prediction_logger import PredictionLogger
+            PredictionLogger().log_pre_deadline(
+                gw=next_gw,
+                all_players=enriched_players,
+                plan=plan,
+                deadline=deadline,
+            )
+        except Exception as e:
+            logger.debug(f"Could not save pre-deadline prediction log: {e}")
+
         # 6. Consult Gemini AI Advisor for tactical briefing
         gold_rules_list = (
             self.gold_rule_config.extracted_rules

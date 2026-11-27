@@ -78,3 +78,43 @@ def test_chip_evaluator_urgency_before_gw19():
     assert res["urgent_window"] is True
     assert res["gws_remaining_in_half"] == 4
     assert res["auto_activate_chip"] in ("bboost", "3xc")
+
+
+def test_chip_evaluator_idle_bank_wildcard_trigger():
+    squad = _make_squad()
+    lineup = LineupSolver().solve(squad)
+    evaluator = ChipEvaluator()
+    # No Bench Boost left, £18.1m idle in bank -> should recommend WILDCARD HIGH
+    chips = {"wildcard": 1, "freehit": 1, "3xc": 1}
+    res = evaluator.evaluate(squad_15=squad, lineup=lineup, chips_available=chips, next_gw=13, bank=18.1)
+    assert any(r["chip"] == "wildcard" and r["confidence"] == "HIGH" for r in res["chip_recommendations"])
+
+
+def test_transfer_solver_rolls_ft_on_marginal_gain():
+    squad = _make_squad()
+    # Truly marginal upgrade (+0.8 xP / +1.5 horizon_xp) with 1 FT -> should roll FT instead of burning it
+    marginal_in = _make_player(98, "MarginalMid", "MID", 9, 5.5, 5.0, horizon_xp=12.0)
+    solver = TransferSolver(all_players=squad + [marginal_in], lineup_solver=LineupSolver())
+    plan = solver.solve(current_squad=squad, bank=1.0, free_transfers=1, max_hits=0)
+    assert len(plan.transfers) == 0
+
+
+def test_prediction_logger_roundtrip(tmp_path):
+    from src.infrastructure.analysis.prediction_logger import PredictionLogger
+    from src.domain.models.transfer import TransferPlan
+
+    squad = _make_squad()
+    lineup = LineupSolver().solve(squad)
+    plan = TransferPlan(
+        transfers=[], hits=0, hits_cost=0, net_gain=0.0, horizon_gain=0.0,
+        new_bank=1.0, final_lineup=lineup, new_players=squad
+    )
+    logger = PredictionLogger(output_dir=tmp_path)
+    out = logger.log_pre_deadline(gw=12, all_players=squad, plan=plan, deadline="2026-11-27T18:30:00Z")
+    assert out.exists()
+
+    live_mock = {p.id: {"minutes": 90, "total_points": int(round(p.xp))} for p in squad}
+    report = logger.evaluate_gameweek(gw=12, live_elements=live_mock)
+    assert report["sample_size_60m"] == 15
+    assert report["mae"] < 0.6
+

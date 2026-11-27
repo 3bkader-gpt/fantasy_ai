@@ -52,7 +52,8 @@ class SquadOptimizer(IOptimizer):
             squad_15=plan.new_players,
             lineup=plan.final_lineup,
             chips_available=chips_available or {},
-            next_gw=next_gw
+            next_gw=next_gw,
+            bank=plan.new_bank
         )
         plan.chip_recommendation = chips_result
         return plan

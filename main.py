@@ -86,8 +86,8 @@ def run_manager(team_id: int, dry_run: bool, max_hits: int, apply_gold_rules: bo
     return dto
 
 
-def run_build_squad(budget: float = 100.0, min_chance: int = config.min_starter_chance):
-    """Builds optimal initial 15-man squad for £100m using Two-Tier MILP and E[Min] model."""
+def run_build_squad(budget: float = 100.0, min_chance: int = config.min_starter_chance, horizon_weeks: int = None):
+    """Builds optimal initial 15-man squad (or Wildcard squad) using Two-Tier MILP and ProbabilisticXPEngine."""
     repository = FPLDataRepository()
     xp_engine = ProbabilisticXPEngine()
     advisor = GeminiAdvisor()
@@ -99,12 +99,27 @@ def run_build_squad(budget: float = 100.0, min_chance: int = config.min_starter_
     )
     dto = use_case.execute(
         budget=budget,
-        horizon_weeks=config.horizon_weeks,
+        horizon_weeks=horizon_weeks or config.horizon_weeks,
         horizon_decay=config.horizon_decay,
         min_starter_chance=min_chance
     )
     ConsolePresenter().display_initial_squad(dto)
     return dto
+
+
+def run_calibrate(gw: int):
+    """Evaluates previously logged Out-of-Sample predictions against actual FPL live points."""
+    import requests
+    from src.infrastructure.analysis.prediction_logger import PredictionLogger
+
+    res = requests.get(f"{config.fpl_base_url}/event/{gw}/live/", timeout=15)
+    res.raise_for_status()
+    live_elements = {el["id"]: el["stats"] for el in res.json().get("elements", [])}
+    report = PredictionLogger().evaluate_gameweek(gw=gw, live_elements=live_elements)
+    print(f"\n📊 Out-of-Sample Calibration Report for GW{gw}:")
+    for k, v in report.items():
+        print(f"  • {k}: {v}")
+    return report
 
 
 if __name__ == "__main__":
@@ -121,8 +136,32 @@ if __name__ == "__main__":
     parser.add_argument("--gw-end", type=int, default=None, help="Ending gameweek for hindsight analysis (default: current played GW)")
     parser.add_argument("--output-json", type=str, default="hindsight_gold_rules.json", help="Filename for exported Gold Rules JSON (default: hindsight_gold_rules.json)")
     parser.add_argument("--no-gold-rules", action="store_true", help="Disable Hindsight Gold Rules heuristics and use unweighted baseline")
+    parser.add_argument("--wildcard-preview", action="store_true", help="Generate optimal 5-GW Wildcard squad using your full live budget")
+    parser.add_argument("--calibrate", action="store_true", help="Run Out-of-Sample calibration on a finished GW prediction snapshot")
+    parser.add_argument("--gw", type=int, default=None, help="Target GW number for --calibrate")
 
     args = parser.parse_args()
+
+    if args.calibrate:
+        if not args.gw:
+            print("❌ Please specify --gw <number> with --calibrate")
+            sys.exit(1)
+        run_calibrate(gw=args.gw)
+        sys.exit(0)
+
+    if args.wildcard_preview:
+        wc_budget = args.budget
+        if args.team_id and wc_budget == 100.0:
+            try:
+                gw_client = FPLClient(dry_run=True)
+                gw_client.login()
+                st = gw_client.get_my_team(args.team_id)
+                wc_budget = float(st.get("team_value", 100.0))
+                print(f"💰 Detected live total budget for Wildcard: £{wc_budget:.1f}m (5-GW Horizon)")
+            except Exception:
+                pass
+        run_build_squad(budget=wc_budget, min_chance=args.min_chance, horizon_weeks=5)
+        sys.exit(0)
 
     if args.hindsight:
         try:

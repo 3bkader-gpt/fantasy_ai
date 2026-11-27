@@ -144,16 +144,21 @@ class TransferSolver:
                 return True
             return (gain - hit_cost) >= 1.5 and (horizon_gain - hit_cost) >= 4.0
 
+        # Smart Roll-FT Hurdle: FPL allows banking up to 5 FTs.
+        # Avoid burning a free transfer for marginal gains (< 1.5 xP) unless squad is at max 5 FTs or outgoing is injured.
         if single_options and single_options[0]["gain"] > 0.5:
             top = single_options[0]
             hits_needed = max(0, 1 - free_transfers)
             hit_cost = hits_needed * 4
             net_ev = (top["gain"] * 0.7 + top["horizon_gain"] * 0.3) - hit_cost
 
+            out_injured = (not top["p_out"].is_available) or getattr(top["p_out"], "expected_minutes", 90.0) == 0.0
+            roll_ft_hurdle = 0.5 if (free_transfers >= 5 or out_injured or hits_needed > 0) else 1.5
+
             if (
                 hits_needed <= allowed_max_hits
                 and _hit_is_justified(hits_needed, top["gain"], top["horizon_gain"], [top["p_out"]], [top["p_in"]])
-                and net_ev > max(0.5, best_score)
+                and net_ev > max(roll_ft_hurdle, best_score)
             ):
                 best_score = net_ev
                 best_plan = TransferPlan(
