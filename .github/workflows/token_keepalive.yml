@@ -1,0 +1,52 @@
+name: FPL OAuth Token Keep-Alive
+
+on:
+  schedule:
+    # Refresh OAuth token every 4 days at 06:00 UTC to prevent expiration during international breaks
+    - cron: '0 6 */4 * *'
+  workflow_dispatch:
+
+jobs:
+  refresh-fpl-token:
+    name: Rotate & Persist FPL OAuth Token
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: 🐍 Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ⚙️ Install Minimal Dependencies
+        run: pip install requests python-dotenv
+
+      - name: 🔄 Refresh & Persist OAuth Tokens
+        env:
+          FPL_BEARER_TOKEN: ${{ secrets.FPL_BEARER_TOKEN }}
+          FPL_REFRESH_TOKEN: ${{ secrets.FPL_REFRESH_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          python -c "
+          import sys
+          from src.infrastructure.fpl.client import FPLClient
+          from src.infrastructure.notifications.telegram import TelegramNotifier
+
+          client = FPLClient(dry_run=True)
+          ok = client.refresh_access_token()
+          if ok:
+              print('✅ FPL OAuth token rotated and persisted to GitHub Secrets successfully.')
+              sys.exit(0)
+          else:
+              msg = '⚠️ <b>تنبيه Token Keep-Alive:</b> فشل تجديد توكن FPL التلقائي على السيرفر! يرجى تشغيل سكربت تجديد التوكن قبل الديدلاين القادم.'
+              TelegramNotifier().send_message(msg)
+              print('❌ Failed to refresh FPL OAuth token.')
+              sys.exit(1)
+          "
