@@ -63,10 +63,10 @@ def check_final_safety(repo: FPLDataRepository, team_id: int, dry_run: bool, aut
         target_gw = next_gw or (current_gw + 1 if current_gw else 1)
         team_fixtures = repo.get_team_fixtures(target_gw, weeks_ahead=1)
 
-        from src.infrastructure.xp.rule_engine import RuleBasedXPEngine
+        from src.infrastructure.xp.probabilistic_engine import ProbabilisticXPEngine
         from src.infrastructure.optimization.lineup_solver import LineupSolver, get_opponent_code
 
-        xp_engine = RuleBasedXPEngine()
+        xp_engine = ProbabilisticXPEngine()
         squad_15 = [all_players[pick["element"]] for pick in picks if pick.get("element") in all_players]
         enriched_squad = xp_engine.enrich_players_with_horizon_xp(
             players=squad_15,

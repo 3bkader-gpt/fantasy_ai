@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore")
 
 from src.config import config
 from src.infrastructure.fpl import FPLDataRepository, FPLClient
-from src.infrastructure.xp import RuleBasedXPEngine
+from src.infrastructure.xp import ProbabilisticXPEngine
 from src.infrastructure.optimization import SquadOptimizer
 from src.infrastructure.ai import GeminiAdvisor
 from src.infrastructure.notifications import TelegramNotifier
@@ -51,7 +51,7 @@ def run_manager(team_id: int, dry_run: bool, max_hits: int, apply_gold_rules: bo
     # 1. Instantiate Adapters (Infrastructure)
     repository = FPLDataRepository()
     gateway = FPLClient(dry_run=dry_run)
-    xp_engine = RuleBasedXPEngine()
+    xp_engine = ProbabilisticXPEngine()
     advisor = GeminiAdvisor()
     notifier = TelegramNotifier()
 
@@ -89,7 +89,7 @@ def run_manager(team_id: int, dry_run: bool, max_hits: int, apply_gold_rules: bo
 def run_build_squad(budget: float = 100.0, min_chance: int = config.min_starter_chance):
     """Builds optimal initial 15-man squad for £100m using Two-Tier MILP and E[Min] model."""
     repository = FPLDataRepository()
-    xp_engine = RuleBasedXPEngine()
+    xp_engine = ProbabilisticXPEngine()
     advisor = GeminiAdvisor()
 
     use_case = BuildInitialSquadUseCase(

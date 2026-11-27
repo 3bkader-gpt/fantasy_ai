@@ -36,6 +36,9 @@ class AppConfig:
     telegram_bot_token: str = os.getenv("TELEGRAM_BOT_TOKEN", "")
     telegram_chat_id: str = os.getenv("TELEGRAM_CHAT_ID", "")
 
+    # The Odds API (Sharp Market Implied Goals, Clean Sheets & Anytime Goalscorer Odds)
+    odds_api_key: str = os.getenv("ODDS_API_KEY", "")
+
     # Endpoints
     fpl_base_url: str = "https://fantasy.premierleague.com/api"
     fpl_login_url: str = "https://users.premierleague.com/accounts/login/"
