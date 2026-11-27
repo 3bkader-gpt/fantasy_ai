@@ -80,6 +80,7 @@ class OptimizeGameweekUseCase:
 
         bank = team_status.get("bank", 0.0)
         free_transfers = team_status.get("free_transfers", 1)
+        transfers_made = team_status.get("transfers_made", 0)
         rank = team_status.get("rank")
         total_points = team_status.get("total_points", 0)
         team_value = team_status.get("team_value", 100.0)
@@ -164,11 +165,20 @@ class OptimizeGameweekUseCase:
         except TypeError:
             optimizer = self.optimizer_factory(enriched_players)
 
+        # Per-GW Transfer Lock: never stack hits if transfers were already executed this GW
+        effective_max_hits = max_hits
+        if transfers_made > 0 and free_transfers == 0:
+            logger.info(
+                f"Per-GW Transfer Lock active: {transfers_made} transfer(s) already made in GW{next_gw} "
+                f"and 0 free transfers left. Forcing max_hits=0 to prevent duplicate hit stacking."
+            )
+            effective_max_hits = 0
+
         plan = optimizer.optimize_transfers(
             current_squad=current_squad,
             bank=bank,
             free_transfers=free_transfers,
-            max_hits=max_hits,
+            max_hits=effective_max_hits,
             chips_available=chips_available,
             next_gw=next_gw
         )
@@ -199,8 +209,29 @@ class OptimizeGameweekUseCase:
         # 7. Execute changes on FPL account if live
         execution_status: Dict[str, Any] = {"dry_run": dry_run}
         if not dry_run:
+            # Deadline Window Guard: block live transfers if deadline is > 24 hours away (e.g. international break)
+            skip_live_transfers = False
+            if deadline:
+                try:
+                    from datetime import datetime, timezone
+                    dl_dt = datetime.fromisoformat(deadline.replace("Z", "+00:00"))
+                    hours_until_dl = (dl_dt - datetime.now(timezone.utc)).total_seconds() / 3600.0
+                    if hours_until_dl > 24.0:
+                        skip_live_transfers = True
+                        logger.warning(
+                            f"Deadline Window Guard: GW{next_gw} deadline is {hours_until_dl:.1f}h away (>24h). "
+                            f"Skipping live transfers to prevent premature international-break hits."
+                        )
+                        execution_status["transfers"] = {
+                            "status": "skipped_early_window",
+                            "success": True,
+                            "hours_until_deadline": round(hours_until_dl, 1)
+                        }
+                except Exception as e:
+                    logger.debug(f"Could not parse deadline '{deadline}' for window guard: {e}")
+
             execution_status["success"] = True
-            if plan.transfers:
+            if plan.transfers and not skip_live_transfers:
                 trans_res = self.gateway.make_transfers(team_id=team_id, transfers=plan.transfers, next_gw=next_gw)
                 execution_status["transfers"] = trans_res
                 if trans_res.get("status") != "success" and not trans_res.get("success"):
@@ -212,7 +243,19 @@ class OptimizeGameweekUseCase:
                         f"⚠️ يرجى الدخول لموقع الفانتازي وعمل التبديلات يدوياً فوراً!"
                     )
 
-            lineup_res = self.gateway.set_lineup(team_id=team_id, picks_payload=plan.final_lineup.api_picks)
+            # Determine safe auto-activated chip (bboost / 3xc only, and only within 24h of deadline)
+            active_chip = None
+            if not skip_live_transfers and plan.chip_recommendation:
+                cand_chip = plan.chip_recommendation.get("auto_activate_chip")
+                if cand_chip in ("bboost", "3xc"):
+                    active_chip = cand_chip
+                    logger.info(f"Auto-activating chip '{active_chip}' for GW{next_gw}.")
+
+            lineup_res = self.gateway.set_lineup(
+                team_id=team_id,
+                picks_payload=plan.final_lineup.api_picks,
+                chip=active_chip
+            )
             execution_status["lineup"] = lineup_res
             if lineup_res.get("status") != "success" and not lineup_res.get("success"):
                 execution_status["success"] = False

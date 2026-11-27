@@ -99,6 +99,8 @@ class FPLDataRepository(IDataRepository):
                 goals_scored=p.get("goals_scored", 0),
                 assists=p.get("assists", 0),
                 clean_sheets=p.get("clean_sheets", 0),
+                saves=p.get("saves", 0),
+                bonus=p.get("bonus", 0),
                 status=p.get("status", "a"),
                 news=p.get("news", ""),
                 chance_of_playing_next_round=p.get("chance_of_playing_next_round"),

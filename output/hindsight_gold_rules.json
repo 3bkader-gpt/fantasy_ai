@@ -2,173 +2,218 @@
   "summary": {
     "gameweek_range": [
       1,
-      5
+      11
     ],
-    "total_net_points": 705,
-    "total_hits": 20,
-    "total_hit_cost": 80,
-    "gameweeks_count": 5,
-    "average_points_per_gw": 141.0
+    "total_net_points": 1430,
+    "total_hits": 42,
+    "total_hit_cost": 168,
+    "gameweeks_count": 11,
+    "average_points_per_gw": 130.0
   },
   "gold_rules": [
     {
       "category": "captain",
-      "rule_text": "Captains averaged £6.5m in cost; premium assets (>=£9.5m) were captained 20.0% of the time.",
-      "confidence": 0.8,
+      "rule_text": "Captains averaged £6.5m in cost; premium assets (>=£9.5m) were captained 9.1% of the time.",
+      "confidence": 0.909,
       "evidence_gws": [
         1,
         2,
         3,
         4,
-        5
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
       ],
       "feature_values": {
-        "avg_price": 6.5,
-        "premium_captain_pct": 0.2
+        "avg_price": 6.45,
+        "premium_captain_pct": 0.091
       }
     },
     {
       "category": "captain",
-      "rule_text": "Captains played at Home 40.0% of the time with an average FDR of 3.0 (FDR <= 2 in 40.0% of GWs).",
-      "confidence": 0.4,
+      "rule_text": "Captains played at Home 72.7% of the time with an average FDR of 2.5 (FDR <= 2 in 45.5% of GWs).",
+      "confidence": 0.727,
       "evidence_gws": [
         1,
         2,
         3,
         4,
-        5
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
       ],
       "feature_values": {
-        "home_pct": 0.4,
-        "avg_fdr": 3.0,
-        "easy_fdr_pct": 0.4
+        "home_pct": 0.727,
+        "avg_fdr": 2.55,
+        "easy_fdr_pct": 0.455
       }
     },
     {
       "category": "formation",
-      "rule_text": "Formation 4-5-1 was mathematically optimal in 40.0% of gameweeks.",
-      "confidence": 0.4,
+      "rule_text": "Formation 4-3-3 was mathematically optimal in 27.3% of gameweeks.",
+      "confidence": 0.273,
       "evidence_gws": [
-        1,
-        5
+        4,
+        8,
+        9
       ],
       "feature_values": {
-        "dominant_formation": "4-5-1",
-        "frequency": 2,
+        "dominant_formation": "4-3-3",
+        "frequency": 3,
         "all_formations": {
+          "5-4-1": 1,
+          "3-4-3": 2,
+          "4-4-2": 2,
+          "4-3-3": 3,
           "4-5-1": 2,
-          "3-4-3": 1,
-          "4-4-2": 1,
-          "4-3-3": 1
+          "3-5-2": 1
         }
       }
     },
     {
       "category": "transfer",
-      "rule_text": "Optimal transfers in averaged 13.4 pts in their debut GW vs 2.6 pts for players sold (net immediate gain: +10.8 pts per transfer).",
+      "rule_text": "Optimal transfers in averaged 11.8 pts in their debut GW vs 2.9 pts for players sold (net immediate gain: +8.9 pts per transfer).",
       "confidence": 0.85,
       "evidence_gws": [
         2,
         3,
         4,
-        5
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
       ],
       "feature_values": {
-        "total_transfers_made": 25,
-        "avg_debut_points_in": 13.44,
-        "avg_points_out": 2.64,
-        "net_point_delta": 10.8,
-        "total_hits_taken": 20
+        "total_transfers_made": 53,
+        "avg_debut_points_in": 11.79,
+        "avg_points_out": 2.89,
+        "net_point_delta": 8.9,
+        "total_hits_taken": 42
       }
     },
     {
       "category": "transfer",
-      "rule_text": "Taking 20 hit(s) (-80 pts) was mathematically optimal to capture explosive upside across gameweeks.",
+      "rule_text": "Taking 42 hit(s) (-168 pts) was mathematically optimal to capture explosive upside across gameweeks.",
       "confidence": 0.8,
       "evidence_gws": [
         2,
         3,
         4,
-        5
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
       ],
       "feature_values": {
-        "total_hits": 20,
-        "hit_cost": 80
+        "total_hits": 42,
+        "hit_cost": 168
       }
     },
     {
       "category": "position_allocation",
-      "rule_text": "Starting XI budget prioritized MID (39.8% of starting spend, avg £27.9m).",
-      "confidence": 0.398,
+      "rule_text": "Starting XI budget prioritized MID (36.3% of starting spend, avg £25.4m).",
+      "confidence": 0.363,
       "evidence_gws": [
         1,
         2,
         3,
         4,
-        5
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
       ],
       "feature_values": {
         "GK": {
-          "share_pct": 0.07,
-          "avg_spend_m": 4.92
+          "share_pct": 0.071,
+          "avg_spend_m": 5.0
         },
         "DEF": {
-          "share_pct": 0.257,
-          "avg_spend_m": 18.0
+          "share_pct": 0.283,
+          "avg_spend_m": 19.82
         },
         "MID": {
-          "share_pct": 0.398,
-          "avg_spend_m": 27.88
+          "share_pct": 0.363,
+          "avg_spend_m": 25.42
         },
         "FWD": {
-          "share_pct": 0.275,
-          "avg_spend_m": 19.24
+          "share_pct": 0.283,
+          "avg_spend_m": 19.82
         }
       }
     },
     {
       "category": "fixture_context",
-      "rule_text": "Optimal starting XIs leaned towards Home fixtures (45.5%) with an average FDR of 2.9 (easy FDR <= 2 in 30.9% of picks).",
-      "confidence": 0.455,
+      "rule_text": "Optimal starting XIs leaned towards Home fixtures (52.9%) with an average FDR of 2.9 (easy FDR <= 2 in 34.7% of picks).",
+      "confidence": 0.529,
       "evidence_gws": [
         1,
         2,
         3,
         4,
-        5
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
       ],
       "feature_values": {
-        "starting_home_pct": 0.455,
-        "avg_fdr": 2.89,
-        "easy_fdr_pct": 0.309
+        "starting_home_pct": 0.529,
+        "avg_fdr": 2.86,
+        "easy_fdr_pct": 0.347
       }
     },
     {
       "category": "price_efficiency",
-      "rule_text": "Budget (<£6.0m) offered the highest points-per-million (2.69 pts/£m) in the optimal starting XIs.",
+      "rule_text": "Budget (<£6.0m) offered the highest points-per-million (2.25 pts/£m) in the optimal starting XIs.",
       "confidence": 0.8,
       "evidence_gws": [
         1,
         2,
         3,
         4,
-        5
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
       ],
       "feature_values": {
         "Budget (<£6.0m)": {
-          "total_picks": 29,
-          "pts_per_million": 2.69,
-          "avg_points": 13.03
+          "total_picks": 73,
+          "pts_per_million": 2.25,
+          "avg_points": 11.49
         },
         "Mid-Tier (£6.0-£9.0m)": {
-          "total_picks": 20,
-          "pts_per_million": 1.8,
-          "avg_points": 11.9
+          "total_picks": 38,
+          "pts_per_million": 1.74,
+          "avg_points": 12.05
         },
         "Premium (>=£9.5m)": {
-          "total_picks": 6,
-          "pts_per_million": 1.03,
-          "avg_points": 13.33
+          "total_picks": 10,
+          "pts_per_million": 0.86,
+          "avg_points": 11.5
         }
       }
     }
@@ -176,12 +221,12 @@
   "gameweeks": [
     {
       "gameweek": 1,
-      "formation": "4-5-1",
-      "gross_points": 165,
+      "formation": "5-4-1",
+      "gross_points": 158,
       "hit_cost": 0,
-      "net_points": 165,
+      "net_points": 158,
       "hits_taken": 0,
-      "bank": 6.0,
+      "bank": 5.0,
       "team_value": 100.0,
       "captain": {
         "id": 115,
@@ -196,11 +241,31 @@
       },
       "starting_xi": [
         {
+          "id": 8,
+          "name": "Calafiori",
+          "position": "DEF",
+          "price": 5.5,
+          "points": 9,
+          "was_home": true,
+          "opponent": "COV",
+          "fdr": 2
+        },
+        {
           "id": 88,
           "name": "Kayode",
           "position": "DEF",
           "price": 4.5,
           "points": 13,
+          "was_home": true,
+          "opponent": "TOT",
+          "fdr": 3
+        },
+        {
+          "id": 98,
+          "name": "Janelt",
+          "position": "MID",
+          "price": 5.0,
+          "points": 9,
           "was_home": true,
           "opponent": "TOT",
           "fdr": 3
@@ -253,26 +318,6 @@
           "points": 14,
           "was_home": true,
           "opponent": "MUN",
-          "fdr": 4
-        },
-        {
-          "id": 335,
-          "name": "Stach",
-          "position": "MID",
-          "price": 6.0,
-          "points": 13,
-          "was_home": false,
-          "opponent": "NFO",
-          "fdr": 3
-        },
-        {
-          "id": 367,
-          "name": "Gakpo",
-          "position": "MID",
-          "price": 7.0,
-          "points": 12,
-          "was_home": false,
-          "opponent": "NEW",
           "fdr": 3
         },
         {
@@ -293,7 +338,7 @@
           "points": 10,
           "was_home": true,
           "opponent": "MUN",
-          "fdr": 4
+          "fdr": 3
         },
         {
           "id": 586,
@@ -303,7 +348,7 @@
           "points": 15,
           "was_home": true,
           "opponent": "MUN",
-          "fdr": 4
+          "fdr": 3
         }
       ],
       "bench": [
@@ -318,14 +363,24 @@
           "fdr": 5
         },
         {
-          "id": 449,
-          "name": "Hall",
-          "position": "DEF",
-          "price": 5.0,
-          "points": 3,
+          "id": 124,
+          "name": "Groß",
+          "position": "MID",
+          "price": 5.5,
+          "points": 2,
           "was_home": true,
-          "opponent": "LIV",
-          "fdr": 4
+          "opponent": "AVL",
+          "fdr": 3
+        },
+        {
+          "id": 379,
+          "name": "Isak",
+          "position": "FWD",
+          "price": 9.0,
+          "points": 2,
+          "was_home": false,
+          "opponent": "NEW",
+          "fdr": 3
         },
         {
           "id": 411,
@@ -336,16 +391,6 @@
           "was_home": true,
           "opponent": "BOU",
           "fdr": 3
-        },
-        {
-          "id": 346,
-          "name": "Calvert-Lewin",
-          "position": "FWD",
-          "price": 6.0,
-          "points": 1,
-          "was_home": false,
-          "opponent": "NFO",
-          "fdr": 3
         }
       ],
       "transfers_in": [],
@@ -355,11 +400,11 @@
       "gameweek": 2,
       "formation": "3-4-3",
       "gross_points": 159,
-      "hit_cost": 16,
-      "net_points": 143,
-      "hits_taken": 4,
-      "bank": 0.4,
-      "team_value": 101.9,
+      "hit_cost": 12,
+      "net_points": 147,
+      "hits_taken": 3,
+      "bank": 0.2,
+      "team_value": 103.5,
       "captain": {
         "id": 426,
         "name": "B.Fernandes",
@@ -373,10 +418,20 @@
       },
       "starting_xi": [
         {
+          "id": 8,
+          "name": "Calafiori",
+          "position": "DEF",
+          "price": 5.9,
+          "points": 11,
+          "was_home": false,
+          "opponent": "AVL",
+          "fdr": 3
+        },
+        {
           "id": 69,
           "name": "Scott",
           "position": "MID",
-          "price": 6.1,
+          "price": 5.9,
           "points": 12,
           "was_home": true,
           "opponent": "EVE",
@@ -386,7 +441,7 @@
           "id": 124,
           "name": "Groß",
           "position": "MID",
-          "price": 5.8,
+          "price": 6.3,
           "points": 13,
           "was_home": false,
           "opponent": "CHE",
@@ -396,30 +451,30 @@
           "id": 165,
           "name": "João Pedro",
           "position": "FWD",
-          "price": 7.8,
+          "price": 7.6,
           "points": 9,
           "was_home": true,
           "opponent": "BHA",
-          "fdr": 2
+          "fdr": 4
         },
         {
           "id": 229,
           "name": "Tarkowski",
           "position": "DEF",
-          "price": 6.1,
+          "price": 6.2,
           "points": 12,
           "was_home": false,
           "opponent": "BOU",
-          "fdr": 3
+          "fdr": 4
         },
         {
-          "id": 346,
-          "name": "Calvert-Lewin",
+          "id": 379,
+          "name": "Isak",
           "position": "FWD",
-          "price": 6.0,
+          "price": 9.4,
           "points": 8,
           "was_home": true,
-          "opponent": "BRE",
+          "opponent": "NFO",
           "fdr": 3
         },
         {
@@ -430,43 +485,33 @@
           "points": 14,
           "was_home": false,
           "opponent": "CRY",
-          "fdr": 3
+          "fdr": 2
         },
         {
           "id": 411,
           "name": "Haaland",
           "position": "FWD",
-          "price": 15.6,
+          "price": 15.7,
           "points": 13,
           "was_home": false,
           "opponent": "CRY",
-          "fdr": 3
+          "fdr": 2
         },
         {
           "id": 426,
           "name": "B.Fernandes",
           "position": "MID",
-          "price": 12.0,
+          "price": 11.6,
           "points": 23,
           "was_home": true,
           "opponent": "IPS",
           "fdr": 2
         },
         {
-          "id": 449,
-          "name": "Hall",
-          "position": "DEF",
-          "price": 5.2,
-          "points": 11,
-          "was_home": false,
-          "opponent": "TOT",
-          "fdr": 3
-        },
-        {
           "id": 572,
           "name": "Tzolakis",
           "position": "GK",
-          "price": 4.6,
+          "price": 4.7,
           "points": 10,
           "was_home": false,
           "opponent": "COV",
@@ -476,7 +521,7 @@
           "id": 593,
           "name": "Dedić",
           "position": "DEF",
-          "price": 4.5,
+          "price": 4.4,
           "points": 11,
           "was_home": false,
           "opponent": "TOT",
@@ -505,13 +550,13 @@
           "fdr": 2
         },
         {
-          "id": 367,
-          "name": "Gakpo",
+          "id": 98,
+          "name": "Janelt",
           "position": "MID",
-          "price": 7.2,
-          "points": 5,
-          "was_home": true,
-          "opponent": "NFO",
+          "price": 5.0,
+          "points": 1,
+          "was_home": false,
+          "opponent": "LEE",
           "fdr": 3
         },
         {
@@ -530,31 +575,21 @@
           "id": 69,
           "name": "Scott",
           "position": "MID",
-          "price": 6.1,
+          "price": 5.9,
           "points": 12,
           "was_home": true,
           "opponent": "EVE",
           "fdr": 3
         },
         {
-          "id": 124,
-          "name": "Groß",
-          "position": "MID",
-          "price": 5.8,
-          "points": 13,
-          "was_home": false,
-          "opponent": "CHE",
-          "fdr": 4
-        },
-        {
           "id": 229,
           "name": "Tarkowski",
           "position": "DEF",
-          "price": 6.1,
+          "price": 6.2,
           "points": 12,
           "was_home": false,
           "opponent": "BOU",
-          "fdr": 3
+          "fdr": 4
         },
         {
           "id": 399,
@@ -564,13 +599,13 @@
           "points": 14,
           "was_home": false,
           "opponent": "CRY",
-          "fdr": 3
+          "fdr": 2
         },
         {
           "id": 426,
           "name": "B.Fernandes",
           "position": "MID",
-          "price": 12.0,
+          "price": 11.6,
           "points": 23,
           "was_home": true,
           "opponent": "IPS",
@@ -580,7 +615,7 @@
           "id": 593,
           "name": "Dedić",
           "position": "DEF",
-          "price": 4.5,
+          "price": 4.4,
           "points": 11,
           "was_home": false,
           "opponent": "TOT",
@@ -592,7 +627,7 @@
           "id": 88,
           "name": "Kayode",
           "position": "DEF",
-          "price": 4.6,
+          "price": 4.5,
           "points": 2,
           "was_home": false,
           "opponent": "LEE",
@@ -602,7 +637,7 @@
           "id": 115,
           "name": "De Cuyper",
           "position": "DEF",
-          "price": 4.9,
+          "price": 5.6,
           "points": 0,
           "was_home": false,
           "opponent": "CHE",
@@ -622,27 +657,17 @@
           "id": 154,
           "name": "Palmer",
           "position": "MID",
-          "price": 9.7,
+          "price": 9.8,
           "points": 7,
           "was_home": true,
           "opponent": "BHA",
-          "fdr": 2
-        },
-        {
-          "id": 335,
-          "name": "Stach",
-          "position": "MID",
-          "price": 6.0,
-          "points": 4,
-          "was_home": true,
-          "opponent": "BRE",
-          "fdr": 3
+          "fdr": 4
         },
         {
           "id": 565,
           "name": "M.Sangaré",
           "position": "MID",
-          "price": 5.6,
+          "price": 5.3,
           "points": 4,
           "was_home": false,
           "opponent": "LEE",
@@ -654,11 +679,11 @@
       "gameweek": 3,
       "formation": "4-4-2",
       "gross_points": 140,
-      "hit_cost": 24,
-      "net_points": 116,
-      "hits_taken": 6,
-      "bank": 6.3,
-      "team_value": 101.9,
+      "hit_cost": 20,
+      "net_points": 120,
+      "hits_taken": 5,
+      "bank": 6.1,
+      "team_value": 103.5,
       "captain": {
         "id": 204,
         "name": "Mitchell",
@@ -675,7 +700,7 @@
           "id": 69,
           "name": "Scott",
           "position": "MID",
-          "price": 6.1,
+          "price": 5.9,
           "points": 10,
           "was_home": false,
           "opponent": "NEW",
@@ -695,7 +720,7 @@
           "id": 204,
           "name": "Mitchell",
           "position": "DEF",
-          "price": 4.5,
+          "price": 4.4,
           "points": 15,
           "was_home": false,
           "opponent": "FUL",
@@ -705,17 +730,17 @@
           "id": 330,
           "name": "Bogle",
           "position": "DEF",
-          "price": 4.6,
+          "price": 4.8,
           "points": 14,
           "was_home": false,
           "opponent": "BHA",
-          "fdr": 3
+          "fdr": 4
         },
         {
           "id": 367,
           "name": "Gakpo",
           "position": "MID",
-          "price": 7.2,
+          "price": 7.1,
           "points": 11,
           "was_home": false,
           "opponent": "IPS",
@@ -725,7 +750,7 @@
           "id": 379,
           "name": "Isak",
           "position": "FWD",
-          "price": 9.1,
+          "price": 9.4,
           "points": 13,
           "was_home": false,
           "opponent": "IPS",
@@ -735,7 +760,7 @@
           "id": 411,
           "name": "Haaland",
           "position": "FWD",
-          "price": 15.6,
+          "price": 15.7,
           "points": 9,
           "was_home": true,
           "opponent": "COV",
@@ -745,7 +770,7 @@
           "id": 453,
           "name": "Barnes",
           "position": "MID",
-          "price": 6.1,
+          "price": 6.0,
           "points": 12,
           "was_home": true,
           "opponent": "BOU",
@@ -755,11 +780,11 @@
           "id": 504,
           "name": "Vuskovic",
           "position": "DEF",
-          "price": 5.0,
+          "price": 5.3,
           "points": 12,
           "was_home": true,
           "opponent": "LEE",
-          "fdr": 2
+          "fdr": 3
         },
         {
           "id": 586,
@@ -775,7 +800,7 @@
           "id": 597,
           "name": "Suzuki",
           "position": "GK",
-          "price": 5.0,
+          "price": 5.1,
           "points": 10,
           "was_home": false,
           "opponent": "HUL",
@@ -794,30 +819,30 @@
           "fdr": 5
         },
         {
-          "id": 449,
-          "name": "Hall",
+          "id": 229,
+          "name": "Tarkowski",
           "position": "DEF",
-          "price": 5.2,
-          "points": 4,
+          "price": 6.2,
+          "points": 3,
           "was_home": true,
-          "opponent": "BOU",
+          "opponent": "MUN",
           "fdr": 3
         },
         {
           "id": 124,
           "name": "Groß",
           "position": "MID",
-          "price": 5.8,
+          "price": 6.3,
           "points": 1,
           "was_home": true,
           "opponent": "LEE",
-          "fdr": 2
+          "fdr": 3
         },
         {
           "id": 165,
           "name": "João Pedro",
           "position": "FWD",
-          "price": 7.8,
+          "price": 7.6,
           "points": 1,
           "was_home": false,
           "opponent": "ARS",
@@ -826,20 +851,10 @@
       ],
       "transfers_in": [
         {
-          "id": 98,
-          "name": "Janelt",
-          "position": "MID",
-          "price": 5.0,
-          "points": 11,
-          "was_home": true,
-          "opponent": "SUN",
-          "fdr": 2
-        },
-        {
           "id": 204,
           "name": "Mitchell",
           "position": "DEF",
-          "price": 4.5,
+          "price": 4.4,
           "points": 15,
           "was_home": false,
           "opponent": "FUL",
@@ -849,18 +864,18 @@
           "id": 330,
           "name": "Bogle",
           "position": "DEF",
-          "price": 4.6,
+          "price": 4.8,
           "points": 14,
           "was_home": false,
           "opponent": "BHA",
-          "fdr": 3
+          "fdr": 4
         },
         {
-          "id": 379,
-          "name": "Isak",
-          "position": "FWD",
-          "price": 9.1,
-          "points": 13,
+          "id": 367,
+          "name": "Gakpo",
+          "position": "MID",
+          "price": 7.1,
+          "points": 11,
           "was_home": false,
           "opponent": "IPS",
           "fdr": 2
@@ -869,7 +884,7 @@
           "id": 453,
           "name": "Barnes",
           "position": "MID",
-          "price": 6.1,
+          "price": 6.0,
           "points": 12,
           "was_home": true,
           "opponent": "BOU",
@@ -879,17 +894,17 @@
           "id": 504,
           "name": "Vuskovic",
           "position": "DEF",
-          "price": 5.0,
+          "price": 5.3,
           "points": 12,
           "was_home": true,
           "opponent": "LEE",
-          "fdr": 2
+          "fdr": 3
         },
         {
           "id": 597,
           "name": "Suzuki",
           "position": "GK",
-          "price": 5.0,
+          "price": 5.1,
           "points": 10,
           "was_home": false,
           "opponent": "HUL",
@@ -898,13 +913,13 @@
       ],
       "transfers_out": [
         {
-          "id": 229,
-          "name": "Tarkowski",
+          "id": 8,
+          "name": "Calafiori",
           "position": "DEF",
-          "price": 6.1,
-          "points": 3,
+          "price": 5.9,
+          "points": 2,
           "was_home": true,
-          "opponent": "MUN",
+          "opponent": "CHE",
           "fdr": 4
         },
         {
@@ -915,16 +930,6 @@
           "points": 5,
           "was_home": true,
           "opponent": "AVL",
-          "fdr": 3
-        },
-        {
-          "id": 346,
-          "name": "Calvert-Lewin",
-          "position": "FWD",
-          "price": 6.0,
-          "points": 1,
-          "was_home": false,
-          "opponent": "BHA",
           "fdr": 3
         },
         {
@@ -941,7 +946,7 @@
           "id": 426,
           "name": "B.Fernandes",
           "position": "MID",
-          "price": 12.0,
+          "price": 11.6,
           "points": 2,
           "was_home": false,
           "opponent": "EVE",
@@ -951,7 +956,7 @@
           "id": 572,
           "name": "Tzolakis",
           "position": "GK",
-          "price": 4.6,
+          "price": 4.7,
           "points": 6,
           "was_home": true,
           "opponent": "AVL",
@@ -961,7 +966,7 @@
           "id": 593,
           "name": "Dedić",
           "position": "DEF",
-          "price": 4.5,
+          "price": 4.4,
           "points": 1,
           "was_home": true,
           "opponent": "BOU",
@@ -972,12 +977,12 @@
     {
       "gameweek": 4,
       "formation": "4-3-3",
-      "gross_points": 158,
-      "hit_cost": 24,
-      "net_points": 134,
-      "hits_taken": 6,
-      "bank": 10.0,
-      "team_value": 101.9,
+      "gross_points": 157,
+      "hit_cost": 28,
+      "net_points": 129,
+      "hits_taken": 7,
+      "bank": 6.6,
+      "team_value": 103.5,
       "captain": {
         "id": 124,
         "name": "Groß",
@@ -994,7 +999,7 @@
           "id": 1,
           "name": "Raya",
           "position": "GK",
-          "price": 6.0,
+          "price": 6.2,
           "points": 14,
           "was_home": false,
           "opponent": "SUN",
@@ -1008,14 +1013,14 @@
           "points": 15,
           "was_home": false,
           "opponent": "BOU",
-          "fdr": 3
+          "fdr": 4
         },
         {
-          "id": 116,
-          "name": "Dunk",
+          "id": 115,
+          "name": "De Cuyper",
           "position": "DEF",
-          "price": 4.5,
-          "points": 12,
+          "price": 5.6,
+          "points": 11,
           "was_home": false,
           "opponent": "COV",
           "fdr": 2
@@ -1024,7 +1029,7 @@
           "id": 124,
           "name": "Groß",
           "position": "MID",
-          "price": 5.8,
+          "price": 6.3,
           "points": 17,
           "was_home": false,
           "opponent": "COV",
@@ -1034,7 +1039,7 @@
           "id": 165,
           "name": "João Pedro",
           "position": "FWD",
-          "price": 7.8,
+          "price": 7.6,
           "points": 12,
           "was_home": true,
           "opponent": "HUL",
@@ -1044,7 +1049,7 @@
           "id": 229,
           "name": "Tarkowski",
           "position": "DEF",
-          "price": 6.1,
+          "price": 6.2,
           "points": 8,
           "was_home": false,
           "opponent": "TOT",
@@ -1054,7 +1059,7 @@
           "id": 286,
           "name": "Belloumi",
           "position": "MID",
-          "price": 5.1,
+          "price": 5.2,
           "points": 13,
           "was_home": false,
           "opponent": "CHE",
@@ -1068,37 +1073,37 @@
           "points": 14,
           "was_home": false,
           "opponent": "CRY",
-          "fdr": 3
+          "fdr": 2
         },
         {
           "id": 316,
           "name": "Emersonn",
           "position": "FWD",
-          "price": 5.5,
+          "price": 5.4,
           "points": 12,
           "was_home": false,
           "opponent": "CRY",
-          "fdr": 3
+          "fdr": 2
         },
         {
           "id": 330,
           "name": "Bogle",
           "position": "DEF",
-          "price": 4.6,
+          "price": 4.8,
           "points": 15,
           "was_home": true,
           "opponent": "NEW",
-          "fdr": 2
+          "fdr": 3
         },
         {
           "id": 411,
           "name": "Haaland",
           "position": "FWD",
-          "price": 15.6,
+          "price": 15.7,
           "points": 9,
           "was_home": false,
           "opponent": "MUN",
-          "fdr": 4
+          "fdr": 3
         }
       ],
       "bench": [
@@ -1110,36 +1115,36 @@
           "points": 0,
           "was_home": true,
           "opponent": "BHA",
+          "fdr": 4
+        },
+        {
+          "id": 504,
+          "name": "Vuskovic",
+          "position": "DEF",
+          "price": 5.3,
+          "points": 6,
+          "was_home": false,
+          "opponent": "COV",
           "fdr": 2
         },
         {
-          "id": 98,
-          "name": "Janelt",
+          "id": 428,
+          "name": "Cunha",
           "position": "MID",
-          "price": 5.0,
-          "points": 4,
-          "was_home": false,
-          "opponent": "BOU",
-          "fdr": 3
-        },
-        {
-          "id": 453,
-          "name": "Barnes",
-          "position": "MID",
-          "price": 6.1,
+          "price": 7.8,
           "points": 2,
-          "was_home": false,
-          "opponent": "LEE",
-          "fdr": 3
+          "was_home": true,
+          "opponent": "MCI",
+          "fdr": 4
         },
         {
-          "id": 449,
-          "name": "Hall",
-          "position": "DEF",
-          "price": 5.2,
-          "points": 0,
-          "was_home": false,
-          "opponent": "LEE",
+          "id": 53,
+          "name": "Manzambi",
+          "position": "MID",
+          "price": 6.2,
+          "points": 1,
+          "was_home": true,
+          "opponent": "NFO",
           "fdr": 3
         }
       ],
@@ -1148,10 +1153,20 @@
           "id": 1,
           "name": "Raya",
           "position": "GK",
-          "price": 6.0,
+          "price": 6.2,
           "points": 14,
           "was_home": false,
           "opponent": "SUN",
+          "fdr": 3
+        },
+        {
+          "id": 53,
+          "name": "Manzambi",
+          "position": "MID",
+          "price": 6.2,
+          "points": 1,
+          "was_home": true,
+          "opponent": "NFO",
           "fdr": 3
         },
         {
@@ -1162,33 +1177,23 @@
           "points": 15,
           "was_home": false,
           "opponent": "BOU",
-          "fdr": 3
+          "fdr": 4
         },
         {
-          "id": 116,
-          "name": "Dunk",
+          "id": 115,
+          "name": "De Cuyper",
           "position": "DEF",
-          "price": 4.5,
-          "points": 12,
+          "price": 5.6,
+          "points": 11,
           "was_home": false,
           "opponent": "COV",
           "fdr": 2
         },
         {
-          "id": 229,
-          "name": "Tarkowski",
-          "position": "DEF",
-          "price": 6.1,
-          "points": 8,
-          "was_home": false,
-          "opponent": "TOT",
-          "fdr": 3
-        },
-        {
           "id": 286,
           "name": "Belloumi",
           "position": "MID",
-          "price": 5.1,
+          "price": 5.2,
           "points": 13,
           "was_home": false,
           "opponent": "CHE",
@@ -1202,17 +1207,27 @@
           "points": 14,
           "was_home": false,
           "opponent": "CRY",
-          "fdr": 3
+          "fdr": 2
         },
         {
           "id": 316,
           "name": "Emersonn",
           "position": "FWD",
-          "price": 5.5,
+          "price": 5.4,
           "points": 12,
           "was_home": false,
           "opponent": "CRY",
-          "fdr": 3
+          "fdr": 2
+        },
+        {
+          "id": 428,
+          "name": "Cunha",
+          "position": "MID",
+          "price": 7.8,
+          "points": 2,
+          "was_home": true,
+          "opponent": "MCI",
+          "fdr": 4
         }
       ],
       "transfers_out": [
@@ -1220,17 +1235,27 @@
           "id": 69,
           "name": "Scott",
           "position": "MID",
-          "price": 6.1,
+          "price": 5.9,
           "points": 4,
           "was_home": true,
           "opponent": "BRE",
           "fdr": 3
         },
         {
+          "id": 98,
+          "name": "Janelt",
+          "position": "MID",
+          "price": 5.0,
+          "points": 4,
+          "was_home": false,
+          "opponent": "BOU",
+          "fdr": 4
+        },
+        {
           "id": 204,
           "name": "Mitchell",
           "position": "DEF",
-          "price": 4.5,
+          "price": 4.4,
           "points": 1,
           "was_home": true,
           "opponent": "IPS",
@@ -1240,7 +1265,7 @@
           "id": 367,
           "name": "Gakpo",
           "position": "MID",
-          "price": 7.2,
+          "price": 7.1,
           "points": 1,
           "was_home": true,
           "opponent": "FUL",
@@ -1250,21 +1275,21 @@
           "id": 379,
           "name": "Isak",
           "position": "FWD",
-          "price": 9.1,
+          "price": 9.4,
           "points": 2,
           "was_home": true,
           "opponent": "FUL",
           "fdr": 2
         },
         {
-          "id": 504,
-          "name": "Vuskovic",
-          "position": "DEF",
-          "price": 5.0,
-          "points": 6,
+          "id": 453,
+          "name": "Barnes",
+          "position": "MID",
+          "price": 6.0,
+          "points": 2,
           "was_home": false,
-          "opponent": "COV",
-          "fdr": 2
+          "opponent": "LEE",
+          "fdr": 3
         },
         {
           "id": 586,
@@ -1280,7 +1305,7 @@
           "id": 597,
           "name": "Suzuki",
           "position": "GK",
-          "price": 5.0,
+          "price": 5.1,
           "points": 2,
           "was_home": true,
           "opponent": "NFO",
@@ -1291,21 +1316,21 @@
     {
       "gameweek": 5,
       "formation": "4-5-1",
-      "gross_points": 163,
-      "hit_cost": 16,
+      "gross_points": 159,
+      "hit_cost": 12,
       "net_points": 147,
-      "hits_taken": 4,
-      "bank": 5.6,
-      "team_value": 101.9,
+      "hits_taken": 3,
+      "bank": 3.9,
+      "team_value": 103.5,
       "captain": {
-        "id": 552,
-        "name": "Brobbey",
+        "id": 397,
+        "name": "Semenyo",
         "points": 17,
         "effective_points": 34
       },
       "vice_captain": {
-        "id": 397,
-        "name": "Semenyo",
+        "id": 552,
+        "name": "Brobbey",
         "points": 17
       },
       "starting_xi": [
@@ -1313,7 +1338,7 @@
           "id": 53,
           "name": "Manzambi",
           "position": "MID",
-          "price": 5.9,
+          "price": 6.2,
           "points": 13,
           "was_home": false,
           "opponent": "TOT",
@@ -1323,7 +1348,7 @@
           "id": 93,
           "name": "Schuster",
           "position": "DEF",
-          "price": 4.5,
+          "price": 4.4,
           "points": 14,
           "was_home": true,
           "opponent": "CHE",
@@ -1347,13 +1372,13 @@
           "points": 11,
           "was_home": false,
           "opponent": "NFO",
-          "fdr": 3
+          "fdr": 2
         },
         {
           "id": 124,
           "name": "Groß",
           "position": "MID",
-          "price": 5.8,
+          "price": 6.3,
           "points": 14,
           "was_home": true,
           "opponent": "ARS",
@@ -1367,13 +1392,13 @@
           "points": 15,
           "was_home": false,
           "opponent": "NFO",
-          "fdr": 3
+          "fdr": 2
         },
         {
           "id": 229,
           "name": "Tarkowski",
           "position": "DEF",
-          "price": 6.1,
+          "price": 6.2,
           "points": 14,
           "was_home": true,
           "opponent": "IPS",
@@ -1383,37 +1408,37 @@
           "id": 397,
           "name": "Semenyo",
           "position": "MID",
-          "price": 8.4,
+          "price": 8.1,
           "points": 17,
           "was_home": true,
           "opponent": "SUN",
           "fdr": 2
         },
         {
-          "id": 449,
-          "name": "Hall",
-          "position": "DEF",
-          "price": 5.2,
-          "points": 13,
-          "was_home": true,
-          "opponent": "HUL",
-          "fdr": 2
+          "id": 428,
+          "name": "Cunha",
+          "position": "MID",
+          "price": 7.8,
+          "points": 10,
+          "was_home": false,
+          "opponent": "FUL",
+          "fdr": 3
         },
         {
-          "id": 453,
-          "name": "Barnes",
-          "position": "MID",
-          "price": 6.1,
-          "points": 9,
+          "id": 504,
+          "name": "Vuskovic",
+          "position": "DEF",
+          "price": 5.3,
+          "points": 8,
           "was_home": true,
-          "opponent": "HUL",
-          "fdr": 2
+          "opponent": "ARS",
+          "fdr": 4
         },
         {
           "id": 552,
           "name": "Brobbey",
           "position": "FWD",
-          "price": 5.7,
+          "price": 5.6,
           "points": 17,
           "was_home": false,
           "opponent": "MCI",
@@ -1425,59 +1450,49 @@
           "id": 1,
           "name": "Raya",
           "position": "GK",
-          "price": 6.0,
+          "price": 6.2,
           "points": 1,
           "was_home": false,
           "opponent": "BHA",
-          "fdr": 3
+          "fdr": 4
+        },
+        {
+          "id": 115,
+          "name": "De Cuyper",
+          "position": "DEF",
+          "price": 5.6,
+          "points": 6,
+          "was_home": true,
+          "opponent": "ARS",
+          "fdr": 4
         },
         {
           "id": 411,
           "name": "Haaland",
           "position": "FWD",
-          "price": 15.6,
+          "price": 15.7,
           "points": 6,
           "was_home": true,
           "opponent": "SUN",
           "fdr": 2
         },
         {
-          "id": 330,
-          "name": "Bogle",
-          "position": "DEF",
-          "price": 4.6,
-          "points": 5,
-          "was_home": true,
-          "opponent": "CRY",
-          "fdr": 3
-        },
-        {
           "id": 165,
           "name": "João Pedro",
           "position": "FWD",
-          "price": 7.8,
+          "price": 7.6,
           "points": 0,
           "was_home": false,
           "opponent": "BRE",
-          "fdr": 3
+          "fdr": 4
         }
       ],
       "transfers_in": [
         {
-          "id": 53,
-          "name": "Manzambi",
-          "position": "MID",
-          "price": 5.9,
-          "points": 13,
-          "was_home": false,
-          "opponent": "TOT",
-          "fdr": 3
-        },
-        {
           "id": 93,
           "name": "Schuster",
           "position": "DEF",
-          "price": 4.5,
+          "price": 4.4,
           "points": 14,
           "was_home": true,
           "opponent": "CHE",
@@ -1491,13 +1506,13 @@
           "points": 15,
           "was_home": false,
           "opponent": "NFO",
-          "fdr": 3
+          "fdr": 2
         },
         {
           "id": 397,
           "name": "Semenyo",
           "position": "MID",
-          "price": 8.4,
+          "price": 8.1,
           "points": 17,
           "was_home": true,
           "opponent": "SUN",
@@ -1507,7 +1522,7 @@
           "id": 552,
           "name": "Brobbey",
           "position": "FWD",
-          "price": 5.7,
+          "price": 5.6,
           "points": 17,
           "was_home": false,
           "opponent": "MCI",
@@ -1516,30 +1531,10 @@
       ],
       "transfers_out": [
         {
-          "id": 98,
-          "name": "Janelt",
-          "position": "MID",
-          "price": 5.0,
-          "points": 3,
-          "was_home": true,
-          "opponent": "CHE",
-          "fdr": 4
-        },
-        {
-          "id": 116,
-          "name": "Dunk",
-          "position": "DEF",
-          "price": 4.5,
-          "points": 0,
-          "was_home": true,
-          "opponent": "ARS",
-          "fdr": 4
-        },
-        {
           "id": 286,
           "name": "Belloumi",
           "position": "MID",
-          "price": 5.1,
+          "price": 5.2,
           "points": 4,
           "was_home": false,
           "opponent": "NEW",
@@ -1559,10 +1554,1694 @@
           "id": 316,
           "name": "Emersonn",
           "position": "FWD",
-          "price": 5.5,
+          "price": 5.4,
           "points": 2,
           "was_home": false,
           "opponent": "EVE",
+          "fdr": 3
+        },
+        {
+          "id": 330,
+          "name": "Bogle",
+          "position": "DEF",
+          "price": 4.8,
+          "points": 5,
+          "was_home": true,
+          "opponent": "CRY",
+          "fdr": 2
+        }
+      ]
+    },
+    {
+      "gameweek": 6,
+      "formation": "3-4-3",
+      "gross_points": 141,
+      "hit_cost": 28,
+      "net_points": 113,
+      "hits_taken": 7,
+      "bank": 1.0,
+      "team_value": 103.5,
+      "captain": {
+        "id": 101,
+        "name": "Henderson",
+        "points": 18,
+        "effective_points": 36
+      },
+      "vice_captain": {
+        "id": 115,
+        "name": "De Cuyper",
+        "points": 15
+      },
+      "starting_xi": [
+        {
+          "id": 101,
+          "name": "Henderson",
+          "position": "MID",
+          "price": 4.9,
+          "points": 18,
+          "was_home": true,
+          "opponent": "BOU",
+          "fdr": 3
+        },
+        {
+          "id": 109,
+          "name": "Verbruggen",
+          "position": "GK",
+          "price": 4.7,
+          "points": 9,
+          "was_home": false,
+          "opponent": "SUN",
+          "fdr": 3
+        },
+        {
+          "id": 115,
+          "name": "De Cuyper",
+          "position": "DEF",
+          "price": 5.6,
+          "points": 15,
+          "was_home": false,
+          "opponent": "SUN",
+          "fdr": 3
+        },
+        {
+          "id": 165,
+          "name": "João Pedro",
+          "position": "FWD",
+          "price": 7.6,
+          "points": 12,
+          "was_home": true,
+          "opponent": "BOU",
+          "fdr": 3
+        },
+        {
+          "id": 166,
+          "name": "N.Jackson",
+          "position": "FWD",
+          "price": 7.3,
+          "points": 9,
+          "was_home": true,
+          "opponent": "BRE",
+          "fdr": 3
+        },
+        {
+          "id": 236,
+          "name": "Dewsbury-Hall",
+          "position": "MID",
+          "price": 6.7,
+          "points": 13,
+          "was_home": false,
+          "opponent": "HUL",
+          "fdr": 2
+        },
+        {
+          "id": 304,
+          "name": "O'Shea",
+          "position": "DEF",
+          "price": 4.0,
+          "points": 11,
+          "was_home": true,
+          "opponent": "FUL",
+          "fdr": 2
+        },
+        {
+          "id": 400,
+          "name": "Doku",
+          "position": "MID",
+          "price": 7.5,
+          "points": 12,
+          "was_home": false,
+          "opponent": "LIV",
+          "fdr": 4
+        },
+        {
+          "id": 411,
+          "name": "Haaland",
+          "position": "FWD",
+          "price": 15.7,
+          "points": 6,
+          "was_home": false,
+          "opponent": "LIV",
+          "fdr": 4
+        },
+        {
+          "id": 428,
+          "name": "Cunha",
+          "position": "MID",
+          "price": 7.8,
+          "points": 10,
+          "was_home": true,
+          "opponent": "TOT",
+          "fdr": 3
+        },
+        {
+          "id": 504,
+          "name": "Vuskovic",
+          "position": "DEF",
+          "price": 5.3,
+          "points": 8,
+          "was_home": false,
+          "opponent": "SUN",
+          "fdr": 3
+        }
+      ],
+      "bench": [
+        {
+          "id": 1,
+          "name": "Raya",
+          "position": "GK",
+          "price": 6.2,
+          "points": 3,
+          "was_home": true,
+          "opponent": "LEE",
+          "fdr": 3
+        },
+        {
+          "id": 53,
+          "name": "Manzambi",
+          "position": "MID",
+          "price": 6.2,
+          "points": 5,
+          "was_home": true,
+          "opponent": "BRE",
+          "fdr": 3
+        },
+        {
+          "id": 31,
+          "name": "Konsa",
+          "position": "DEF",
+          "price": 4.9,
+          "points": 4,
+          "was_home": true,
+          "opponent": "LEE",
+          "fdr": 3
+        },
+        {
+          "id": 4,
+          "name": "Gabriel",
+          "position": "DEF",
+          "price": 8.1,
+          "points": 2,
+          "was_home": true,
+          "opponent": "LEE",
+          "fdr": 3
+        }
+      ],
+      "transfers_in": [
+        {
+          "id": 4,
+          "name": "Gabriel",
+          "position": "DEF",
+          "price": 8.1,
+          "points": 2,
+          "was_home": true,
+          "opponent": "LEE",
+          "fdr": 3
+        },
+        {
+          "id": 31,
+          "name": "Konsa",
+          "position": "DEF",
+          "price": 4.9,
+          "points": 4,
+          "was_home": true,
+          "opponent": "LEE",
+          "fdr": 3
+        },
+        {
+          "id": 101,
+          "name": "Henderson",
+          "position": "MID",
+          "price": 4.9,
+          "points": 18,
+          "was_home": true,
+          "opponent": "BOU",
+          "fdr": 3
+        },
+        {
+          "id": 109,
+          "name": "Verbruggen",
+          "position": "GK",
+          "price": 4.7,
+          "points": 9,
+          "was_home": false,
+          "opponent": "SUN",
+          "fdr": 3
+        },
+        {
+          "id": 166,
+          "name": "N.Jackson",
+          "position": "FWD",
+          "price": 7.3,
+          "points": 9,
+          "was_home": true,
+          "opponent": "BRE",
+          "fdr": 3
+        },
+        {
+          "id": 236,
+          "name": "Dewsbury-Hall",
+          "position": "MID",
+          "price": 6.7,
+          "points": 13,
+          "was_home": false,
+          "opponent": "HUL",
+          "fdr": 2
+        },
+        {
+          "id": 304,
+          "name": "O'Shea",
+          "position": "DEF",
+          "price": 4.0,
+          "points": 11,
+          "was_home": true,
+          "opponent": "FUL",
+          "fdr": 2
+        },
+        {
+          "id": 400,
+          "name": "Doku",
+          "position": "MID",
+          "price": 7.5,
+          "points": 12,
+          "was_home": false,
+          "opponent": "LIV",
+          "fdr": 4
+        }
+      ],
+      "transfers_out": [
+        {
+          "id": 93,
+          "name": "Schuster",
+          "position": "DEF",
+          "price": 4.4,
+          "points": 1,
+          "was_home": false,
+          "opponent": "AVL",
+          "fdr": 3
+        },
+        {
+          "id": 94,
+          "name": "Schade",
+          "position": "MID",
+          "price": 6.1,
+          "points": 1,
+          "was_home": false,
+          "opponent": "AVL",
+          "fdr": 3
+        },
+        {
+          "id": 110,
+          "name": "Rushworth",
+          "position": "GK",
+          "price": 4.5,
+          "points": 3,
+          "was_home": true,
+          "opponent": "NEW",
+          "fdr": 3
+        },
+        {
+          "id": 124,
+          "name": "Groß",
+          "position": "MID",
+          "price": 6.3,
+          "points": 6,
+          "was_home": false,
+          "opponent": "SUN",
+          "fdr": 3
+        },
+        {
+          "id": 176,
+          "name": "Dasilva",
+          "position": "DEF",
+          "price": 4.0,
+          "points": 5,
+          "was_home": true,
+          "opponent": "NEW",
+          "fdr": 3
+        },
+        {
+          "id": 229,
+          "name": "Tarkowski",
+          "position": "DEF",
+          "price": 6.2,
+          "points": 3,
+          "was_home": false,
+          "opponent": "HUL",
+          "fdr": 2
+        },
+        {
+          "id": 397,
+          "name": "Semenyo",
+          "position": "MID",
+          "price": 8.1,
+          "points": 3,
+          "was_home": false,
+          "opponent": "LIV",
+          "fdr": 4
+        },
+        {
+          "id": 552,
+          "name": "Brobbey",
+          "position": "FWD",
+          "price": 5.6,
+          "points": 0,
+          "was_home": true,
+          "opponent": "BHA",
+          "fdr": 4
+        }
+      ]
+    },
+    {
+      "gameweek": 7,
+      "formation": "4-4-2",
+      "gross_points": 134,
+      "hit_cost": 16,
+      "net_points": 118,
+      "hits_taken": 4,
+      "bank": 3.8,
+      "team_value": 103.5,
+      "captain": {
+        "id": 156,
+        "name": "Neto",
+        "points": 15,
+        "effective_points": 30
+      },
+      "vice_captain": {
+        "id": 129,
+        "name": "Ayari",
+        "points": 13
+      },
+      "starting_xi": [
+        {
+          "id": 1,
+          "name": "Raya",
+          "position": "GK",
+          "price": 6.2,
+          "points": 9,
+          "was_home": false,
+          "opponent": "NFO",
+          "fdr": 2
+        },
+        {
+          "id": 4,
+          "name": "Gabriel",
+          "position": "DEF",
+          "price": 8.1,
+          "points": 8,
+          "was_home": false,
+          "opponent": "NFO",
+          "fdr": 2
+        },
+        {
+          "id": 31,
+          "name": "Konsa",
+          "position": "DEF",
+          "price": 4.9,
+          "points": 9,
+          "was_home": false,
+          "opponent": "NFO",
+          "fdr": 2
+        },
+        {
+          "id": 53,
+          "name": "Manzambi",
+          "position": "MID",
+          "price": 6.2,
+          "points": 11,
+          "was_home": false,
+          "opponent": "NEW",
+          "fdr": 3
+        },
+        {
+          "id": 68,
+          "name": "Tavernier",
+          "position": "MID",
+          "price": 6.8,
+          "points": 10,
+          "was_home": true,
+          "opponent": "SUN",
+          "fdr": 2
+        },
+        {
+          "id": 79,
+          "name": "Evanilson",
+          "position": "FWD",
+          "price": 6.6,
+          "points": 12,
+          "was_home": true,
+          "opponent": "SUN",
+          "fdr": 2
+        },
+        {
+          "id": 129,
+          "name": "Ayari",
+          "position": "MID",
+          "price": 5.5,
+          "points": 13,
+          "was_home": true,
+          "opponent": "CRY",
+          "fdr": 2
+        },
+        {
+          "id": 156,
+          "name": "Neto",
+          "position": "MID",
+          "price": 6.6,
+          "points": 15,
+          "was_home": false,
+          "opponent": "EVE",
+          "fdr": 3
+        },
+        {
+          "id": 411,
+          "name": "Haaland",
+          "position": "FWD",
+          "price": 15.7,
+          "points": 13,
+          "was_home": true,
+          "opponent": "IPS",
+          "fdr": 2
+        },
+        {
+          "id": 504,
+          "name": "Vuskovic",
+          "position": "DEF",
+          "price": 5.3,
+          "points": 11,
+          "was_home": true,
+          "opponent": "CRY",
+          "fdr": 2
+        },
+        {
+          "id": 566,
+          "name": "Silva",
+          "position": "DEF",
+          "price": 5.1,
+          "points": 8,
+          "was_home": true,
+          "opponent": "SUN",
+          "fdr": 2
+        }
+      ],
+      "bench": [
+        {
+          "id": 109,
+          "name": "Verbruggen",
+          "position": "GK",
+          "price": 4.7,
+          "points": 6,
+          "was_home": true,
+          "opponent": "CRY",
+          "fdr": 2
+        },
+        {
+          "id": 304,
+          "name": "O'Shea",
+          "position": "DEF",
+          "price": 4.0,
+          "points": 3,
+          "was_home": false,
+          "opponent": "MCI",
+          "fdr": 5
+        },
+        {
+          "id": 166,
+          "name": "N.Jackson",
+          "position": "FWD",
+          "price": 7.3,
+          "points": 2,
+          "was_home": false,
+          "opponent": "NEW",
+          "fdr": 3
+        },
+        {
+          "id": 236,
+          "name": "Dewsbury-Hall",
+          "position": "MID",
+          "price": 6.7,
+          "points": 2,
+          "was_home": true,
+          "opponent": "CHE",
+          "fdr": 4
+        }
+      ],
+      "transfers_in": [
+        {
+          "id": 68,
+          "name": "Tavernier",
+          "position": "MID",
+          "price": 6.8,
+          "points": 10,
+          "was_home": true,
+          "opponent": "SUN",
+          "fdr": 2
+        },
+        {
+          "id": 79,
+          "name": "Evanilson",
+          "position": "FWD",
+          "price": 6.6,
+          "points": 12,
+          "was_home": true,
+          "opponent": "SUN",
+          "fdr": 2
+        },
+        {
+          "id": 129,
+          "name": "Ayari",
+          "position": "MID",
+          "price": 5.5,
+          "points": 13,
+          "was_home": true,
+          "opponent": "CRY",
+          "fdr": 2
+        },
+        {
+          "id": 156,
+          "name": "Neto",
+          "position": "MID",
+          "price": 6.6,
+          "points": 15,
+          "was_home": false,
+          "opponent": "EVE",
+          "fdr": 3
+        },
+        {
+          "id": 566,
+          "name": "Silva",
+          "position": "DEF",
+          "price": 5.1,
+          "points": 8,
+          "was_home": true,
+          "opponent": "SUN",
+          "fdr": 2
+        }
+      ],
+      "transfers_out": [
+        {
+          "id": 101,
+          "name": "Henderson",
+          "position": "MID",
+          "price": 4.9,
+          "points": 3,
+          "was_home": false,
+          "opponent": "EVE",
+          "fdr": 3
+        },
+        {
+          "id": 115,
+          "name": "De Cuyper",
+          "position": "DEF",
+          "price": 5.6,
+          "points": 6,
+          "was_home": true,
+          "opponent": "CRY",
+          "fdr": 2
+        },
+        {
+          "id": 165,
+          "name": "João Pedro",
+          "position": "FWD",
+          "price": 7.6,
+          "points": 2,
+          "was_home": false,
+          "opponent": "EVE",
+          "fdr": 3
+        },
+        {
+          "id": 400,
+          "name": "Doku",
+          "position": "MID",
+          "price": 7.5,
+          "points": 6,
+          "was_home": true,
+          "opponent": "IPS",
+          "fdr": 2
+        },
+        {
+          "id": 428,
+          "name": "Cunha",
+          "position": "MID",
+          "price": 7.8,
+          "points": 1,
+          "was_home": false,
+          "opponent": "LEE",
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "gameweek": 8,
+      "formation": "4-3-3",
+      "gross_points": 136,
+      "hit_cost": 16,
+      "net_points": 120,
+      "hits_taken": 4,
+      "bank": 6.4,
+      "team_value": 103.5,
+      "captain": {
+        "id": 4,
+        "name": "Gabriel",
+        "points": 17,
+        "effective_points": 34
+      },
+      "vice_captain": {
+        "id": 31,
+        "name": "Konsa",
+        "points": 14
+      },
+      "starting_xi": [
+        {
+          "id": 4,
+          "name": "Gabriel",
+          "position": "DEF",
+          "price": 8.1,
+          "points": 17,
+          "was_home": true,
+          "opponent": "EVE",
+          "fdr": 3
+        },
+        {
+          "id": 31,
+          "name": "Konsa",
+          "position": "DEF",
+          "price": 4.9,
+          "points": 14,
+          "was_home": true,
+          "opponent": "EVE",
+          "fdr": 3
+        },
+        {
+          "id": 60,
+          "name": "Hill",
+          "position": "DEF",
+          "price": 5.7,
+          "points": 11,
+          "was_home": false,
+          "opponent": "MUN",
+          "fdr": 3
+        },
+        {
+          "id": 68,
+          "name": "Tavernier",
+          "position": "MID",
+          "price": 6.8,
+          "points": 10,
+          "was_home": false,
+          "opponent": "MUN",
+          "fdr": 3
+        },
+        {
+          "id": 166,
+          "name": "N.Jackson",
+          "position": "FWD",
+          "price": 7.3,
+          "points": 13,
+          "was_home": true,
+          "opponent": "MCI",
+          "fdr": 4
+        },
+        {
+          "id": 264,
+          "name": "Bobb",
+          "position": "MID",
+          "price": 5.5,
+          "points": 11,
+          "was_home": false,
+          "opponent": "COV",
+          "fdr": 2
+        },
+        {
+          "id": 295,
+          "name": "McBurnie",
+          "position": "FWD",
+          "price": 5.5,
+          "points": 8,
+          "was_home": true,
+          "opponent": "BRE",
+          "fdr": 3
+        },
+        {
+          "id": 411,
+          "name": "Haaland",
+          "position": "FWD",
+          "price": 15.7,
+          "points": 8,
+          "was_home": false,
+          "opponent": "AVL",
+          "fdr": 3
+        },
+        {
+          "id": 529,
+          "name": "Roefs",
+          "position": "GK",
+          "price": 4.8,
+          "points": 9,
+          "was_home": true,
+          "opponent": "LEE",
+          "fdr": 3
+        },
+        {
+          "id": 566,
+          "name": "Silva",
+          "position": "DEF",
+          "price": 5.1,
+          "points": 8,
+          "was_home": false,
+          "opponent": "MUN",
+          "fdr": 3
+        },
+        {
+          "id": 591,
+          "name": "Enciso",
+          "position": "MID",
+          "price": 5.5,
+          "points": 10,
+          "was_home": true,
+          "opponent": "NFO",
+          "fdr": 3
+        }
+      ],
+      "bench": [
+        {
+          "id": 109,
+          "name": "Verbruggen",
+          "position": "GK",
+          "price": 4.7,
+          "points": 2,
+          "was_home": false,
+          "opponent": "LIV",
+          "fdr": 4
+        },
+        {
+          "id": 129,
+          "name": "Ayari",
+          "position": "MID",
+          "price": 5.5,
+          "points": 2,
+          "was_home": false,
+          "opponent": "LIV",
+          "fdr": 4
+        },
+        {
+          "id": 236,
+          "name": "Dewsbury-Hall",
+          "position": "MID",
+          "price": 6.7,
+          "points": 2,
+          "was_home": false,
+          "opponent": "ARS",
+          "fdr": 5
+        },
+        {
+          "id": 504,
+          "name": "Vuskovic",
+          "position": "DEF",
+          "price": 5.3,
+          "points": 1,
+          "was_home": false,
+          "opponent": "LIV",
+          "fdr": 4
+        }
+      ],
+      "transfers_in": [
+        {
+          "id": 60,
+          "name": "Hill",
+          "position": "DEF",
+          "price": 5.7,
+          "points": 11,
+          "was_home": false,
+          "opponent": "MUN",
+          "fdr": 3
+        },
+        {
+          "id": 264,
+          "name": "Bobb",
+          "position": "MID",
+          "price": 5.5,
+          "points": 11,
+          "was_home": false,
+          "opponent": "COV",
+          "fdr": 2
+        },
+        {
+          "id": 295,
+          "name": "McBurnie",
+          "position": "FWD",
+          "price": 5.5,
+          "points": 8,
+          "was_home": true,
+          "opponent": "BRE",
+          "fdr": 3
+        },
+        {
+          "id": 529,
+          "name": "Roefs",
+          "position": "GK",
+          "price": 4.8,
+          "points": 9,
+          "was_home": true,
+          "opponent": "LEE",
+          "fdr": 3
+        },
+        {
+          "id": 591,
+          "name": "Enciso",
+          "position": "MID",
+          "price": 5.5,
+          "points": 10,
+          "was_home": true,
+          "opponent": "NFO",
+          "fdr": 3
+        }
+      ],
+      "transfers_out": [
+        {
+          "id": 1,
+          "name": "Raya",
+          "position": "GK",
+          "price": 6.2,
+          "points": 7,
+          "was_home": true,
+          "opponent": "EVE",
+          "fdr": 3
+        },
+        {
+          "id": 53,
+          "name": "Manzambi",
+          "position": "MID",
+          "price": 6.2,
+          "points": 1,
+          "was_home": true,
+          "opponent": "MCI",
+          "fdr": 4
+        },
+        {
+          "id": 79,
+          "name": "Evanilson",
+          "position": "FWD",
+          "price": 6.6,
+          "points": 6,
+          "was_home": false,
+          "opponent": "MUN",
+          "fdr": 3
+        },
+        {
+          "id": 156,
+          "name": "Neto",
+          "position": "MID",
+          "price": 6.6,
+          "points": 3,
+          "was_home": true,
+          "opponent": "TOT",
+          "fdr": 3
+        },
+        {
+          "id": 304,
+          "name": "O'Shea",
+          "position": "DEF",
+          "price": 4.0,
+          "points": 2,
+          "was_home": true,
+          "opponent": "NFO",
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "gameweek": 9,
+      "formation": "4-3-3",
+      "gross_points": 121,
+      "hit_cost": 8,
+      "net_points": 113,
+      "hits_taken": 2,
+      "bank": 19.1,
+      "team_value": 103.5,
+      "captain": {
+        "id": 112,
+        "name": "Van Hecke",
+        "points": 15,
+        "effective_points": 30
+      },
+      "vice_captain": {
+        "id": 295,
+        "name": "McBurnie",
+        "points": 12
+      },
+      "starting_xi": [
+        {
+          "id": 31,
+          "name": "Konsa",
+          "position": "DEF",
+          "price": 4.9,
+          "points": 10,
+          "was_home": false,
+          "opponent": "LIV",
+          "fdr": 4
+        },
+        {
+          "id": 60,
+          "name": "Hill",
+          "position": "DEF",
+          "price": 5.7,
+          "points": 6,
+          "was_home": true,
+          "opponent": "LEE",
+          "fdr": 3
+        },
+        {
+          "id": 109,
+          "name": "Verbruggen",
+          "position": "GK",
+          "price": 4.7,
+          "points": 11,
+          "was_home": false,
+          "opponent": "MCI",
+          "fdr": 5
+        },
+        {
+          "id": 112,
+          "name": "Van Hecke",
+          "position": "DEF",
+          "price": 5.2,
+          "points": 15,
+          "was_home": true,
+          "opponent": "CRY",
+          "fdr": 2
+        },
+        {
+          "id": 129,
+          "name": "Ayari",
+          "position": "MID",
+          "price": 5.5,
+          "points": 10,
+          "was_home": false,
+          "opponent": "MCI",
+          "fdr": 5
+        },
+        {
+          "id": 166,
+          "name": "N.Jackson",
+          "position": "FWD",
+          "price": 7.3,
+          "points": 9,
+          "was_home": true,
+          "opponent": "FUL",
+          "fdr": 2
+        },
+        {
+          "id": 249,
+          "name": "Barry",
+          "position": "FWD",
+          "price": 5.7,
+          "points": 9,
+          "was_home": false,
+          "opponent": "NEW",
+          "fdr": 3
+        },
+        {
+          "id": 295,
+          "name": "McBurnie",
+          "position": "FWD",
+          "price": 5.5,
+          "points": 12,
+          "was_home": true,
+          "opponent": "IPS",
+          "fdr": 2
+        },
+        {
+          "id": 542,
+          "name": "E.Le Fée",
+          "position": "MID",
+          "price": 5.7,
+          "points": 8,
+          "was_home": false,
+          "opponent": "COV",
+          "fdr": 2
+        },
+        {
+          "id": 566,
+          "name": "Silva",
+          "position": "DEF",
+          "price": 5.1,
+          "points": 8,
+          "was_home": true,
+          "opponent": "LEE",
+          "fdr": 3
+        },
+        {
+          "id": 591,
+          "name": "Enciso",
+          "position": "MID",
+          "price": 5.5,
+          "points": 8,
+          "was_home": false,
+          "opponent": "HUL",
+          "fdr": 2
+        }
+      ],
+      "bench": [
+        {
+          "id": 529,
+          "name": "Roefs",
+          "position": "GK",
+          "price": 4.8,
+          "points": 1,
+          "was_home": false,
+          "opponent": "COV",
+          "fdr": 2
+        },
+        {
+          "id": 504,
+          "name": "Vuskovic",
+          "position": "DEF",
+          "price": 5.3,
+          "points": 6,
+          "was_home": false,
+          "opponent": "MCI",
+          "fdr": 5
+        },
+        {
+          "id": 236,
+          "name": "Dewsbury-Hall",
+          "position": "MID",
+          "price": 6.7,
+          "points": 4,
+          "was_home": false,
+          "opponent": "NEW",
+          "fdr": 3
+        },
+        {
+          "id": 68,
+          "name": "Tavernier",
+          "position": "MID",
+          "price": 6.8,
+          "points": 3,
+          "was_home": true,
+          "opponent": "LEE",
+          "fdr": 3
+        }
+      ],
+      "transfers_in": [
+        {
+          "id": 112,
+          "name": "Van Hecke",
+          "position": "DEF",
+          "price": 5.2,
+          "points": 15,
+          "was_home": true,
+          "opponent": "CRY",
+          "fdr": 2
+        },
+        {
+          "id": 249,
+          "name": "Barry",
+          "position": "FWD",
+          "price": 5.7,
+          "points": 9,
+          "was_home": false,
+          "opponent": "NEW",
+          "fdr": 3
+        },
+        {
+          "id": 542,
+          "name": "E.Le Fée",
+          "position": "MID",
+          "price": 5.7,
+          "points": 8,
+          "was_home": false,
+          "opponent": "COV",
+          "fdr": 2
+        }
+      ],
+      "transfers_out": [
+        {
+          "id": 4,
+          "name": "Gabriel",
+          "position": "DEF",
+          "price": 8.1,
+          "points": 6,
+          "was_home": false,
+          "opponent": "LIV",
+          "fdr": 4
+        },
+        {
+          "id": 264,
+          "name": "Bobb",
+          "position": "MID",
+          "price": 5.5,
+          "points": 2,
+          "was_home": false,
+          "opponent": "AVL",
+          "fdr": 3
+        },
+        {
+          "id": 411,
+          "name": "Haaland",
+          "position": "FWD",
+          "price": 15.7,
+          "points": 2,
+          "was_home": true,
+          "opponent": "BHA",
+          "fdr": 4
+        }
+      ]
+    },
+    {
+      "gameweek": 10,
+      "formation": "3-5-2",
+      "gross_points": 141,
+      "hit_cost": 12,
+      "net_points": 129,
+      "hits_taken": 3,
+      "bank": 18.7,
+      "team_value": 103.5,
+      "captain": {
+        "id": 249,
+        "name": "Barry",
+        "points": 16,
+        "effective_points": 32
+      },
+      "vice_captain": {
+        "id": 52,
+        "name": "Alysson",
+        "points": 16
+      },
+      "starting_xi": [
+        {
+          "id": 31,
+          "name": "Konsa",
+          "position": "DEF",
+          "price": 4.9,
+          "points": 8,
+          "was_home": true,
+          "opponent": "HUL",
+          "fdr": 2
+        },
+        {
+          "id": 52,
+          "name": "Alysson",
+          "position": "MID",
+          "price": 4.9,
+          "points": 16,
+          "was_home": false,
+          "opponent": "MUN",
+          "fdr": 3
+        },
+        {
+          "id": 166,
+          "name": "N.Jackson",
+          "position": "FWD",
+          "price": 7.3,
+          "points": 11,
+          "was_home": false,
+          "opponent": "MUN",
+          "fdr": 3
+        },
+        {
+          "id": 236,
+          "name": "Dewsbury-Hall",
+          "position": "MID",
+          "price": 6.7,
+          "points": 9,
+          "was_home": true,
+          "opponent": "COV",
+          "fdr": 2
+        },
+        {
+          "id": 249,
+          "name": "Barry",
+          "position": "FWD",
+          "price": 5.7,
+          "points": 16,
+          "was_home": true,
+          "opponent": "COV",
+          "fdr": 2
+        },
+        {
+          "id": 366,
+          "name": "Wirtz",
+          "position": "MID",
+          "price": 7.5,
+          "points": 13,
+          "was_home": false,
+          "opponent": "CRY",
+          "fdr": 2
+        },
+        {
+          "id": 415,
+          "name": "Dorgu",
+          "position": "MID",
+          "price": 5.7,
+          "points": 11,
+          "was_home": true,
+          "opponent": "AVL",
+          "fdr": 3
+        },
+        {
+          "id": 504,
+          "name": "Vuskovic",
+          "position": "DEF",
+          "price": 5.3,
+          "points": 12,
+          "was_home": true,
+          "opponent": "BRE",
+          "fdr": 3
+        },
+        {
+          "id": 529,
+          "name": "Roefs",
+          "position": "GK",
+          "price": 4.8,
+          "points": 9,
+          "was_home": true,
+          "opponent": "CHE",
+          "fdr": 4
+        },
+        {
+          "id": 533,
+          "name": "Mukiele",
+          "position": "DEF",
+          "price": 5.3,
+          "points": 9,
+          "was_home": true,
+          "opponent": "CHE",
+          "fdr": 4
+        },
+        {
+          "id": 542,
+          "name": "E.Le Fée",
+          "position": "MID",
+          "price": 5.7,
+          "points": 11,
+          "was_home": true,
+          "opponent": "CHE",
+          "fdr": 4
+        }
+      ],
+      "bench": [
+        {
+          "id": 109,
+          "name": "Verbruggen",
+          "position": "GK",
+          "price": 4.7,
+          "points": 6,
+          "was_home": true,
+          "opponent": "BRE",
+          "fdr": 3
+        },
+        {
+          "id": 60,
+          "name": "Hill",
+          "position": "DEF",
+          "price": 5.7,
+          "points": 4,
+          "was_home": false,
+          "opponent": "IPS",
+          "fdr": 2
+        },
+        {
+          "id": 566,
+          "name": "Silva",
+          "position": "DEF",
+          "price": 5.1,
+          "points": 3,
+          "was_home": false,
+          "opponent": "IPS",
+          "fdr": 2
+        },
+        {
+          "id": 295,
+          "name": "McBurnie",
+          "position": "FWD",
+          "price": 5.5,
+          "points": 2,
+          "was_home": false,
+          "opponent": "ARS",
+          "fdr": 5
+        }
+      ],
+      "transfers_in": [
+        {
+          "id": 52,
+          "name": "Alysson",
+          "position": "MID",
+          "price": 4.9,
+          "points": 16,
+          "was_home": false,
+          "opponent": "MUN",
+          "fdr": 3
+        },
+        {
+          "id": 366,
+          "name": "Wirtz",
+          "position": "MID",
+          "price": 7.5,
+          "points": 13,
+          "was_home": false,
+          "opponent": "CRY",
+          "fdr": 2
+        },
+        {
+          "id": 415,
+          "name": "Dorgu",
+          "position": "MID",
+          "price": 5.7,
+          "points": 11,
+          "was_home": true,
+          "opponent": "AVL",
+          "fdr": 3
+        },
+        {
+          "id": 533,
+          "name": "Mukiele",
+          "position": "DEF",
+          "price": 5.3,
+          "points": 9,
+          "was_home": true,
+          "opponent": "CHE",
+          "fdr": 4
+        }
+      ],
+      "transfers_out": [
+        {
+          "id": 68,
+          "name": "Tavernier",
+          "position": "MID",
+          "price": 6.8,
+          "points": 3,
+          "was_home": false,
+          "opponent": "IPS",
+          "fdr": 2
+        },
+        {
+          "id": 112,
+          "name": "Van Hecke",
+          "position": "DEF",
+          "price": 5.2,
+          "points": 4,
+          "was_home": false,
+          "opponent": "LEE",
+          "fdr": 3
+        },
+        {
+          "id": 129,
+          "name": "Ayari",
+          "position": "MID",
+          "price": 5.5,
+          "points": 3,
+          "was_home": true,
+          "opponent": "BRE",
+          "fdr": 3
+        },
+        {
+          "id": 591,
+          "name": "Enciso",
+          "position": "MID",
+          "price": 5.5,
+          "points": 1,
+          "was_home": true,
+          "opponent": "BOU",
+          "fdr": 3
+        }
+      ]
+    },
+    {
+      "gameweek": 11,
+      "formation": "4-5-1",
+      "gross_points": 152,
+      "hit_cost": 16,
+      "net_points": 136,
+      "hits_taken": 4,
+      "bank": 19.9,
+      "team_value": 103.5,
+      "captain": {
+        "id": 86,
+        "name": "Lewis-Potter",
+        "points": 16,
+        "effective_points": 32
+      },
+      "vice_captain": {
+        "id": 336,
+        "name": "Okafor",
+        "points": 15
+      },
+      "starting_xi": [
+        {
+          "id": 60,
+          "name": "Hill",
+          "position": "DEF",
+          "price": 5.7,
+          "points": 14,
+          "was_home": true,
+          "opponent": "NFO",
+          "fdr": 3
+        },
+        {
+          "id": 86,
+          "name": "Lewis-Potter",
+          "position": "MID",
+          "price": 5.5,
+          "points": 16,
+          "was_home": true,
+          "opponent": "EVE",
+          "fdr": 3
+        },
+        {
+          "id": 295,
+          "name": "McBurnie",
+          "position": "FWD",
+          "price": 5.5,
+          "points": 13,
+          "was_home": true,
+          "opponent": "BHA",
+          "fdr": 4
+        },
+        {
+          "id": 336,
+          "name": "Okafor",
+          "position": "MID",
+          "price": 5.8,
+          "points": 15,
+          "was_home": false,
+          "opponent": "CHE",
+          "fdr": 4
+        },
+        {
+          "id": 366,
+          "name": "Wirtz",
+          "position": "MID",
+          "price": 7.5,
+          "points": 14,
+          "was_home": true,
+          "opponent": "MUN",
+          "fdr": 3
+        },
+        {
+          "id": 369,
+          "name": "Ngumoha",
+          "position": "MID",
+          "price": 5.7,
+          "points": 13,
+          "was_home": true,
+          "opponent": "MUN",
+          "fdr": 3
+        },
+        {
+          "id": 499,
+          "name": "Pedro Porro",
+          "position": "DEF",
+          "price": 5.3,
+          "points": 11,
+          "was_home": true,
+          "opponent": "IPS",
+          "fdr": 2
+        },
+        {
+          "id": 529,
+          "name": "Roefs",
+          "position": "GK",
+          "price": 4.8,
+          "points": 11,
+          "was_home": false,
+          "opponent": "AVL",
+          "fdr": 3
+        },
+        {
+          "id": 533,
+          "name": "Mukiele",
+          "position": "DEF",
+          "price": 5.3,
+          "points": 8,
+          "was_home": false,
+          "opponent": "AVL",
+          "fdr": 3
+        },
+        {
+          "id": 566,
+          "name": "Silva",
+          "position": "DEF",
+          "price": 5.1,
+          "points": 8,
+          "was_home": true,
+          "opponent": "NFO",
+          "fdr": 3
+        },
+        {
+          "id": 601,
+          "name": "Williams-Barnett",
+          "position": "MID",
+          "price": 4.4,
+          "points": 13,
+          "was_home": true,
+          "opponent": "IPS",
+          "fdr": 2
+        }
+      ],
+      "bench": [
+        {
+          "id": 109,
+          "name": "Verbruggen",
+          "position": "GK",
+          "price": 4.7,
+          "points": 2,
+          "was_home": false,
+          "opponent": "HUL",
+          "fdr": 2
+        },
+        {
+          "id": 166,
+          "name": "N.Jackson",
+          "position": "FWD",
+          "price": 7.3,
+          "points": 2,
+          "was_home": true,
+          "opponent": "SUN",
+          "fdr": 2
+        },
+        {
+          "id": 249,
+          "name": "Barry",
+          "position": "FWD",
+          "price": 5.7,
+          "points": 2,
+          "was_home": false,
+          "opponent": "BRE",
+          "fdr": 4
+        },
+        {
+          "id": 504,
+          "name": "Vuskovic",
+          "position": "DEF",
+          "price": 5.3,
+          "points": 0,
+          "was_home": false,
+          "opponent": "HUL",
+          "fdr": 2
+        }
+      ],
+      "transfers_in": [
+        {
+          "id": 86,
+          "name": "Lewis-Potter",
+          "position": "MID",
+          "price": 5.5,
+          "points": 16,
+          "was_home": true,
+          "opponent": "EVE",
+          "fdr": 3
+        },
+        {
+          "id": 336,
+          "name": "Okafor",
+          "position": "MID",
+          "price": 5.8,
+          "points": 15,
+          "was_home": false,
+          "opponent": "CHE",
+          "fdr": 4
+        },
+        {
+          "id": 369,
+          "name": "Ngumoha",
+          "position": "MID",
+          "price": 5.7,
+          "points": 13,
+          "was_home": true,
+          "opponent": "MUN",
+          "fdr": 3
+        },
+        {
+          "id": 499,
+          "name": "Pedro Porro",
+          "position": "DEF",
+          "price": 5.3,
+          "points": 11,
+          "was_home": true,
+          "opponent": "IPS",
+          "fdr": 2
+        },
+        {
+          "id": 601,
+          "name": "Williams-Barnett",
+          "position": "MID",
+          "price": 4.4,
+          "points": 13,
+          "was_home": true,
+          "opponent": "IPS",
+          "fdr": 2
+        }
+      ],
+      "transfers_out": [
+        {
+          "id": 31,
+          "name": "Konsa",
+          "position": "DEF",
+          "price": 4.9,
+          "points": 1,
+          "was_home": false,
+          "opponent": "NEW",
+          "fdr": 3
+        },
+        {
+          "id": 52,
+          "name": "Alysson",
+          "position": "MID",
+          "price": 4.9,
+          "points": 3,
+          "was_home": true,
+          "opponent": "SUN",
+          "fdr": 2
+        },
+        {
+          "id": 236,
+          "name": "Dewsbury-Hall",
+          "position": "MID",
+          "price": 6.7,
+          "points": 2,
+          "was_home": false,
+          "opponent": "BRE",
+          "fdr": 4
+        },
+        {
+          "id": 415,
+          "name": "Dorgu",
+          "position": "MID",
+          "price": 5.7,
+          "points": 2,
+          "was_home": false,
+          "opponent": "LIV",
+          "fdr": 4
+        },
+        {
+          "id": 542,
+          "name": "E.Le Fée",
+          "position": "MID",
+          "price": 5.7,
+          "points": 3,
+          "was_home": false,
+          "opponent": "AVL",
           "fdr": 3
         }
       ]

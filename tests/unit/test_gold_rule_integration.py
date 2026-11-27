@@ -59,9 +59,11 @@ def test_gold_rule_loader_real_and_fallback():
     assert real_config.is_active
     assert real_config.source_file == "output/hindsight_gold_rules.json"
     assert len(real_config.extracted_rules) > 0
-    assert real_config.captain_mid_multiplier >= 1.15
-    assert real_config.midfield_formation_bonus >= 0.75
-    assert real_config.aggressive_hits_enabled is True
+    assert real_config.captain_mid_multiplier == 1.0
+    assert real_config.captain_premium_bias_dampener == 1.0
+    assert real_config.midfield_formation_bonus == 0.0
+    assert real_config.aggressive_hits_enabled is False
+    assert real_config.hit_hurdle_discount == 0.0
 
 
 def test_lineup_solver_gold_rule_captain_profiling():

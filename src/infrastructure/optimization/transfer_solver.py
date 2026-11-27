@@ -35,9 +35,7 @@ class TransferSolver:
         gold_rule_config: Optional[GoldRuleConfig] = None
     ) -> TransferPlan:
         config = gold_rule_config or self.gold_rule_config
-        allowed_max_hits = max_hits
-        if config and config.is_active and config.aggressive_hits_enabled:
-            allowed_max_hits = max(max_hits, config.max_hits_evaluated)
+        allowed_max_hits = max(0, max_hits)
 
         current_ids = {p.id for p in current_squad}
         base_lineup = self.lineup_solver.solve(current_squad, gold_rule_config=config)
@@ -120,24 +118,44 @@ class TransferSolver:
             reverse=True
         )
 
+        # Unified comparison score (0.0 = hold / no transfers)
+        best_score = 0.0
+
+        def _hit_is_justified(
+            hits_needed: int,
+            gain: float,
+            horizon_gain: float,
+            out_players: List[Player],
+            in_players: Optional[List[Player]] = None,
+        ) -> bool:
+            if hits_needed <= 0:
+                return True
+            # Anti-Churn Same-Club Guard: never pay a hit for a sideways same-club swap unless outgoing is unavailable
+            if in_players:
+                for p_out, p_in in zip(out_players, in_players):
+                    if p_out.team_id == p_in.team_id and p_out.is_available and getattr(p_out, "expected_minutes", 90.0) > 0.0:
+                        return False
+            hit_cost = hits_needed * 4
+            has_injured_out = any(
+                (not p.is_available) or getattr(p, "expected_minutes", 90.0) == 0.0
+                for p in out_players
+            )
+            if has_injured_out and gain >= 2.0 and (horizon_gain - hit_cost) >= 1.5:
+                return True
+            return (gain - hit_cost) >= 1.5 and (horizon_gain - hit_cost) >= 4.0
+
         if single_options and single_options[0]["gain"] > 0.5:
             top = single_options[0]
             hits_needed = max(0, 1 - free_transfers)
             hit_cost = hits_needed * 4
+            net_ev = (top["gain"] * 0.7 + top["horizon_gain"] * 0.3) - hit_cost
 
-            # Gold Rule Hit EV calculation
-            if config and config.is_active and config.aggressive_hits_enabled and hits_needed > 0:
-                horizon_credit = config.horizon_hit_weight * top["horizon_gain"]
-                hurdle_discount = (
-                    config.hit_hurdle_discount
-                    if (top.get("is_out_underperformer") and top.get("is_in_explosive"))
-                    else 0.0
-                )
-                net_ev = top["gain"] + horizon_credit - (hit_cost - hurdle_discount)
-            else:
-                net_ev = top["gain"] - hit_cost
-
-            if hits_needed <= allowed_max_hits and net_ev > 0.5:
+            if (
+                hits_needed <= allowed_max_hits
+                and _hit_is_justified(hits_needed, top["gain"], top["horizon_gain"], [top["p_out"]], [top["p_in"]])
+                and net_ev > max(0.5, best_score)
+            ):
+                best_score = net_ev
                 best_plan = TransferPlan(
                     transfers=[Transfer(player_out=top["p_out"], player_in=top["p_in"])],
                     hits=hits_needed,
@@ -184,21 +202,20 @@ class TransferSolver:
                     hits_needed = max(0, 2 - free_transfers)
                     hit_cost = hits_needed * 4
 
-                    # Gold Rule Hit EV calculation for double transfers
-                    if config and config.is_active and config.aggressive_hits_enabled and hits_needed > 0:
-                        horizon_credit = config.horizon_hit_weight * horizon_gain
-                        # Count matching pairs of underperformer -> explosive
-                        matching_pairs = (
-                            1 if (opt1.get("is_out_underperformer") and opt1.get("is_in_explosive")) else 0
-                        ) + (
-                            1 if (opt2.get("is_out_underperformer") and opt2.get("is_in_explosive")) else 0
-                        )
-                        hurdle_discount = min(hit_cost - 1.0, matching_pairs * config.hit_hurdle_discount)
-                        net_ev = raw_gain + horizon_credit - (hit_cost - hurdle_discount)
-                    else:
-                        net_ev = raw_gain - hit_cost
+                    net_ev = (raw_gain * 0.7 + horizon_gain * 0.3) - hit_cost
 
-                    if hits_needed <= allowed_max_hits and net_ev > best_plan.net_gain:
+                    if (
+                        hits_needed <= allowed_max_hits
+                        and _hit_is_justified(
+                            hits_needed,
+                            raw_gain,
+                            horizon_gain,
+                            [opt1["p_out"], opt2["p_out"]],
+                            [opt1["p_in"], opt2["p_in"]],
+                        )
+                        and net_ev > best_score
+                    ):
+                        best_score = net_ev
                         best_plan = TransferPlan(
                             transfers=[
                                 Transfer(player_out=opt1["p_out"], player_in=opt1["p_in"]),

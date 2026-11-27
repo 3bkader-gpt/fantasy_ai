@@ -123,12 +123,20 @@ class RuleBasedXPEngine(IXPEngine):
             elif player.cost <= 6.0 and pos != "GK":
                 scaled_match_xp = min(7.0, scaled_match_xp)
             elif pos == "GK":
+                # Empirical GW4-GW11 finding: GKs with >=3 saves/match average +0.71 pts/GW higher.
+                if player.minutes >= 90:
+                    saves_90 = (getattr(player, "saves", 0) / player.minutes) * 90.0
+                    bonus_90 = (getattr(player, "bonus", 0) / player.minutes) * 90.0
+                    save_boost = min(0.90, max(0.0, (saves_90 - 2.2) * 0.35))
+                    bonus_boost = min(0.45, bonus_90 * 0.25)
+                    scaled_match_xp += save_boost + bonus_boost
+
                 # Goalkeepers playing away against top attacks (FDR 4 or 5)
-                # have very low clean-sheet probability (<15%) and high conceded goals expectation.
+                # have very low clean-sheet probability (<15%) unless elite shot-stoppers.
                 if fdr >= 4 and not is_home:
-                    scaled_match_xp = min(3.8, scaled_match_xp * 0.82)
+                    scaled_match_xp = min(4.2, scaled_match_xp * 0.84)
                 elif fdr >= 4:
-                    scaled_match_xp = min(4.4, scaled_match_xp * 0.90)
+                    scaled_match_xp = min(4.8, scaled_match_xp * 0.92)
                 elif fdr <= 2:
                     # Favorable clean-sheet matchup bonus
                     scaled_match_xp *= 1.08

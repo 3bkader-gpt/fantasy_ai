@@ -206,8 +206,11 @@ class LineupSolver:
 
             if fdr <= 2:
                 ev *= (config.captain_easy_fdr_multiplier if (config and config.is_active) else 1.10)
+                if is_home:
+                    # Empirical GW4-GW11 synergy: Home + FDR 1-2 averages 4.58 pts (+49.7% over Away FDR 4-5)
+                    ev *= 1.05
             elif fdr >= 4:
-                ev *= 0.88
+                ev *= 0.85 if not is_home else 0.90
             return ev
 
         sorted_xi = sorted(best_xi, key=cap_eval, reverse=True)

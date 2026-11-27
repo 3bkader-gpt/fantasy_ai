@@ -11,21 +11,21 @@ logger = logging.getLogger("GoldRuleLoader")
 class GoldRuleConfig:
     """Configurable weights and parameters derived from Hindsight Gold Rules."""
 
-    # Captaincy Profiling
-    captain_mid_multiplier: float = 1.15  # Boost for mid-priced (£6.0m-£9.0m) explosive assets
-    captain_premium_bias_dampener: float = 0.95  # Dampens static price-only bias for premiums
-    captain_easy_fdr_multiplier: float = 1.10  # Multiplier when captain has FDR <= 2
-    captain_home_multiplier: float = 1.08  # Multiplier when captain is at Home
+    # Captaincy Profiling (neutral defaults — do not penalize premiums)
+    captain_mid_multiplier: float = 1.0
+    captain_premium_bias_dampener: float = 1.0
+    captain_easy_fdr_multiplier: float = 1.06  # Modest multiplier when captain has FDR <= 2
+    captain_home_multiplier: float = 1.05  # Modest multiplier when captain is at Home
 
-    # Hit Strategy & Transfer EV
-    aggressive_hits_enabled: bool = True
-    hit_hurdle_discount: float = 2.0  # Discount off -4 penalty when replacing underperformer with explosive
-    horizon_hit_weight: float = 0.40  # Fraction of horizon gain credited to justify a hit
-    max_hits_evaluated: int = 2  # Evaluate up to 2 hits when mathematically EV-positive
+    # Hit Strategy & Transfer EV (strictly disciplined — no hindsight hit-chasing)
+    aggressive_hits_enabled: bool = False
+    hit_hurdle_discount: float = 0.0
+    horizon_hit_weight: float = 0.25
+    max_hits_evaluated: int = 1
 
-    # Formation & Budget Allocation
-    midfield_formation_bonus: float = 0.75  # Soft bonus for heavy midfield formations (4-5-1, 3-5-2)
-    budget_enabler_ppm_weight: float = 0.20  # Preference for budget enablers (< £6.0m) with high pts/£m
+    # Formation & Budget Allocation (neutral formation — FWDs average 4.74 vs MIDs 3.85 in GW4-11)
+    midfield_formation_bonus: float = 0.0
+    budget_enabler_ppm_weight: float = 0.15  # Mild preference for budget enablers (< £6.0m)
 
     # Metadata
     is_active: bool = False
@@ -56,34 +56,26 @@ def load_gold_rule_config(path: str = "output/hindsight_gold_rules.json") -> Gol
             cat = rule.get("category")
             fv = rule.get("feature_values", {})
 
-            # 1. Captaincy tuning
+            # 1. Captaincy tuning (kept neutral to avoid penalizing elite premiums)
             if cat == "captain":
-                prem_pct = fv.get("premium_captain_pct")
-                if prem_pct is not None and prem_pct < 0.35:
-                    # Low reliance on premiums -> reward explosive mid-priced assets
-                    config.captain_mid_multiplier = 1.18
-                    config.captain_premium_bias_dampener = 0.92
+                config.captain_mid_multiplier = 1.0
+                config.captain_premium_bias_dampener = 1.0
 
-            # 2. Transfer / Hit tuning
+            # 2. Transfer / Hit tuning (never enable hindsight aggressive hits in live play)
             elif cat == "transfer":
-                net_delta = fv.get("net_point_delta")
-                if net_delta is not None and net_delta > 5.0:
-                    config.aggressive_hits_enabled = True
-                    config.hit_hurdle_discount = 2.0
-                    config.horizon_hit_weight = 0.40
+                config.aggressive_hits_enabled = False
+                config.hit_hurdle_discount = 0.0
+                config.horizon_hit_weight = 0.25
 
-            # 3. Formation & Midfield Allocation
+            # 3. Formation & Midfield Allocation (kept neutral so 3-FWD formations are not penalized)
             elif cat == "position_allocation":
-                mid_info = fv.get("MID", {})
-                mid_share = mid_info.get("share_pct", 0.0)
-                if mid_share >= 0.35:
-                    config.midfield_formation_bonus = 0.85
+                config.midfield_formation_bonus = 0.0
 
             # 4. Budget & Price Efficiency
             elif cat == "price_efficiency":
                 budget_info = fv.get("Budget (<£6.0m)", {})
                 if budget_info and budget_info.get("pts_per_million", 0) > 2.0:
-                    config.budget_enabler_ppm_weight = 0.25
+                    config.budget_enabler_ppm_weight = 0.15
 
         logger.info(
             f"Successfully loaded {len(rules)} Gold Rules from '{path}' (is_active=True)."

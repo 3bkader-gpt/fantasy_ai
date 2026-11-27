@@ -23,6 +23,8 @@ class Player:
     goals_scored: int = 0
     assists: int = 0
     clean_sheets: int = 0
+    saves: int = 0
+    bonus: int = 0
     status: str = "a"  # 'a' (available), 'd' (doubtful), 'i' (injured), 's' (suspended)
     news: str = ""
     chance_of_playing_next_round: Optional[int] = None
