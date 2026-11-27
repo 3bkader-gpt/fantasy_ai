@@ -1,10 +1,9 @@
 name: Autonomous FPL Agent & Pages Deploy
 
 on:
-  schedule:
-    # Run every Friday at 09:00 UTC & Saturday at 08:30 UTC (FPL Gameweek prep & deadline execution)
-    - cron: '0 9 * * 5'
-    - cron: '30 8 * * 6'
+  # Triggered dynamically by Cloudflare Edge Sentinel (exact T-2.5h Stage 1 & T-20m Stage 2)
+  # or manually via Telegram Bot / GitHub Actions UI. Fixed weekly crons removed to prevent
+  # international-break or post-deadline runs.
   workflow_dispatch:
     inputs:
       execution_mode:
